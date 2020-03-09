@@ -12,11 +12,11 @@ function submitForm(){
 	_("mybtn").disabled = true;
 	_("status").innerHTML = 'please wait ...';
 	var formdata = new FormData();
-	formdata.append( "navn", _("navn").value );
+	formdata.append( "name", _("name").value );
 	formdata.append( "email", _("email").value );
-	formdata.append( "melding", _("melding").value );
+	formdata.append( "message", _("message").value );
 	var ajax = new XMLHttpRequest();
-	ajax.open( "POST", ".php" );
+	ajax.open( "POST", "feedback_insert.php" );
 	ajax.onreadystatechange = function() {
 		if(ajax.readyState == 4 && ajax.status == 200) {
 			if(ajax.responseText == "success"){
@@ -32,10 +32,10 @@ function submitForm(){
 </script>
 </head>
 <body>
-<form id="my_form" onsubmit="submitForm(); return false;">
-  <p><input id="navn" placeholder="Navn" required></p>
+<form id="my_form" onsubmit="return submitForm();">
+  <p><input id="name" placeholder="Navn" required></p>
   <p><input id="email" placeholder="E-mail" type="email" required></p>
-  <textarea id="melding" placeholder="skriv inn melding" rows="10" required></textarea>
+  <textarea id="message" placeholder="skriv inn melding" rows="10" required></textarea>
   <p><input id="mybtn" type="submit" value="Submit Form"> <span id="status"></span></p>
 </form>
 
