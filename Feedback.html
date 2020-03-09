@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Feedback</title>
+
+	<link rel="stylesheet" href="CSS/stylesheet.css">
+	<link rel="stylesheet" href="CSS/stylefixed.css">
+
+	<script>
+function _(id){ return document.getElementById(id); }
+function submitForm(){
+	_("mybtn").disabled = true;
+	_("status").innerHTML = 'please wait ...';
+	var formdata = new FormData();
+	formdata.append( "name", _("name").value );
+	formdata.append( "email", _("email").value );
+	formdata.append( "message", _("message").value );
+	var ajax = new XMLHttpRequest();
+	ajax.open( "POST", "feedback_insert.php" );
+	ajax.onreadystatechange = function() {
+		if(ajax.readyState == 4 && ajax.status == 200) {
+			if(ajax.responseText == "success"){
+				_("my_form").innerHTML = '<h2>Thanks '+_("n").value+', your message has been sent.</h2>';
+			} else {
+				_("status").innerHTML = ajax.responseText;
+				_("mybtn").disabled = false;
+			}
+		}
+	}
+	ajax.send( formdata );
+}
+</script>
+</head>
+<body>
+<form id="my_form" onsubmit="return submitForm();">
+  <p><input id="name" placeholder="Navn" required></p>
+  <p><input id="email" placeholder="E-mail" type="email" required></p>
+  <textarea id="message" placeholder="skriv inn melding" rows="10" required></textarea>
+  <p><input id="mybtn" type="submit" value="Submit Form"> <span id="status"></span></p>
+</form>
+
+
+
+
+</body>
+</html>
