@@ -6,55 +6,38 @@
 	<link rel="stylesheet" href="CSS/stylesheet.css">
 	<link rel="stylesheet" href="CSS/stylefixed.css">
 
+	<script>
+function _(id){ return document.getElementById(id); }
+function submitForm(){
+	_("mybtn").disabled = true;
+	_("status").innerHTML = 'please wait ...';
+	var formdata = new FormData();
+	formdata.append( "navn", _("navn").value );
+	formdata.append( "email", _("email").value );
+	formdata.append( "melding", _("melding").value );
+	var ajax = new XMLHttpRequest();
+	ajax.open( "POST", ".php" );
+	ajax.onreadystatechange = function() {
+		if(ajax.readyState == 4 && ajax.status == 200) {
+			if(ajax.responseText == "success"){
+				_("my_form").innerHTML = '<h2>Thanks '+_("n").value+', your message has been sent.</h2>';
+			} else {
+				_("status").innerHTML = ajax.responseText;
+				_("mybtn").disabled = false;
+			}
+		}
+	}
+	ajax.send( formdata );
+}
+</script>
 </head>
 <body>
-
-
-<form name="form-intro" action="javascript:void(0)" method="post">
-
-	<div class="form_container">
-		<div class="small_container">
-			<p><label class="form_label" rel="tooltip" title="" for="form_name" data-original-title="Please enter your name here">Name: </label> 
-				
-				<input type="text" class="form_input" id="rsc_name" name="name" value="" size="45"></p>
-					<span class="form_clear"></span><p><label class="form_label" rel="tooltip" title="" for="form_email" data-original-title="Please enter your valid email address here">Email: </label> 
-						<input type="text" class="form_input" id="form_email" name="email" value="" size="45"></p>
-						<span class="form_clear"></span><p>
-							<label class="form_label" rel="tooltip" title="" for="form_subject" data-original-title="Please enter your subject here">Subject: </label> 
-
-							<input type="text" class="form_input" id="form_subject" name="subject" value="" size="45"></p>
-							<span class="form_clear"></span><p>
-								<label class="form_label" rel="tooltip" title="" for="rsc_website" data-original-title="Please enter your website address here">Website: </label> 
-
-								<input type="text" class="form_input" id="rsc_website" name="website" value="" size="45"></p><span class="form_clear"></span><p></p><p>
-
-									<label class="form_label" rel="tooltip" title="" for="form_comment" data-original-title="Please enter your comment here">Comment: </label>
-										<p>
-									 <textarea id="form_comment" name="comment" cols="50" rows="10" onkeydown="rsc_comment_cnt(document.rscommentsForm.comment,'commentlen',1000);" onkeyup="rsc_comment_cnt(document.rscommentsForm.comment,'commentlen',1000);"></textarea>
-
-									 <p><span id="commentlen">1000</span> Characters left</p>
-
-									<input id="submit_consent_rsc" value="1" name="i_consent_to_privacy_policy_and_submit_my_details" type="checkbox">
-
-										<label for="submit_consent_rsc">I consent to this website collecting my details through this form.</label>
-
-									</div><p class="text-right pull-right">
-											<label class="form_label">&nbsp;</label>
-											<button type="button" class="btn1 btn-primary" onclick="rsc_save('');">Send</button> <button type="reset" class="btn2">Reset</button></p>
-		</div>
-	</div>
-
-									<input type="hidden" name="obj_option" value="com_rsfeedback">
-									<input type="hidden" name="url" value="ZmVlZGJhY2svc2luZ2xlLWZlZWRiYWNrLzE1NzEtY3NzLmh0bWw=">
-									<input type="hidden" name="obj_id" value="1571">
-									<input type="hidden" name="controller" value="comments">
-									<input type="hidden" name="IdComment" value="">
-									<input type="hidden" name="task" value="save">
-
-									<script type="text/javascript">document.onclick=rsc_check;</script>
+<form id="my_form" onsubmit="submitForm(); return false;">
+  <p><input id="navn" placeholder="Navn" required></p>
+  <p><input id="email" placeholder="E-mail" type="email" required></p>
+  <textarea id="melding" placeholder="skriv inn melding" rows="10" required></textarea>
+  <p><input id="mybtn" type="submit" value="Submit Form"> <span id="status"></span></p>
 </form>
-
-
 
 
 
