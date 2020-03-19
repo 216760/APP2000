@@ -17,8 +17,29 @@ body{
   margin-top: -4rem;
 }
 
-/*--- Navigaton --*/
 
+.card-group {
+
+  background-color: white;
+}
+
+.card{
+    position: relative;
+    margin: 1rem;
+    margin-top: 8rem;
+    margin-left: 2rem;
+    padding: 1px;
+    margin-bottom: 1rem;
+}
+
+
+
+/* ------------------------------------------- */
+/* CUSTOM STYLING START */
+/*
+/* ------------------------------------------- */
+
+/* KODET AV: Anders Koo */
 
 
 .navbar{
@@ -26,8 +47,79 @@ body{
   font-weight: 700;
   font-size: .9rem;
   letter-spacing: .1rem;
-  background-color: #dfdbd7;
+  background-color: #543091!important;
 }
+
+
+/* https://www.w3schools.com/css/tryit.asp?filename=trycss_position_fixed */
+
+#info-section{
+  background-color: white;
+  height: 500px;
+}
+
+
+
+#info-text{
+  text-align: left;
+  margin-top: 150px;
+  margin-left: 50px;
+  color:#543091;
+  position: relative;
+  top: 110px;
+  font-family: 'Lato', sans-serif;
+}
+
+
+#info-section2{
+  background-color:#543091;
+  height: 620px;
+}
+
+#info-text2{
+  text-align: right;
+  margin-top: 150px;
+  margin-right: 100px;
+  color: white;
+  position: relative;
+  top: 200px;
+  font-family: 'Lato', sans-serif;
+}
+
+
+
+
+#info-text3{
+  text-align: left;
+  margin-top: 120px;
+  margin-left: 50px;
+  color:#543091;
+  position: relative;
+  top: 40px;
+  font-family: 'Lato', sans-serif;
+  
+
+}
+
+#info-section3{
+  background-color: white;
+  height: 500px;
+}
+
+
+/* KODET AV: Anders Koo */
+
+
+/* ------------------------------------------- */
+/* CUSTOM STYLING END */
+/* ------------------------------------------- */
+
+
+
+
+
+
+
 
 .navbar-brand img{
   height: 5rem;
@@ -44,54 +136,60 @@ body{
 
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .navbar-nav .nav-link:hover{
-  color: #2681E6;
+  color: white
 }
 
-/*--- Landing Page --*/
+/*---- info Section ---*/
 
-.caption{
-  width: 100%;
-  max-width: 100%;
-  position: absolute;
-  top: 45%;
-  z-index: 1;
+/*.section1{
+
+padding: 10px;
+margin-left: 10px;
+margin-right: 10px;
+
+}
+
+.section2{
+
+padding: 10px;
+margin-left: 10px;
+margin-right: 10px;
+
+}
+
+.section3{
+
+  padding: 10px;
+margin-left: 10px;
+margin-right: 10px;
+}*/
+
+
+
+
+.content-main {
+
   color: white;
-  text-transform: uppercase;
-  padding: 10rem;
-  margin-top: -10rem;
-
-}
-
-#borderText .caption{
+  padding: 20%;
+  background-color: #40474e;
   
-  border-top: 10px solid #fff;
-  border-bottom: 10px solid #fff;
-  box-shadow: 0px 0px 15px 0px #000000;
+}
+.content-2{
+
+  padding: 20%;
+  background-color: white;
+}
+
+.content-3{
+
+  
+  padding: 10%;
+  color: white;
+  background-color: #40474e;
 }
 
 
-.caption h1 {
-  font-size: 3.8rem;
-  font-weight: 700;
-  letter-spacing: .3rem;
-  text-shadow: .1rem .1rem .8rem black;
-  padding-bottom: 1rem; 
 
-}
-
-.caption h3{
-  font-size: 2rem;
-  text-shadow: .1rem .1rem .5rem black;
-  padding-bottom: 1.6rem; 
-}
-
-.btn-lg{
-  border-width: medium;
-  border-radius: 0;
-  padding: .6rem 1.3rem;
-  font-size: 1.1rem;
-
-}
 
 
 
@@ -100,16 +198,21 @@ body{
 
 /*---- Contact  / Footer  Section ---*/
 
-footer{
-  background-color: #40474e;
-  color: white;
-  padding: 2rem 0 2rem;
-  margin-top: 1rem;
+.section4{
+  
+margin-left: 40%;
+margin-right: 30%;
+}
 
+footer{
+  background-color: #333333;
+  color: white;
+  padding: 1rem 0 2rem;
+  margin-top: 0.5rem;
 }
 
 footer img {
-  height: 8rem;
+  height: 3rem;
   margin: 1.5rem 0;
   
 }
@@ -127,11 +230,6 @@ footer svg.svg-inline--fa:hover{
  color: #2681E6!important;
 }
 
-hr.socket{
- width: 100%;
- border-top: .2rem solid #666b71;
- margin-top: 3rem;
-}
 
 
 
@@ -142,7 +240,6 @@ hr.socket{
 .intro {
   width: 100%;
   height: 100%;
-  background: url("https://www.onlygfx.com/wp-content/uploads/2018/03/grey-polygonal-background-fade-2.png");
   background-size: cover;
   background-repeat: no-repeat;
   display: table;
@@ -180,9 +277,9 @@ hr.socket{
   padding: 1% 1% 1% 10%;
   background: url();
   background-repeat: no-repeat;
-  font-size: 30px
+  font-size: 30px;
   font-family: 'pacifico';
-  broder: 0px;
+  border: 0px;
   border-bottom: 1px solid white;
   width: 13.5vw;
   height: 5vh;
@@ -195,9 +292,9 @@ hr.socket{
   padding: 1% 1% 1% 10%;
   background: url();
   background-repeat: no-repeat;
-  font-size: 30px
+  font-size: 30px;
   font-family: 'pacifico';
-  broder: 0px;
+  border: 0px;
   border-bottom: 1px solid white;
   width: 13.5vw;
   height: 5vh;
@@ -210,9 +307,9 @@ hr.socket{
   padding: 1% 1% 1% 10%;
   background: url();
   background-repeat: no-repeat;
-  font-size: 30px
+  font-size: 30px;
   font-family: 'pacifico';
-  broder: 0px;
+  border: 0px;
   border-bottom: 1px solid white;
   width: 13.5vw;
   height: 5vh;
@@ -235,7 +332,7 @@ hr.socket{
   font-size: 1.9vw;
 }
 
-.btn {
+/* .btn {
 
   text-decoration: none;
   display: table;
@@ -247,7 +344,7 @@ hr.socket{
   font-family: 'Lobster';
   font-size: 1.8;
   color: #0D0707;
-}
+} */
 
 
 /*---- Login and Signup Section ---*/
@@ -263,20 +360,47 @@ form{
 
 }
 .form_label {
-  
+
+}
+
+/*--- Feedback form --*/
+
+.wrapper{
+  max-width:500px;
+  margin:2rem auto;
+  border:2px solid #E74C3C;
+  padding:2rem;
+  border-radius:5px;
+  }
+input, textarea {
+  display:block;
+    width:100%;
+    border:2px solid #2980B9;
+    padding:.5rem;
+    font-size:18px;
+    border-radius:5px;
+}
+input{type=text}:focus{
+  border-color: purple;
+  box-shadow: 0 0 8px 0 purple;
 }
 
 
+.sendBtn{
+  border:0;
+  background:#343050;
+  padding:.5rem;
+  color:white;
+  margin:1rem 0;
+  width:auto;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:3s background ease;
+  hover: background #3498DB;
+  }
 
 
 
 
-
-
-/* Om Oss fixed background*/
-.fixed2 {
-  background-image: url(img/testing.jpg);
-  z-index: -1;
-}
 
 
