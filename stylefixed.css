@@ -1,3 +1,4 @@
+
 /*--- Extra Bootstrap Column Padding --*/
 [class*="col-"] {
   padding: 1rem;
@@ -14,88 +15,51 @@ margin-right: 0px!important;
  -webkit-backface-visibility: hidden;
 }
 
-/*--- Fixed Landing Page Section --*/
-.landing {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  display: table;
-  z-index: -1;
-}
-.home-wrap {
-  clip: rect(0, auto, auto, 0);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.home-inner {
-  position: fixed;
-  display: table;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center center;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
-  will-change: transform;
+/*--- contact form --*/
+
+
+.wrapper{
+  max-width:500px;
+  margin:2rem auto;
+  border:2px solid #543091;
+  padding:2rem;
+  border-radius:5px;
+  }
+input, textarea {
+ 	display:block;
+    width:100%;
+    border:2px solid;
+    padding:.5rem;
+    font-size:18px;
+    border-radius:5px;
+   
 }
 
-/*--- iOS Fixed Background Image --*/
-.fixed-background {
-  position: relative;
-  width: 100%;
+input{type=text}:focus{
+  border-color: purple;
+  box-shadow: 0 0 8px 0 purple;
 }
-.fixed-wrap {
-  clip: rect(0, auto, auto, 0);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -999!important;
+  
+
+
+.sendBtn{
+  border:0;
+  background:#543091;
+  padding:.5rem;
+  color:white;
+  margin:1rem 0;
+  width:auto;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:.2s background ease;
+
 }
-.fixed {
-  position: fixed;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center center;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
-  will-change: transform;
+
+.sendBtn: hover {
+  background-color: yellow;
 }
 
 
-.fixed-background2 {
-  position: relative;
-  width: 100%;
-}
-.fixed-wrap2 {
-  clip: rect(0, auto, auto, 0);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -999!important;
-}
-.fixed2 {
-  position: fixed;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center center;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
-  will-change: transform;
-}
+
+
+
