@@ -1,14 +1,36 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,300);
+
+
+/* body{
+  overflow-x: hidden;
+  font-family: 'Lato', sans-serif;
+  background-position: center;
+  background-size: contain;
+  background-attachment: fixed;
+
+
+} */
+
+/* ------------------------------------------- */
+/* CUSTOM STYLING START */
+/*
+/* ------------------------------------------- */
+
 body{
   overflow-x: hidden;
   font-family: 'Lato', sans-serif;
   background-position: center;
   background-size: contain;
   background-attachment: fixed;
- /* color: #007018; */
-
+  margin-top: 100;
 }
+
+/* ------------------------------------------- */
+/* CUSTOM STYLING END */
+/*
+/* ------------------------------------------- */
+
 
 .offset:before {
   display: block;
@@ -42,18 +64,145 @@ body{
 /* KODET AV: Anders Koo */
 
 
-.navbar{
+
+.info-text{
+  text-align: center;
+  margin-bottom: 300px;
+  margin-left: 50px;
+  color:#543091;
+  position: relative;
+}
+
+/* https://www.w3schools.com/cssref/pr_class_position.asp */
+.empty-sub{
+  position: relative;
+  left: 40%;
+
+  }
+
+
+/* https://www.w3schools.com/howto/howto_css_fixed_footer.asp */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #543091;
+  text-align: center;
+}
+
+.btn{
+  background-color: #543091;
+}
+
+/* https://www.w3schools.com/cssref/sel_focus.asp */
+/* https://stackoverflow.com/questions/3397113/how-to-remove-focus-border-outline-around-text-input-boxes-chrome */
+
+
+input:focus {
+	outline: none;
+	border-color: #543091;
+	border-radius: 2px;
+  }
+
+  .btn{
+	background-color: #543091;
+	color:white;
+	/* background-color: #543091; */
+  }
+
+  .btn:hover{
+	background-color: #543091;
+	color:white;
+
+	/* background-color: #543091; */
+  }
+
+  .container{
+    position: relative;
+    padding-top: 1px;
+    bottom:250px;
+  }
+
+
+
+
+/* https://www.w3schools.com/css/tryit.asp?filename=trycss_position_fixed */
+
+ #info-section{
+  background-color: white;
+  height: 500px;
+}
+
+#info-text{
+  text-align: center;
+  margin-top: 150px;
+  margin-left: 50px;
+  color:#543091;
+  position: relative;
+  top: 110px;
+  font-family: 'Lato', sans-serif;
+}
+
+
+#info-section2{
+  background-color:#543091;
+  height: 620px;
+}
+
+#info-text2{
+  text-align: right;
+  margin-top: 150px;
+  margin-right: 100px;
+  color: white;
+  position: relative;
+  top: 200px;
+  font-family: 'Lato', sans-serif;
+}
+
+
+
+
+#info-text3{
+  text-align: left;
+  margin-top: 120px;
+  margin-left: 50px;
+  color:#543091;
+  position: relative;
+  top: 40px;
+  font-family: 'Lato', sans-serif;
+  
+
+}
+
+
+/* ------------------------------------------- */
+/* CUSTOM STYLING END */
+/* ------------------------------------------- */
+
+
+
+
+/* ------------------------------------------- */
+/* CUSTOM STYLING START */
+/*
+/* ------------------------------------------- */
+
+/* KODET AV: Anders Koo */
+
+
+/* .navbar{
   text-transform: uppercase;
   font-weight: 700;
   font-size: .9rem;
   letter-spacing: .1rem;
   background-color: #543091!important;
-}
+} */
 
 
 /* https://www.w3schools.com/css/tryit.asp?filename=trycss_position_fixed */
 
-#info-section{
+/* #info-section{
   background-color: white;
   height: 500px;
 }
@@ -104,7 +253,7 @@ body{
 #info-section3{
   background-color: white;
   height: 500px;
-}
+} */
 
 
 /* KODET AV: Anders Koo */
