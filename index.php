@@ -14,18 +14,8 @@
 			<?php include('includes/navbar.php');?>
 		</nav>
 
-
-	
 			<?php include('includes/main.php');?>
 			
-
-
-
-				
-
-	
-
-
 <!-- Script Source Files -->
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>

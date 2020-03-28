@@ -1,38 +1,63 @@
+<!----------------------------------------------------------------------------------------------------------------------------------------------
 
-<!-- https://stackoverflow.com/questions/36003670/how-to-put-a-link-on-a-button-with-bootstrap -->
-<!-- https://stackoverflow.com/questions/36108407/how-to-auto-adjust-the-height-of-fixed-footer-at-bottom -->
+TIL INFORMASJON: 
+
+I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.
+Dette vil også bli dokumentert under kildebruk i rapporten.  Grunnen til dette er basert på “best practice”  måter å programmere på.  
+Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 
+
+Vi ser først på en demo av hvordan et eksempel virker,  koder oss gjennom guiden for å lære hva som skjer. 
+Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke. 
+
+Linker til gjenbrukt kode:
+
+Vi har primært tilpasset kode fra part 1-6 i fra denne Youtube kanalen. Her det blir forklart hvordan man 
+henter ut data fra database og lastet inn i html malen: 
+https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
+
+https://www.w3schools.com/howto/howto_css_fixed_footer.asp 
+https://stackoverflow.com/questions/36003670/how-to-put-a-link-on-a-button-with-bootstrap 
+https://stackoverflow.com/questions/36108407/how-to-auto-adjust-the-height-of-fixed-footer-at-bottom
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------>
+
 <?php
+// ----------------------------------------------SESSION OG INCLUDES START---------------------------------------------
+
 session_start();
 include('includes/header.php');
-include('includes/navbar.php'); 
+include('includes/navbar.php');
+// ----------------------------------------------SESSION OG INCLUDES STOPP ---------------------------------------------
 ?>
+
+
+
 <?php
+// ---------------------------------------------- DATABASE FORBINDELSE MED SPØRRING START-------------------------------
+
 // $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
 $connection = mysqli_connect("localhost", "root", "", "gruppe2");
 $query = "SELECT * FROM cards";
 $query_run = mysqli_query($connection, $query);
+
+
+// ---------------------------------------------- DATABASE FORBINDELSE MED SPØRRING STOPP-------------------------------
 ?>
 
+
+<!-- ---------------------------------------------SETTER OPP DASHBOARD STRUKTUR START ---------------------------------- -->
 <html>
+
 <head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="css/stylesheet.css">
 </head>
-
 <body>
-
-
-
-<!-- --------------------------------------------------------------------------------------------------------- -->
-<!-- --------------------------------------------------------------------------------------------------------- -->
-<!-- <div class="wrapper"> -->
-
 <h6 class="info-text">Please add new subscription in the top right</h6>
-
                     <div class="container">
                         <div class="row">
                         <?php
-        
                             //Hvis det finnes rader/data i db
                             if(mysqli_num_rows($query_run) > 0)
                             {
@@ -48,16 +73,14 @@ $query_run = mysqli_query($connection, $query);
                                                 <p class=list-group-item>End date <?php echo $row['end_date']; ?></p>
                                                 </ul>
                                                 <div class="card-body">
-                                                <form action="edit.php" method="POST">                                               <!-- holds id value -->
+                                                <form action="edit.php" method="POST">                <!-- holds id value -->
                                                     <input type="hidden" name ="edit_id" value="<?php echo $row['id']; ?>">
                                                         <button type="submit" name="edit_btn" class="btn btn-primary"> Edit</button>
-                                                      </form> 
-                                                    
+                                                </form> 
                                                 <form action="server.php" method="POST"> 
                                                     <input type="hidden" name ="delete_id" value="<?php echo $row['id']; ?>">
                                                     <button type="submit" name="delete_btn" class="btn btn-primary"> Delete</button>
-                                                    </form>     
-                                                                               
+                                                    </form>                             
                                             </div>
                                         </div>
                                     </div>
@@ -68,7 +91,6 @@ $query_run = mysqli_query($connection, $query);
                         }
                         else {
                         echo '<h7 class="empty-sub">No subscriptions yet :(</h7>';
-
                         }
                     ?>
                     <div class="container">
@@ -121,28 +143,18 @@ $query_run = mysqli_query($connection, $query);
                             </div>
                         </div>                  
 
-
-
-
-<!-- </div>  -->
+<!-- ---------------------------------------------SETTER OPP DASHBOARD STRUKTUR STOPP ---------------------------------- -->
 
 
 
 
 
-<!--  Start Contact Section -->
 
+<!-- --------------------------------------------------FOOTER START---------------------------------------------------- -->
 
+<?php include('includes/footer.php');?>
 
-  
-
-<!-- End Contact Section -->
-
-
-
-<?php 
-include('includes/footer.php');
-?>
+<!-- --------------------------------------------------FOOTER END------------------------------------------------------- -->
 
 </body> 
 </html>

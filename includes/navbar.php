@@ -1,5 +1,6 @@
+<!-- -------------------------------------------------------------------TOP NAVBAR START --------------------------------------------------------------------------- -->
+
 <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-    <!-- <a class="navbar-brand" href="index.php"><img src="img/Logo.png"></a> -->
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -19,9 +20,9 @@
 				</li>
 				<li class="nav-item">
 					<a class="nav-link"  href="#" data-toggle="modal" data-target="#eexampleModal">Add+</a>
-
-				 
 				</li>
 			</ul>
 		</div>
 </nav>
+
+<!-- -------------------------------------------------------------------TOP NAVBAR STOPP --------------------------------------------------------------------------- -->

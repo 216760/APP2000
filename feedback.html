@@ -1,3 +1,19 @@
+<!----------------------------------------------------------------------------------------------------------------------------------------------
+
+TIL INFORMASJON: 
+
+I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.
+Dette vil også bli dokumentert under kildebruk i rapporten.  Grunnen til dette er basert på “best practice”  måter å programmere på.  
+Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 
+
+Vi ser først på en demo av hvordan et eksempel virker,  koder oss gjennom guiden for å lære hva som skjer. 
+Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke. 
+
+Kilde: http://www.openjs.com/ajax/tutorial/ajax.php
+
+------------------------------------------------------------------------------------------------------------------------------------------------> 
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,18 +49,18 @@ function submitForm(){
 </script>
 </head>
 <body>
-			
-					<div class="wrapper">				
-	
-							<form id="my_form" onsubmit="return submitForm();">
-							  <p><input id="name" placeholder="Navn" required class=""></p>
-							  <p><input id="email" placeholder="E-mail" type="email" class="" required></p>
-							  <p><input id="subject" placeholder="Emne" type="subject"></p>
-							  <textarea id="message" placeholder="skriv inn melding" rows="10" class="" required ></textarea>
-							  <p><input class="sendBtn"id="mybtn" type="submit" value="Submit Form"> <span id="status"></span></p>
-							</form>		
 
-					</div>
+	<div class="wrapper">				
+
+			<form id="my_form" onsubmit="return submitForm();">
+				<p><input id="name" placeholder="Navn" required class=""></p>
+				<p><input id="email" placeholder="E-mail" type="email" class="" required></p>
+				<p><input id="subject" placeholder="Emne" type="subject"></p>
+				<textarea id="message" placeholder="skriv inn melding" rows="10" class="" required ></textarea>
+				<p><input class="sendBtn"id="mybtn" type="submit" value="Submit Form"> <span id="status"></span></p>
+			</form>		
+
+	</div>
 
 
 </body>

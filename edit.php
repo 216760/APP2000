@@ -1,7 +1,29 @@
+<!----------------------------------------------------------------------------------------------------------------------------------------------
+
+TIL INFORMASJON: 
+
+I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.
+Dette vil også bli dokumentert under kildebruk i rapporten.  Grunnen til dette er basert på “best practice”  måter å programmere på.  
+Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 
+
+Vi ser først på en demo av hvordan et eksempel virker,  koder oss gjennom guiden for å lære hva som skjer. 
+Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke. 
+
+Denne koden er hentet fra og tilpasset egen løsning fra denne Youtube kanalen, part 1-6
+https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------> 
+
+
+
+
 <?php
 session_start();
 include('includes/header.php');
 include('includes/navbar.php'); 
+include('includes/scripts.php'); 
 ?>
 
 
@@ -10,18 +32,14 @@ include('includes/navbar.php');
 <link rel="stylesheet" href="css/Logginn.css">
 
 <!-- ---------------------------------------------------------------------------------------------- -->
-<!-- ---------------------------------------------------------------------------------------------- -->
 
 
 <div class="container-fluid">
-
-	<!-- DataTales Example -->
 	<div class="card shadow mb-4 mx-auto" style="width: 30rem;">
 	  <div class="card-header py-3">
 	    <h6 class="m-0 font-weight-bold text-primary"> EDIT Subscription </h6>
 	  </div>
 	  <div class="card-body">
-
 <?php
 
 
@@ -40,9 +58,8 @@ $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000d
         $query_run = mysqli_query($connection, $query);
     
 
-// ----------------------------------------------------------------------------------------------------
-// PRESENTERER DB DATA I BOOTSTRAP
-// ----------------------------------------------------------------------------------------------------
+
+// ---------------------------------------SETTER OPP BOOTSTRAP STRUKTUR START ---------------------------------------------
         foreach($query_run as $row)
         {
             ?>
@@ -52,17 +69,15 @@ $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000d
             <input type="hidden" name="edit_id" value="<?php echo $row['id'] ?>">
             <div class="form-group">
                     <label> Beskrivelse </label>          
-                                                              <!-- loading username from db -->
+                                                              <!-- HENTER DATA FRA DB -->
                     <input type="text" name="edit_description" value="<?php echo $row['description'] ?>" class="form-control" placeholder="Enter Username"> 
                 </div>
                 <div class="form-group">
-                    <label>Fra dato</label>
-                                                         <!-- loading email from db -->
+                    <label>Fra dato</label>                   <!-- HENTER DATA FRA DB -->
                     <input type="date" name="edit_date_from" value="<?php echo $row['start_date'] ?>" class="form-control" placeholder="Enter Email">
                 </div>
                 <div class="form-group">
-                    <label>Til dato</label>
-                                                                <!-- loading password from db -->
+                    <label>Til dato</label>                   <!-- HENTER DATA FRA DB -->
                     <input type="date" name="edit_date_to" value="<?php echo $row['end_date'] ?>" class="form-control" placeholder="Enter Password">
                 </div> 
                     <a href="dashboard.php" class="btn"> Cancel</a>
@@ -73,15 +88,16 @@ $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000d
             <?php
         }
     }
+
+// ---------------------------------------SETTER OPP BOOTSTRAP STRUKTUR STOPP---------------------------------------------
     ?>
 
 
 
-<!-- Script Source Files -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
-<script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
-<!-- End of Script Source Files -->
 
-<!-- /.container-fluid -->
+<!-- --------------------------------------------------FOOTER START---------------------------------------------------- -->
+
+<?php include('includes/footer.php');?>
+
+<!-- --------------------------------------------------FOOTER END------------------------------------------------------- -->
 

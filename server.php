@@ -1,18 +1,31 @@
 <?php
+/**
+* 
+* TIL INFORMASJON:
+*  
+* I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.
+* Dette vil også bli dokumentert under kildebruk i rapporten.  Grunnen til dette er basert på “best practice”  måter å programmere på.  
+* Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 
+
+* Vi ser først på en demo av hvordan et eksempel virker,  koder oss gjennom guiden for å lære hva som skjer. 
+* Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke. 
+
+* Denne koden er hentet fra og tilpasset egen løsning fra denne Youtube kanalen, part 1-6
+* https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
+
+ **/ 
+
+// Tilpasset av : Anders Koo
+
 
 // ----------------------------------------------------------------------------------------------------
-// NB! DENNE KODEN ER HENTET FRA YOUTUBE KANALEN FUNDA OF WEB IT OG TILPASSET EGEN LØSNING
-// MODIFISERT AV: Anders Koo
-// ----------------------------------------------------------------------------------------------------
-
-// ----------------------------------------------------------------------------------------------------
-//  OPPRETTER UNIK SESSION FOR BRUKER
+// Oppretter unik session for bruker
 // ----------------------------------------------------------------------------------------------------
 
 session_start();
 
 // ----------------------------------------------------------------------------------------------------
-//  SETTER OPP FORBINDELSE MED DATABASEN
+// Setter opp forbindelse med databasen
 // ----------------------------------------------------------------------------------------------------
 
 $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
@@ -20,13 +33,14 @@ $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000d
 
 if(isset($_POST['registerbtn']))
 {
+    // Informasjon om abonnement
     // INFORMASJON OM ABONNEMENT 
     $description = $_POST['description'];
     $start_date = $_POST['start_date'];
     $end_date = $_POST['end_date'];
 
 // ----------------------------------------------------------------------------------------------------
-//  SETTER OPP SPØRREVARIABEL FOR REGISTRING AV ABONNEMENT
+// Setter opp spørrevariabel for registrering av abonnement
 // ----------------------------------------------------------------------------------------------------
 
 $queryReg = "INSERT INTO cards (description, start_date, end_date) VALUES ('$description', '$start_date','$end_date')";
@@ -51,7 +65,7 @@ $queryDB = mysqli_query($connection, $queryReg);
 
 
 // ----------------------------------------------------------------------------------------------------
-// REDIGERINGSKNAPP
+// Redigeringsknapp
 // ----------------------------------------------------------------------------------------------------
 
     if(isset($_POST['edit_btn']))
@@ -63,7 +77,7 @@ $queryDB = mysqli_query($connection, $queryReg);
     }
 
 // ----------------------------------------------------------------------------------------------------
-// OPPDATERINGSKNAPP
+// Oppdateringsknapp
 // ----------------------------------------------------------------------------------------------------
 if(isset($_POST['updatebtn'])) {
     $id = $_POST['edit_id'];
@@ -87,7 +101,7 @@ if(isset($_POST['updatebtn'])) {
 
 
 // ----------------------------------------------------------------------------------------------------
-//   SLETTEKNAPP
+// Sletteknapp
 // ----------------------------------------------------------------------------------------------------
 if(isset($_POST['delete_btn']))
 {
