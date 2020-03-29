@@ -48,6 +48,8 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------> 
+
+
         <?php
         session_start();
         //Inkluderer database connection-fil
@@ -75,9 +77,10 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
 	            // Teller antall rader som matcher med email som bruker skrev i registreringsformen
 	            $user_matched = mysqli_num_rows($email_result);
 
-	            // Hvis spørringen returnerer et antall bruker-rader som er større enn 0, betyr det at emailen allerede eksisterer i databasen
+	            // Gjør email sikker på SQL injekting (saniterer)
 				$email = filter_var($email, FILTER_SANITIZE_EMAIL);
 
+				// Om emailen ikke er i riktig regex format blir den ikke sanitert
 	            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
             		echo("$email is not a valid email address");
@@ -85,7 +88,7 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
             	} else {
 
             		echo"";
-
+					// Hvis spørringen returnerer et antall bruker-rader som er større enn 0, betyr det at emailen allerede eksisterer i databasen
             		if ($user_matched > 0) {
 
             			echo "<br/><br/><strong>Error: </strong> User already exists with the email id '$email'.";
@@ -98,10 +101,13 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
 // https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s
 // ----------------------------------------------------------------------------------------------------
 
-
+						// Variabel som bruker password_hash metode for å hashe passord
 						$hashedpass = password_hash($password, PASSWORD_BCRYPT);
+						
+						// Setter brukerdata inn i databasen
             			$result = mysqli_query($mysqli, "INSERT INTO register(username,email,password) VALUES('$name','$email','$hashedpass')");
 	
+						// Ved gjennomført spørring får brukeren beskjed om at profilen er opprettet eller at det har skjedd en feil. 
             			if ($result) {
 
             				echo "<br/><br/>User Registered successfully.";

@@ -18,6 +18,9 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
 
 
 
+<!-- ----------------------------------------------------------------------------------------------------
+Setter opp session og includes
+----------------------------------------------------------------------------------------------------- -->
 
 <?php
 session_start();
@@ -26,13 +29,14 @@ include('includes/navbar.php');
 include('includes/scripts.php'); 
 ?>
 
+<!-- ----------------------------------------------------------------------------------------------------
+Setter opp session og includes
+----------------------------------------------------------------------------------------------------- -->
+
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="css/stylesheet.css">
 <link rel="stylesheet" href="css/Logginn.css">
-
-<!-- ---------------------------------------------------------------------------------------------- -->
-
 
 <div class="container-fluid">
 	<div class="card shadow mb-4 mx-auto" style="width: 30rem;">
@@ -42,14 +46,13 @@ include('includes/scripts.php');
 	  <div class="card-body">
 <?php
 
+// ----------------------------------------------------------------------------------------------------
+// Setter opp database forbindelse
+// ----------------------------------------------------------------------------------------------------
 
 $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
 
-// ----------------------------------------------------------------------------------------------------
-// DATABASE FORBIINDELSE
-// ----------------------------------------------------------------------------------------------------
-    
-    
+
     if(isset($_POST['edit_btn']))
     {
         $id = $_POST['edit_id'];
@@ -58,8 +61,10 @@ $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000d
         $query_run = mysqli_query($connection, $query);
     
 
+// ----------------------------------------------------------------------------------------------------
+// Setter opp bootstrap struktur
+// ----------------------------------------------------------------------------------------------------
 
-// ---------------------------------------SETTER OPP BOOTSTRAP STRUKTUR START ---------------------------------------------
         foreach($query_run as $row)
         {
             ?>
@@ -69,15 +74,15 @@ $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000d
             <input type="hidden" name="edit_id" value="<?php echo $row['id'] ?>">
             <div class="form-group">
                     <label> Beskrivelse </label>          
-                                                              <!-- HENTER DATA FRA DB -->
+                                                              <!-- Henter data fra DB -->
                     <input type="text" name="edit_description" value="<?php echo $row['description'] ?>" class="form-control" placeholder="Enter Username"> 
                 </div>
                 <div class="form-group">
-                    <label>Fra dato</label>                   <!-- HENTER DATA FRA DB -->
+                    <label>Fra dato</label>                   <!-- Henter data fra DB -->
                     <input type="date" name="edit_date_from" value="<?php echo $row['start_date'] ?>" class="form-control" placeholder="Enter Email">
                 </div>
                 <div class="form-group">
-                    <label>Til dato</label>                   <!-- HENTER DATA FRA DB -->
+                    <label>Til dato</label>                   <!-- Henter data fra DB -->
                     <input type="date" name="edit_date_to" value="<?php echo $row['end_date'] ?>" class="form-control" placeholder="Enter Password">
                 </div> 
                     <a href="dashboard.php" class="btn"> Cancel</a>
@@ -88,16 +93,17 @@ $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000d
             <?php
         }
     }
-
-// ---------------------------------------SETTER OPP BOOTSTRAP STRUKTUR STOPP---------------------------------------------
     ?>
 
 
 
 
-<!-- --------------------------------------------------FOOTER START---------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------------------------------
+ Footer 
+------------------------------------------------------------------------------------------------------>
 
 <?php include('includes/footer.php');?>
 
-<!-- --------------------------------------------------FOOTER END------------------------------------------------------- -->
-
+<!-- --------------------------------------------------------------------------------------------------
+ Footer 
+------------------------------------------------------------------------------------------------------>

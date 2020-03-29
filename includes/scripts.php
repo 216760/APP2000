@@ -1,5 +1,11 @@
-<!-- JS, JQUERY, BOOTSTRAP SKRIPT START -->
+<!-- ---------------------------------------------------------------------------------------------------- 
+Henter script filer (JS, JQUERY, BOOTSTRAP)
+----------------------------------------------------------------------------------------------------- -->
+
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
 <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
-<!-- JS, JQUERY, BOOTSTRAP SKRIPT STOPP -->
+
+<!-- ---------------------------------------------------------------------------------------------------- 
+Henter script filer (JS, JQUERY, BOOTSTRAP)
+----------------------------------------------------------------------------------------------------- -->

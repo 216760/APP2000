@@ -18,20 +18,23 @@ https://www.php.net/manual/en/mysqli-stmt.bind-param.php
 
 ------------------------------------------------------------------------------------------------------------------------------------------------> 
 
-
-
-
-
 <?php
 
 
+// ----------------------------------------------------------------------------------------------------
+// Setter opp kredentialer
+// ----------------------------------------------------------------------------------------------------
 
-// -------------------------------------SETTER OPP KREDENTIALER-------------------------------------------------------
 $name = $_POST['name'];
 $email = $_POST['email'];
 $message = $_POST['message'];
 $subject = $_POST['subject'];
-// -------------------------------------KOBLER TIL DATABASE-----------------------------------------------------------
+
+
+// ----------------------------------------------------------------------------------------------------
+// Kobler til database
+// ----------------------------------------------------------------------------------------------------
+
 $url = 'itfag.usn.no';
 $username = 'v20app2000u2';
 $password = 'pw2';
@@ -39,13 +42,23 @@ $db = "v20app2000db2";
 $mysqli = mysqli_connect($url, $username, $password, $db); 
 if(!$mysqli){
  die('Could not Connect My Sql:' .mysqli_error());
-
 }
-//----------------------------------------FORBEREDER SQL SPØRRING TIL bind_param (INSERT)-----------------------------
+
+
+// ----------------------------------------------------------------------------------------------------
+// Forbereder insert spørring mot databasen med prepare
+// ----------------------------------------------------------------------------------------------------
+
+
 
 $stmt = $mysqli->prepare("INSERT INTO feedback(name, email, message, subject) VALUES(?,?,?,?)");
 
-//----------------------bind_param UTFØRER SPØRRINGEN MED execute. (bind_param KAN IKKE UTFØRES UTEN prepare) --------
+
+// ----------------------------------------------------------------------------------------------------
+// Utfører spørring mot databaseb. bind_param er er metode for å "binde" sammen de forskjellige input 
+// datatypene. Bruker variablene blir først definert med "ssss" (s=string), og deretter legges dem inn.
+// bind_param og prepare metodene hører sammen
+// ----------------------------------------------------------------------------------------------------
 
 $stmt->bind_param("ssss", $name, $email, $message, $subject);
 if($stmt->execute())

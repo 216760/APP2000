@@ -31,20 +31,19 @@ session_start();
 $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
 
 
-if(isset($_POST['registerbtn']))
+if(isset($_POST['registerbtn'])) // Sjekker at variabel er deklarert
 {
     // Informasjon om abonnement
-    // INFORMASJON OM ABONNEMENT 
-    $description = $_POST['description'];
-    $start_date = $_POST['start_date'];
-    $end_date = $_POST['end_date'];
+    $description = $_POST['description'];   // Sjekker at variabel er deklarert
+    $start_date = $_POST['start_date'];     // Sjekker at variabel er deklarert
+    $end_date = $_POST['end_date'];         // Sjekker at variabel er deklarert
 
 // ----------------------------------------------------------------------------------------------------
 // Setter opp spørrevariabel for registrering av abonnement
 // ----------------------------------------------------------------------------------------------------
 
-$queryReg = "INSERT INTO cards (description, start_date, end_date) VALUES ('$description', '$start_date','$end_date')";
-$queryDB = mysqli_query($connection, $queryReg);
+$queryReg = "INSERT INTO cards (description, start_date, end_date) VALUES ('$description', '$start_date','$end_date')"; //  Spørring som setter inn data i databasen
+$queryDB = mysqli_query($connection, $queryReg); // Utfører spørring mot databasen
 
 
 
@@ -68,25 +67,26 @@ $queryDB = mysqli_query($connection, $queryReg);
 // Redigeringsknapp
 // ----------------------------------------------------------------------------------------------------
 
-    if(isset($_POST['edit_btn']))
+    if(isset($_POST['edit_btn']))   // Sjekker at variabel er deklarert
     {
-        $id = $_POST['edit_id'];
+        $id = $_POST['edit_id'];    // Sjekker at variabel er deklarert
         
-        $queryReg = "SELECT * FROM cards WHERE id='$id' ";
-        $queryDB = mysqli_query($connection, $query);
+        $queryReg = "SELECT * FROM cards WHERE id='$id' ";  // Spørring som henter spesifikk kort fra databasen
+        $queryDB = mysqli_query($connection, $query);       // Utfører spørring mot databasen
     }
 
 // ----------------------------------------------------------------------------------------------------
 // Oppdateringsknapp
 // ----------------------------------------------------------------------------------------------------
-if(isset($_POST['updatebtn'])) {
-    $id = $_POST['edit_id'];
-    $description = $_POST['edit_description'];
-    $start_date = $_POST['edit_date_from'];
-    $end_date = $_POST['edit_date_to'];
+if(isset($_POST['updatebtn'])) {    // Sjekker at variabel er deklarert
+    $id = $_POST['edit_id'];        // Sjekker at variabel er deklarert
+    $description = $_POST['edit_description'];  // Sjekker at variabel er deklarert
+    $start_date = $_POST['edit_date_from'];     // Sjekker at variabel er deklarert
+    $end_date = $_POST['edit_date_to'];         // Sjekker at variabel er deklarert
 
+    // Spørring som oppdaterer spesifikt kort i databasen
     $queryEdit = "UPDATE cards SET description='$description', start_date='$start_date', end_date='$end_date' WHERE id='$id' ";
-    $queryDB = mysqli_query($connection, $queryEdit);
+    $queryDB = mysqli_query($connection, $queryEdit); // Utfører spørring mot databasen
 
     if($queryDB) {
 
@@ -103,13 +103,13 @@ if(isset($_POST['updatebtn'])) {
 // ----------------------------------------------------------------------------------------------------
 // Sletteknapp
 // ----------------------------------------------------------------------------------------------------
-if(isset($_POST['delete_btn']))
+if(isset($_POST['delete_btn'])) // Sjekker at variabel er deklarert
 {
-    $id = $_POST['delete_id'];
+    $id = $_POST['delete_id'];  // Sjekker at variabel er deklarert
 
 
-    $queryDelete = "DELETE FROM cards WHERE id='$id'";
-    $queryDB = mysqli_query($connection, $queryDelete);
+    $queryDelete = "DELETE FROM cards WHERE id='$id'";  // Spørring som sletter spesifikt kort fra databasen
+    $queryDB = mysqli_query($connection, $queryDelete); // Utfører spørring mot databasen
 
     if($queryDB)
     {
