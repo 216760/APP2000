@@ -39,23 +39,6 @@ body{
   margin-top: -4rem;
 }
 
-
-.card-group {
-
-  background-color: white;
-}
-
-.card{
-    position: relative;
-    margin: 1rem;
-    margin-top: 8rem;
-    margin-left: 2rem;
-    padding: 1px;
-    margin-bottom: 1rem;
-}
-
-
-
 /* ------------------------------------------- */
 /* CUSTOM STYLING START */
 /*
@@ -69,6 +52,7 @@ body{
   text-align: center;
   margin-bottom: 300px;
   margin-left: 50px;
+  margin-top: 50px;
   color:#543091;
   position: relative;
 }
@@ -82,14 +66,14 @@ body{
 
 
 /* https://www.w3schools.com/howto/howto_css_fixed_footer.asp */
-.footer {
+/*.footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   background-color: #543091;
   text-align: center;
-}
+}*/
 
 .btn{
   background-color: #543091;
@@ -103,33 +87,33 @@ input:focus {
 	outline: none;
 	border-color: #543091;
 	border-radius: 2px;
-  }
+}
 
-  .btn{
-	background-color: #543091;
-	color:white;
-	/* background-color: #543091; */
-  }
+.btn{
+background-color: #543091;
+color:white;
+/* background-color: #543091; */
+}
 
-  .btn:hover{
-	background-color: #543091;
-	color:white;
+.btn:hover{
+background-color: #543091;
+color:white;
+/* background-color: #543091; */
+}
 
-	/* background-color: #543091; */
-  }
-
-  .container{
-    position: relative;
-    padding-top: 1px;
-    bottom:250px;
-  }
+/*
+.container{
+  position: relative;
+  padding-top: 1px;
+  bottom:250px;
+}*/
 
 
 
 
 /* https://www.w3schools.com/css/tryit.asp?filename=trycss_position_fixed */
 
- #info-section{
+/*#info-section{
   background-color: white;
   height: 500px;
 }
@@ -173,7 +157,7 @@ input:focus {
   font-family: 'Lato', sans-serif;
   
 
-}
+}*/
 
 
 /* ------------------------------------------- */
@@ -263,12 +247,68 @@ input:focus {
 /* CUSTOM STYLING END */
 /* ------------------------------------------- */
 
+/* KODET AV: Andreas Knutsen */
 
+.card-group {
+  background-color: white;
+}
 
+.card{
+    position: relative;
+    margin: 0 auto;
+    padding: 1px;
+}
 
+.content-main {
+  padding-top: 52px;
+  padding-bottom: 60px;
+}
 
+.content-dashboard {
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
 
+section {
+  font-family: 'Lato', sans-serif;
+  padding:15rem;
+}
 
+.bg-main {
+  background-color: #FFFFFF;
+  color: #543091;
+}
+
+.bg-secondary-custom {
+  background-color: #543091;
+  color: #FFFFFF;
+}
+
+.content-secondary{
+  padding: 20%;
+  background-color: white;
+}
+
+.navbar{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .9rem;
+  letter-spacing: .1rem;
+  background-color: #543091;
+  margin-bottom: 0;
+}
+
+.navbar a {
+  color:white;
+}
+
+nav li:hover a {
+  color: white;
+}
+
+.dropdown-menu a{
+    color: #000000 !important;
+}
 
 .navbar-brand img{
   height: 5rem;
@@ -287,6 +327,38 @@ input:focus {
 .navbar-dark .navbar-nav .nav-link:hover{
   color: white
 }
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.btn-primary {
+  background-color: #543091 !important;
+  border-color: #543091 !important;
+  border-radius: 8px !important;
+}
+
+
+footer{
+  position: fixed;
+  height: 50px;
+  bottom: 0;
+  width: 100%;
+  background-color: #543091;
+}
+
+
+footer a{
+  color: white;
+}
+
+
+/* KODET AV: Andreas Knutsen */
+
 
 /*---- info Section ---*/
 
@@ -314,60 +386,12 @@ margin-right: 10px;
 }*/
 
 
-
-
-.content-main {
-
-  color: white;
-  padding: 20%;
-  background-color: #40474e;
-  
-}
-.content-2{
-
-  padding: 20%;
-  background-color: white;
-}
-
-.content-3{
-
-  
-  padding: 10%;
-  color: white;
-  background-color: #40474e;
-}
-
-
-
-
-
-
-
-
-
 /*---- Contact  / Footer  Section ---*/
 
 .section4{
   
 margin-left: 40%;
 margin-right: 30%;
-}
-
-footer{
-  background-color: #333333;
-  color: white;
-  padding: 1rem 0 2rem;
-  margin-top: 0.5rem;
-}
-
-footer img {
-  height: 3rem;
-  margin: 1.5rem 0;
-  
-}
-
-footer a{
-  color: white;
 }
 
 footer svg.svg-inline--fa{
@@ -379,9 +403,11 @@ footer svg.svg-inline--fa:hover{
  color: #2681E6!important;
 }
 
-
-
-
+footer img {
+  height: 3rem;
+  margin: 1.5rem 0;
+  
+}
 
 
 /*---- Login and Signup Section ---*/
@@ -547,9 +573,3 @@ input{type=text}:focus{
   transition:3s background ease;
   hover: background #3498DB;
   }
-
-
-
-
-
-
