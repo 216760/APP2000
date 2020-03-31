@@ -12,6 +12,7 @@ Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempele
 Kilde:
 https://gitlab.com/tutorialsclass/php-simple-login-registration-script
 
+-------------------------------------------------------------------------------------------------------------------->
 
 
 <?php
@@ -24,12 +25,11 @@ $databaseHost     = 'itfag.usn.no';
 $databaseName     = 'v20app2000db2';
 $databaseUsername = 'v20app2000u2';
 $databasePassword = 'pw2';
-
 // ----------------------------------------------------------------------------------------------------
 // Kobler til database
 // ----------------------------------------------------------------------------------------------------
 
-$mysqli = mysqli_connect($databaseHost , $databaseName, $databaseUsername, $databasePassword);
+$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
 // ----------------------------------------------------------------------------------------------------
 // 

@@ -10,12 +10,9 @@
 		<link rel="stylesheet" href="css/stylesheet.css">
 		<link rel="stylesheet" href="css/login.css">
 	</head>
-
 	<body>					
 		<form id="myForm" class="form-signin" form action="signup.php" method="post" name="form1">
-
 			<h1>LOGO</h1>
-
 			<input type="text" placeholder="username" class="" name="name">
 			<input type="text" placeholder="email" class="" name="email">
 			<input type="password" placeholder="password" class="" name="password"> 
@@ -49,7 +46,6 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
         //Inkluderer database connection-fil
         include_once("db-config.php");
 
-
         $empty = FALSE;
 
         // Sjekker om registreringsformen er klar, og legger inn data i databasen
@@ -58,11 +54,10 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
             $email    = $_POST['email'];
 			$password = $_POST['password'];
 
-
 			// $password= password_hash($_POST["password"],PASSWORD_DEFAULT);
-            $empty = FALSE;
-            $emailErr = "";
-
+			$emailErr = "";
+			
+			echo("Fields cannot be empty!");
         	if(!empty($_POST['name'] && $_POST['email'] && $_POST['password'])) {
 
 	            // Hvis email allerede er registert får bruker en feilmelding
@@ -104,7 +99,7 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
 						// Ved gjennomført spørring får brukeren beskjed om at profilen er opprettet eller at det har skjedd en feil. 
             			if ($result) {
 
-            				echo "<br/><br/>User Registered successfully.";
+            				echo "<br><br>User Registered successfully.";
 
             			} else {
 
@@ -114,23 +109,8 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
             		}
             	}
             }
-        }
+		}
+	
 
-        ?>
+?>
 
-
-<!-- 
-<script type="text/javascript">
-    function Validate() {
-        var password = document.getElementById("password").value
-        var confirmPassword = document.getElementById("confirmpass").value
-        if(password != confirmPassword) {
-            alert('Passwords do not match!');
-            return false;
-        }
-        return true;
-    }
-</script> -->
-<!-- 
-<!DOCTYPE html>
-<html>
