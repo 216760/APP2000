@@ -22,3 +22,56 @@
     </form>
 </body>
 </html>
+
+
+
+
+<?php
+
+// ----------------------------------------------------------------------------------------------------
+//   LOGINKNAPP
+// ----------------------------------------------------------------------------------------------------
+
+// Hvis formen er "submitted", hent email og passord fra formen
+if (isset($_POST['loginbtn'])) {
+    $email    = $_POST['email'];
+    $password = $_POST['password'];
+
+
+
+
+    // Sjekker om det eksisterer en bruker i databasen med gitt email
+    $result->query("SELECT * FROM register WHERE email='$email'");
+
+    if(mysqli_fetch_array($queryDB))
+    {
+        $_SESSION['username'] = $email_login;
+        header("dashboard.php");
+    }
+    else{
+        $_SESSION['subError'] = 'Email id /Password Invalid';
+        header('Location:login.php');
+    }
+    
+    // Variabel som lagrer bruker i db med fetch_array via MYSQLI_BOTH. MYSQLI_BOTH er en 
+    // konstant metode som lager en tabell som både er numerisk og assosiati
+    $row = $result->fetch_array(MYSQLI_BOTH);
+      // $user_matched = mysqli_num_rows($result);
+      
+// ----------------------------------------------------------------------------------------------------
+//  OPERASJON MED Å SAMMENLIGNE INPUT PASSORD MED HASHET PASSORD ER HENTET OG TILPASSET EGEN LØSNING FRA:
+// https://www.youtube.com/playlist?list=PL-Db3tEF6pB_1oKlnpxyQGZIa8EYmA_1K
+// https://www.youtube.com/watch?v=RCr0Go3Z0u8
+
+// ----------------------------------------------------------------------------------------------------  
+    if(password_verify($password, $row['password'])){
+
+        $_SESSION["id"] = $row['id'];
+        header('Location: dashboard.php');
+    }else {
+        $_SESSION["LogInFail"] = "Yes;";
+        header('Location: dashboard.php');
+    }
+}
+
+?>

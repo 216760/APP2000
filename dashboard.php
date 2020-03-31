@@ -71,6 +71,8 @@ $query_run = mysqli_query($connection, $query);
 
           while($row = mysqli_fetch_assoc($query_run)) {
 
+   
+
         ?>
       <div class="col-sm-4">
         <div class="card shadow mx-auto" style="width: 18rem;">
