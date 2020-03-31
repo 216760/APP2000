@@ -80,11 +80,14 @@ $query_run = mysqli_query($connection, $query);
             <li class="list-group-item"><h6 class="card-text">End date</h6><?php echo $row['end_date']; ?></li>
           </ul>
           <div class="card-body">
-            <form action="subscription_edit.php" method="post">                                               
-              <input type="hidden" name ="edit_id" value="<?php echo $row['id']; ?>">
-                  <button type="submit" class="btn btn-primary" name="edit_btn" data-toggle="modal"> Edit</button>
-                  <button type="button" class="btn btn-primary" data-toggle="modal"> Delete</button>
-            </form>    
+              <form action="edit.php" method="POST">                                               <!-- holds id value -->
+                  <input type="hidden" name ="edit_id" value="<?php echo $row['id']; ?>">
+                      <button type="submit" name="edit_btn" class="btn btn-primary"> Edit</button>
+                    </form>    
+              <form action="server.php" method="POST"> 
+                  <input type="hidden" name ="delete_id" value="<?php echo $row['id']; ?>">
+                  <button type="submit" name="delete_btn" class="btn btn-primary"> Delete</button>
+                  </form>                            
           </div>
         </div>
       </div>
