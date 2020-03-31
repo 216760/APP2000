@@ -7,27 +7,22 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-		<title>Registrering</title>
-
-		<link rel="stylesheet" href="CSS/stylesheet.css">
-		<link rel="stylesheet" href="CSS/Logginn.css">
+		<link rel="stylesheet" href="css/stylesheet.css">
+		<link rel="stylesheet" href="css/login.css">
 	</head>
+
 	<body>					
-<form id="myForm" form action="signup.php" method="post" name="form1">
-	<div class="content">
-		<h1>LOGO</h1>
+		<form id="myForm" class="form-signin" form action="signup.php" method="post" name="form1">
 
-		<input type="text" placeholder="username" class="" name="name"><br>
-		<br>
-		<input type="text" placeholder="email" class="" name="email"><br>
-		<br>
-		<input type="password" placeholder="password" class="" name="password"> 
-		<br>
-		<input type="submit" id="regbtn" name="registerbtn" class="btn rounded primary" value="Registrer">
+			<h1>LOGO</h1>
 
-	</div>
-</form>
+			<input type="text" placeholder="username" class="" name="name">
+			<input type="text" placeholder="email" class="" name="email">
+			<input type="password" placeholder="password" class="" name="password"> 
+			<input type="submit" id="regbtn" name="registerbtn" class="btn rounded primary" value="Registrer">
+
+
+		</form>
 
 </body>
 </html>
