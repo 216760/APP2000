@@ -22,10 +22,20 @@ https://www.w3schools.com/howto/howto_css_fixed_footer.asp
 Footer
 ----------------------------------------------------------------------------------------------------- -->
 
-<div class="footer">
-<p>TITLE</p>
-<a href="logout.php">Logout</a>
-</div>
+<footer class="fixed-bottom">
+						
+	<div class="container">
+
+  		<!-- Copyright -->
+			<div class="footer-copyright text-center py-2">© 2020 Copyright:
+				<a href="https://mdbootstrap.com/"> resub.com</a>
+			</div>
+		<!-- Copyright -->
+
+		</span>
+	</div>
+
+</footer>		
 
 <!-- ---------------------------------------------------------------------------------------------------- 
 Footer
