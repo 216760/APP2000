@@ -44,7 +44,6 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
 
 ------------------------------------------------------------------------------------------------------------------------------------------------> 
 
-
         <?php
         session_start();
         //Inkluderer database connection-fil

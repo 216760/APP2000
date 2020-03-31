@@ -21,7 +21,7 @@
 					<a class="nav-link" href="feedback.html">Feedback</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="index.php">Log out</a>
+					<a class="nav-link" href="logout.php">Log out</a>
 				</li>
 			</ul>
 		</div>

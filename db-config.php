@@ -20,10 +20,10 @@ https://gitlab.com/tutorialsclass/php-simple-login-registration-script
 // Setter opp kredentialer
 // ----------------------------------------------------------------------------------------------------
 
-$host = 'localhost';
-$DBname = 'gruppe2';
-$username = 'root';
-$password = '';
+$host = 'itfag.usn.no';
+$DBname = 'v20app2000db2';
+$username = 'v20app2000u2';
+$password = 'pw2';
 
 // ----------------------------------------------------------------------------------------------------
 // Kobler til database
