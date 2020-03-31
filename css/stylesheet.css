@@ -8,8 +8,6 @@
   background-position: center;
   background-size: contain;
   background-attachment: fixed;
-
-
 } */
 
 /* ------------------------------------------- */
@@ -86,9 +84,9 @@ body{
 
 
 input:focus {
-	outline: none;
-	border-color: #543091;
-	border-radius: 2px;
+  outline: none;
+  border-color: #543091;
+  border-radius: 2px;
 }
 
 .btn{
@@ -120,7 +118,6 @@ color:white;
   background-color: white;
   height: 500px;
 }
-
 #info-text{
   text-align: center;
   margin-top: 150px;
@@ -130,13 +127,10 @@ color:white;
   top: 110px;
   font-family: 'Lato', sans-serif;
 }
-
-
 #info-section2{
   background-color:#543091;
   height: 620px;
 }
-
 #info-text2{
   text-align: right;
   margin-top: 150px;
@@ -146,10 +140,6 @@ color:white;
   top: 200px;
   font-family: 'Lato', sans-serif;
 }
-
-
-
-
 #info-text3{
   text-align: left;
   margin-top: 120px;
@@ -159,7 +149,6 @@ color:white;
   top: 40px;
   font-family: 'Lato', sans-serif;
   
-
 }*/
 
 
@@ -193,9 +182,6 @@ color:white;
   background-color: white;
   height: 500px;
 }
-
-
-
 #info-text{
   text-align: left;
   margin-top: 150px;
@@ -205,13 +191,10 @@ color:white;
   top: 110px;
   font-family: 'Lato', sans-serif;
 }
-
-
 #info-section2{
   background-color:#543091;
   height: 620px;
 }
-
 #info-text2{
   text-align: right;
   margin-top: 150px;
@@ -221,10 +204,6 @@ color:white;
   top: 200px;
   font-family: 'Lato', sans-serif;
 }
-
-
-
-
 #info-text3{
   text-align: left;
   margin-top: 120px;
@@ -234,9 +213,7 @@ color:white;
   top: 40px;
   font-family: 'Lato', sans-serif;
   
-
 }
-
 #info-section3{
   background-color: white;
   height: 500px;
@@ -366,23 +343,16 @@ footer a{
 /*---- info Section ---*/
 
 /*.section1{
-
 padding: 10px;
 margin-left: 10px;
 margin-right: 10px;
-
 }
-
 .section2{
-
 padding: 10px;
 margin-left: 10px;
 margin-right: 10px;
-
 }
-
 .section3{
-
   padding: 10px;
 margin-left: 10px;
 margin-right: 10px;
@@ -511,7 +481,6 @@ footer img {
 }
 
 /* .btn {
-
   text-decoration: none;
   display: table;
   text-align: center;
@@ -541,19 +510,21 @@ form{
 
 }
 
-/*--- Feedback form --*/
 
-.wrapper{
+/*--- Feedback form --*/
+/*--- kodet av Henrik --*/
+
+.fdwrapper{
   max-width:500px;
   margin:2rem auto;
-  border:2px solid #E74C3C;
+  border:2px solid #543091;
   padding:2rem;
   border-radius:5px;
-  }
+ }
 input, textarea {
   display:block;
     width:100%;
-    border:2px solid #2980B9;
+    border:2px solid black;
     padding:.5rem;
     font-size:18px;
     border-radius:5px;
@@ -561,18 +532,33 @@ input, textarea {
 input{type=text}:focus{
   border-color: purple;
   box-shadow: 0 0 8px 0 purple;
-}
+ }
 
 
-.sendBtn{
+.fdsendBtn{
   border:0;
-  background:#343050;
+  background:#543091;
   padding:.5rem;
   color:white;
   margin:1rem 0;
   width:auto;
   text-transform:uppercase;
   cursor:pointer;
-  transition:3s background ease;
-  hover: background #3498DB;
   }
+
+.fdbackBtn{
+  border:0;
+  background: #543091;
+  color:white;
+  margin:1rem 0;
+  width:auto;
+  text-transform:uppercase;
+  cursor:pointer;
+  vertical-align: right;
+}
+/*--- Feedback form --*/
+
+
+
+
+
