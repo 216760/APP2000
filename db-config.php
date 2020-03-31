@@ -29,7 +29,7 @@ $databasePassword = 'pw2';
 // Kobler til database
 // ----------------------------------------------------------------------------------------------------
 
-$mysqli = mysqli_connect($databaseHost , $databaseName, $databaseUsername, $databasePassword);
+$mysqli = mysqli_connect($databaseHost, $databaseName, $databaseUsername, $databasePassword);
 
 // ----------------------------------------------------------------------------------------------------
 // 
