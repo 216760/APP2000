@@ -11,27 +11,19 @@ Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempele
 
 Kilde:
 https://gitlab.com/tutorialsclass/php-simple-login-registration-script
-
+-------------------------------------------------------------------------------------------------------------------->
 
 
 <?php
 
-// ----------------------------------------------------------------------------------------------------
-// Setter opp kredentialer
-// ----------------------------------------------------------------------------------------------------
+$databaseHost     = 'itfag.usn.no';
+ $databaseName     = 'v20app2000db2';
+ $databaseUsername = 'v20app2000u2';
+ $databasePassword = 'pw2';
 
-$host = 'localhost';
-$DBname = 'gruppe2';
-$username = 'root';
-$password = '';
 
-// ----------------------------------------------------------------------------------------------------
-// Kobler til database
-// ----------------------------------------------------------------------------------------------------
 
-$mysqli = mysqli_connect($host , $DBname, $username, $password);
 
-// ----------------------------------------------------------------------------------------------------
-// 
-// ----------------------------------------------------------------------------------------------------
+$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
+
 ?>
