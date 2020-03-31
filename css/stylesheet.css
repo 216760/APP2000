@@ -547,7 +547,7 @@ form{
 
 /*--- Feedback form --*/
 
-.wrapper{
+.fdwrapper{
   max-width:500px;
   margin:2rem auto;
   border:2px solid #E74C3C;
@@ -570,7 +570,7 @@ input{type=text}:focus{
 }
 
 
-.sendBtn{
+.fdsendBtn{
   border:0;
   background:#343050;
   padding:.5rem;
