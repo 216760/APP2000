@@ -52,19 +52,8 @@ body{
 .empty-sub{
   position: relative;
   left: 40%;
-
   }
 
-
-/* https://www.w3schools.com/howto/howto_css_fixed_footer.asp */
-/*.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #543091;
-  text-align: center;
-}*/
 
 .btn{
   background-color: #543091;
@@ -83,13 +72,11 @@ input:focus {
 .btn{
 background-color: #543091;
 color:white;
-/* background-color: #543091; */
 }
 
 .btn:hover{
 background-color: #543091;
 color:white;
-/* background-color: #543091; */
 }
 
 
@@ -355,6 +342,7 @@ form{
   padding:2rem;
   border-radius:5px;
  }
+
 input, textarea {
   display:block;
     width:100%;
@@ -363,6 +351,7 @@ input, textarea {
     font-size:18px;
     border-radius:5px;
 }
+
 input{type=text}:focus{
   border-color: purple;
   box-shadow: 0 0 8px 0 purple;
