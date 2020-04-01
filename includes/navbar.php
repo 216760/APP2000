@@ -8,14 +8,8 @@
 
 		<div class="collapse navbar-collapse " id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" data-target="dropdown_target" aria-haspopup="true" aria-expanded="false"> Dashboard
-						<span class="caret"></span>
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-	                    <a class="dropdown-item" href="dashboard.php">View subscriptions</a>
-						<a class="dropdown-item" href="create_subscription.php">New subscription</a>
-					</div>
+				<li class="nav-item">
+					<a class="nav-link" href="#" data-toggle="modal" data-target="#eexampleModal">Add+</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="feedback.html">Feedback</a>
