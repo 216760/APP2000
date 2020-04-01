@@ -37,8 +37,8 @@ Setter opp session og includes
                                 <label>Til dato</label>                 
                                 <input type="date" name="end_date" value="" class="form-control" placeholder="">
                             </div> 
-                            <a href="dashboard.php" class="btn"> Cancel</a>
-                            <button type="submit" name="registerbtn" class="btn">Save</button>
+                            <a href="dashboard.php" class="btn btn-primary"> Cancel</a>
+                            <button type="submit" name="registerbtn" class="btn btn-primary">Save</button>
                         </form>
                     </div>
                 </div>
