@@ -86,7 +86,8 @@ body{
 input:focus {
 	outline: none;
 	border-color: #543091;
-	border-radius: 2px;
+  border-radius: 2px;
+  
 }
 
 .btn{
@@ -557,7 +558,7 @@ form{
 input, textarea {
   display:block;
     width:100%;
-    border:2px solid black;
+    border:none;
     padding:.5rem;
     font-size:18px;
     border-radius:5px;
