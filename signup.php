@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 
 <!DOCTYPE html>
 <html>
@@ -11,14 +15,23 @@
         <link rel="stylesheet" href="css/stylesheet.css">
         <link rel="stylesheet" href="css/login.css">
     </head>
-    <body>                  
+    <body>
+
+             
         <form id="myForm" class="form-signin" form action="signup.php" method="post" name="form1">
             <h1>LOGO</h1>
             <input type="text" placeholder="username" class="" name="name">
             <input type="text" placeholder="email" class="" name="email">
             <input type="password" placeholder="password" class="" name="password"> 
             <input type="submit" id="regbtn" name="registerbtn" class="btn rounded primary" value="Registrer">
+            <?php
 
+                if(isset($_SESSION['status']) && $_SESSION['status'] !='') 
+                {
+                    echo '<h6 class="bg-warning text-white"> '.$_SESSION['status'].' </h6>';
+                    unset($_SESSION['status']);
+                }
+            ?>
 
         </form>
 
@@ -36,7 +49,6 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
 ------------------------------------------------------------------------------------------------------------------------------------------------> 
 
         <?php
-        session_start();
         //Inkluderer database connection-fil
         include_once("db-config.php");
 
@@ -66,7 +78,8 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
                 // Om emailen ikke er i riktig regex format blir den ikke sanitert
                 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
-                    echo("$email is not a valid email address");
+                    $_SESSION['status'] = "$email is not a valid email address";
+                    header('Location: signup.php');
 
                 } else {
 
@@ -95,7 +108,8 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
                         }
                 }
             } else {
-                echo("Fields cannot be empty!");
+                $_SESSION['status'] = "Fields can not be empty";
+                header('Location: signup.php');
             }
         }
     
