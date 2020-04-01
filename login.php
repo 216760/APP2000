@@ -52,18 +52,19 @@ if (isset($_POST['loginbtn'])) {
         $_SESSION['subError'] = 'Email id /Password Invalid';
         header('Location:login.php');
     }
-    
-    // Variabel som lagrer bruker i db med fetch_array via MYSQLI_BOTH. MYSQLI_BOTH er en 
-    // konstant metode som lager en tabell som både er numerisk og assosiati
-    $row = $result->fetch_array(MYSQLI_BOTH);
-      // $user_matched = mysqli_num_rows($result);
-      
-// ----------------------------------------------------------------------------------------------------
+    // ----------------------------------------------------------------------------------------------------
 //  OPERASJON MED Å SAMMENLIGNE INPUT PASSORD MED HASHET PASSORD ER HENTET OG TILPASSET EGEN LØSNING FRA:
 // https://www.youtube.com/playlist?list=PL-Db3tEF6pB_1oKlnpxyQGZIa8EYmA_1K
 // https://www.youtube.com/watch?v=RCr0Go3Z0u8
-
 // ----------------------------------------------------------------------------------------------------  
+    
+    // Variabel som lagrer bruker i db med fetch_array via MYSQLI_BOTH. MYSQLI_BOTH er en 
+    // konstant metode som lager en tabell som både er numerisk og assosiati
+    // https://stackoverflow.com/questions/34648767/what-is-difference-between-mysqli-fetch-array-and-mysqli-both/34649011
+    $row = $result->fetch_array(MYSQLI_BOTH);
+      // $user_matched = mysqli_num_rows($result);
+      
+
     if(password_verify($password, $row['password'])){
 
         $_SESSION["id"] = $row['id'];
