@@ -46,7 +46,7 @@ if (isset($_POST['loginbtn'])) {
     if(mysqli_fetch_array($queryDB))
     {
         $_SESSION['username'] = $email_login;
-        header("dashboard.php");
+        header("Location:dashboard.php");
     }
     else{
         $_SESSION['subError'] = 'Email id /Password Invalid';

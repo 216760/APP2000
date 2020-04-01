@@ -46,8 +46,8 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
         //Inkluderer database connection-fil
         include_once("db-config.php");
 
-        
 
+       
         // Sjekker om registreringsformen er klar, og legger inn data i databasen
         if (isset($_POST['registerbtn'])) {
             $name     = $_POST['name'];
@@ -78,7 +78,7 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
 
             		echo"";
 					// Hvis spørringen returnerer et antall bruker-rader som er større enn 0, betyr det at emailen allerede eksisterer i databasen
-            		if ($user_matched > 0) {
+            		if ($user_matched == $email) {
 
             			echo "<br/><br/><strong>Error: </strong> User already exists with the email id '$email'.";
 
