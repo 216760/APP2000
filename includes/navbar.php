@@ -13,15 +13,15 @@
 						<span class="caret"></span>
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-	                    <a class="dropdown-item" href="dashboard.php">New subscription</a>
-						<a class="dropdown-item" href="#">Some content</a>
+	                    <a class="dropdown-item" href="dashboard.php">View subscriptions</a>
+						<a class="dropdown-item" href="create_subscription.php">New subscription</a>
 					</div>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="feedback.html">Feedback</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="logout.php">Log out</a>
+					<a class="nav-link" href="login.php">Log out</a>
 				</li>
 			</ul>
 		</div>

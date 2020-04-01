@@ -24,12 +24,13 @@ $databaseHost     = 'itfag.usn.no';
 $databaseName     = 'v20app2000db2';
 $databaseUsername = 'v20app2000u2';
 $databasePassword = 'pw2';
-
 // ----------------------------------------------------------------------------------------------------
 // Kobler til database
 // ----------------------------------------------------------------------------------------------------
+$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
-$mysqli = mysqli_connect($databaseHost , $databaseName, $databaseUsername, $databasePassword);
+// Dere får feil med denne syntaksen:
+// $mysqli = mysqli_connect($databaseHost, $databaseName, $databaseUsername, $databasePassword);
 
 // ----------------------------------------------------------------------------------------------------
 // 
