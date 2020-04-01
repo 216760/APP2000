@@ -46,7 +46,7 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
         //Inkluderer database connection-fil
         include_once("db-config.php");
 
-        $empty = FALSE;
+        
 
         // Sjekker om registreringsformen er klar, og legger inn data i databasen
         if (isset($_POST['registerbtn'])) {
