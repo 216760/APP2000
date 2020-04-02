@@ -32,47 +32,26 @@
 //   LOGINKNAPP
 // ----------------------------------------------------------------------------------------------------
 
-// Hvis formen er "submitted", hent email og passord fra formen
+$con = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
 if (isset($_POST['loginbtn'])) {
     $email    = $_POST['email'];
     $password = $_POST['password'];
 
+    // Check if a user exists with given username & password
+    //Sjekker om bruker med brukernavn og passord allerede eksisterer
 
-
-
-    // Sjekker om det eksisterer en bruker i databasen med gitt email
-    $result->query("SELECT * FROM register WHERE email='$email'");
-
-    if(mysqli_fetch_array($queryDB))
-    {
-        $_SESSION['username'] = $email_login;
-        header("Location:dashboard.php");
-    }
-    else{
-        $_SESSION['subError'] = 'Email id /Password Invalid';
-        header('Location:login.php');
-    }
-    // ----------------------------------------------------------------------------------------------------
-//  OPERASJON MED Å SAMMENLIGNE INPUT PASSORD MED HASHET PASSORD ER HENTET OG TILPASSET EGEN LØSNING FRA:
-// https://www.youtube.com/playlist?list=PL-Db3tEF6pB_1oKlnpxyQGZIa8EYmA_1K
-// https://www.youtube.com/watch?v=RCr0Go3Z0u8
-// ----------------------------------------------------------------------------------------------------  
-    
-    // Variabel som lagrer bruker i db med fetch_array via MYSQLI_BOTH. MYSQLI_BOTH er en 
-    // konstant metode som lager en tabell som både er numerisk og assosiati
-    // https://stackoverflow.com/questions/34648767/what-is-difference-between-mysqli-fetch-array-and-mysqli-both/34649011
-    $row = $result->fetch_array(MYSQLI_BOTH);
-      // $user_matched = mysqli_num_rows($result);
-      
-
-    if(password_verify($password, $row['password'])){
-
-        $_SESSION["id"] = $row['id'];
+    $sql = $con->query("SELECT id, password FROM register WHERE email='$email'");
+    if ($sql->num_rows > 0) {
+        $data = $sql->fetch_array(); 
+    if(password_verify($password, $data['password'])) {
+        echo "You have been logged in";
         header('Location: dashboard.php');
-    }else {
-        $_SESSION["LogInFail"] = "Yes;";
-        header('Location: dashboard.php');
+    } else 
+        echo "User email or password is not matched <br/><br/>";
+    } else {
+        echo "Please check your inputs!";
     }
+}
 }
 
 ?>
