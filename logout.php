@@ -16,6 +16,6 @@ session_destroy();
 // Videresender bruker til login.php etter utlogging
 // ----------------------------------------------------------------------------------------------------
 
-header("location: login.php");
+header("location: logout.php");
 
 ?>
