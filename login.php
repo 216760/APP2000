@@ -81,15 +81,15 @@ $con = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
             $data = $sql->fetch_array(); // Legger resultatet av spørringen i en tabell
         if(password_verify($password, $data['password'])) { //password_verify sammenligner input password med hashet passord i databasen
             header('Location:dashboard.php'); //Viderefører brukeren til dashboard
-            exit(); //Terminerer operasjonen 
+            exit(0); //Terminerer operasjonen 
         } else
             header('Location: login.php');  //Viderefører brukeren til login
             $_SESSION['status'] = "Email or password is incorrect"; //Feilmelding til bruker
-            exit();
+            exit(0);
         } else {
             header('Location:login.php'); //Viderefører brukeren til login
             $_SESSION['status'] = "Fields cannot be empty"; //Feilmelding til bruke
-            exit(); //Terminerer operasjonen 
+            exit(0); //Terminerer operasjonen 
         }
     }
 
