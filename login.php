@@ -42,7 +42,7 @@ include_once('db-config.php');
 
 
 <?php
-ob_start();
+ob_start(); // Aktiverer output buffering
 // -----------------------------------------------------------------------------------------------------
 // TIL INFORMASJON: 
 
@@ -94,5 +94,5 @@ $con = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
     }
 
 
-ob_end_flush();
+ob_end_flush(); //  Flush (send) output-bufferen og deaktiver output-buffering
 ?>
