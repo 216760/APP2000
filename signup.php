@@ -98,14 +98,10 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
                     
                     // Setter brukerdata inn i databasen
                     $result = mysqli_query($mysqli, "INSERT INTO register(username,email,password) VALUES('$name','$email','$hashedpass')");
-    
                         // Ved gjennomført spørring får brukeren beskjed om at profilen er opprettet eller at det har skjedd en feil. 
                         if ($result) {
-
                             $_SESSION['success'] = "$User Registered successfully";
                             header('Location: signup.php');
-
-
                         } else {
                             // Todo: Finn en bedre måte å vise denne meldingen på
                             $_SESSION['status'] = "Email already in use: \n" . mysqli_error($mysqli);

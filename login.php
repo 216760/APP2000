@@ -1,3 +1,8 @@
+<?php
+session_start();
+include_once('db-config.php');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,44 +18,51 @@
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-    <form class="form-signin" action="server.php" method="POST" name="form1">
+    <form class="form-signin text-center" action="login.php" method="POST" name="form1">
         <h1>LOGO</h1>
             <input type="text" placeholder="Enter your email..." name="email" class="">
             <input type="password" placeholder="Enter your password..." name="password" class="">
             <!-- /* https://getbootstrap.com/docs/4.0/components/buttons/#button-tags */ -->
             <input type="submit" id="login" name="loginbtn" class="btn primary" value="Logg inn">
+        <?php
+
+            if(isset($_SESSION['status']) && $_SESSION['status'] !='') {
+                echo '<h6 class="bg-warning text-white"> '.$_SESSION['status'].' </h6>';
+                unset($_SESSION['status']);
+            } else if (isset($_SESSION['success']) && $_SESSION['success'] !='') {
+                echo '<h6 class="bg-success text-white"> '.$_SESSION['success'].' </h6>';
+                unset($_SESSION['success']);
+            }
+        ?>
     </form>
+
 </body>
 </html>
-
-
-
-
 <?php
-
-// ----------------------------------------------------------------------------------------------------
-//   LOGINKNAPP
-// ----------------------------------------------------------------------------------------------------
-
 $con = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
-if (isset($_POST['loginbtn'])) {
-    $email    = $_POST['email'];
-    $password = $_POST['password'];
+    if (isset($_POST['loginbtn'])) {
+        $email    = trim($_POST['email']);
+        $password = trim($_POST['password']);
 
-    // Check if a user exists with given username & password
-    //Sjekker om bruker med brukernavn og passord allerede eksisterer
+    // Denne koden er hentet fra og implementert inn i egen løsning fra Youtube kanalen 
+        $sql = $con->query("SELECT id, password FROM register WHERE email='$email'");
+        if ($sql->num_rows > 0) {
+            $data = $sql->fetch_array(); 
 
-    $sql = $con->query("SELECT id, password FROM register WHERE email='$email'");
-    if ($sql->num_rows > 0) {
-        $data = $sql->fetch_array(); 
-    if(password_verify($password, $data['password'])) {
-        echo "You have been logged in";
-        header('Location: dashboard.php');
-    } else 
-        echo "User email or password is not matched <br/><br/>";
-    } else {
-        echo "Please check your inputs!";
+        if(password_verify($password, $data['password'])) {
+            $_SESSION['success'] = "You have been logged in";
+            header('Location: dashboard.php');
+        } else
+            $_SESSION['status'] = "Email or password is incorrect";
+            header('Location: login.php');
+        } else {
+            $_SESSION['status'] = "Fields cannot be empty";
+            header('Location: login.php');
+        }
     }
+
 }
+
+
 
 ?>
