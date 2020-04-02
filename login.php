@@ -52,6 +52,6 @@ if (isset($_POST['loginbtn'])) {
         echo "Please check your inputs!";
     }
 }
-}
+
 
 ?>
