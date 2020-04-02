@@ -551,7 +551,7 @@ form{
 .fdwrapper{
   max-width:500px;
   margin:2rem auto;
-  border:2px solid #543091;
+  border: none;
   padding:2rem;
   border-radius:5px;
  }
@@ -567,7 +567,7 @@ textarea {
     resize: none;
 }
 input{type=text}:focus{
-  border-color: purple;
+  border:2px solid #543091;
   box-shadow: 0 0 8px 0 purple;
  }
 
