@@ -17,13 +17,16 @@
         <h1>LOGO</h1>
             <input type="text" placeholder="Enter your email..." name="email" class="">
             <input type="password" placeholder="Enter your password..." name="password" class="">
-            <!-- /* https://getbootstrap.com/docs/4.0/components/buttons/#button-tags */ -->
             <input type="submit" id="login" name="loginbtn" class="btn primary" value="Logg inn">
-            <?php 
+            <?php
+
                 if(isset($_SESSION['status']) && $_SESSION['status'] !='') {
                     echo '<h6 class="bg-warning text-white"> '.$_SESSION['status'].' </h6>';
                     unset($_SESSION['status']);
-
+                } else if (isset($_SESSION['success']) && $_SESSION['success'] !='') {
+                    echo '<h6 class="bg-success text-white"> '.$_SESSION['success'].' </h6>';
+                    unset($_SESSION['success']);
+                }
             ?>
     </form>
 </body>
@@ -35,32 +38,53 @@
 //   LOGINKNAPP
 // ----------------------------------------------------------------------------------------------------
 
+ ?>
+<?php 
 
-    $con = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
+$con = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
     if (isset($_POST['loginbtn'])) {
         $email    = trim($_POST['email']);
         $password = trim($_POST['password']);
 
-// ----------------------------------------------------------------------------------------------------
-// Denne koden er hentet fra og implementert inn i egen løsning fra Youtube kanalen:
-// https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s
-// ----------------------------------------------------------------------------------------------------
-
+    // Denne koden er hentet fra og implementert inn i egen løsning fra Youtube kanalen 
         $sql = $con->query("SELECT id, password FROM register WHERE email='$email'");
         if ($sql->num_rows > 0) {
             $data = $sql->fetch_array(); 
 
-            if(password_verify($password, $data['password'])) {
-                echo "You have been logged in";
-                header('Location: dashboard.php');
-
+        if(password_verify($password, $data['password'])) {
+            $_SESSION['success'] = "You have been logged in";
+            // echo "You have been logged in";
+            header('Location: dashboard.php');
+        } else
+            $_SESSION['status'] = "Email or password is incorrect";
+            header('Location: login.php');
         } else {
-            $_SESSION['status'] = "User email or password is not matched ";
-            // echo "User email or password is not matched <br/><br/>";
-        } 
-        } else {
-            // echo "Please check your inputs!";
-            $_SESSION['status'] = "Please check your inputs!";
+            $_SESSION['status'] = "Fields cannot be empty";
+            header('Location: login.php');
         }
     }
 ?>
+
+
+<!-- $con = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
+    if (isset($_POST['loginbtn'])) {
+        $email    = trim($_POST['email']);
+        $password = trim($_POST['password']);
+
+    // Denne koden er hentet fra og implementert inn i egen løsning fra Youtube kanalen 
+        $sql = $con->query("SELECT id, password FROM register WHERE email='$email'");
+        if ($sql->num_rows > 0) {
+            $data = $sql->fetch_array(); 
+
+        if(password_verify($password, $data['password'])) {
+            $_SESSION['success'] = "You have been logged in";
+            // echo "You have been logged in";
+            header('Location: dashboard.php');
+        } else
+            $_SESSION['status'] = "Email or password is incorrect";
+            header('Location: login.php');
+        } else {
+            $_SESSION['status'] = "Fields cannot be empty";
+            header('Location: login.php');
+        }
+    } -->
