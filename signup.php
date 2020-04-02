@@ -43,12 +43,15 @@ session_start();
     
 <!----------------------------------------------------------------------------------------------------------------------------------------------
 TIL INFORMASJON: 
+
 I denne filen finnes det kode som er gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under. 
 Dette er også synlig kommentert andre steder i filen der hvor dette oppstår, og vil også bli dokumentert under kildebruk i rapporten.
 Grunnen til dette er fordi at for enkelte funksjoner så er det “best practice”-måter å kode på. For vår del så er det en måte å lære dette på. 
 Vi setter oss inn i all koden først, og sørger for at vi forstår den, før den eventuelt vil bli tilpasset og implementert i vår kode.
+
 Kilde: 
 https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
+
 ------------------------------------------------------------------------------------------------------------------------------------------------> 
 
         <?php
