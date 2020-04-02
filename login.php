@@ -61,8 +61,6 @@ $con = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
         }
     }
 
-}
-
 
 
 ?>
