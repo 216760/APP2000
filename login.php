@@ -29,6 +29,7 @@ include_once('db-config.php');
             if(isset($_SESSION['status']) && $_SESSION['status'] !='') {
                 echo '<h6 class="bg-warning text-white"> '.$_SESSION['status'].' </h6>';
                 unset($_SESSION['status']);
+
             } else if (isset($_SESSION['success']) && $_SESSION['success'] !='') {
                 echo '<h6 class="bg-success text-white"> '.$_SESSION['success'].' </h6>';
                 unset($_SESSION['success']);
@@ -38,26 +39,56 @@ include_once('db-config.php');
 
 </body>
 </html>
+
+
 <?php
+// -----------------------------------------------------------------------------------------------------
+// TIL INFORMASJON: 
+
+// I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.
+// Dette vil også bli dokumentert under kildebruk i rapporten.  Grunnen til dette er basert på “best practice”  måter å programmere på.  
+// Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 
+
+// Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer. 
+// Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke. 
+
+// Kilder: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s
+
+
+//-----------------------------------------------------------------------------------------------------
+// Setter opp database forbindelse
+//-----------------------------------------------------------------------------------------------------
+
 $con = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
-    if (isset($_POST['loginbtn'])) {
-        $email    = trim($_POST['email']);
-        $password = trim($_POST['password']);
 
-    // Denne koden er hentet fra og implementert inn i egen løsning fra Youtube kanalen 
-        $sql = $con->query("SELECT id, password FROM register WHERE email='$email'");
+//-----------------------------------------------------------------------------------------------------
+//
+//-----------------------------------------------------------------------------------------------------
+
+
+    if (isset($_POST['loginbtn'])) {    //Sjekker at variabel er deklarert
+        $email    = trim($_POST['email']);  //Sjekker at email er deklarert
+        $password = trim($_POST['password']); //Sjekker at password er deklarert
+
+//-----------------------------------------------------------------------------------------------------
+// Denne koden er hentet fra og implementert og tilpasset inn i egen løsning fra Youtube kanalen Coding Passive income
+// Kilde: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s
+//-----------------------------------------------------------------------------------------------------
+
+        $sql = $con->query("SELECT id, password FROM register WHERE email='$email'"); // bruker $con til å utføre SELECT spørring 
         if ($sql->num_rows > 0) {
-            $data = $sql->fetch_array(); 
-
-        if(password_verify($password, $data['password'])) {
-            $_SESSION['success'] = "You have been logged in";
-            header('Location: dashboard.php');
+            $data = $sql->fetch_array(); // Legger resultatet av spørringen i en tabell
+        if(password_verify($password, $data['password'])) { //password_verify sammenligner input password med hashet passord i databasen
+            header('Location:dashboard.php'); //Viderefører brukeren til dashboard
+            exit(); //Terminerer operasjonen 
         } else
-            $_SESSION['status'] = "Email or password is incorrect";
-            header('Location: login.php');
+            $_SESSION['status'] = "Email or password is incorrect"; //Feilmelding til bruker
+            header('Location: login.php');  //Viderefører brukeren til login
+            exit();
         } else {
-            $_SESSION['status'] = "Fields cannot be empty";
-            header('Location: login.php');
+            $_SESSION['status'] = "Fields cannot be empty"; //Feilmelding til bruke
+            header('Location:login.php'); //Viderefører brukeren til login
+            exit(); //Terminerer operasjonen 
         }
     }
 
