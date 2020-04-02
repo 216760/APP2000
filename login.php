@@ -13,18 +13,21 @@
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-    <form class="form-signin" action="server.php" method="POST" name="form1">
+    <form class="form-signin" action="login.php" method="POST" name="form1">
         <h1>LOGO</h1>
             <input type="text" placeholder="Enter your email..." name="email" class="">
             <input type="password" placeholder="Enter your password..." name="password" class="">
             <!-- /* https://getbootstrap.com/docs/4.0/components/buttons/#button-tags */ -->
             <input type="submit" id="login" name="loginbtn" class="btn primary" value="Logg inn">
+            <?php 
+                if(isset($_SESSION['status']) && $_SESSION['status'] !='') {
+                    echo '<h6 class="bg-warning text-white"> '.$_SESSION['status'].' </h6>';
+                    unset($_SESSION['status']);
+
+            ?>
     </form>
 </body>
 </html>
-
-
-
 
 <?php
 
@@ -32,47 +35,32 @@
 //   LOGINKNAPP
 // ----------------------------------------------------------------------------------------------------
 
-// Hvis formen er "submitted", hent email og passord fra formen
-if (isset($_POST['loginbtn'])) {
-    $email    = $_POST['email'];
-    $password = $_POST['password'];
 
+    $con = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
+    if (isset($_POST['loginbtn'])) {
+        $email    = trim($_POST['email']);
+        $password = trim($_POST['password']);
 
+// ----------------------------------------------------------------------------------------------------
+// Denne koden er hentet fra og implementert inn i egen løsning fra Youtube kanalen:
+// https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s
+// ----------------------------------------------------------------------------------------------------
 
+        $sql = $con->query("SELECT id, password FROM register WHERE email='$email'");
+        if ($sql->num_rows > 0) {
+            $data = $sql->fetch_array(); 
 
-    // Sjekker om det eksisterer en bruker i databasen med gitt email
-    $result->query("SELECT * FROM register WHERE email='$email'");
+            if(password_verify($password, $data['password'])) {
+                echo "You have been logged in";
+                header('Location: dashboard.php');
 
-    if(mysqli_fetch_array($queryDB))
-    {
-        $_SESSION['username'] = $email_login;
-        header("Location:dashboard.php");
+        } else {
+            $_SESSION['status'] = "User email or password is not matched ";
+            // echo "User email or password is not matched <br/><br/>";
+        } 
+        } else {
+            // echo "Please check your inputs!";
+            $_SESSION['status'] = "Please check your inputs!";
+        }
     }
-    else{
-        $_SESSION['subError'] = 'Email id /Password Invalid';
-        header('Location:login.php');
-    }
-    // ----------------------------------------------------------------------------------------------------
-//  OPERASJON MED Å SAMMENLIGNE INPUT PASSORD MED HASHET PASSORD ER HENTET OG TILPASSET EGEN LØSNING FRA:
-// https://www.youtube.com/playlist?list=PL-Db3tEF6pB_1oKlnpxyQGZIa8EYmA_1K
-// https://www.youtube.com/watch?v=RCr0Go3Z0u8
-// ----------------------------------------------------------------------------------------------------  
-    
-    // Variabel som lagrer bruker i db med fetch_array via MYSQLI_BOTH. MYSQLI_BOTH er en 
-    // konstant metode som lager en tabell som både er numerisk og assosiati
-    // https://stackoverflow.com/questions/34648767/what-is-difference-between-mysqli-fetch-array-and-mysqli-both/34649011
-    $row = $result->fetch_array(MYSQLI_BOTH);
-      // $user_matched = mysqli_num_rows($result);
-      
-
-    if(password_verify($password, $row['password'])){
-
-        $_SESSION["id"] = $row['id'];
-        header('Location: dashboard.php');
-    }else {
-        $_SESSION["LogInFail"] = "Yes;";
-        header('Location: dashboard.php');
-    }
-}
-
 ?>
