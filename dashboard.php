@@ -79,8 +79,20 @@ $query_run = mysqli_query($connection, $query);
         ?>
       <div class="col-sm-4">
         <div class="card shadow mx-auto" style="width: 18rem;">
+          <div class="card-header"><?php echo $row['description']; ?>
+            <div class="float-right">
+              <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Green</a>
+                <a class="dropdown-item" href="#">Yellow</a>
+                <a class="dropdown-item" href="#">Red</a>
+              </div>
+            </div>
+          </div>
+        </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><h6 class="card-text">Service</h6><?php echo $row['description']; ?></li>
             <li class="list-group-item"><h6 class="card-text">Start date</h6><?php echo $row['start_date']; ?></li>
             <li class="list-group-item"><h6 class="card-text">End date</h6><?php echo $row['end_date']; ?></li>
           </ul>
