@@ -30,6 +30,11 @@ https://stackoverflow.com/questions/36108407/how-to-auto-adjust-the-height-of-fi
 // ----------------------------------------------------------------------------------------------------
 
 session_start();
+
+if(!isset($_SESSION)){
+  header('Location:login.php');
+}
+
 include('includes/header.php');
 include('includes/navbar.php');
 
@@ -80,10 +85,13 @@ $query_run = mysqli_query($connection, $query);
             <li class="list-group-item"><h6 class="card-text">End date</h6><?php echo $row['end_date']; ?></li>
           </ul>
           <div class="card-body">
-            <form action="edit.php" method="post">                                               
+            <form action="edit.php" method="post" style="display:inline-block;">                                               
               <input type="hidden" name ="edit_id" value="<?php echo $row['id']; ?>">
-                  <button type="submit" class="btn btn-primary" name="edit_btn" data-toggle="modal"> Edit</button>
-                  <button type="submit" class="btn btn-primary" name="delete_btn" data-toggle="modal"> Delete</button>
+              <button type="submit" class="btn btn-primary" name="edit_btn" data-toggle="modal"> Edit</button>
+            </form>
+            <form action="server.php" method="post" style="display:inline-block;">                                               
+              <input type="hidden" name ="delete_id" value="<?php echo $row['id']; ?>">
+              <button type="submit" class="btn btn-primary" name="delete_btn" data-toggle="modal"> Delete</button>
             </form>    
           </div>
         </div>
