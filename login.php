@@ -42,6 +42,7 @@ include_once('db-config.php');
 
 
 <?php
+ob_start();
 // -----------------------------------------------------------------------------------------------------
 // TIL INFORMASJON: 
 
@@ -82,16 +83,16 @@ $con = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
             header('Location:dashboard.php'); //Viderefører brukeren til dashboard
             exit(); //Terminerer operasjonen 
         } else
-            $_SESSION['status'] = "Email or password is incorrect"; //Feilmelding til bruker
             header('Location: login.php');  //Viderefører brukeren til login
+            $_SESSION['status'] = "Email or password is incorrect"; //Feilmelding til bruker
             exit();
         } else {
-            $_SESSION['status'] = "Fields cannot be empty"; //Feilmelding til bruke
             header('Location:login.php'); //Viderefører brukeren til login
+            $_SESSION['status'] = "Fields cannot be empty"; //Feilmelding til bruke
             exit(); //Terminerer operasjonen 
         }
     }
 
 
-
+ob_end_flush();
 ?>
