@@ -54,13 +54,14 @@ ob_start(); // Aktiverer output buffering
 // Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke. 
 
 // Kilder: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s
+// Kilder: https://gitlab.com/tutorialsclass/php-simple-login-registration-script
 
 
 //-----------------------------------------------------------------------------------------------------
 // Setter opp database forbindelse
 //-----------------------------------------------------------------------------------------------------
-
-$con = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
+include_once('db-config.php');
+// $con = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
 
 //-----------------------------------------------------------------------------------------------------
 //
@@ -72,11 +73,11 @@ $con = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
         $password = trim($_POST['password']); //Sjekker at password er deklarert
 
 //-----------------------------------------------------------------------------------------------------
-// Denne koden er hentet fra og implementert og tilpasset inn i egen løsning fra Youtube kanalen Coding Passive income
+// Denne koden er hentet fra og tilpasset inn i egen løsning fra Youtube kanalen Coding Passive income
 // Kilde: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s
 //-----------------------------------------------------------------------------------------------------
 
-        $sql = $con->query("SELECT id, password FROM register WHERE email='$email'"); // bruker $con til å utføre SELECT spørring 
+        $sql = $mysqli->query("SELECT id, password FROM register WHERE email='$email'"); // bruker $con til å utføre SELECT spørring 
         if ($sql->num_rows > 0) {
             $data = $sql->fetch_array(); // Legger resultatet av spørringen i en tabell
         if(password_verify($password, $data['password'])) { //password_verify sammenligner input password med hashet passord i databasen
@@ -85,7 +86,7 @@ $con = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
         } else
             header('Location: login.php');  //Viderefører brukeren til login
             $_SESSION['status'] = "Email or password is incorrect"; //Feilmelding til bruker
-            exit(0);
+            exit(0);//Terminerer operasjonen 
         } else {
             header('Location:login.php'); //Viderefører brukeren til login
             $_SESSION['status'] = "Fields cannot be empty"; //Feilmelding til bruke
