@@ -54,7 +54,6 @@ ob_start(); // Aktiverer output buffering
 // Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke. 
 
 // Kilder: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s
-// Kilder: https://gitlab.com/tutorialsclass/php-simple-login-registration-script
 
 
 //-----------------------------------------------------------------------------------------------------
@@ -73,20 +72,21 @@ include_once('db-config.php');
         $password = trim($_POST['password']); //Sjekker at password er deklarert
 
 //-----------------------------------------------------------------------------------------------------
-// Denne koden er hentet fra og tilpasset inn i egen løsning fra Youtube kanalen Coding Passive income
+// Denne koden er hentet fra og implementert og tilpasset inn i egen løsning fra Youtube kanalen Coding Passive income
 // Kilde: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s
 //-----------------------------------------------------------------------------------------------------
 
-        $sql = $mysqli->query("SELECT id, password FROM register WHERE email='$email'"); // bruker $con til å utføre SELECT spørring 
-        if ($sql->num_rows > 0) {
-            $data = $sql->fetch_array(); // Legger resultatet av spørringen i en tabell
+        $sql = mysqli_query($mysqli, "SELECT id, password FROM register WHERE email='$email'"); // bruker $con til å utføre SELECT spørring 
+        $user_matced = mysqli_num_rows($sql);
+        if ($user_matced > 0) {
+            $data = mysqli_fetch_array($user_matced); // Legger resultatet av spørringen i en tabell
         if(password_verify($password, $data['password'])) { //password_verify sammenligner input password med hashet passord i databasen
             header('Location:dashboard.php'); //Viderefører brukeren til dashboard
             exit(0); //Terminerer operasjonen 
         } else
             header('Location: login.php');  //Viderefører brukeren til login
             $_SESSION['status'] = "Email or password is incorrect"; //Feilmelding til bruker
-            exit(0);//Terminerer operasjonen 
+            exit(0);
         } else {
             header('Location:login.php'); //Viderefører brukeren til login
             $_SESSION['status'] = "Fields cannot be empty"; //Feilmelding til bruke
