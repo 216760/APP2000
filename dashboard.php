@@ -30,6 +30,7 @@ https://stackoverflow.com/questions/36108407/how-to-auto-adjust-the-height-of-fi
 // ----------------------------------------------------------------------------------------------------
 
 session_start();
+$id = $_SESSION["id"];
 
 if(!isset($_SESSION)){
   header('Location:login.php');
@@ -53,7 +54,7 @@ include('includes/navbar.php');
 
 // $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
 $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
-$query = "SELECT * FROM cards";
+$query = "SELECT * FROM cards WHERE user_id=$id"; // Henter cards som har user_id som samsvarer med session id
 $query_run = mysqli_query($connection, $query);
 
 
