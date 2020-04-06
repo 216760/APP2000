@@ -80,6 +80,8 @@ include_once('db-config.php');
         $user_matced = mysqli_num_rows($sql);
         if ($user_matced > 0) {
             $data = mysqli_fetch_array($sql); // Legger resultatet av spørringen i en tabell
+            $id = $data['id'];
+            $_SESSION['id'] = $id;
             
         if(password_verify($password, $data['password'])) { //password_verify sammenligner input password med hashet passord i databasen
             header('Location:dashboard.php'); //Viderefører brukeren til dashboard
