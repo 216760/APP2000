@@ -37,12 +37,13 @@ if(isset($_POST['registerbtn'])) // Sjekker at variabel er deklarert
     $description = $_POST['description'];   // Sjekker at variabel er deklarert
     $start_date = $_POST['start_date'];     // Sjekker at variabel er deklarert
     $end_date = $_POST['end_date'];         // Sjekker at variabel er deklarert
+    $user_id = $_SESSION['id'];
 
 // ----------------------------------------------------------------------------------------------------
 // Setter opp spørrevariabel for registrering av abonnement
 // ----------------------------------------------------------------------------------------------------
 
-$queryReg = "INSERT INTO cards (description, start_date, end_date) VALUES ('$description', '$start_date','$end_date')"; //  Spørring som setter inn data i databasen
+$queryReg = "INSERT INTO cards (description, start_date, end_date, user_id) VALUES ('$description', '$start_date','$end_date', $user_id)"; //  Spørring som setter inn data i databasen
 $queryDB = mysqli_query($connection, $queryReg); // Utfører spørring mot databasen
 
 
