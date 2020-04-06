@@ -575,14 +575,15 @@ input{type=text}:focus{
 .fdsendBtn{
   border:0;
   background:#543091;
-  padding:.5rem;
   color:white;
   margin:1rem 0;
   width:auto;
   text-transform:uppercase;
   cursor:pointer;
+  float: left;
+  margin-right: 5px;
+ 
   }
-
 .fdbackBtn{
   border:0;
   background: #543091;
@@ -591,8 +592,11 @@ input{type=text}:focus{
   width:auto;
   text-transform:uppercase;
   cursor:pointer;
-  vertical-align: right;
+  float: left; 
+
 }
+
+  
 
 
 

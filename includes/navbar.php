@@ -9,10 +9,13 @@
 		<div class="collapse navbar-collapse " id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
+					<a class="nav-link" href="dashboard.php">Dashboard</a>
+				</li>
+				<li class="nav-item">
 					<a class="nav-link" href="#" data-toggle="modal" data-target="#eexampleModal">Add+</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="feedback.html">Feedback</a>
+					<a class="nav-link" href="feedback.php">Feedback</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="login.php">Log out</a>
