@@ -79,7 +79,7 @@ include_once('db-config.php');
         $sql = mysqli_query($mysqli, "SELECT id, password FROM register WHERE email='$email'"); // bruker $con til å utføre SELECT spørring 
         $user_matced = mysqli_num_rows($sql);
         if ($user_matced > 0) {
-            $data = mysqli_fetch_array($user_matced); // Legger resultatet av spørringen i en tabell
+            $data = mysqli_fetch_array($sql); // Legger resultatet av spørringen i en tabell
         if(password_verify($password, $data['password'])) { //password_verify sammenligner input password med hashet passord i databasen
             header('Location:dashboard.php'); //Viderefører brukeren til dashboard
             exit(0); //Terminerer operasjonen 
