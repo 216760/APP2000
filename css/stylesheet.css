@@ -271,7 +271,7 @@ color:white;
 
 section {
   font-family: 'Lato', sans-serif;
-  padding:15rem;
+  padding:10rem;
 }
 
 .bg-main {
@@ -617,9 +617,22 @@ input{type=text}:focus{
 
 }
 
-  
+  /*--- Feedback form --*/
 
 
+  /*--- landingpage --*/
 
-/*--- Feedback form --*/
+  .lpBtn{
+
+        border:0;
+        background: #543091;
+        color:white;
+        margin:1rem 0;
+        width:auto;
+        text-transform:uppercase;
+        cursor:pointer;
+        float: right; 
+  }
+
+
 

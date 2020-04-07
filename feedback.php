@@ -69,28 +69,48 @@ Footer
 
 <script>
 
-		function _(id){ return document.getElementById(id); }
+		function _(id){ return document.getElementById(id); } // denne funksjonen tar alle id verdiene i form, for å kunne bli sendt til submitForm
 		function submitForm(){
-			_("mybtn").disabled = true; // sånn at brukeren ikke kan sende dataen mange ganger
-			_("status").innerHTML = 'please wait ...'; // en tilbakemelding opp at dataen blir sendt
-			var formdata = new FormData(); //et objekt, sånn at man kan tilkoble til en ny nøkkelparverdi
-			formdata.append( "name", _("name").value ); // nøkkel og verdi
-			formdata.append( "email", _("email").value ); // nøkkel og verdi
-			formdata.append( "message", _("message").value ); // nøkkel og verdi
-			formdata.append( "subject", _("subject").value ); // nøkkel og verdi
-			var ajax = new XMLHttpRequest(); // lager en variabel
-			ajax.open( "POST", "feedbackinsert.php" ); // lager en metode 
-			ajax.onreadystatechange = function() { // etter den er klar så starter den funksjonen
+			// sånn at brukeren ikke kan sende dataen mange ganger
+			_("mybtn").disabled = true; 
+			// en tilbakemelding om at dataen blir sendt
+			_("status").innerHTML = 'please wait ...'; 
+			//et objekt, sånn at man kan tilkoble til en ny nøkkelparverdi
+			var formdata = new FormData(); 
+			// nøkkel og verdi
+			formdata.append( "name", _("name").value );
+			 // nøkkel og verdi
+			formdata.append( "email", _("email").value ); 
+			// nøkkel og verdi
+			formdata.append( "message", _("message").value ); 
+			// nøkkel og verdi
+			formdata.append( "subject", _("subject").value ); 
+			// denne lager et nytt XMLHttpRequest objekt, denne variabelen gjør at man kan oppdatere side uten å laste inn siden på nytt
+			var ajax = new XMLHttpRequest(); 
+			// lager en metode 
+			ajax.open( "POST", "feedbackinsert.php" ); 
+			// starter den funksjonen, blir "called" når readystate verdiene forandrer seg
+			ajax.onreadystatechange = function() { 
+				// Denne holder statusen til XMLHttpRequest, 
+				// forespørselen starter 
+				// kobler til databasen
+				// forespørsel mottatt 
+				// prosessere forspørsel 
+				// forespørsel ferdig, responsetext er klar
 				if(ajax.readyState == 4 && ajax.status == 200) {
+					// hvis alt går, så har dataen fra skjemaet blitt sendt til databasen 
 					if(ajax.responseText == "success"){
-						_("my_form").innerHTML = '<h2>Thanks '+_("name").value+', your message has been sent.</h2>';  // hvis alt går, så har dataen fra skjemaet blitt sendt til databasen 
+						_("my_form").innerHTML = '<h2>Thanks '+_("name").value+', your message has been sent.</h2>';  
 					} else {
-						_("status").innerHTML = ajax.responseText; // hvis det er en feil, så får man opp en responsetext. 
-						_("mybtn").disabled = false; // denne gjør sånn at man kan trykke på submit knappen igjen
+						// hvis det er en feil, så får man opp en responsetext. 
+						_("status").innerHTML = ajax.responseText; 
+						// denne gjør sånn at man kan trykke på submit knappen igjen
+						_("mybtn").disabled = false; 
 					}
 				}
 			}
-			ajax.send( formdata ); // lager en metode der man sender (fromdata) som er name, email, subject og message
+			// sender verdiene fra (fromdata) som er name, email, subject og message in i databasen
+			ajax.send( formdata ); 
 		}
 </script>
 
