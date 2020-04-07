@@ -23,7 +23,7 @@ include('db-config.php');
             <input type="text" placeholder="Enter your email..." name="email" class="">
             <input type="password" placeholder="Enter your password..." name="password" class="">
             <!-- /* https://getbootstrap.com/docs/4.0/components/buttons/#button-tags */ -->
-            <input type="submit" id="login" name="loginbtn" class="btn primary" value="Logg inn">
+            <input type="submit" id="login" name="loginbtn" class="btn primary" value="Login">
         <?php
 
             if(isset($_SESSION['status']) && $_SESSION['status'] !='') {
