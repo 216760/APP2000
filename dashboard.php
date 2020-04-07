@@ -92,7 +92,7 @@ $query_run = mysqli_query($connection, $query);
               </div>
             </div>
           </div>
-        </div>
+        </div>  
           <ul class="list-group list-group-flush">
             <li class="list-group-item"><h6 class="card-text">Start date</h6><?php echo $row['start_date']; ?></li>
             <li class="list-group-item"><h6 class="card-text">End date</h6><?php echo $row['end_date']; ?></li>

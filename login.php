@@ -23,15 +23,20 @@ include('db-config.php');
             <input type="text" placeholder="Enter your email..." name="email" class="">
             <input type="password" placeholder="Enter your password..." name="password" class="">
             <!-- /* https://getbootstrap.com/docs/4.0/components/buttons/#button-tags */ -->
-            <input type="submit" id="login" name="loginbtn" class="btn primary" value="Logg inn">
+            <input type="submit" id="login" name="loginbtn" class="btn primary" value="Login">
         <?php
-
+            // Sjekker om session status er deklarert og ikke er en tom string
             if(isset($_SESSION['status']) && $_SESSION['status'] !='') {
+                // Viser info melding til bruker
                 echo '<h6 class="bg-warning text-white"> '.$_SESSION['status'].' </h6>';
+                // Resetter SESSION status variaber
                 unset($_SESSION['status']);
 
+            // Sjekker om session status er deklarert og ikke er en tom string
             } else if (isset($_SESSION['success']) && $_SESSION['success'] !='') {
+                // Viser info melding til bruker
                 echo '<h6 class="bg-success text-white"> '.$_SESSION['success'].' </h6>';
+                // Resetter SESSION success variaber
                 unset($_SESSION['success']);
             }
         ?>
@@ -61,8 +66,8 @@ ob_start(); // Aktiverer output buffering
 //-----------------------------------------------------------------------------------------------------
 
 
-    if (isset($_POST['loginbtn'])) {    //Sjekker at variabel er deklarert og sikrer mot sql injection
-        $email    = mysqli_real_escape_string($mysqli, $_POST['email']);  //Sjekker at email er deklarert og sikrer mot sql injection
+    if (isset($_POST['loginbtn'])) {                                        //Sjekker at variabel er deklarert og sikrer mot sql injection
+        $email    = mysqli_real_escape_string($mysqli, $_POST['email']);    //Sjekker at email er deklarert og sikrer mot sql injection
         $password = mysqli_real_escape_string($mysqli, $_POST['password']); //Sjekker at password er deklarert og sikrer mot sql injection
 
 //-----------------------------------------------------------------------------------------------------
@@ -78,16 +83,16 @@ ob_start(); // Aktiverer output buffering
             $_SESSION['id'] = $id;
             
         if(password_verify($password, $data['password'])) { //password_verify sammenligner input password med hashet passord i databasen fra $data variabel
-            header('Location:dashboard.php'); //Viderefører brukeren til dashboard
-            exit(0); //Terminerer operasjonen 
+            header('Location:dashboard.php'); // Header er en funksjon som viderefører brukeren til dashboard
+            exit(0); // Funksjon som terminerer operasjonen 
         } else
-            header('Location: login.php');  //Viderefører brukeren til login
+            header('Location: login.php');  // Header er en funksjon som viderefører brukeren til login
             $_SESSION['status'] = "Email or password is incorrect"; //Feilmelding til bruker
-            exit(0); //Terminerer operasjonen 
+            exit(0); // Funksjon som terminerer operasjonen 
         } else {
-            header('Location:login.php'); //Viderefører brukeren til login
+            header('Location:login.php'); // Header er en funksjon som viderefører brukeren til login
             $_SESSION['status'] = "Fields cannot be empty"; //Feilmelding til bruke
-            exit(0); //Terminerer operasjonen 
+            exit(0); // Funksjon som terminerer operasjonen 
         }
     }
 

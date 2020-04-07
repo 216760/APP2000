@@ -53,19 +53,22 @@ Setter opp session og includes
 $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
 
 
-    if(isset($_POST['edit_btn']))
+    if(isset($_POST['edit_btn'])) // Sjekker om variabel er deklarert
     {
-        $id = $_POST['edit_id'];
+        $id = $_POST['edit_id'];  // Sjekker om variabel er deklarert
         
-        $query = "SELECT * FROM cards WHERE id='$id' ";
-        $query_run = mysqli_query($connection, $query);
+        
+        $query = "SELECT * FROM cards WHERE id='$id' "; // Setter opp en spørrevariabel får å vise eksisterende data
+        
+        // Setter opp en variabel med en mysqli_query funksjon som gjennomfører oppretting av forbindelse og SQL-spørringen 
+        $query_run = mysqli_query($connection, $query); 
     
 
 // ----------------------------------------------------------------------------------------------------
 // Setter opp bootstrap struktur
 // ----------------------------------------------------------------------------------------------------
 
-        foreach($query_run as $row)
+        foreach($query_run as $row) // foreach brukes til telle antall rader i databasen som samsvarer med innlogget bruker
         {
             ?>
     
@@ -74,15 +77,15 @@ $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000d
             <input type="hidden" name="edit_id" value="<?php echo $row['id'] ?>">
             <div class="form-group">
                     <label> Beskrivelse </label>          
-                                                              <!-- Henter data fra DB -->
+                                                              <!-- Henter beskrivelse fra DB -->
                     <input type="text" name="edit_description" value="<?php echo $row['description'] ?>" class="form-control" placeholder="Enter Username"> 
                 </div>
                 <div class="form-group">
-                    <label>Fra dato</label>                   <!-- Henter data fra DB -->
+                    <label>Fra dato</label>                   <!-- Henter start dato fra DB -->
                     <input type="date" name="edit_date_from" value="<?php echo $row['start_date'] ?>" class="form-control" placeholder="Enter Email">
                 </div>
                 <div class="form-group">
-                    <label>Til dato</label>                   <!-- Henter data fra DB -->
+                    <label>Til dato</label>                   <!-- Henter slutt dato fra DB -->
                     <input type="date" name="edit_date_to" value="<?php echo $row['end_date'] ?>" class="form-control" placeholder="Enter Password">
                 </div> 
                     <a href="dashboard.php" class="btn"> Cancel</a>
