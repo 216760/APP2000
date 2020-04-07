@@ -52,7 +52,7 @@ body{
   margin-bottom: 300px;
   margin-left: 50px;
   margin-top: 50px;
-  color:#543091;
+  color:#4a138c;
   position: relative;
 }
 
@@ -75,7 +75,7 @@ body{
 }*/
 
 .btn{
-  background-color: #543091;
+  background-color: #4a138c;
 }
 
 /* https://www.w3schools.com/cssref/sel_focus.asp */
@@ -84,19 +84,19 @@ body{
 
 input:focus {
 	outline: none;
-	border-color: #543091;
+	border-color: #4a138c;
   border-radius: 2px;
   
 }
 
 .btn{
-background-color: #543091;
+background-color: #4a138c;
 color:white;
 /* background-color: #543091; */
 }
 
 .btn:hover{
-background-color: #543091;
+background-color: #4a138c;
 color:white;
 /* background-color: #543091; */
 }
@@ -280,7 +280,7 @@ section {
 }
 
 .bg-secondary-custom {
-  background-color: #543091;
+  background-color: #4a138c;
   color: #FFFFFF;
 }
 
@@ -294,7 +294,7 @@ section {
   font-weight: 700;
   font-size: .9rem;
   letter-spacing: .1rem;
-  background-color: #543091;
+  background-color: #4a138c;
   margin-bottom: 0;
 }
 
@@ -337,8 +337,8 @@ nav li:hover a {
 }
 
 .btn-primary {
-  background-color: #543091 !important;
-  border-color: #543091 !important;
+  background-color: #4a138c !important;
+  border-color: #4a138c !important;
   border-radius: 8px !important;
 }
 
@@ -348,7 +348,7 @@ footer{
   /*height: 50px;*/
   bottom: 0;
   width: 100%;
-  background-color: #543091;
+  background-color: #4a138c;
 }
 
 footer.page-footer .footer-copyright {
@@ -595,7 +595,7 @@ input{type=text}:focus{
 
 .fdsendBtn{
   border:0;
-  background:#543091;
+  background:#4a138c;
   color:white;
   margin:1rem 0;
   width:auto;
@@ -607,7 +607,7 @@ input{type=text}:focus{
   }
 .fdbackBtn{
   border:0;
-  background: #543091;
+  background: #4a138c;
   color:white;
   margin:1rem 0;
   width:auto;
