@@ -33,7 +33,7 @@ session_start();
 $id = $_SESSION["id"];
 
 if(!isset($_SESSION)){
-  header('Location:login.php');
+  header('Location:login.php'); 
 }
 
 include('includes/header.php');

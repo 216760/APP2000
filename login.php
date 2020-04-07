@@ -76,20 +76,20 @@ include_once('db-config.php');
 // Kilde: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s
 //-----------------------------------------------------------------------------------------------------
 
-        $sql = mysqli_query($mysqli, "SELECT id, password FROM register WHERE email='$email'"); // bruker $con til å utføre SELECT spørring 
-        $user_matced = mysqli_num_rows($sql);
+        $sql = mysqli_query($mysqli, "SELECT id, password FROM register WHERE email='$email'"); // Utfører SELECT spørring mot database og sjekker om email matcher med input
+        $user_matced = mysqli_num_rows($sql); // Henter ut raden som matcher med email og legger denne i en variabel
         if ($user_matced > 0) {
-            $data = mysqli_fetch_array($sql); // Legger resultatet av spørringen i en tabell
+            $data = mysqli_fetch_array($sql); // Legger SELECT spørringen i tabell deretter i en variabel
             $id = $data['id'];
             $_SESSION['id'] = $id;
             
-        if(password_verify($password, $data['password'])) { //password_verify sammenligner input password med hashet passord i databasen
+        if(password_verify($password, $data['password'])) { //password_verify sammenligner input password med hashet passord i databasen fra $data variabel
             header('Location:dashboard.php'); //Viderefører brukeren til dashboard
             exit(0); //Terminerer operasjonen 
         } else
             header('Location: login.php');  //Viderefører brukeren til login
             $_SESSION['status'] = "Email or password is incorrect"; //Feilmelding til bruker
-            exit(0);
+            exit(0); //Terminerer operasjonen 
         } else {
             header('Location:login.php'); //Viderefører brukeren til login
             $_SESSION['status'] = "Fields cannot be empty"; //Feilmelding til bruke

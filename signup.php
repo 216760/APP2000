@@ -96,22 +96,23 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
 // https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s
 // ----------------------------------------------------------------------------------------------------
 
-                    // Variabel som bruker password_hash metode for å hashe passord
+                    // Variabel som bruker password_hash metode sammen med PASSWORD_BCRYPT algoritme for å hashe passord
                     $hashedpass = password_hash($password, PASSWORD_BCRYPT);
                     
                     // Setter brukerdata inn i databasen
                     $result = mysqli_query($mysqli, "INSERT INTO register(username,email,password) VALUES('$name','$email','$hashedpass')");
-                        // Ved gjennomført spørring får brukeren beskjed om at profilen er opprettet eller at det har skjedd en feil. 
+                        // Ved gjennomført spørring får brukeren beskjed om at profilen er opprettet 
                         if ($result) {
                             $_SESSION['success'] = "$User Registered successfully";
                             header('Location: signup.php');
                         } else {
-                            // Todo: Finn en bedre måte å vise denne meldingen på
+                            //  Ved gjennomført spørring får brukeren beskjed om at emailen allerede er i bruk
                             $_SESSION['status'] = "Email already in use: \n" . mysqli_error($mysqli);
 
                         }
                 }
             } else {
+                //Ved tomme felt får brukeren beskjed om at feltene IKKE kan være tomme
                 $_SESSION['status'] = "Fields cannot be empty";
                 header('Location: signup.php');
             }
