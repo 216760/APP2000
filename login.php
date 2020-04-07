@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once('db-config.php');
+include('db-config.php');
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +36,6 @@ include_once('db-config.php');
             }
         ?>
     </form>
-
 </body>
 </html>
 
@@ -45,6 +44,8 @@ include_once('db-config.php');
 ob_start(); // Aktiverer output buffering
 // -----------------------------------------------------------------------------------------------------
 // TIL INFORMASJON: 
+// -----------------------------------------------------------------------------------------------------
+
 
 // I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.
 // Dette vil også bli dokumentert under kildebruk i rapporten.  Grunnen til dette er basert på “best practice”  måter å programmere på.  
@@ -55,13 +56,6 @@ ob_start(); // Aktiverer output buffering
 
 // Kilder: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s
 
-
-//-----------------------------------------------------------------------------------------------------
-// Setter opp database forbindelse
-//-----------------------------------------------------------------------------------------------------
-include_once('db-config.php');
-// $con = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
-
 //-----------------------------------------------------------------------------------------------------
 //
 //-----------------------------------------------------------------------------------------------------
@@ -69,7 +63,7 @@ include_once('db-config.php');
 
     if (isset($_POST['loginbtn'])) {    //Sjekker at variabel er deklarert og sikrer mot sql injection
         $email    = mysqli_real_escape_string($mysqli, $_POST['email']);  //Sjekker at email er deklarert og sikrer mot sql injection
-       $password = mysqli_real_escape_string($mysqli, $_POST['password']); //Sjekker at password er deklarert og sikrer mot sql injection
+        $password = mysqli_real_escape_string($mysqli, $_POST['password']); //Sjekker at password er deklarert og sikrer mot sql injection
 
 //-----------------------------------------------------------------------------------------------------
 // Denne koden er hentet fra og implementert og tilpasset inn i egen løsning fra Youtube kanalen Coding Passive income

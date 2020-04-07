@@ -26,11 +26,17 @@ session_start();
             <input type="submit" id="regbtn" name="registerbtn" class="btn rounded primary" value="Registrer">
             <?php
 
+                // Sjekker om session status er deklarert og ikke er en tom string
                 if(isset($_SESSION['status']) && $_SESSION['status'] !='') {
+                    // Viser info melding til bruker
                     echo '<h6 class="bg-warning text-white"> '.$_SESSION['status'].' </h6>';
+                    // Resetter SESSION status variaber
                     unset($_SESSION['status']);
+                    // Sjekker om session status er deklarert og ikke er en tom string
                 } else if (isset($_SESSION['success']) && $_SESSION['success'] !='') {
+                    // Viser info melding til bruker
                     echo '<h6 class="bg-success text-white"> '.$_SESSION['success'].' </h6>';
+                    // Resetter SESSION success variaber
                     unset($_SESSION['success']);
                 }
 
@@ -56,7 +62,7 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
 
         <?php
         //Inkluderer database connection-fil
-        include_once("db-config.php");
+        include("db-config.php");
 
         $empty = FALSE;
 
