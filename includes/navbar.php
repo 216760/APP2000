@@ -1,8 +1,8 @@
 <?php
 if (!empty($_SESSION)) {
 		echo '<div class="container">
-	    <a class="navbar-brand" href="index.php">RE:SUB</a>
-	<nav class="navbar navbar-expand-md fixed-top">
+		 <nav class="navbar navbar-expand-md fixed-top">
+		 <a class="navbar-brand" href="index.php">RE:SUB</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -30,7 +30,7 @@ if (!empty($_SESSION)) {
 } else {
 	echo '<div class="container">
 			<nav class="navbar navbar-expand-md fixed-top">
-			    <a class="navbar-brand" href="index.php">RE:SUB</a>
+			<a class="navbar-brand" href="index.php">RE:SUB</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 						<span class="navbar-toggler-icon"></span>
 					</button>

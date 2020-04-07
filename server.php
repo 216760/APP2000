@@ -36,7 +36,7 @@ if(isset($_POST['registerbtn'])) // Sjekker at variabel er deklarert
     // Informasjon om abonnement
     $description = mysqli_real_escape_string($connection, $_POST['description']);   // Sjekker at variabel er deklarert
     $start_date = mysqli_real_escape_string($connection, $_POST['start_date']);     // Sjekker at variabel er deklarert
-    $end_date = $_POST['end_date'];         // Sjekker at variabel er deklarert
+    $end_date =  mysqli_real_escape_string($connection,$_POST['end_date'];         // Sjekker at variabel er deklarert
     $user_id = $_SESSION['id'];
 
 // ----------------------------------------------------------------------------------------------------
@@ -48,15 +48,13 @@ $queryDB = mysqli_query($connection, $queryReg); // Utfører spørring mot datab
 
 
 
-    if($queryDB)
-    {
+    if($queryDB){
         echo "Saved";
         $_SESSION['subOk'] = "New subscription is successfully added!";
         header('Location: dashboard.php');
     
     }
-    } else 
-    {
+    } else {
         echo "Not Saved";
         $_SESSION['subError'] = "Subscription could not be added!";
         header('Location: dashboard.php');
@@ -90,13 +88,11 @@ if(isset($_POST['updatebtn'])) {    // Sjekker at variabel er deklarert
     $queryDB = mysqli_query($connection, $queryEdit); // Utfører spørring mot databasen
 
     if($queryDB) {
-
-    $_SESSION['subOk'] = "New subscription is successfully updated!";
-    header('Location: dashboard.php');
-
+        $_SESSION['subOk'] = "New subscription is successfully updated!";
+        header('Location: dashboard.php');
     } else {
-    $_SESSION['subError'] = "Subscription could not be updated";
-    header('Location: dashboard.php');
+        $_SESSION['subError'] = "Subscription could not be updated";
+        header('Location: dashboard.php');
     }
 }
 
@@ -108,17 +104,14 @@ if(isset($_POST['delete_btn'])) // Sjekker at variabel er deklarert
 {
     $id = $_POST['delete_id'];  // Sjekker at variabel er deklarert
 
-
     $queryDelete = "DELETE FROM cards WHERE id='$id'";  // Spørring som sletter spesifikt kort fra databasen
     $queryDB = mysqli_query($connection, $queryDelete); // Utfører spørring mot databasen
 
-    if($queryDB)
-    {
+    if($queryDB) {
         $_SESSION['subOk'] = "Subscription is successfully deleted!";
         header('Location: dashboard.php');
     }
-    else
-    {
+    else {
         $_SESSION['subError'] = "Subscription could NOT be deleted";
         header('Location: dashboard.php');
     }

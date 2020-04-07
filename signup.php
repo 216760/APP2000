@@ -89,7 +89,6 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
 
                 // Om emailen ikke er i riktig regex format blir den ikke sanitert
                 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-
                     $_SESSION['status'] = "$email is not a valid email address";
                     header('Location: signup.php');
 
