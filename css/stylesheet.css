@@ -388,7 +388,7 @@ footer.page-footer ul {
 
 /* KODET AV: Andreas Knutsen */
 
-
+/* KODET AV: Henrik Solnør Johansen*/
 /*---- info Section ---*/
 
 /*.section1{
@@ -622,17 +622,5 @@ input{type=text}:focus{
 
   /*--- landingpage --*/
 
-  .lpBtn{
-
-        border:0;
-        background: #543091;
-        color:white;
-        margin:1rem 0;
-        width:auto;
-        text-transform:uppercase;
-        cursor:pointer;
-        float: right; 
-  }
-
-
+/* KODET AV: Henrik Solnør Johansen*/
 
