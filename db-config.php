@@ -12,6 +12,8 @@ Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempele
 Kilde:
 https://gitlab.com/tutorialsclass/php-simple-login-registration-script
 
+Kodet og tilpasset av: Anders Koo
+
 -------------------------------------------------------------------------------------------------------------------->
 
 <?php

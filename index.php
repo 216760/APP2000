@@ -5,20 +5,20 @@ include('includes/navbar.php');
 ?>
 
 
-<!--  Start Info Section -->
+<!--  Visning av landdingsiden -->
 
 	<div class="content-main">
 		<?php include('includes/main.php');?>
 	</div>
 
-<!-- End Info Section -->
+<!-- Visning av landdingsiden  -->
 
 
-<!--  Start Contact Section -->
+<!-- Visning av footer -->
 	<footer>
 		<?php include('includes/footer.php');?>
 	</footer>
-<!-- End Contact Section -->
+<!--  Visning av footer -->
 
 
 </body>

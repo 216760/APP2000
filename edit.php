@@ -12,7 +12,7 @@ Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempele
 Denne koden er hentet fra og tilpasset egen løsning fra denne Youtube kanalen, part 1-6
 https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
 
-
+Kodet og tilpasset av: Andreas Knutsen og Anders Koo
 
 ------------------------------------------------------------------------------------------------------------------------------------------------> 
 

@@ -1,3 +1,19 @@
+<!-- ------------------------------------------------------------------------------------------------ 
+TIL INFORMASJON:
+ 
+
+// I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.
+// Dette vil også bli dokumentert under kildebruk i rapporten.  Grunnen til dette er basert på “best practice”  måter å programmere på.  
+// Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 
+
+// Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer. 
+// Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke. 
+
+// Kilder: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s
+
+Kodet og tilpasset av:  Henrik Solnør Johansen, Andreas Knutsen og Anders Koo
+
+-----------------------------------------------------------------------------------------------------  -->
 <?php
 session_start();
 include('db-config.php');
@@ -47,23 +63,6 @@ include('db-config.php');
 
 <?php
 ob_start(); // Aktiverer output buffering
-// -----------------------------------------------------------------------------------------------------
-// TIL INFORMASJON: 
-// -----------------------------------------------------------------------------------------------------
-
-
-// I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.
-// Dette vil også bli dokumentert under kildebruk i rapporten.  Grunnen til dette er basert på “best practice”  måter å programmere på.  
-// Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 
-
-// Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer. 
-// Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke. 
-
-// Kilder: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s
-
-//-----------------------------------------------------------------------------------------------------
-//
-//-----------------------------------------------------------------------------------------------------
 
 
     if (isset($_POST['loginbtn'])) {                                        //Sjekker at variabel er deklarert og sikrer mot sql injection

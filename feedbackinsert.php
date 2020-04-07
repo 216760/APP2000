@@ -16,6 +16,8 @@ https://www.w3schools.com/php/php_mysql_prepared_statements.asp
 https://www.php.net/manual/en/mysqli.prepare.php
 https://www.php.net/manual/en/mysqli-stmt.bind-param.php
 
+Kodet og tilpasset av: Henrik Solnør Johansen og Vigleik Espeland Stakseng og Anders Koo
+
 ------------------------------------------------------------------------------------------------------------------------------------------------> 
 
 <?php
