@@ -11,7 +11,7 @@ TIL INFORMASJON:
 
 // Kilder: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s
 
-Kodet og tilpasset av:  Henrik Solnør Johansen, Andreas Knutsen og Anders Koo
+Medlemmer som har bidratt:  Henrik Solnør Johansen, Andreas Knutsen og Anders Koo
 
 -----------------------------------------------------------------------------------------------------  -->
 <?php
@@ -41,6 +41,7 @@ include('db-config.php');
             <!-- /* https://getbootstrap.com/docs/4.0/components/buttons/#button-tags */ -->
             <input type="submit" id="login" name="loginbtn" class="btn primary" value="Login">
         <?php
+
             // Sjekker om session status er deklarert og ikke er en tom string
             if(isset($_SESSION['status']) && $_SESSION['status'] !='') {
                 // Viser info melding til bruker
@@ -64,7 +65,6 @@ include('db-config.php');
 <?php
 ob_start(); // Aktiverer output buffering
 
-
     if (isset($_POST['loginbtn'])) {                                        //Sjekker at variabel er deklarert og sikrer mot sql injection
         $email    = mysqli_real_escape_string($mysqli, $_POST['email']);    //Sjekker at email er deklarert og sikrer mot sql injection
         $password = mysqli_real_escape_string($mysqli, $_POST['password']); //Sjekker at password er deklarert og sikrer mot sql injection
@@ -73,6 +73,8 @@ ob_start(); // Aktiverer output buffering
 // Denne koden er hentet fra og implementert og tilpasset inn i egen løsning fra Youtube kanalen Coding Passive income
 // Kilde: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s
 //-----------------------------------------------------------------------------------------------------
+
+//Kodet og tilpasset av: Anders Koo og Andeas Knutsen START 
 
         $sql = mysqli_query($mysqli, "SELECT id, password FROM register WHERE email='$email'"); // Utfører SELECT spørring mot database og sjekker om email matcher med input
         $user_matced = mysqli_num_rows($sql); // Henter ut raden som matcher med email og legger denne i en variabel
@@ -94,7 +96,7 @@ ob_start(); // Aktiverer output buffering
             exit(0); // Funksjon som terminerer operasjonen 
         }
     }
-
+//Kodet og tilpasset av: Anders Koo og Andeas Knutsen STOPP 
 
 ob_end_flush(); //  Flush (send) output-bufferen og deaktiver output-buffering
 ?>

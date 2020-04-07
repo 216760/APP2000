@@ -16,7 +16,7 @@ https://www.w3schools.com/php/php_mysql_prepared_statements.asp
 https://www.php.net/manual/en/mysqli.prepare.php
 https://www.php.net/manual/en/mysqli-stmt.bind-param.php
 
-Kodet og tilpasset av: Henrik Solnør Johansen og Vigleik Espeland Stakseng og Anders Koo
+Kodet og tilpasset av: Henrik Solnør Johansen og Vigleik Espeland Stakseng og
 
 ------------------------------------------------------------------------------------------------------------------------------------------------> 
 
@@ -40,6 +40,7 @@ $subject = trim($_POST['subject']); // Sjekker om variaber er deklarert og fjern
 // Forbereder insert spørring mot databasen med prepare
 // ----------------------------------------------------------------------------------------------------
 
+//Kodet og tilpasset av: Anders Koo
 $stmt = mysqli_prepare($mysqli,"INSERT INTO feedback(name, email, message, subject) VALUES(?,?,?,?)");
 
 // ----------------------------------------------------------------------------------------------------
@@ -48,6 +49,7 @@ $stmt = mysqli_prepare($mysqli,"INSERT INTO feedback(name, email, message, subje
 // mysqli_stmt_bind_param og mysqli_prepare metodene hører sammen og er en måte å sikre mot sql injection. 
 // ----------------------------------------------------------------------------------------------------
 
+//Kodet og tilpasset av: Anders Koo
 mysqli_stmt_bind_param($stmt,"ssss", $name, $email, $message, $subject);
 if(mysqli_stmt_execute($stmt))
 {
@@ -55,5 +57,6 @@ if(mysqli_stmt_execute($stmt))
 }else{
     echo 'failure';
 }
+
 //--------------------------------------------------------------------------------------------------------------------
 ?>

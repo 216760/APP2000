@@ -19,8 +19,7 @@ https://www.w3schools.com/howto/howto_css_fixed_footer.asp
 https://stackoverflow.com/questions/36003670/how-to-put-a-link-on-a-button-with-bootstrap 
 https://stackoverflow.com/questions/36108407/how-to-auto-adjust-the-height-of-fixed-footer-at-bottom
 
-Kodet og tilpasset av: Henrik Solnør Johansen, Andreas Knutsen og Anders Koo
-
+Medlemmer som har bidratt: Henrik Solnør Johansen, Andreas Knutsen og Anders Koo
 
 ------------------------------------------------------------------------------------------------------------------------------------------------>
 

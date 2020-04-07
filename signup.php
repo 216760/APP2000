@@ -1,7 +1,25 @@
+<!-- ------------------------------------------------------------------------------------------------ 
+TIL INFORMASJON:
+ 
+
+// I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.
+// Dette vil også bli dokumentert under kildebruk i rapporten.  Grunnen til dette er basert på “best practice”  måter å programmere på.  
+// Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 
+
+// Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer. 
+// Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke. 
+
+// Kilder: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s
+
+Medlemmer som har bidratt:  Henrik Solnør Johansen, Andreas Knutsen og Anders Koo
+
+
+
+-----------------------------------------------------------------------------------------------------  -->
+
 <?php
 session_start();
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -60,6 +78,9 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
 
 ------------------------------------------------------------------------------------------------------------------------------------------------> 
 
+
+<!-- Kodet og tilpasset av: Anders Koo og Andreas Knutsen START -->
+
         <?php
         //Inkluderer database connection-fil
         include("db-config.php");
@@ -76,6 +97,7 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
             $empty = FALSE;
             $emailErr = "";
             
+           //Kodet og tilpasset av: Anders Koo START
             if(!empty($_POST['name'] && $_POST['email'] && $_POST['password'])) {
 
                 // mysqli_query er er spørremetode som tar inn databaseforbindelse variabelen mysqli og selve SQL spørringen.
@@ -84,6 +106,8 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
                 // mysqli_num_rows teller antall rader som matcher med email som bruker skrev i registreringsskjema
                 $user_matched = mysqli_num_rows($email_result);
 
+
+            //Kodet og tilpasset av: Anders Koo STOPP
                 // Bruker filter_var som er en metode som tar inn en variabel og et filter FILTER_SANITIZE_EMAIL
                 $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 
@@ -102,7 +126,7 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
 // ----------------------------------------------------------------------------------------------------
 
                     // Variabel som bruker password_hash funksjon sammen med PASSWORD_BCRYPT algoritme for å hashe passord
-                    $hashedpass = password_hash($password, PASSWORD_BCRYPT);
+                    $hashedpass = password_hash($password, PASSWORD_BCRYPT); 
                     
                     // Setter brukerdata inn i databasen ved funksjon mysqli_query
                     $result = mysqli_query($mysqli, "INSERT INTO register(username,email,password) VALUES('$name','$email','$hashedpass')");
@@ -122,5 +146,6 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
                 header('Location: signup.php'); // Header er en funksjon som viderefører brukeren til signup
             }
         }
-    
+
+        //Kodet og tilpasset av: Anders Koo og Andreas Knutsen STOPP
 ?>

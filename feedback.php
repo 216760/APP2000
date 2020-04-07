@@ -9,7 +9,8 @@ Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempele
 
 Kilde: http://www.openjs.com/ajax/tutorial/ajax.php
 
-Kodet og tilpasset av: Henrik Solnør Johansen og Vigleik Espeland Stakseng og Anders Koo
+Medlemmer som har birdratt Henrik Solnør Johansen og Vigleik Espeland Stakseng og Anders Koo
+
 ------------------------------------------------------------------------------------------------------------------------------------------------> 
 
 
