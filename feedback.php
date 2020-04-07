@@ -30,7 +30,7 @@ include('includes/header.php');
 			  <p><input id="email" placeholder="E-mail" type="email" class="" required></p>
 			  <p><input id="subject" placeholder="Emne" type="subject"></p>
 			  <textarea id="message" placeholder="skriv inn melding" rows="10" class="" required ></textarea>
-			  <input class="fdsendBtn"id="mybtn" type="submit" value="Submit"> <span id="status"></span>
+			  <input class="fdsendBtn"id="mybtn" type="submit" name="submitbtn" value="Submit"> <span id="status"></span>
 			</form>	
 			<input class="fdbackBtn" type="submit" align="right" value="Cancel" onclick="document.location = 'index.php'">
 	</div>  
