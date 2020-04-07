@@ -78,13 +78,13 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
             
             if(!empty($_POST['name'] && $_POST['email'] && $_POST['password'])) {
 
-                // Hvis email allerede er registert får bruker en feilmelding
+                // mysqli_query er er spørremetode som tar inn databaseforbindelse variabelen mysqli og selve SQL spørringen.
                 $email_result = mysqli_query($mysqli, "select 'email' from register where email='$email' and password='$password'");
 
-                // Teller antall rader som matcher med email som bruker skrev i registreringsformen
+                // mysqli_num_rows teller antall rader som matcher med email som bruker skrev i registreringsskjema
                 $user_matched = mysqli_num_rows($email_result);
 
-                // Gjør email sikker på SQL injekting (saniterer)
+                // Bruker filter_var som er en metode som tar inn en variabel og et filter FILTER_SANITIZE_EMAIL
                 $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 
                 // Om emailen ikke er i riktig regex format blir den ikke sanitert
@@ -101,10 +101,10 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
 // https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s
 // ----------------------------------------------------------------------------------------------------
 
-                    // Variabel som bruker password_hash metode sammen med PASSWORD_BCRYPT algoritme for å hashe passord
+                    // Variabel som bruker password_hash funksjon sammen med PASSWORD_BCRYPT algoritme for å hashe passord
                     $hashedpass = password_hash($password, PASSWORD_BCRYPT);
                     
-                    // Setter brukerdata inn i databasen
+                    // Setter brukerdata inn i databasen ved funksjon mysqli_query
                     $result = mysqli_query($mysqli, "INSERT INTO register(username,email,password) VALUES('$name','$email','$hashedpass')");
                         // Ved gjennomført spørring får brukeren beskjed om at profilen er opprettet 
                         if ($result) {
@@ -119,7 +119,7 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
             } else {
                 //Ved tomme felt får brukeren beskjed om at feltene IKKE kan være tomme
                 $_SESSION['status'] = "Fields cannot be empty";
-                header('Location: signup.php');
+                header('Location: signup.php'); // Header er en funksjon som viderefører brukeren til signup
             }
         }
     

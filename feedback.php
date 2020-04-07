@@ -22,11 +22,11 @@ include('includes/header.php');
 
 
 <body>
-		<!-- ----------------------------------------------------------------------------------------
-			Lager et form som da har 3 inputs name, email og subject og 1 textarea der man kan skrive inn. Dette blir sendt når alle feltene er fylt ut, ellers så får du opp en feilmelding. 
-			For at et form skal sendes, så man ha en id som kobler (my_form)formet sammen med scriptet nedenfor.
-			Har 2 submit knapper der den ene knappen har en id "mybtn" som gjør at function starter. 
-			Knapp 2 sender bruker tilbake til forsiden.  
+<!-- ----------------------------------------------------------------------------------------
+Lager et form som da har 3 inputs name, email og subject og 1 textarea der man kan skrive inn. Dette blir sendt når alle feltene er fylt ut, ellers så får du opp en feilmelding. 
+For at et form skal sendes, så man ha en id som kobler (my_form)formet sammen med scriptet nedenfor.
+Har 2 submit knapper der den ene knappen har en id "mybtn" som gjør at function starter. 
+Knapp 2 sender bruker tilbake til forsiden.  
 ----------------------------------------------------------------------------------------------------- -->	
 
 	<div class="fdwrapper">				
