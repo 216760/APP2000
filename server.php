@@ -34,8 +34,8 @@ $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000d
 if(isset($_POST['registerbtn'])) // Sjekker at variabel er deklarert
 {
     // Informasjon om abonnement
-    $description = $_POST['description'];   // Sjekker at variabel er deklarert
-    $start_date = $_POST['start_date'];     // Sjekker at variabel er deklarert
+    $description = mysqli_real_escape_string($connection, $_POST['description']);   // Sjekker at variabel er deklarert
+    $start_date = mysqli_real_escape_string($connection, $_POST['start_date']);     // Sjekker at variabel er deklarert
     $end_date = $_POST['end_date'];         // Sjekker at variabel er deklarert
     $user_id = $_SESSION['id'];
 
@@ -81,9 +81,9 @@ $queryDB = mysqli_query($connection, $queryReg); // Utfører spørring mot datab
 // ----------------------------------------------------------------------------------------------------
 if(isset($_POST['updatebtn'])) {    // Sjekker at variabel er deklarert
     $id = $_POST['edit_id'];        // Sjekker at variabel er deklarert
-    $description = $_POST['edit_description'];  // Sjekker at variabel er deklarert
-    $start_date = $_POST['edit_date_from'];     // Sjekker at variabel er deklarert
-    $end_date = $_POST['edit_date_to'];         // Sjekker at variabel er deklarert
+    $description = mysqli_real_escape_string($connection, $_POST['edit_description']);  // Sjekker at variabel er deklarert
+    $start_date = mysqli_real_escape_string($connection, $_POST['edit_date_from']);     // Sjekker at variabel er deklarert
+    $end_date = mysqli_real_escape_string($connection, $_POST['edit_date_to']);         // Sjekker at variabel er deklarert
 
     // Spørring som oppdaterer spesifikt kort i databasen
     $queryEdit = "UPDATE cards SET description='$description', start_date='$start_date', end_date='$end_date' WHERE id='$id' ";
