@@ -85,7 +85,7 @@ Footer
 			formdata.append( "message", _("message").value ); 
 			// nøkkel og verdi
 			formdata.append( "subject", _("subject").value ); 
-			// denne lager et nytt XMLHttpRequest objekt, denne variabelen gjør at man kan oppdatere side uten å laste inn siden på nytt
+			// denne lager et nytt XMLHttpRequest objekt, denne variabelen gjør at man kan oppdatere siden uten å laste inn siden på nytt
 			var ajax = new XMLHttpRequest(); 
 			// lager en metode 
 			ajax.open( "POST", "feedbackinsert.php" ); 
