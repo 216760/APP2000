@@ -3,7 +3,7 @@
 	<div class="container-fluid">
 
 		<h2>
-				Etter bare en økt med våre tjenster <br><input class="lpBtn" type="submit" align="right" value="REGISTRER DEG NÅ!" onclick="document.location = 'signup.php'"><br> vil du ha mer kontroll over<p> <br>budsjett, sparemål og livet
+				Etter bare en økt med våre tjenster <br><br> vil du ha mer kontroll over<p> <br>budsjett, sparemål og livet
 
 		<h2>
 			
