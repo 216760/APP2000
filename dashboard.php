@@ -33,7 +33,7 @@ session_start();
 $id = $_SESSION["id"];
 
 if(!isset($_SESSION)){
-  header('Location:login.php');
+  header('Location:login.php'); 
 }
 
 include('includes/header.php');
@@ -163,6 +163,9 @@ $query_run = mysqli_query($connection, $query);
             unset($_SESSION['error']);
           }
           ?>
+
+
+
         </div>
       </form>
       </div>
@@ -191,7 +194,7 @@ Footer
 Henter script filer (JS, JQUERY, BOOTSTRAP)
 ----------------------------------------------------------------------------------------------------- -->
 
-<?php include'includes/scripts.php';?>
+<?php include('includes/scripts.php');?>
 
 <!-- ---------------------------------------------------------------------------------------------------- 
 Henter script filer (JS, JQUERY, BOOTSTRAP)

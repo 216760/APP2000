@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once('db-config.php');
+include('db-config.php');
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +36,6 @@ include_once('db-config.php');
             }
         ?>
     </form>
-
 </body>
 </html>
 
@@ -45,6 +44,8 @@ include_once('db-config.php');
 ob_start(); // Aktiverer output buffering
 // -----------------------------------------------------------------------------------------------------
 // TIL INFORMASJON: 
+// -----------------------------------------------------------------------------------------------------
+
 
 // I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.
 // Dette vil også bli dokumentert under kildebruk i rapporten.  Grunnen til dette er basert på “best practice”  måter å programmere på.  
@@ -55,41 +56,34 @@ ob_start(); // Aktiverer output buffering
 
 // Kilder: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s
 
-
-//-----------------------------------------------------------------------------------------------------
-// Setter opp database forbindelse
-//-----------------------------------------------------------------------------------------------------
-include_once('db-config.php');
-// $con = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
-
 //-----------------------------------------------------------------------------------------------------
 //
 //-----------------------------------------------------------------------------------------------------
 
 
-    if (isset($_POST['loginbtn'])) {    //Sjekker at variabel er deklarert
-        $email    = trim($_POST['email']);  //Sjekker at email er deklarert
-        $password = trim($_POST['password']); //Sjekker at password er deklarert
+    if (isset($_POST['loginbtn'])) {    //Sjekker at variabel er deklarert og sikrer mot sql injection
+        $email    = mysqli_real_escape_string($mysqli, $_POST['email']);  //Sjekker at email er deklarert og sikrer mot sql injection
+        $password = mysqli_real_escape_string($mysqli, $_POST['password']); //Sjekker at password er deklarert og sikrer mot sql injection
 
 //-----------------------------------------------------------------------------------------------------
 // Denne koden er hentet fra og implementert og tilpasset inn i egen løsning fra Youtube kanalen Coding Passive income
 // Kilde: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s
 //-----------------------------------------------------------------------------------------------------
 
-        $sql = mysqli_query($mysqli, "SELECT id, password FROM register WHERE email='$email'"); // bruker $con til å utføre SELECT spørring 
-        $user_matced = mysqli_num_rows($sql);
+        $sql = mysqli_query($mysqli, "SELECT id, password FROM register WHERE email='$email'"); // Utfører SELECT spørring mot database og sjekker om email matcher med input
+        $user_matced = mysqli_num_rows($sql); // Henter ut raden som matcher med email og legger denne i en variabel
         if ($user_matced > 0) {
-            $data = mysqli_fetch_array($sql); // Legger resultatet av spørringen i en tabell
+            $data = mysqli_fetch_array($sql); // Legger SELECT spørringen i tabell deretter i en variabel
             $id = $data['id'];
             $_SESSION['id'] = $id;
             
-        if(password_verify($password, $data['password'])) { //password_verify sammenligner input password med hashet passord i databasen
+        if(password_verify($password, $data['password'])) { //password_verify sammenligner input password med hashet passord i databasen fra $data variabel
             header('Location:dashboard.php'); //Viderefører brukeren til dashboard
             exit(0); //Terminerer operasjonen 
         } else
             header('Location: login.php');  //Viderefører brukeren til login
             $_SESSION['status'] = "Email or password is incorrect"; //Feilmelding til bruker
-            exit(0);
+            exit(0); //Terminerer operasjonen 
         } else {
             header('Location:login.php'); //Viderefører brukeren til login
             $_SESSION['status'] = "Fields cannot be empty"; //Feilmelding til bruke

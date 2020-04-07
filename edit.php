@@ -26,7 +26,7 @@ Setter opp session og includes
 session_start();
 include('includes/header.php');
 include('includes/navbar.php'); 
-include('includes/scripts.php'); 
+
 ?>
 
 <!-- ----------------------------------------------------------------------------------------------------
@@ -89,6 +89,8 @@ $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000d
                     <button type="submit" name="updatebtn" class="btn">Update</button>
                 </form>
             </div>
+            </div>
+            </div>
     
             <?php
         }
@@ -102,7 +104,10 @@ $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000d
  Footer 
 ------------------------------------------------------------------------------------------------------>
 
-<?php include('includes/footer.php');?>
+<?php
+include('includes/footer.php');
+include('includes/scripts.php'); 
+?>
 
 <!-- --------------------------------------------------------------------------------------------------
  Footer 

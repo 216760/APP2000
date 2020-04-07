@@ -26,11 +26,17 @@ session_start();
             <input type="submit" id="regbtn" name="registerbtn" class="btn rounded primary" value="Registrer">
             <?php
 
+                // Sjekker om session status er deklarert og ikke er en tom string
                 if(isset($_SESSION['status']) && $_SESSION['status'] !='') {
+                    // Viser info melding til bruker
                     echo '<h6 class="bg-warning text-white"> '.$_SESSION['status'].' </h6>';
+                    // Resetter SESSION status variaber
                     unset($_SESSION['status']);
+                    // Sjekker om session status er deklarert og ikke er en tom string
                 } else if (isset($_SESSION['success']) && $_SESSION['success'] !='') {
+                    // Viser info melding til bruker
                     echo '<h6 class="bg-success text-white"> '.$_SESSION['success'].' </h6>';
+                    // Resetter SESSION success variaber
                     unset($_SESSION['success']);
                 }
 
@@ -56,15 +62,15 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
 
         <?php
         //Inkluderer database connection-fil
-        include_once("db-config.php");
+        include("db-config.php");
 
         $empty = FALSE;
 
         // Sjekker om registreringsformen er klar, og legger inn data i databasen
         if (isset($_POST['registerbtn'])) {
-            $name     = $_POST['name'];
-            $email    = $_POST['email'];
-            $password = $_POST['password'];
+            $name     = mysqli_real_escape_string($mysqli, $_POST['name']);
+            $email    = mysqli_real_escape_string($mysqli, $_POST['email']);
+            $password = mysqli_real_escape_string($mysqli, $_POST['password']);
 
             // $password= password_hash($_POST["password"],PASSWORD_DEFAULT);
             $empty = FALSE;
@@ -83,7 +89,6 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
 
                 // Om emailen ikke er i riktig regex format blir den ikke sanitert
                 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-
                     $_SESSION['status'] = "$email is not a valid email address";
                     header('Location: signup.php');
 
@@ -96,22 +101,23 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
 // https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s
 // ----------------------------------------------------------------------------------------------------
 
-                    // Variabel som bruker password_hash metode for å hashe passord
+                    // Variabel som bruker password_hash metode sammen med PASSWORD_BCRYPT algoritme for å hashe passord
                     $hashedpass = password_hash($password, PASSWORD_BCRYPT);
                     
                     // Setter brukerdata inn i databasen
                     $result = mysqli_query($mysqli, "INSERT INTO register(username,email,password) VALUES('$name','$email','$hashedpass')");
-                        // Ved gjennomført spørring får brukeren beskjed om at profilen er opprettet eller at det har skjedd en feil. 
+                        // Ved gjennomført spørring får brukeren beskjed om at profilen er opprettet 
                         if ($result) {
                             $_SESSION['success'] = "$User Registered successfully";
                             header('Location: signup.php');
                         } else {
-                            // Todo: Finn en bedre måte å vise denne meldingen på
+                            //  Ved gjennomført spørring får brukeren beskjed om at emailen allerede er i bruk
                             $_SESSION['status'] = "Email already in use: \n" . mysqli_error($mysqli);
 
                         }
                 }
             } else {
+                //Ved tomme felt får brukeren beskjed om at feltene IKKE kan være tomme
                 $_SESSION['status'] = "Fields cannot be empty";
                 header('Location: signup.php');
             }

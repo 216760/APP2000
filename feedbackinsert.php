@@ -19,49 +19,35 @@ https://www.php.net/manual/en/mysqli-stmt.bind-param.php
 ------------------------------------------------------------------------------------------------------------------------------------------------> 
 
 <?php
-
-
+// ----------------------------------------------------------------------------------------------------
+// Kobler til database
+// ----------------------------------------------------------------------------------------------------
+ include_once("db-config.php");
 // ----------------------------------------------------------------------------------------------------
 // Setter opp kredentialer
 // ----------------------------------------------------------------------------------------------------
 
-$name = $_POST['name'];
-$email = $_POST['email'];
-$message = $_POST['message'];
-$subject = $_POST['subject'];
+$name = trim($_POST['name']); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
+$email = trim($_POST['email']); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
+$message = trim($_POST['message']); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
+$subject = trim($_POST['subject']); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
 
-
-// ----------------------------------------------------------------------------------------------------
-// Kobler til database
-// ----------------------------------------------------------------------------------------------------
-
-$url = 'itfag.usn.no';
-$username = 'v20app2000u2';
-$password = 'pw2';
-$db = "v20app2000db2";
-$mysqli = mysqli_connect($url, $username, $password, $db); 
-if(!$mysqli){
- die('Could not Connect My Sql:' .mysqli_error());
-}
 
 
 // ----------------------------------------------------------------------------------------------------
 // Forbereder insert spørring mot databasen med prepare
 // ----------------------------------------------------------------------------------------------------
 
-
-
-$stmt = $mysqli->prepare("INSERT INTO feedback(name, email, message, subject) VALUES(?,?,?,?)");
-
+$stmt = mysqli_prepare($mysqli,"INSERT INTO feedback(name, email, message, subject) VALUES(?,?,?,?)");
 
 // ----------------------------------------------------------------------------------------------------
-// Utfører spørring mot databaseb. bind_param er er metode for å "binde" sammen de forskjellige input 
+// Utfører spørring mot databaseb. mysqli_stmt_bind_param er er metode for å "binde" sammen de forskjellige input 
 // datatypene. Bruker variablene blir først definert med "ssss" (s=string), og deretter legges dem inn.
-// bind_param og prepare metodene hører sammen
+// mysqli_stmt_bind_param og mysqli_prepare metodene hører sammen og er en måte å sikre mot sql injection. 
 // ----------------------------------------------------------------------------------------------------
 
-$stmt->bind_param("ssss", $name, $email, $message, $subject);
-if($stmt->execute())
+mysqli_stmt_bind_param($stmt,"ssss", $name, $email, $message, $subject);
+if(mysqli_stmt_execute($stmt))
 {
     echo 'success';
 }else{
