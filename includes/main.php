@@ -21,7 +21,7 @@ Medlemmer som har bidratt: Henrik Solnør Johansen og Anders Koo
 	<div class="container-fluid">
 
 		<h2 align="right">
-		Be ready to take your one chance to change your<img src="img/files.png" align="left"> view and control<br>of your finances and life
+		Be ready to take your one chance to change your view and control<br>of your finances and life
 		  
 		<h2>	
 	</div>
@@ -31,8 +31,8 @@ Medlemmer som har bidratt: Henrik Solnør Johansen og Anders Koo
 
 	<div class="container-fluid">
 		
-		<h2>
-		After just one session with our services you will<img src="img/files.png" align="right"> have better control<br> of your budget and savings
+		<h2 align="left">
+		After just one session with our services you will have better control<br> of your budget and savings
 		
 		</h2>
 
