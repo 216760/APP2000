@@ -2,9 +2,9 @@
 
 	<div class="container-fluid">
 
-		<h2>
-				Etter bare en økt med våre tjenster <br><br> vil du ha mer kontroll over<p> <br>budsjett, sparemål og livet
-
+		<h2 align="center">
+				
+							Be ready to take your one chance to change your view and control of your finances and life 
 		<h2>
 			
 	</div>
@@ -15,8 +15,9 @@
 
 	<div class="container-fluid">
 		
-		<h2>
-			Etter bare en økt med våre tjenster<img src="img/kontroll.jpeg" align="left"> <p><br> vil du ha mer kontroll over<p> <br>budsjett, sparemål og livet
+		<h2 align="center">
+			After just one session with our services YOU will have better control of your BUDGET, your SAVING needs and your LIFE 
+				
 		</h2>
 
 	</div>
@@ -28,7 +29,7 @@
 	<div class="container-fluid">
 
 		<h2>
-				Etter bare en økt med våre tjenster<img src="img/student.jpeg" align="right"> <p><br> vil du ha mer kontroll over<p> <br>budsjett, sparemål og livet
+				Our services 
 		</h2>
 
 	</div>
