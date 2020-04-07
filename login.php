@@ -68,8 +68,8 @@ include_once('db-config.php');
 
 
     if (isset($_POST['loginbtn'])) {    //Sjekker at variabel er deklarert
-        $email    = trim($_POST['email']);  //Sjekker at email er deklarert
-        $password = trim($_POST['password']); //Sjekker at password er deklarert
+        $email    = mysqli_real_escape_string($mysqli, $_POST['email']);  //Sjekker at email er deklarert
+       $password = mysqli_real_escape_string($mysqli, $_POST['password']); //Sjekker at password er deklarert
 
 //-----------------------------------------------------------------------------------------------------
 // Denne koden er hentet fra og implementert og tilpasset inn i egen løsning fra Youtube kanalen Coding Passive income

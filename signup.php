@@ -62,9 +62,9 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
 
         // Sjekker om registreringsformen er klar, og legger inn data i databasen
         if (isset($_POST['registerbtn'])) {
-            $name     = $_POST['name'];
-            $email    = $_POST['email'];
-            $password = $_POST['password'];
+            $name     = mysqli_real_escape_string($mysqli, $_POST['name']);
+            $email    = mysqli_real_escape_string($mysqli, $_POST['email']);
+            $password = mysqli_real_escape_string($mysqli, $_POST['password']);
 
             // $password= password_hash($_POST["password"],PASSWORD_DEFAULT);
             $empty = FALSE;
