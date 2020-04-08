@@ -50,7 +50,7 @@ $stmt = mysqli_prepare($mysqli,"INSERT INTO feedback(name, email, message, subje
 // mysqli_stmt_bind_param og mysqli_prepare metodene hører sammen og er en måte å sikre mot sql injection. 
 // ----------------------------------------------------------------------------------------------------
 
-//Kodet og tilpasset av: Anders Koo Henrik Solnør Johansen STOPP
+//Kodet og tilpasset av: Anders Koo og Henrik Solnør Johansen STOPP
 mysqli_stmt_bind_param($stmt,"ssss", $name, $email, $message, $subject);
 if(mysqli_stmt_execute($stmt))
 {
