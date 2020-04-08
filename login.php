@@ -16,7 +16,6 @@ Medlemmer som har bidratt:  Henrik Solnør Johansen, Andreas Knutsen og Anders K
 -----------------------------------------------------------------------------------------------------  -->
 <?php
 session_start();
-include('db-config.php');
 ?>
 
 <!DOCTYPE html>
@@ -62,7 +61,9 @@ include('db-config.php');
 
 
 <?php
+
 ob_start(); // Aktiverer output buffering
+include_once('db-config.php');
 
     if (isset($_POST['loginbtn'])) {                                        //Sjekker at variabel er deklarert og sikrer mot sql injection
         $email    = mysqli_real_escape_string($mysqli, $_POST['email']);    //Sjekker at email er deklarert og sikrer mot sql injection
