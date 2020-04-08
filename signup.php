@@ -97,7 +97,6 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
             $empty = FALSE;
             $emailErr = "";
             
-           //Kodet og tilpasset av: Anders Koo START
             if(!empty($_POST['name'] && $_POST['email'] && $_POST['password'])) {
 
                 // mysqli_query er er spørremetode som tar inn databaseforbindelse variabelen mysqli og selve SQL spørringen.
@@ -107,7 +106,6 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
                 $user_matched = mysqli_num_rows($email_result);
 
 
-            //Kodet og tilpasset av: Anders Koo STOPP
                 // Bruker filter_var som er en metode som tar inn en variabel og et filter FILTER_SANITIZE_EMAIL
                 $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 
@@ -124,7 +122,7 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
 // Kilde: 
 // https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s
 // ----------------------------------------------------------------------------------------------------
-
+                    
                     // Variabel som bruker password_hash funksjon sammen med PASSWORD_BCRYPT algoritme for å hashe passord
                     $hashedpass = password_hash($password, PASSWORD_BCRYPT); 
                     
@@ -147,5 +145,5 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
             }
         }
 
-        //Kodet og tilpasset av: Anders Koo og Andreas Knutsen STOPP
+        //-- Kodet og tilpasset av: Anders Koo og Andreas Knutsen STOPP --
 ?>
