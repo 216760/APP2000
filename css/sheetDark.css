@@ -63,17 +63,6 @@ body{
 
   }
 
-
-/* https://www.w3schools.com/howto/howto_css_fixed_footer.asp */
-/*.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #543091;
-  text-align: center;
-}*/
-
 .btn{
   background-color: #4a138c;
 }
@@ -101,146 +90,6 @@ color:white;
 /* background-color: #543091; */
 }
 
-/*
-.container{
-  position: relative;
-  padding-top: 1px;
-  bottom:250px;
-}*/
-
-
-
-
-/* https://www.w3schools.com/css/tryit.asp?filename=trycss_position_fixed */
-
-/*#info-section{
-  background-color: white;
-  height: 500px;
-}
-
-#info-text{
-  text-align: center;
-  margin-top: 150px;
-  margin-left: 50px;
-  color:#543091;
-  position: relative;
-  top: 110px;
-  font-family: 'Lato', sans-serif;
-}
-
-
-#info-section2{
-  background-color:#543091;
-  height: 620px;
-}
-
-#info-text2{
-  text-align: right;
-  margin-top: 150px;
-  margin-right: 100px;
-  color: white;
-  position: relative;
-  top: 200px;
-  font-family: 'Lato', sans-serif;
-}
-
-
-
-
-#info-text3{
-  text-align: left;
-  margin-top: 120px;
-  margin-left: 50px;
-  color:#543091;
-  position: relative;
-  top: 40px;
-  font-family: 'Lato', sans-serif;
-  
-
-}*/
-
-
-/* ------------------------------------------- */
-/* CUSTOM STYLING END */
-/* ------------------------------------------- */
-
-
-
-
-/* ------------------------------------------- */
-/* CUSTOM STYLING START */
-/*
-/* ------------------------------------------- */
-
-/* KODET AV: Anders Koo */
-
-
-/* .navbar{
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: .9rem;
-  letter-spacing: .1rem;
-  background-color: #543091!important;
-} */
-
-
-/* https://www.w3schools.com/css/tryit.asp?filename=trycss_position_fixed */
-
-/* #info-section{
-  background-color: white;
-  height: 500px;
-}
-
-
-
-#info-text{
-  text-align: left;
-  margin-top: 150px;
-  margin-left: 50px;
-  color:#543091;
-  position: relative;
-  top: 110px;
-  font-family: 'Lato', sans-serif;
-}
-
-
-#info-section2{
-  background-color:#543091;
-  height: 620px;
-}
-
-#info-text2{
-  text-align: right;
-  margin-top: 150px;
-  margin-right: 100px;
-  color: white;
-  position: relative;
-  top: 200px;
-  font-family: 'Lato', sans-serif;
-}
-
-
-
-
-#info-text3{
-  text-align: left;
-  margin-top: 120px;
-  margin-left: 50px;
-  color:#543091;
-  position: relative;
-  top: 40px;
-  font-family: 'Lato', sans-serif;
-  
-
-}
-
-#info-section3{
-  background-color: white;
-  height: 500px;
-} */
-
-
-/* KODET AV: Anders Koo */
 
 
 /* ------------------------------------------- */
@@ -386,35 +235,6 @@ footer.page-footer ul {
 }
 
 
-/* KODET AV: Andreas Knutsen */
-
-/* KODET AV: Henrik Solnør Johansen*/
-/*---- info Section ---*/
-
-/*.section1{
-
-padding: 10px;
-margin-left: 10px;
-margin-right: 10px;
-
-}
-
-.section2{
-
-padding: 10px;
-margin-left: 10px;
-margin-right: 10px;
-
-}
-
-.section3{
-
-  padding: 10px;
-margin-left: 10px;
-margin-right: 10px;
-}*/
-
-
 /*---- Contact  / Footer  Section ---*/
 
 .section4{
@@ -536,20 +356,6 @@ footer img {
   font-size: 1.9vw;
 }
 
-/* .btn {
-
-  text-decoration: none;
-  display: table;
-  text-align: center;
-  margin-top: 6%;
-  height: 3vh;
-  padding: 3% 0% 3% 0%;
-  background: #12E553;
-  font-family: 'Lobster';
-  font-size: 1.8;
-  color: #0D0707;
-} */
-
 
 /*---- Login and Signup Section ---*/
 
@@ -587,7 +393,7 @@ input, textarea {
 textarea {
     resize: none;
 }
-input{type=text}:focus{
+input:focus{
   border:2px solid #543091;
   box-shadow: 0 0 8px 0 purple;
  }
