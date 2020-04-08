@@ -116,6 +116,7 @@ color:white;
 .content-dashboard {
   padding-top: 100px;
   padding-bottom: 60px;
+  background-color: grey;
 }
 
 section {
@@ -124,7 +125,7 @@ section {
 }
 
 .bg-main {
-  background-color: black;
+  background-color: grey;
   color: #543091;
 }
 
