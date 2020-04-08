@@ -263,22 +263,26 @@ form{
 
 input, textarea {
   display:block;
-    width:100%;
-    border:none;
-    padding:.5rem;
-    font-size:18px;
-    border-radius:5px;
+  width:100%;
+  border:none;
+  padding:.5rem;
+  font-size:18px;
+  border-radius:5px;
+  resize: none;
 }
 
-input:focus{
+#message {
+  resize: none;
+}
+
+input{type=text}:focus{
   border:2px solid #543091;
   box-shadow: 0 0 8px 0 purple;
  }
 
-
-.fdsendBtn{
+.fdsendBtn {
   border:0;
-  background:#4a138c;
+  background:#543091;
   color:white;
   margin:1rem 0;
   width:auto;
@@ -286,18 +290,21 @@ input:focus{
   cursor:pointer;
   float: left;
   margin-right: 5px;
- 
-  }
-.fdbackBtn{
+}
+
+.fdbackBtn {
   border:0;
-  background: #4a138c;
+  background: #543091;
   color:white;
   margin:1rem 0;
   width:auto;
   text-transform:uppercase;
   cursor:pointer;
   float: left; 
+}
 
+.form-control {
+  width: 100%;
 }
 
   /*--- Feedback form --*/
