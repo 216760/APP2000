@@ -34,9 +34,9 @@ include('includes/header.php');
 
     <body>
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="css/stylesheet.css">
-<link rel="stylesheet" href="css/login.css">
+<?php
+include('includes/navbar.php');
+?>
 
         <div class="content-dashboard">
             <div class="container">
@@ -45,8 +45,7 @@ include('includes/header.php');
                         <h6 class="m-0 font-weight-bold text-primary"> EDIT Subscription </h6>
                     </div>
                     <div class="card-body">
-<?php
-
+    <?php
 // ----------------------------------------------------------------------------------------------------
 // Setter opp database forbindelse
 // ----------------------------------------------------------------------------------------------------
@@ -69,7 +68,7 @@ $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000d
 // Setter opp bootstrap struktur
 // ----------------------------------------------------------------------------------------------------
 
-    foreach($query_run as $row) // foreach brukes til telle antall rader i databasen som samsvarer med innlogget bruker
+    foreach($query_run as $row)
     {
     ?>
 
