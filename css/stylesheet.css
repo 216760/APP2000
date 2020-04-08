@@ -33,7 +33,7 @@ body{
 /*
 /* ------------------------------------------- */
 
-/* KODET AV: Anders Koo start*/
+/* KODET AV: Anders Koo */
 
 
 
@@ -45,8 +45,7 @@ body{
   color:#4a138c;
   position: relative;
 }
-
-/* Kilder brukt til å posisjonere input felter */
+/* Kilder brukt til å style input felter */
 /* https://www.w3schools.com/cssref/pr_class_position.asp */
 .empty-sub{
   position: relative;
@@ -80,9 +79,6 @@ background-color: #4a138c;
 color:white;
 /* background-color: #543091; */
 }
-
-
-/* KODET AV: Anders Koo stopp*/
 
 
 /* KODET AV: Andreas Knutsen */

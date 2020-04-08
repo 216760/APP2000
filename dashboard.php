@@ -130,7 +130,7 @@ $query_run = mysqli_query($connection, $query);
   <?php
     }
     else { ?>
-      <h6 class="info-text">Please add new subscription in the top right</h6> <?php
+   <?php
     }
   ?>
 <div class="container">

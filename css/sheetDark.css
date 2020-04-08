@@ -35,23 +35,7 @@ body{
 
 /* KODET AV: Anders Koo start*/
 
-
-
-.info-text{
-  text-align: center;
-  margin-bottom: 300px;
-  margin-left: 50px;
-  margin-top: 50px;
-  color:#4a138c;
-  position: relative;
-}
-
 /* https://www.w3schools.com/cssref/pr_class_position.asp */
-.empty-sub{
-  position: relative;
-  left: 40%;
-
-  }
 
 .btn{
   background-color: #4a138c;
