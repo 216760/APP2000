@@ -32,7 +32,7 @@ session_start();
 include('includes/header.php');
 ?>
 
-    <body>
+    <body id="custom-body">
 
 <?php
 include('includes/navbar.php');
