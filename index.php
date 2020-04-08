@@ -17,9 +17,21 @@ Kodet og tilpasset av:  Henrik Solnør Johansen og Anders Koo
 
 <?php
 session_start();
-include('includes/header.php');
-include('includes/navbar.php'); 
 ?>
+
+
+<!DOCTYPE html>
+<html>
+
+	<?php
+	include('includes/header.php');
+	?>
+
+	<body id="custom-body">
+
+		<?php
+		include('includes/navbar.php');
+		?>
 
 
 <!--  Visning av landdingsiden -->
