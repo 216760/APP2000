@@ -29,7 +29,7 @@ Kodet og tilpasset av: Henrik Solnør Johansen og Vigleik Espeland Stakseng og
 // Setter opp kredentialer
 // ----------------------------------------------------------------------------------------------------
 
-//Kodet og tilpasset av: Anders Koo START
+//Kodet og tilpasset av: Anders Koo og Henrik Solnør Johansen START
 $name = trim($_POST['name']); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
 $email = trim($_POST['email']); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
 $message = trim($_POST['message']); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
@@ -50,7 +50,7 @@ $stmt = mysqli_prepare($mysqli,"INSERT INTO feedback(name, email, message, subje
 // mysqli_stmt_bind_param og mysqli_prepare metodene hører sammen og er en måte å sikre mot sql injection. 
 // ----------------------------------------------------------------------------------------------------
 
-//Kodet og tilpasset av: Anders Koo STOPP
+//Kodet og tilpasset av: Anders Koo Henrik Solnør Johansen STOPP
 mysqli_stmt_bind_param($stmt,"ssss", $name, $email, $message, $subject);
 if(mysqli_stmt_execute($stmt))
 {
