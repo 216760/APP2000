@@ -72,7 +72,7 @@ $query_run = mysqli_query($connection, $query);
   include('includes/header.php');
   ?>
 
-  <body>
+  <body id="custom-body">
 
     <?php
     include('includes/navbar.php');

@@ -19,7 +19,7 @@ Medlemmer som har bidratt Henrik Solnør Johansen, Vigleik Espeland Stakseng, An
 	include('includes/header.php');
 	?>
 
-	<body>
+	<body id="custom-body">
 		<!-- ------------------------------------------------------------------------------------------------
 		Lager et form som da har 3 inputs name, email og subject og 1 textarea der man kan skrive inn. 
 		Dette blir sendt når alle feltene er fylt ut, ellers så får du opp en feilmelding. 
