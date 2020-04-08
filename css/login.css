@@ -5,6 +5,13 @@ body {
   height: 100%;
 }
 
+
+/* .form-control:input:focus{
+  outline: none;
+	border-color: #4a138c;
+  border-radius: 2px;
+} */
+
 body {
   display: -ms-flexbox;
   display: -webkit-box;

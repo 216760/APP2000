@@ -36,7 +36,7 @@ Setter opp session og includes
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="css/stylesheet.css">
-<link rel="stylesheet" href="css/Logginn.css">
+<link rel="stylesheet" href="css/login.css">
 
 <div class="container-fluid">
 	<div class="card shadow mb-4 mx-auto" style="width: 30rem;">
