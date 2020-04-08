@@ -88,7 +88,7 @@ Footer
 			formdata.append( "subject", _("subject").value ); 
 			// denne lager et nytt XMLHttpRequest objekt, denne variabelen gjør at man kan oppdatere siden uten å laste inn siden på nytt
 			var ajax = new XMLHttpRequest(); 
-			// lager en metode 
+			// lager en metode, med hjelp av POST vil metoden sende dataen når tilkoblingen er åpen
 			ajax.open( "POST", "feedbackinsert.php" ); 
 			// starter den funksjonen, blir "called" når readystate verdiene forandrer seg
 			ajax.onreadystatechange = function() { 
