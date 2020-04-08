@@ -43,12 +43,12 @@ if(isset($_POST['registerbtn'])) // Sjekker at variabel er deklarert
 // Setter opp spørrevariabel for registrering av abonnement
 // ----------------------------------------------------------------------------------------------------
 
-$queryReg = "INSERT INTO cards (description, start_date, end_date, user_id) VALUES ('$description', '$start_date','$end_date', $user_id)"; //  Spørring som setter inn data i databasen
+$queryReg = "INSERT INTO cards (description, start_date, end_date, user_id) VALUES ('$description', '$start_date','$end_date', '$user_id')"; //  Spørring som setter inn data i databasen
 $queryDB = mysqli_query($connection, $queryReg); // Utfører spørring mot databasen
 
 
 
-    if($queryDB){
+    if($queryDB){   
         echo "Saved";
         $_SESSION['subOk'] = "New subscription is successfully added!";
         header('Location: dashboard.php');
