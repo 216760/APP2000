@@ -90,7 +90,7 @@ color:white;
 .card{
     position: relative;
     margin: 0 auto;
-    padding: 1px;
+    margin-top: 30px;
 }
 
 .content-main {
