@@ -15,6 +15,7 @@ Medlemmer som har bidratt Henrik Solnør Johansen, Vigleik Espeland Stakseng, An
 <html>
 
 	<?php
+	session_start();
 	include('includes/header.php');
 	?>
 

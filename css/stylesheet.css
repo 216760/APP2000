@@ -57,9 +57,9 @@ body{
   background-color: #4a138c;
 }
 
+/* Kilder brukt til å style input felter */
 /* https://www.w3schools.com/cssref/sel_focus.asp */
 /* https://stackoverflow.com/questions/3397113/how-to-remove-focus-border-outline-around-text-input-boxes-chrome */
-
 
 input:focus {
 	outline: none;
