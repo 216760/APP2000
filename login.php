@@ -22,7 +22,7 @@ session_start();
 <html>
 
     <?php
-    include('includes/header_login.php');
+    include('includes/header_login.php'); // Inkluderer bare 'db-config.php' en gang, og scriptet vil avbrytes dersom include_once-funksjonen ikke finner filen.
     ?>
  
  <body id="custom-body">
