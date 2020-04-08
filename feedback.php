@@ -1,4 +1,3 @@
-  
 <!----------------------------------------------------------------------------------------------------------------------------------------------
 TIL INFORMASJON: 
 I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.
@@ -12,55 +11,72 @@ Kilde: http://www.openjs.com/ajax/tutorial/ajax.php
 Medlemmer som har birdratt Henrik Solnør Johansen og Vigleik Espeland Stakseng og Anders Koo
 
 ------------------------------------------------------------------------------------------------------------------------------------------------> 
-
-
 <!DOCTYPE html>
 <html>
-<?php
-session_start();
-include('includes/navbar.php');
-include('includes/header.php');
-?>
 
-<title>Feedback</title>
+	<?php
+	include('includes/header.php');
+	?>
+
+	<body>
+		<!-- ------------------------------------------------------------------------------------------------
+		Lager et form som da har 3 inputs name, email og subject og 1 textarea der man kan skrive inn. 
+		Dette blir sendt når alle feltene er fylt ut, ellers så får du opp en feilmelding. 
+		For at et form skal sendes, så man ha en id som kobler (my_form)formet sammen med scriptet nedenfor.
+		Har 2 submit knapper der den ene knappen har en id "mybtn" som gjør at function starter. 
+		Knapp 2 sender bruker tilbake til forsiden.  
+		----------------------------------------------------------------------------------------------------->
+
+		<?php
+		include('includes/navbar.php');
+		?>
+			
+
+		<div class="content-dashboard">
+      		<div class="container">
+        		<div class="row justify-content-center">
+		            <div class="card shadow mx-auto" style="width: 25rem;">
+              			<div class="card-header">Send a message</div>
+	    				<form id="my_form" onsubmit="return submitForm();">
+							<div class="form-group col-lg-12">
+								<input id="name" placeholder="Name" required class="form-control">
+							</div>
+							<div class="form-group col-lg-12">
+								<input id="email" placeholder="E-mail" type="email" class="form-control" required>
+							</div>
+							<div class="form-group col-lg-12">
+								<input id="subject" placeholder="Subject" type="subject" class="form-control">
+							</div>
+							<div class="form-group col-lg-12">
+								<textarea class="form-control" id="message" placeholder="Write your message" rows="5" class="form-control" required ></textarea>
+							</div>
+							<div class="form-group col-lg-6">
+								<input class="fdsendBtn"id="mybtn" type="submit" name="submitbtn" value="Submit" style="display:inline-block;"><span id="status"></span>
+								<input class="fdbackBtn" type="submit" align="right" value="Cancel" style="display:inline-block;" onclick="document.location = 'index.php'">
+							</div>
+						</form>	 
+					</div>
+				</div>
+			</div>
+
+		<!-- ---------------------------------------------------------------------------------------------------- 
+		Footer
+		----------------------------------------------------------------------------------------------------- -->
+
+		<?php include('includes/footer.php');?>
+
+		<!-- ---------------------------------------------------------------------------------------------------- 
+		Footer
+		----------------------------------------------------------------------------------------------------- -->
+
+	</body>
 
 
-<body>
-<!-- ----------------------------------------------------------------------------------------
-Lager et form som da har 3 inputs name, email og subject og 1 textarea der man kan skrive inn. 
-Dette blir sendt når alle feltene er fylt ut, ellers så får du opp en feilmelding. 
-For at et form skal sendes, så man ha en id som kobler (my_form)formet sammen med scriptet nedenfor.
-Har 2 submit knapper der den ene knappen har en id "mybtn" som gjør at function starter. 
-Knapp 2 sender bruker tilbake til forsiden.  
------------------------------------------------------------------------------------------- -->	
 
-	<div class="fdwrapper">				
+	<?php
+	include('includes/scripts.php');
+	?>
 
-			<form id="my_form" onsubmit="return submitForm();">
-			  <p><input id="name" placeholder="Navn" required class=""></p>
-			  <p><input id="email" placeholder="E-mail" type="email" class="" required></p>
-			  <p><input id="subject" placeholder="Emne" type="subject"></p>
-			  <textarea id="message" placeholder="skriv inn melding" rows="10" class="" required ></textarea>
-			  <input class="fdsendBtn"id="mybtn" type="submit" name="submitbtn" value="Submit"> <span id="status"></span>
-			</form>	
-			<input class="fdbackBtn" type="submit" align="right" value="Cancel" onclick="document.location = 'index.php'">
-	</div>  
-
-
-</body>
-
-
-
-
-<!-- ---------------------------------------------------------------------------------------------------- 
-Footer
------------------------------------------------------------------------------------------------------ -->
-
-<?php include('includes/footer.php');?>
-
-<!-- ---------------------------------------------------------------------------------------------------- 
-Footer
------------------------------------------------------------------------------------------------------ -->
 
 </html>
 
