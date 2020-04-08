@@ -37,9 +37,6 @@ if(!isset($_SESSION)){
   header('Location:login.php'); 
 }
 
-include('includes/header.php');
-include('includes/navbar.php');
-
 // ----------------------------------------------------------------------------------------------------
 // Setter opp session og includes
 // ----------------------------------------------------------------------------------------------------
@@ -68,55 +65,67 @@ $query_run = mysqli_query($connection, $query);
 <!-- ---------------------------------------------------------------------------------------------------- 
  Setter opp dashboard struktur. Vi henter så ut brukerkort fra databasen ved å identifisere dem via id 
 ----------------------------------------------------------------------------------------------------- -->
+<!DOCTYPE html>
+<html>
+  
+  <?php
+  include('includes/header.php');
+  ?>
 
-<div class="content-dashboard">
-  <div class="container">
-    <div>
-        <button data-toggle="modal" data-target="#eexampleModal" class="btn btn-primary w-25" style="display: block; margin: 0 auto;">Add a new subscription</button>
-    </div>
-    <div class="row justify-content-center">
-        <?php
+  <body>
 
-        if(mysqli_num_rows($query_run) > 0) {
+    <?php
+    include('includes/navbar.php');
+    ?>
 
-          while($row = mysqli_fetch_assoc($query_run)) {
+    <div class="content-dashboard">
+      <div class="container">
+        <div>
+            <button data-toggle="modal" data-target="#eexampleModal" class="btn btn-primary w-25" style="display: block; margin: 0 auto;">Add a new subscription</button>
+        </div>
+        <div class="row justify-content-center">
+            <?php
 
-        ?>
-      <div class="col-sm-4">
-        <div class="card shadow mx-auto" style="width: 18rem;">
-          <div class="card-header"><?php echo $row['description']; ?>
-            <div class="float-right">
-              <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Green</a>
-                <a class="dropdown-item" href="#">Yellow</a>
-                <a class="dropdown-item" href="#">Red</a>
+            if(mysqli_num_rows($query_run) > 0) {
+
+              while($row = mysqli_fetch_assoc($query_run)) {
+
+            ?>
+          <div class="col-sm-4">
+            <div class="card shadow mx-auto" style="width: 18rem;">
+              <div class="card-header"><?php echo $row['description']; ?>
+                <div class="float-right">
+                  <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Green</a>
+                    <a class="dropdown-item" href="#">Yellow</a>
+                    <a class="dropdown-item" href="#">Red</a>
+                  </div>
+                </div>
+              </div>
+            </div>  
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h6 class="card-text">Start date</h6><?php echo $row['start_date']; ?></li>
+                <li class="list-group-item"><h6 class="card-text">End date</h6><?php echo $row['end_date']; ?></li>
+              </ul>
+              <div class="card-body">
+                <form action="edit.php" method="post" style="display:inline-block;">                                               
+                  <input type="hidden" name ="edit_id" value="<?php echo $row['id']; ?>">
+                  <button type="submit" class="btn btn-primary" name="edit_btn" data-toggle="modal"> Edit</button>
+                </form>
+                <form action="server.php" method="post" style="display:inline-block;">                                               
+                  <input type="hidden" name ="delete_id" value="<?php echo $row['id']; ?>">
+                  <button type="submit" class="btn btn-primary" name="delete_btn" data-toggle="modal"> Delete</button>
+                </form>    
               </div>
             </div>
           </div>
-        </div>  
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><h6 class="card-text">Start date</h6><?php echo $row['start_date']; ?></li>
-            <li class="list-group-item"><h6 class="card-text">End date</h6><?php echo $row['end_date']; ?></li>
-          </ul>
-          <div class="card-body">
-            <form action="edit.php" method="post" style="display:inline-block;">                                               
-              <input type="hidden" name ="edit_id" value="<?php echo $row['id']; ?>">
-              <button type="submit" class="btn btn-primary" name="edit_btn" data-toggle="modal"> Edit</button>
-            </form>
-            <form action="server.php" method="post" style="display:inline-block;">                                               
-              <input type="hidden" name ="delete_id" value="<?php echo $row['id']; ?>">
-              <button type="submit" class="btn btn-primary" name="delete_btn" data-toggle="modal"> Delete</button>
-            </form>    
-          </div>
+              <?php } ?>
         </div>
       </div>
-          <?php } ?>
     </div>
-  </div>
-</div>
 
   <?php
     }
