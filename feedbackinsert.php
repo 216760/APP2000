@@ -21,6 +21,7 @@ Kodet og tilpasset av: Henrik Solnør Johansen og Vigleik Espeland Stakseng og
 ------------------------------------------------------------------------------------------------------------------------------------------------> 
 
 <?php
+session_start();
 // ----------------------------------------------------------------------------------------------------
 // Kobler til database
 // ----------------------------------------------------------------------------------------------------
@@ -34,6 +35,7 @@ $name = trim($_POST['name']); // Sjekker om variaber er deklarert og fjerner whi
 $email = trim($_POST['email']); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
 $message = trim($_POST['message']); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
 $subject = trim($_POST['subject']); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
+$user_id = $_SESSION['id'];
 
 
 
@@ -42,7 +44,7 @@ $subject = trim($_POST['subject']); // Sjekker om variaber er deklarert og fjern
 // ----------------------------------------------------------------------------------------------------
 
 
-$stmt = mysqli_prepare($mysqli,"INSERT INTO feedback(name, email, message, subject) VALUES(?,?,?,?)");
+$stmt = mysqli_prepare($mysqli,"INSERT INTO feedback(name, email, message, subject, user_id) VALUES(?,?,?,?,?)");
 
 // ----------------------------------------------------------------------------------------------------
 // Utfører spørring mot databaseb. mysqli_stmt_bind_param er er metode for å "binde" sammen de forskjellige input 
@@ -51,7 +53,7 @@ $stmt = mysqli_prepare($mysqli,"INSERT INTO feedback(name, email, message, subje
 // ----------------------------------------------------------------------------------------------------
 
 //Kodet og tilpasset av: Anders Koo og Henrik Solnør Johansen STOPP
-mysqli_stmt_bind_param($stmt,"ssss", $name, $email, $message, $subject);
+mysqli_stmt_bind_param($stmt,"ssssi", $name, $email, $message, $subject, $user_id);
 if(mysqli_stmt_execute($stmt))
 {
     echo 'success';
