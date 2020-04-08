@@ -7,6 +7,10 @@ if (!empty($_SESSION)) {
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
+			<!-- Kodet av: Vigleik Espeland Stakseng START -->
+			<input type="checkbox" data-toggle="toggle" data-on="Dark Mode" data-off="Light Mode" id="toggle1" onchange="toggleDark()" data-size="sm">
+			<!-- Kodet av: Vigleik Espeland Stakseng STOP -->
+
 		<div class="collapse navbar-collapse " id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
@@ -31,6 +35,11 @@ if (!empty($_SESSION)) {
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 						<span class="navbar-toggler-icon"></span>
 					</button>
+
+					<!-- Kodet av: Vigleik Espeland Stakseng START -->
+			<input type="checkbox" data-toggle="toggle" data-on="Dark Mode" data-off="Light Mode" id="toggle1" onchange="toggleDark()" data-size="sm">
+			<!-- Kodet av: Vigleik Espeland Stakseng STOP -->
+
 				<div class="collapse navbar-collapse " id="navbarResponsive">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item">
