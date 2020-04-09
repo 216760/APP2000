@@ -254,6 +254,12 @@ form{
 
 /*--- Feedback form --*/
 
+.card-header{
+  padding-bottom: 2px;
+  color: white;
+}
+
+
 .form-group input:focus{
   display: block;
   border: 2px solid #543091;
