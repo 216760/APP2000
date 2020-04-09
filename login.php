@@ -24,7 +24,7 @@ session_start(); // Oppretter unik sessjon til bruker
     <?php include('includes/header_login.php');?>
  
  <body id="custom-body">
-    <form class="form-signin text-center" action="login.php" method="POST" name="form1">
+    <form class="form-signin col-lg-12 text-center" action="login.php" method="POST" name="form1">
         <h1>LOGO</h1>
             <input type="text" placeholder="Enter your email..." name="email" class="">
             <input type="password" placeholder="Enter your password..." name="password" class="">
@@ -84,7 +84,7 @@ include_once('db-config.php'); // Inkluderer bare 'db-config.php' en gang, og sc
             header('Location:dashboard.php'); // Header er en funksjon som viderefører brukeren til dashboard
             exit(0); // exit er en funksjon som terminerer operasjonen 
         } else
-            header('Location: login.php');  // Header er en funksjon som viderefører brukeren til login
+            header('Location:login.php');  // Header er en funksjon som viderefører brukeren til login
             $_SESSION['status'] = "Email or password is incorrect"; //Feilmelding til bruker
             exit(0); // exit er en funksjon som terminerer operasjonen 
         } else {

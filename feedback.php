@@ -34,18 +34,18 @@ Den andre knappen returnerer brukeren til dashbordet.
       		<div class="container">
         		<div class="row justify-content-center">
 		            <div class="card shadow mx-auto" style="width: 25rem;">
-              			<div class="card-header" style="background-color: #543091">Send a message</div>
+              			<div class="card-header">Send a message</div>
 	    				<form id="my_form" onsubmit="return submitForm();">
-							<div class="form-group col-lg-12">
+							<div class="form-group col-sm-12">
 								<input id="name" placeholder="Name" type="name" required class="form-control">
 							</div>
-							<div class="form-group col-lg-12">
+							<div class="form-group col-sm-12">
 								<input id="email" placeholder="E-mail" type="email" class="form-control" required>
 							</div>
-							<div class="form-group col-lg-12">
+							<div class="form-group col-sm-12">
 								<input id="subject" placeholder="Subject"  type="subject" class="form-control">
 							</div>
-							<div class="form-group col-lg-12">
+							<div class="form-group col-sm-12">
 								<textarea class="form-control" id="message" placeholder="Write your message" rows="5" class="form-control" required ></textarea>
 							</div>
 							<div class="form-group col-lg-6">
@@ -56,7 +56,7 @@ Den andre knappen returnerer brukeren til dashbordet.
 					</div>
 				</div>
 			</div>
-
+		</div>
 		<!-- ---------------------------------------------------------------------------------------------------- 
 		Footer
 		----------------------------------------------------------------------------------------------------- -->

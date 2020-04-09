@@ -1,18 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,300);
 
-
 /* ------------------------------------------- */
 /* CUSTOM STYLING START */
 /*
 /* ------------------------------------------- */
 
-body{
+body {
   overflow-x: hidden;
   background-position: center;
   background-size: contain;
   background-attachment: fixed;
-  margin-top: 100;
 }
 
 /* ------------------------------------------- */
@@ -35,14 +33,12 @@ body{
 
 /* KODET AV: Anders Koo */
 
-
-
 .info-text{
   text-align: center;
   margin-bottom: 300px;
   margin-left: 50px;
   margin-top: 50px;
-  color:#4a138c;
+  color:#543091;
   position: relative;
 }
 
@@ -53,26 +49,56 @@ body{
 
   }
 
-.btn{
-  background-color: #4a138c;
-}
-
 /* https://www.w3schools.com/cssref/sel_focus.asp */
 /* https://stackoverflow.com/questions/3397113/how-to-remove-focus-border-outline-around-text-input-boxes-chrome */
 
 
+input:focus {
+  outline: none;
+  border-color: #543091;
+  border-radius: 2px;
+}
+
 .btn{
-background-color: #4a138c;
-color:white;
-/* background-color: #543091; */
+  background-color: #543091;
+  color:white;
 }
 
 .btn:hover{
-background-color: #4a138c;
+background-color: #543091;
 color:white;
-/* background-color: #543091; */
 }
 
+/* ------------------------------------------- */
+/* CUSTOM STYLING END */
+/* ------------------------------------------- */
+
+/*--- Bootstrap Mobile Gutter Fix --*/
+.row, .container-fluid {
+margin-left: 0px!important;
+margin-right: 0px!important;
+}
+
+/*--- Extra Bootstrap Column Padding --*/
+[class*="col-"] {
+  padding: 1rem;
+}
+
+
+/* ------------------------------------------- */
+/* CUSTOM STYLING START */
+/*
+/* ------------------------------------------- */
+
+/* KODET AV: Anders Koo */
+
+
+/* KODET AV: Anders Koo */
+
+
+/* ------------------------------------------- */
+/* CUSTOM STYLING END */
+/* ------------------------------------------- */
 
 /* KODET AV: Andreas Knutsen */
 
@@ -98,7 +124,7 @@ color:white;
 
 section {
   font-family: 'Lato', sans-serif;
-  padding:10rem;
+  padding:15rem;
 }
 
 .bg-main {
@@ -107,7 +133,7 @@ section {
 }
 
 .bg-secondary-custom {
-  background-color: #4a138c;
+  background-color: #543091;
   color: #FFFFFF;
 }
 
@@ -121,7 +147,7 @@ section {
   font-weight: 700;
   font-size: .9rem;
   letter-spacing: .1rem;
-  background-color: #4a138c;
+  background-color: #543091;
   margin-bottom: 0;
 }
 
@@ -155,27 +181,18 @@ nav li:hover a {
   color: #FFFFFF;
 }
 
-.fixed-top {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-}
-
 .btn-primary {
-  background-color: #4a138c !important;
-  border-color: #4a138c !important;
+  background-color: #543091 !important;
+  border-color: #543091 !important;
   border-radius: 8px !important;
 }
 
-
 footer{
   position: fixed;
-  /*height: 50px;*/
+  height: 72px;
   bottom: 0;
   width: 100%;
-  background-color: #4a138c;
+  background-color: #543091;
 }
 
 footer.page-footer .footer-copyright {
@@ -198,6 +215,10 @@ footer.page-footer ul {
     margin-right: 100px;
 }
 
+#custom {
+  margin: 0 auto;
+}
+
 
 .btn-outline-white {
     color: #fff !important;
@@ -212,105 +233,98 @@ footer.page-footer ul {
   margin: 0 auto;
 }
 
-/*---- Contact  / Footer  Section ---*/
 
-.section4{
-  
-margin-left: 40%;
-margin-right: 30%;
+/* KODET AV: Andreas Knutsen */
+
+
+/* KODET AV: Henrik Solnør Johansen*/
+
+/*---- Login and Signup Section ---*/
+/* ------------------------------------------- */
+/* CUSTOM STYLING START */
+/* ------------------------------------------- */
+.inner {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+} 
+
+.content {
+  width: 26vw;
+  height: 62vh;
+  background: rgba(255,255,255,0.39);
+  margin: auto;
+  border-radius: 1%;
+  display: table;
 }
-
-footer svg.svg-inline--fa{
-  font-size: 1.6rem;
-  margin: 1.2rem .5rem 0 0;
-}
-
-footer svg.svg-inline--fa:hover{
- color: #2681E6!important;
-}
-
-footer img {
-  height: 3rem;
-  margin: 1.5rem 0;
-  
-}
-
 
 /*---- Login and Signup Section ---*/
 
-form{
+form {
   text-align: center;
 }
+
 .form_container{
-  padding: 5px;
-  margin: 5px;
-}
-.small_container {
-
-}
-.form_label {
-
+  padding: 2px;
+  margin: 2px;
 }
 
 /*--- Feedback form --*/
 
-.card-header{
-  padding-bottom: 2px;
-  color: white;
+input, textarea {
+  display:block;
+  width:100%;
+  padding:.2rem;
+  font-size:18px;
+  border-radius:5px;
 }
 
-
-.form-group input:focus{
-  display: block;
-  border: 2px solid #543091;
-  box-shadow: 0 0 8px 0 #543091; 
-}
-
-.form-group textarea:focus{
-  display: block;
-  border: 2px solid #543091;
-  box-shadow: 0 0 8px 0 #543091; 
-}
-#message{
+#message {
   resize: none;
 }
-/*egenkode, ikke bootstrap4*/
-.fdsendBtn{
-  display:block;
-    width:100%;
-    border:none;
-    padding:.5rem;
-    font-size:18px;
-    border-radius:5px;
-  border:0;
-  background:#4a138c;
-  color:white;
-  margin:1rem 0;
-  width:auto;
-  text-transform:uppercase;
-  cursor:pointer;
+
+
+.fdsendBtn {
+  border: 0;
+  background: #543091;
+  color: white;
+  margin: 1rem 0;
+  width: auto;
+  text-transform: uppercase;
+  cursor: pointer;
   float: left;
   margin-right: 5px;
- 
-  }
-.fdbackBtn{
-  display:block;
-    width:100%;
-    border:none;
-    padding:.5rem;
-    font-size:18px;
-    border-radius:5px;
-  border:0;
-  background: #4a138c;
-  color:white;
-  margin:1rem 0;
-  width:auto;
-  text-transform:uppercase;
-  cursor:pointer;
-  float: left; 
-
 }
-/*egenkode, ikke bootstrap4*/
+
+.fdbackBtn {
+  border: 0;
+  background: #543091;
+  color: white;
+  margin: 1rem 0;
+  width: auto;
+  text-transform: uppercase;
+  cursor: pointer;
+  float: left;
+}
+
+.form-control {
+  width: 100%;
+}
+
+
+.col-lg-12 input:focus{
+  display: block;
+  border: 2px solid #543091;
+  box-shadow: 0 0 8px 0 #543091; 
+}
+
+.col-lg-12 textarea:focus{
+  display: block;
+  border: 2px solid #543091;
+  box-shadow: 0 0 8px 0 #543091; 
+}
+
+
 
 
   /*--- Feedback form --*/
