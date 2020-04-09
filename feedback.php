@@ -34,7 +34,7 @@ Den andre knappen returnerer brukeren til dashbordet.
       		<div class="container">
         		<div class="row justify-content-center">
 		            <div class="card shadow mx-auto" style="width: 25rem;">
-              			<div class="card-header">Send a message</div>
+              			<div class="card-header" style="background-color: #543091">Send a message</div>
 	    				<form id="my_form" onsubmit="return submitForm();">
 							<div class="form-group col-lg-12">
 								<input id="name" placeholder="Name" type="name" required class="form-control">
