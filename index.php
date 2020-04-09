@@ -29,7 +29,6 @@ session_start(); // Gjenopptar session
 
 	<?php include('includes/navbar.php');?> <!-- Inkluderer navbar.php -->
 
-
 <!--  Visning av landdingsiden -->
 
 	<div class="content-main">
@@ -48,7 +47,6 @@ session_start(); // Gjenopptar session
 
 </body>
 </html>
-
 
 <!-- ---------------------------------------------------------------------------------------------------- 
 Henter script filer (JS, JQUERY, BOOTSTRAP)
