@@ -14,7 +14,7 @@ Medlemmer som har bidratt Henrik Solnør Johansen, Vigleik Espeland Stakseng, An
 <!DOCTYPE html>
 <html>
 
-	<?php session_start();?>
+	<?php session_start();?> <!-- Gjenopptar session -->
 	<?php include('includes/header.php');?> <!-- Inkluderer header.php -->
 	
 
@@ -108,7 +108,7 @@ function submitForm(){ // Dette er en funksjon som samler inn data fra feedback 
     }
   }
 
-  ajax.send(formdata); // litt usikker på denne, sender data uansett?
+  ajax.send(formdata); // Sender request til database
 }
 </script>
 
