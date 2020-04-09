@@ -257,6 +257,7 @@ form{
 .card-header{
   padding-bottom: 2px;
   color: white;
+  padding-bottom: 3px;
 }
 
 
@@ -274,7 +275,7 @@ form{
 #message{
   resize: none;
 }
-
+/*egenkode, ikke bootstrap4*/
 .fdsendBtn{
   display:block;
     width:100%;
@@ -310,6 +311,8 @@ form{
   float: left; 
 
 }
+/*egenkode, ikke bootstrap4*/
+
 
   /*--- Feedback form --*/
 
