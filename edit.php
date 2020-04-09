@@ -50,9 +50,9 @@ session_start(); // Gjenopptar session
 
     if(isset($_POST['edit_btn'])) // Sjekker om edit_btn er deklarert og knapp har blitt aktivert
     {
-        $id = $_POST['edit_id'];  // Legger id på kortet inn i en variabel
+        $id = $_POST['edit_id'];  // Legger id på abonnementet inn i en variabel
         
-        $query = "SELECT * FROM cards WHERE id='$id' "; // Setter opp en spørrevariabel som henter kort som samsvarer med id' til det kortet du har klikket på
+        $query = "SELECT * FROM cards WHERE id='$id' "; // Setter opp en spørrevariabel som henter abonnement som samsvarer med id' til det abonnement du har klikket på
         
         // Setter opp en variabel med en mysqli_query funksjon som gjennomfører oppretting av forbindelse og SQL-spørringen 
         $query_run = mysqli_query($mysqli, $query); 
@@ -62,13 +62,13 @@ session_start(); // Gjenopptar session
 // Setter opp bootstrap struktur
 // ----------------------------------------------------------------------------------------------------
 
-    foreach($query_run as $row) // foreach er en funksjon som teller opp antall rader i kort tabellen
+    foreach($query_run as $row) // foreach er en funksjon som teller opp antall rader i abonnement tabellen
     {
     ?>
 
                         <form action="server.php" method="POST">
 
-                            <input type="hidden" name="edit_id" value="<?php echo $row['id'] ?>"> <!-- Henter kort id fra DB -->
+                            <input type="hidden" name="edit_id" value="<?php echo $row['id'] ?>"> <!-- Henter abonnement id fra DB -->
                             <div class="form-group">
                                 <label> Beskrivelse </label>          
                                                                                 <!-- Henter beskrivelse fra DB -->
@@ -79,7 +79,7 @@ session_start(); // Gjenopptar session
                                 <input type="date" name="edit_date_from" value="<?php echo $row['start_date'] ?>" class="form-control" placeholder="Enter Email">
                             </div>
                             <div class="form-group">
-                                <label>Til dato</label>                         <!-- Henter sluttd dato fra DB -->
+                                <label>Til dato</label>                         <!-- Henter slutt dato fra DB -->
                                 <input type="date" name="edit_date_to" value="<?php echo $row['end_date'] ?>" class="form-control" placeholder="Enter Password">
                             </div> 
                             <a href="dashboard.php" class="btn btn-primary"> Cancel</a>

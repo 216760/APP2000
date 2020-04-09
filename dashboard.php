@@ -64,7 +64,7 @@ $query_run = mysqli_query($connection, $query); // mysqli_query er en metode for
 
 
 <!-- ---------------------------------------------------------------------------------------------------- 
- Setter opp dashboard struktur. Vi henter så ut brukerkort fra databasen ved å identifisere dem via id 
+ Setter opp dashboard struktur. Vi henter så ut abonnement fra databasen ved å identifisere dem via id 
 ----------------------------------------------------------------------------------------------------- -->
 <!DOCTYPE html>
 <html>
@@ -113,11 +113,11 @@ $query_run = mysqli_query($connection, $query); // mysqli_query er en metode for
               </ul>
               <div class="card-body">
                 <form action="edit.php" method="post" style="display:inline-block;">                                               
-                  <input type="hidden" name ="edit_id" value="<?php echo $row['id']; ?>"> <!-- Henter ut id dato fra databasen. Dette for å kunne identifisere spesifikt kort  -->
+                  <input type="hidden" name ="edit_id" value="<?php echo $row['id']; ?>"> <!-- Henter ut id dato fra databasen. Dette for å kunne identifisere spesifikt abonnement  -->
                   <button type="submit" class="btn btn-primary" name="edit_btn" data-toggle="modal"> Edit</button>
                 </form>
                 <form action="server.php" method="post" style="display:inline-block;">                                               
-                  <input type="hidden" name ="delete_id" value="<?php echo $row['id']; ?>"> <!-- Henter ut id dato fra databasen. Dette for å kunne identifisere spesifikt kort  -->
+                  <input type="hidden" name ="delete_id" value="<?php echo $row['id']; ?>"> <!-- Henter ut id dato fra databasen. Dette for å kunne identifisere spesifikt abonnement  -->
                   <button type="submit" class="btn btn-primary" name="delete_btn" data-toggle="modal"> Delete</button>
                 </form>    
               </div>
