@@ -28,10 +28,8 @@ $databasePassword = 'pw2';
 // ----------------------------------------------------------------------------------------------------
 // Kobler til database
 // ----------------------------------------------------------------------------------------------------
-$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
-
-// Dere får feil med denne syntaksen:
-// $mysqli = mysqli_connect($databaseHost, $databaseName, $databaseUsername, $databasePassword);
+$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName); // mysqli_connect er en funksjonn som tar inn kredentialene og 
+                                                                                              // kobler seg til databasen
 
 // ----------------------------------------------------------------------------------------------------
 // 

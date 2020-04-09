@@ -23,20 +23,21 @@ Setter opp session og includes
 ----------------------------------------------------------------------------------------------------- -->
 
 <?php
-session_start();
+session_start(); // Gjenopptar session
 ?>
 <!DOCTYPE html>
 <html>
 
-<?php
-include('includes/header.php');
-?>
+
+<?php include('includes/header.php');?> <!-- Inkluderer header.php -->
+<?php include('includes/db-config.php');?> <!-- Inkluderer database tilkobling -->
+
+
 
     <body id="custom-body">
 
-<?php
-include('includes/navbar.php');
-?>
+<?php include('includes/navbar.php'); ?> <!-- Inkluderer navbar.php  -->
+
 
         <div class="content-dashboard">
             <div class="container">
@@ -46,46 +47,39 @@ include('includes/navbar.php');
                     </div>
                     <div class="card-body">
     <?php
-// ----------------------------------------------------------------------------------------------------
-// Setter opp database forbindelse
-// ----------------------------------------------------------------------------------------------------
 
-$connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
-
-
-    if(isset($_POST['edit_btn'])) // Sjekker om variabel er deklarert
+    if(isset($_POST['edit_btn'])) // Sjekker om edit_btn er deklarert og knapp har blitt aktivert
     {
-        $id = $_POST['edit_id'];  // Sjekker om variabel er deklarert
+        $id = $_POST['edit_id'];  // Legger id på abonnementet inn i en variabel
         
-        
-        $query = "SELECT * FROM cards WHERE id='$id' "; // Setter opp en spørrevariabel får å vise eksisterende data
+        $query = "SELECT * FROM cards WHERE id='$id' "; // Setter opp en spørrevariabel som henter abonnement som samsvarer med id' til det abonnement du har klikket på
         
         // Setter opp en variabel med en mysqli_query funksjon som gjennomfører oppretting av forbindelse og SQL-spørringen 
-        $query_run = mysqli_query($connection, $query); 
+        $query_run = mysqli_query($mysqli, $query); 
     
 
 // ----------------------------------------------------------------------------------------------------
 // Setter opp bootstrap struktur
 // ----------------------------------------------------------------------------------------------------
 
-    foreach($query_run as $row)
+    foreach($query_run as $row) // foreach er en funksjon som teller opp antall rader i abonnement tabellen
     {
     ?>
 
                         <form action="server.php" method="POST">
 
-                            <input type="hidden" name="edit_id" value="<?php echo $row['id'] ?>">
+                            <input type="hidden" name="edit_id" value="<?php echo $row['id'] ?>"> <!-- Henter abonnement id fra DB -->
                             <div class="form-group">
                                 <label> Beskrivelse </label>          
-                                <!-- Henter data fra DB -->
+                                                                                <!-- Henter beskrivelse fra DB -->
                                 <input type="text" name="edit_description" value="<?php echo $row['description'] ?>" class="form-control" placeholder="Enter Username"> 
                             </div>
                             <div class="form-group">
-                                <label>Fra dato</label>                   <!-- Henter data fra DB -->
+                                <label>Fra dato</label>                         <!-- Henter start dato fra DB -->
                                 <input type="date" name="edit_date_from" value="<?php echo $row['start_date'] ?>" class="form-control" placeholder="Enter Email">
                             </div>
                             <div class="form-group">
-                                <label>Til dato</label>                   <!-- Henter data fra DB -->
+                                <label>Til dato</label>                         <!-- Henter slutt dato fra DB -->
                                 <input type="date" name="edit_date_to" value="<?php echo $row['end_date'] ?>" class="form-control" placeholder="Enter Password">
                             </div> 
                             <a href="dashboard.php" class="btn btn-primary"> Cancel</a>
@@ -109,7 +103,7 @@ $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000d
     Footer 
     ------------------------------------------------------------------------------------------------------>
 
-    <?php include('includes/footer.php');?>
+    <?php include('includes/footer.php');?> <!-- Inkluderer footer.php -->
 
     <!-- --------------------------------------------------------------------------------------------------
     Footer 
@@ -121,7 +115,7 @@ $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000d
 <!-- ---------------------------------------------------------------------------------------------------- 
 Henter script filer (JS, JQUERY, BOOTSTRAP)
 ----------------------------------------------------------------------------------------------------- -->
-<?php include'includes/scripts.php';?>
+<?php include('includes/scripts.php');?>
 <!-- ---------------------------------------------------------------------------------------------------- 
 Henter script filer (JS, JQUERY, BOOTSTRAP)
 ----------------------------------------------------------------------------------------------------- -->

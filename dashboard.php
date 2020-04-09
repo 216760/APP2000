@@ -30,10 +30,11 @@ Medlemmer som har bidratt: Henrik Solnør Johansen, Andreas Knutsen og Anders Ko
 // Setter opp session og includes
 // ----------------------------------------------------------------------------------------------------
 
-session_start();
-$id = $_SESSION["id"];
+session_start(); // Gjenopptar session
 
-if(!isset($_SESSION)){
+$id = $_SESSION["id"]; 
+
+if(!isset($_SESSION)){ // Hvis session ikke er satt blir brukeren videresendt til login.php
   header('Location:login.php'); 
 }
 
@@ -52,8 +53,8 @@ if(!isset($_SESSION)){
 
 // $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
 $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
-$query = "SELECT * FROM cards WHERE user_id=$id"; // Henter cards som har user_id som samsvarer med session id
-$query_run = mysqli_query($connection, $query);
+$query = "SELECT * FROM cards WHERE user_id=$id"; // Henter data fra cards tabellen hvor user_id er identisk med id til bruker i register tabellen
+$query_run = mysqli_query($connection, $query); // mysqli_query er en metode for å utføre forbindelse med database og spørring
 
 
 // ----------------------------------------------------------------------------------------------------
@@ -63,20 +64,19 @@ $query_run = mysqli_query($connection, $query);
 
 
 <!-- ---------------------------------------------------------------------------------------------------- 
- Setter opp dashboard struktur. Vi henter så ut brukerkort fra databasen ved å identifisere dem via id 
+ Setter opp dashboard struktur. Vi henter så ut abonnement fra databasen ved å identifisere dem via id 
 ----------------------------------------------------------------------------------------------------- -->
 <!DOCTYPE html>
 <html>
   
-  <?php
-  include('includes/header.php');
-  ?>
+  <?php include('includes/header.php');?> <!-- Inkluderer header.php -->
+
 
   <body id="custom-body">
 
     <?php
-    include('includes/navbar.php');
-    ?>
+    include('includes/navbar.php'); ?>  <!-- Inkluderer navbar.php -->
+
 
     <div class="content-dashboard">
       <div class="container">
@@ -86,9 +86,10 @@ $query_run = mysqli_query($connection, $query);
         <div class="row justify-content-center">
             <?php
 
-            if(mysqli_num_rows($query_run) > 0) {
+            if(mysqli_num_rows($query_run) > 0) { // mysqli_num_rows funksjonen returnerer antall rader i databasen. Hvis mysqli_num_rows returnerer en verdi
+                                                  // som er større en 0 vil if-setningen fortsette. 
 
-              while($row = mysqli_fetch_assoc($query_run)) {
+              while($row = mysqli_fetch_assoc($query_run)) { // mysqli_fetch_assoc er en funksjon som returnerer resulterende rad i en tabell og legger den i $row variabelen
 
             ?>
           <div class="col-sm-4">
@@ -106,17 +107,17 @@ $query_run = mysqli_query($connection, $query);
                 </div>
               </div>
             </div>  
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item"><h6 class="card-text">Start date</h6><?php echo $row['start_date']; ?></li>
-                <li class="list-group-item"><h6 class="card-text">End date</h6><?php echo $row['end_date']; ?></li>
+              <ul class="list-group list-group-flush">                                 
+                <li class="list-group-item"><h6 class="card-text">Start date</h6><?php echo $row['start_date']; ?></li> <!-- Henter ut start dato fra databasen  -->
+                <li class="list-group-item"><h6 class="card-text">End date</h6><?php echo $row['end_date']; ?></li> <!-- Henter ut slutt dato fra databasen  -->
               </ul>
               <div class="card-body">
                 <form action="edit.php" method="post" style="display:inline-block;">                                               
-                  <input type="hidden" name ="edit_id" value="<?php echo $row['id']; ?>">
+                  <input type="hidden" name ="edit_id" value="<?php echo $row['id']; ?>"> <!-- Henter ut id dato fra databasen. Dette for å kunne identifisere spesifikt abonnement  -->
                   <button type="submit" class="btn btn-primary" name="edit_btn" data-toggle="modal"> Edit</button>
                 </form>
                 <form action="server.php" method="post" style="display:inline-block;">                                               
-                  <input type="hidden" name ="delete_id" value="<?php echo $row['id']; ?>">
+                  <input type="hidden" name ="delete_id" value="<?php echo $row['id']; ?>"> <!-- Henter ut id dato fra databasen. Dette for å kunne identifisere spesifikt abonnement  -->
                   <button type="submit" class="btn btn-primary" name="delete_btn" data-toggle="modal"> Delete</button>
                 </form>    
               </div>
@@ -195,7 +196,7 @@ $query_run = mysqli_query($connection, $query);
 Footer
 ----------------------------------------------------------------------------------------------------- -->
 
-<?php include('includes/footer.php');?>
+<?php include('includes/footer.php');?> <!-- Inkluderer footer.php -->
 
 <!-- ---------------------------------------------------------------------------------------------------- 
 Footer
