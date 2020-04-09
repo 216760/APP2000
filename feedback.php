@@ -98,7 +98,7 @@ function submitForm(){ // Dette er en funksjon som samler inn data fra feedback 
   formdata.append( "subject", ("subject").value );  //append er en metode som henter verdier fra de id'en subjekt i skjema
   var ajax = new XMLHttpRequest(); // ajax variabel initialiserer XMLHttpRequest objektet
   ajax.open( "POST", "feedbackinsert.php" ); // open er en metode fra XMLHttpRequest objektet som sender en POST forespørsel til feedbackinsert.php
-  ajax.onreadystatechange = function() { // onreadystatechange er en metode med en anonym funksjon som behandler forskjellige typer statuser
+  ajax.onreadystatechange = function() { // onreadystatechange er en metode med en anonym funksjon som behandler forskjellige typer statuser basert på en forespørsel
     if(ajax.readyState == 4 && ajax.status == 200) {
       if(ajax.responseText == "success"){ // hvis status er vellykket får brukeren en tilbakemelding
         ("myform").innerHTML = '<h2>Thanks '+("name").value+', your message has been sent.</h2>'; 

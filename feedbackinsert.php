@@ -57,7 +57,7 @@ $stmt = mysqli_prepare($mysqli,"INSERT INTO feedback(name, email, message, subje
 
 //Kodet og tilpasset av: Anders Koo og Henrik Solnør Johansen STOPP
 mysqli_stmt_bind_param($stmt,"ssssi", $name, $email, $message, $subject, $user_id);
-if(mysqli_stmt_execute($stmt)) //Utfører SQL statement
+if( ($stmt)) //Utfører SQL statement
 {
     echo 'success'; // Hvis utførelsen er vellyket sendes en success status
 }else{
