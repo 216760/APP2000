@@ -31,15 +31,8 @@ session_start();
 include('includes/db-config.php'); // Inkluderer db-config.php
 
 
-
-if(isset($_POST['registerbtn'])) // Sjekker at variabel er deklarert og at registerbtn knappen er klikket på 
-{
+if(isset($_POST['registerbtn'])) { // Sjekker at variabel er deklarert og at registerbtn knappen er klikket på 
     // Informasjon om abonnement
-
-    $description = mysqli_real_escape_string($connection, $_POST['description']);   // Sjekker at variabel er deklarert
-    $start_date = mysqli_real_escape_string($connection, $_POST['start_date']);     // Sjekker at variabel er deklarert
-    $end_date =  mysqli_real_escape_string($connection,$_POST['end_date']);         // Sjekker at variabel er deklarert
-    $user_id = $_SESSION['id'];
 
     $description = mysqli_real_escape_string($mysqli , $_POST['description']);   // Sjekker at variabel er deklarert og sikrer mot SQL injection
     $start_date = mysqli_real_escape_string($mysqli , $_POST['start_date']);     // Sjekker at variabel er deklarert og sikrer mot SQL injection
@@ -75,8 +68,7 @@ $queryDB = mysqli_query($mysqli , $queryReg); // mysqli_query er en funksjon som
 // Redigeringsknapp
 // ----------------------------------------------------------------------------------------------------
 
-    if(isset($_POST['edit_btn']))   // Sjekker at variabel er deklarert og at edit_btn knappen er klikket på 
-    {
+    if(isset($_POST['edit_btn'])) { // Sjekker at variabel er deklarert og at edit_btn knappen er klikket på 
         $id = $_POST['edit_id'];    // Sjekker at variabel er deklarert
         
         $queryReg = "SELECT * FROM cards WHERE id='$id' ";  // Spørring som henter spesifikk abonnement fra databasen
@@ -111,8 +103,7 @@ if(isset($_POST['updatebtn'])) {    // Sjekker at variabel er deklarert og at up
 // ----------------------------------------------------------------------------------------------------
 // Sletteknapp
 // ----------------------------------------------------------------------------------------------------
-if(isset($_POST['delete_btn'])) // Sjekker at variabel er deklarert og at updatebtn knappen er klikket på 
-{
+if(isset($_POST['delete_btn'])) { // Sjekker at variabel er deklarert og at updatebtn knappen er klikket på 
     $id = $_POST['delete_id'];  // Sjekker at variabel er deklarert
 
     $queryDelete = "DELETE FROM cards WHERE id='$id'";  // Spørring som sletter spesifikt abonnement fra databasen

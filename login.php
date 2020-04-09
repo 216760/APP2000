@@ -14,9 +14,7 @@ TIL INFORMASJON:
 Medlemmer som har bidratt:  Henrik Solnør Johansen, Andreas Knutsen og Anders Koo
 
 -----------------------------------------------------------------------------------------------------  -->
-<?php
-session_start(); // Oppretter unik sessjon til bruker
-?>
+<?php session_start(); ?> <!-- Oppretter unik sessjon til bruker -->
 
 <!DOCTYPE html>
 <html>
@@ -38,7 +36,6 @@ session_start(); // Oppretter unik sessjon til bruker
                 echo '<h6 class="bg-warning text-white"> '.$_SESSION['status'].' </h6>';
                 // Resetter SESSION status variaber
                 unset($_SESSION['status']);
-
             // Sjekker om session status er deklarert og ikke er en tom string
             } else if (isset($_SESSION['success']) && $_SESSION['success'] !='') {
                 // Viser info melding til bruker

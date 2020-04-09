@@ -70,13 +70,10 @@ $query_run = mysqli_query($connection, $query); // mysqli_query er en metode for
 <html>
   
   <?php include('includes/header.php');?> <!-- Inkluderer header.php -->
-
-
   <body id="custom-body">
 
     <?php
     include('includes/navbar.php'); ?>  <!-- Inkluderer navbar.php -->
-
 
     <div class="content-dashboard">
       <div class="container">
@@ -177,8 +174,6 @@ $query_run = mysqli_query($connection, $query); // mysqli_query er en metode for
             unset($_SESSION['error']);
           }
           ?>
-
-
 
         </div>
       </form>
