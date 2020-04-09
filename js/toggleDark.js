@@ -1,16 +1,19 @@
 function toggleDark(cssFile) {
-  //Kodet av: Vigleik Espeland Stakseng
+  
+  //-----------------------------------------------------------------------------------------------------------------------
+  // Dett er en JavaScript funksjon som bytter CSS stylesheet fra vanlig til darkmode når bruker trykker på en checkbox
+  //-----------------------------------------------------------------------------------------------------------------------
+  // Kodet av: Vigleik Espeland Stakseng
 
-  // Finner checkboxen (toggle)
-  var checkBox = document.getElementById("toggle1");
-  // Finner output teksten
-  var link = document.getElementById("text");
+  var checkBox = document.getElementById("toggle1"); // Finner selve checkboxen
+  
+  var link = document.getElementById("text");        // Finner output teksten
 
-  if (checkBox.checked == true){
-    var link = document.getElementById("lnk"); //Finner CSS filen
-	link.setAttribute("href", "css/sheetDark.css"); //Bytter href
-  } else {
-    var link = document.getElementById("lnk"); //Finner CSS filen
-	link.setAttribute("href", "css/stylesheet.css"); //Bytter href
+  if (checkBox.checked == true){                     // if-setning som kjører dersom checkbox/toggleswitch er TRUE
+    var link = document.getElementById("lnk");       // Finner CSS filen ved hjelp av getElementById
+	link.setAttribute("href", "css/sheetDark.css");    // Setter href til stylesheet for darkmode
+  } else {                                           // if-setning som kjører dersom checkbox/toggleswitch er FALSE
+    var link = document.getElementById("lnk");       // Finner CSS filen ved hjelp av getElementById
+	link.setAttribute("href", "css/stylesheet.css");   // Setter href til stylesheet for vanlig nettside design (ikke darkmode)
   }
 }

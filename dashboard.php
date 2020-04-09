@@ -30,15 +30,13 @@ Medlemmer som har bidratt: Henrik Solnør Johansen, Andreas Knutsen og Anders Ko
 // Setter opp session og includes
 // ----------------------------------------------------------------------------------------------------
 
-session_start();
-$id = $_SESSION["id"];
+session_start(); // Gjenopptar session
 
-if(!isset($_SESSION)){
+$id = $_SESSION["id"]; 
+
+if(!isset($_SESSION)){ // Hvis session ikke er satt blir brukeren videresendt til login.php
   header('Location:login.php'); 
 }
-
-include('includes/header.php');
-include('includes/navbar.php');
 
 // ----------------------------------------------------------------------------------------------------
 // Setter opp session og includes
@@ -55,8 +53,8 @@ include('includes/navbar.php');
 
 // $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
 $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
-$query = "SELECT * FROM cards WHERE user_id=$id"; // Henter cards som har user_id som samsvarer med session id
-$query_run = mysqli_query($connection, $query);
+$query = "SELECT * FROM cards WHERE user_id=$id"; // Henter data fra cards tabellen hvor user_id er identisk med id til bruker i register tabellen
+$query_run = mysqli_query($connection, $query); // mysqli_query er en metode for å utføre forbindelse med database og spørring
 
 
 // ----------------------------------------------------------------------------------------------------
@@ -66,62 +64,74 @@ $query_run = mysqli_query($connection, $query);
 
 
 <!-- ---------------------------------------------------------------------------------------------------- 
- Setter opp dashboard struktur. Vi henter så ut brukerkort fra databasen ved å identifisere dem via id 
+ Setter opp dashboard struktur. Vi henter så ut abonnement fra databasen ved å identifisere dem via id 
 ----------------------------------------------------------------------------------------------------- -->
+<!DOCTYPE html>
+<html>
+  
+  <?php include('includes/header.php');?> <!-- Inkluderer header.php -->
 
-<div class="content-dashboard">
-  <div class="container">
-    <div>
-        <button data-toggle="modal" data-target="#eexampleModal" class="btn btn-primary w-25" style="display: block; margin: 0 auto;">Add a new subscription</button>
-    </div>
-    <div class="row justify-content-center">
-        <?php
 
-        if(mysqli_num_rows($query_run) > 0) {
+  <body id="custom-body">
 
-          while($row = mysqli_fetch_assoc($query_run)) {
+    <?php
+    include('includes/navbar.php'); ?>  <!-- Inkluderer navbar.php -->
 
-        ?>
-      <div class="col-sm-4">
-        <div class="card shadow mx-auto" style="width: 18rem;">
-          <div class="card-header"><?php echo $row['description']; ?>
-            <div class="float-right">
-              <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Green</a>
-                <a class="dropdown-item" href="#">Yellow</a>
-                <a class="dropdown-item" href="#">Red</a>
+
+    <div class="content-dashboard">
+      <div class="container">
+        <div>
+            <button data-toggle="modal" data-target="#eexampleModal" class="btn btn-primary w-25" style="display: block; margin: 0 auto;">Add a new subscription</button>
+        </div>
+        <div class="row justify-content-center">
+            <?php
+
+            if(mysqli_num_rows($query_run) > 0) { // mysqli_num_rows funksjonen returnerer antall rader i databasen. Hvis mysqli_num_rows returnerer en verdi
+                                                  // som er større en 0 vil if-setningen fortsette. 
+
+              while($row = mysqli_fetch_assoc($query_run)) { // mysqli_fetch_assoc er en funksjon som returnerer resulterende rad i en tabell og legger den i $row variabelen
+
+            ?>
+          <div class="col-sm-4">
+            <div class="card shadow mx-auto" style="width: 18rem;">
+              <div class="card-header"><?php echo $row['description']; ?>
+                <div class="float-right">
+                  <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Green</a>
+                    <a class="dropdown-item" href="#">Yellow</a>
+                    <a class="dropdown-item" href="#">Red</a>
+                  </div>
+                </div>
+              </div>
+            </div>  
+              <ul class="list-group list-group-flush">                                 
+                <li class="list-group-item"><h6 class="card-text">Start date</h6><?php echo $row['start_date']; ?></li> <!-- Henter ut start dato fra databasen  -->
+                <li class="list-group-item"><h6 class="card-text">End date</h6><?php echo $row['end_date']; ?></li> <!-- Henter ut slutt dato fra databasen  -->
+              </ul>
+              <div class="card-body">
+                <form action="edit.php" method="post" style="display:inline-block;">                                               
+                  <input type="hidden" name ="edit_id" value="<?php echo $row['id']; ?>"> <!-- Henter ut id dato fra databasen. Dette for å kunne identifisere spesifikt abonnement  -->
+                  <button type="submit" class="btn btn-primary" name="edit_btn" data-toggle="modal"> Edit</button>
+                </form>
+                <form action="server.php" method="post" style="display:inline-block;">                                               
+                  <input type="hidden" name ="delete_id" value="<?php echo $row['id']; ?>"> <!-- Henter ut id dato fra databasen. Dette for å kunne identifisere spesifikt abonnement  -->
+                  <button type="submit" class="btn btn-primary" name="delete_btn" data-toggle="modal"> Delete</button>
+                </form>    
               </div>
             </div>
           </div>
-        </div>  
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><h6 class="card-text">Start date</h6><?php echo $row['start_date']; ?></li>
-            <li class="list-group-item"><h6 class="card-text">End date</h6><?php echo $row['end_date']; ?></li>
-          </ul>
-          <div class="card-body">
-            <form action="edit.php" method="post" style="display:inline-block;">                                               
-              <input type="hidden" name ="edit_id" value="<?php echo $row['id']; ?>">
-              <button type="submit" class="btn btn-primary" name="edit_btn" data-toggle="modal"> Edit</button>
-            </form>
-            <form action="server.php" method="post" style="display:inline-block;">                                               
-              <input type="hidden" name ="delete_id" value="<?php echo $row['id']; ?>">
-              <button type="submit" class="btn btn-primary" name="delete_btn" data-toggle="modal"> Delete</button>
-            </form>    
-          </div>
+              <?php } ?>
         </div>
       </div>
-          <?php } ?>
     </div>
-  </div>
-</div>
 
   <?php
     }
     else { ?>
-      <h6 class="info-text">Please add new subscription in the top right</h6> <?php
+   <?php
     }
   ?>
 <div class="container">
@@ -186,7 +196,7 @@ $query_run = mysqli_query($connection, $query);
 Footer
 ----------------------------------------------------------------------------------------------------- -->
 
-<?php include('includes/footer.php');?>
+<?php include('includes/footer.php');?> <!-- Inkluderer footer.php -->
 
 <!-- ---------------------------------------------------------------------------------------------------- 
 Footer

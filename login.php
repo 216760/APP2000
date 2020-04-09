@@ -15,25 +15,15 @@ Medlemmer som har bidratt:  Henrik Solnør Johansen, Andreas Knutsen og Anders K
 
 -----------------------------------------------------------------------------------------------------  -->
 <?php
-session_start();
-include('db-config.php');
+session_start(); // Oppretter unik sessjon til bruker
 ?>
 
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">    
-    <meta name="author" content="">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
-    <title>Logg inn</title>
-    <link rel="stylesheet" href="css/stylesheet.css">
-    <link rel="stylesheet" href="css/login.css">
-</head>
-<body>
+<!-- Inkluderer bare 'db-config.php' en gang, og scriptet vil avbrytes dersom include_once-funksjonen ikke finner filen. -->
+    <?php include('includes/header_login.php');?>
+ 
+ <body id="custom-body">
     <form class="form-signin text-center" action="login.php" method="POST" name="form1">
         <h1>LOGO</h1>
             <input type="text" placeholder="Enter your email..." name="email" class="">
@@ -57,15 +47,20 @@ include('db-config.php');
                 unset($_SESSION['success']);
             }
         ?>
-    </form>
-</body>
+        </form>
+
+    </body>
+
+    <?php include('includes/scripts.php');?> <!-- Inkluderer scripts.php -->
+
 </html>
 
 
 <?php
-ob_start(); // Aktiverer output buffering
 
-    if (isset($_POST['loginbtn'])) {                                        //Sjekker at variabel er deklarert og sikrer mot sql injection
+include_once('db-config.php'); // Inkluderer bare 'db-config.php' en gang, og scriptet vil avbrytes dersom include_once-funksjonen ikke finner filen.
+
+    if (isset($_POST['loginbtn'])) { //Sjekker at variabel er deklarert og at knappen er klikket på
         $email    = mysqli_real_escape_string($mysqli, $_POST['email']);    //Sjekker at email er deklarert og sikrer mot sql injection
         $password = mysqli_real_escape_string($mysqli, $_POST['password']); //Sjekker at password er deklarert og sikrer mot sql injection
 
@@ -76,27 +71,28 @@ ob_start(); // Aktiverer output buffering
 
 //Kodet og tilpasset av: Anders Koo og Andeas Knutsen START 
 
-        $sql = mysqli_query($mysqli, "SELECT id, password FROM register WHERE email='$email'"); // Utfører SELECT spørring mot database og sjekker om email matcher med input
-        $user_matced = mysqli_num_rows($sql); // Henter ut raden som matcher med email og legger denne i en variabel
-        if ($user_matced > 0) {
-            $data = mysqli_fetch_array($sql); // Legger SELECT spørringen i tabell deretter i en variabel
-            $id = $data['id'];
-            $_SESSION['id'] = $id;
-            
-        if(password_verify($password, $data['password'])) { //password_verify sammenligner input password med hashet passord i databasen fra $data variabel
+        // mysqli_query funksjon som utfører SELECT spørring mot database og sjekker om email matcher med input
+        $sql = mysqli_query($mysqli, "SELECT id, password FROM register WHERE email='$email'"); 
+        $user_matced = mysqli_num_rows($sql); // mysqli_num_rows funksjon som enter ut raden som matcher med email og legger denne i en variabel
+        if ($user_matced > 0) { // Hvis user_matced returerner en verdi større en 0 fortsetter koden.
+            $data = mysqli_fetch_array($sql); // Legger SELECT spørringen i tabell ved hjelp av funksjonen mysqli_fetch_array. Deretter legges denne spørringen i en variabel
+            $id = $data['id'];  // Henter ut bruker id fra databasen og legger den i en variabel
+            $_SESSION['id'] = $id;  // Legger id variabelen inn i en session variabel. Dette for å identifisere bruker
+        
+        //password_verify er en funksjon som sammenligner input password med hashet passord i databasen fra $data variabel
+        if(password_verify($password, $data['password'])) { 
             header('Location:dashboard.php'); // Header er en funksjon som viderefører brukeren til dashboard
-            exit(0); // Funksjon som terminerer operasjonen 
+            exit(0); // exit er en funksjon som terminerer operasjonen 
         } else
             header('Location: login.php');  // Header er en funksjon som viderefører brukeren til login
             $_SESSION['status'] = "Email or password is incorrect"; //Feilmelding til bruker
-            exit(0); // Funksjon som terminerer operasjonen 
+            exit(0); // exit er en funksjon som terminerer operasjonen 
         } else {
             header('Location:login.php'); // Header er en funksjon som viderefører brukeren til login
             $_SESSION['status'] = "Fields cannot be empty"; //Feilmelding til bruke
-            exit(0); // Funksjon som terminerer operasjonen 
+            exit(0); // exit er en funksjon som terminerer operasjonen 
         }
     }
 //Kodet og tilpasset av: Anders Koo og Andeas Knutsen STOPP 
 
-ob_end_flush(); //  Flush (send) output-bufferen og deaktiver output-buffering
 ?>

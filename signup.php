@@ -19,21 +19,17 @@ Medlemmer som har bidratt:  Henrik Solnør Johansen, Andreas Knutsen og Anders K
 
 <?php
 session_start();
+ob_start();
 ?>
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/stylesheet.css">
-        <link rel="stylesheet" href="css/login.css">
-    </head>
-    <body>
+
+    <?php
+    include('includes/header_signup.php');
+    ?>
+
+    <body id="custom-body">
 
              
         <form id="myForm" class="form-signin" form action="signup.php" method="post" name="form1">
@@ -44,17 +40,11 @@ session_start();
             <input type="submit" id="regbtn" name="registerbtn" class="btn rounded primary" value="Registrer">
             <?php
 
-                // Sjekker om session status er deklarert og ikke er en tom string
                 if(isset($_SESSION['status']) && $_SESSION['status'] !='') {
-                    // Viser info melding til bruker
                     echo '<h6 class="bg-warning text-white"> '.$_SESSION['status'].' </h6>';
-                    // Resetter SESSION status variaber
                     unset($_SESSION['status']);
-                    // Sjekker om session status er deklarert og ikke er en tom string
                 } else if (isset($_SESSION['success']) && $_SESSION['success'] !='') {
-                    // Viser info melding til bruker
                     echo '<h6 class="bg-success text-white"> '.$_SESSION['success'].' </h6>';
-                    // Resetter SESSION success variaber
                     unset($_SESSION['success']);
                 }
 
@@ -62,7 +52,12 @@ session_start();
 
         </form>
 
-</body>
+    </body>
+
+    <?php
+    include('includes/scripts.php');
+    ?>
+
 </html>
     
 <!----------------------------------------------------------------------------------------------------------------------------------------------
@@ -146,4 +141,5 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
         }
 
         //-- Kodet og tilpasset av: Anders Koo og Andreas Knutsen STOPP --
+ob_end_flush();
 ?>

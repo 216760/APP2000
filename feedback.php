@@ -14,22 +14,20 @@ Medlemmer som har bidratt Henrik Solnør Johansen, Vigleik Espeland Stakseng, An
 <!DOCTYPE html>
 <html>
 
-	<?php
-	include('includes/header.php');
-	?>
+	<?php session_start();?>
+	<?php include('includes/header.php');?> <!-- Inkluderer header.php -->
+	
 
-	<body>
-		<!-- ------------------------------------------------------------------------------------------------
-		Lager et form som da har 3 inputs name, email og subject og 1 textarea der man kan skrive inn. 
-		Dette blir sendt når alle feltene er fylt ut, ellers så får du opp en feilmelding. 
-		For at et form skal sendes, så man ha en id som kobler (my_form)formet sammen med scriptet nedenfor.
-		Har 2 submit knapper der den ene knappen har en id "mybtn" som gjør at function starter. 
-		Knapp 2 sender bruker tilbake til forsiden.  
-		----------------------------------------------------------------------------------------------------->
+	<body id="custom-body">
+<!-- ------------------------------------------------------------------------------------------------
+Lager en form med fire inputs: name, email, subject og textarea. 
+Dette blir sendt når alle feltene har innhold og bruker trykker på "submit". 
+For at et form skal sendes må man ha en id som kobler (my_form)-formen sammen med scriptet nedenfor. 
+"mybtn" setter igang prosessen med å sende formen. 
+Den andre knappen returnerer brukeren til dashbordet.
+----------------------------------------------------------------------------------------------------->
 
-		<?php
-		include('includes/navbar.php');
-		?>
+		<?php include('includes/navbar.php');?> <!-- Inkluderer navbar.php -->
 			
 
 		<div class="content-dashboard">
@@ -63,7 +61,7 @@ Medlemmer som har bidratt Henrik Solnør Johansen, Vigleik Espeland Stakseng, An
 		Footer
 		----------------------------------------------------------------------------------------------------- -->
 
-		<?php include('includes/footer.php');?>
+		<?php include('includes/footer.php');?> <!-- Inkluderer footer.php -->
 
 		<!-- ---------------------------------------------------------------------------------------------------- 
 		Footer
@@ -74,8 +72,8 @@ Medlemmer som har bidratt Henrik Solnør Johansen, Vigleik Espeland Stakseng, An
 
 
 	<?php
-	include('includes/scripts.php');
-	?>
+	include('includes/scripts.php'); ?> <!-- Inkluderer scripts.php -->
+
 
 
 </html>
@@ -86,49 +84,33 @@ Medlemmer som har bidratt Henrik Solnør Johansen, Vigleik Espeland Stakseng, An
 
 <script>
 
-		function _(id){ return document.getElementById(id); } // denne funksjonen tar alle id verdiene i form, for å kunne bli sendt til submitForm
-		function submitForm(){
-			// sånn at brukeren ikke kan sende dataen mange ganger
-			_("mybtn").disabled = true; 
-			// en tilbakemelding om at dataen blir sendt
-			_("status").innerHTML = 'please wait ...'; 
-			//et objekt, sånn at man kan tilkoble til en ny nøkkelparverdi
-			var formdata = new FormData(); 
-			// nøkkel og verdi
-			formdata.append( "name", _("name").value );
-			 // nøkkel og verdi
-			formdata.append( "email", _("email").value ); 
-			// nøkkel og verdi
-			formdata.append( "message", _("message").value ); 
-			// nøkkel og verdi
-			formdata.append( "subject", _("subject").value ); 
-			// denne lager et nytt XMLHttpRequest objekt, denne variabelen gjør at man kan oppdatere siden uten å laste inn siden på nytt
-			var ajax = new XMLHttpRequest(); 
-			// lager en metode, med hjelp av POST vil denne metoden sende dataen når tilkoblingen er åpen 
-			ajax.open( "POST", "feedbackinsert.php" ); 
-			// starter den funksjonen, blir "called" når readystate verdiene forandrer seg
-			ajax.onreadystatechange = function() { 
-				// Denne holder statusen til XMLHttpRequest, 
-				// forespørselen starter 
-				// kobler til databasen
-				// forespørsel mottatt 
-				// prosessere forspørsel 
-				// forespørsel ferdig, responsetext er klar
-				if(ajax.readyState == 4 && ajax.status == 200) {
-					// hvis alt går, så har dataen fra skjemaet blitt sendt til databasen 
-					if(ajax.responseText == "success"){
-						_("my_form").innerHTML = '<h2>Thanks '+_("name").value+', your message has been sent.</h2>';  
-					} else {
-						// hvis det er en feil, så får man opp en responsetext. 
-						_("status").innerHTML = ajax.responseText; 
-						// denne gjør sånn at man kan trykke på submit knappen igjen
-						_("mybtn").disabled = false; 
-					}
-				}
-			}
-			// sender verdiene fra (fromdata) som er name, email, subject og message in i databasen
-			ajax.send( formdata ); 
-		}
+function _(id) { // funksjon som returnerer alle id'ene i skjema
+	return document.getElementById(id); 
+} 
+
+function submitForm(){ // Dette er en funksjon som samler inn data fra feedback skjema ovenfor
+  _("mybtn").disabled = true; // Kaller på _funksjon, deretter blir disabled funksjonen kalt på som gjør at brukeren ikke kan sende data flere ganger
+  _("status").innerHTML = 'please wait ...'; // Kaller på _funksjon, deretter blir innerHTML metoden i document objektet kalt på som gjør at du kan sette inn tekst
+  var formdata = new FormData();  //variabel som initialiserer FormData objektet
+  formdata.append( "name", ("name").value ); //append er en metode som henter verdier fra de id'en name skjema
+  formdata.append( "email", ("email").value ); //append er en metode som henter verdier fra de id'en email skjema
+  formdata.append( "message", ("message").value ); //append er en metode som henter verdier fra de id'en message skjema
+  formdata.append( "subject", ("subject").value );  //append er en metode som henter verdier fra de id'en subjekt i skjema
+  var ajax = new XMLHttpRequest(); // ajax variabel initialiserer XMLHttpRequest objektet
+  ajax.open( "POST", "feedbackinsert.php" ); // open er en metode fra XMLHttpRequest objektet som sender en POST forespørsel til feedbackinsert.php
+  ajax.onreadystatechange = function() { // onreadystatechange er en metode med en anonym funksjon som behandler forskjellige typer statuser
+    if(ajax.readyState == 4 && ajax.status == 200) {
+      if(ajax.responseText == "success"){ // hvis status er vellykket får brukeren en tilbakemelding
+        ("myform").innerHTML = '<h2>Thanks '+("name").value+', your message has been sent.</h2>'; 
+      } else {
+        ("status").innerHTML = ajax.responseText;  // hvis ikke får man feilmelding
+        ("mybtn").disabled = false; //deaktiverer submit
+      }
+    }
+  }
+
+  ajax.send(formdata); // litt usikker på denne, sender data uansett?
+}
 </script>
 
 <!-- ---------------------------------------------------------------------------------------------------- 

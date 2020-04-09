@@ -7,8 +7,9 @@
 /*
 /* ------------------------------------------- */
 
-body{
+#custom-body{
   overflow-x: hidden;
+  font-family: 'Lato', sans-serif;
   background-position: center;
   background-size: contain;
   background-attachment: fixed;
@@ -45,7 +46,7 @@ body{
   color:#4a138c;
   position: relative;
 }
-
+/* Kilder brukt til å style input felter */
 /* https://www.w3schools.com/cssref/pr_class_position.asp */
 .empty-sub{
   position: relative;
@@ -57,9 +58,9 @@ body{
   background-color: #4a138c;
 }
 
+/* Kilder brukt til å style input felter */
 /* https://www.w3schools.com/cssref/sel_focus.asp */
 /* https://stackoverflow.com/questions/3397113/how-to-remove-focus-border-outline-around-text-input-boxes-chrome */
-
 
 .btn{
 background-color: #4a138c;
@@ -83,7 +84,7 @@ color:white;
 .card{
     position: relative;
     margin: 0 auto;
-    padding: 1px;
+    margin-top: 30px;
 }
 
 .content-main {
@@ -268,22 +269,25 @@ form{
 
 .fdsendBtn{
   display:block;
+
     width:100%;
     border:none;
     padding:.5rem;
     font-size:18px;
     border-radius:5px;
-  border:0;
-  background:#4a138c;
-  color:white;
-  margin:1rem 0;
-  width:auto;
-  text-transform:uppercase;
-  cursor:pointer;
-  float: left;
-  margin-right: 5px;
- 
-  }
+
+  width:100%;
+  border:none;
+  padding:.5rem;
+  font-size:18px;
+  border-radius:5px;
+  resize: none;
+}
+
+#message {
+  resize: none;
+}
+
 .fdbackBtn{
   display:block;
     width:100%;
@@ -292,14 +296,17 @@ form{
     font-size:18px;
     border-radius:5px;
   border:0;
-  background: #4a138c;
+  background: #543091;
   color:white;
   margin:1rem 0;
   width:auto;
   text-transform:uppercase;
   cursor:pointer;
   float: left; 
+}
 
+.form-control {
+  width: 100%;
 }
 
   /*--- Feedback form --*/
