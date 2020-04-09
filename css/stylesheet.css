@@ -265,6 +265,9 @@ form{
   border: 2px solid #543091;
   box-shadow: 0 0 8px 0 #543091; 
 }
+#message{
+  resize: none;
+}
 
 .fdsendBtn{
   display:block;
