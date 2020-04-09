@@ -7,9 +7,8 @@
 /*
 /* ------------------------------------------- */
 
-#custom-body{
+body{
   overflow-x: hidden;
-  font-family: 'Lato', sans-serif;
   background-position: center;
   background-size: contain;
   background-attachment: fixed;
@@ -46,7 +45,7 @@
   color:#4a138c;
   position: relative;
 }
-/* Kilder brukt til å style input felter */
+
 /* https://www.w3schools.com/cssref/pr_class_position.asp */
 .empty-sub{
   position: relative;
@@ -58,9 +57,9 @@
   background-color: #4a138c;
 }
 
-/* Kilder brukt til å style input felter */
 /* https://www.w3schools.com/cssref/sel_focus.asp */
 /* https://stackoverflow.com/questions/3397113/how-to-remove-focus-border-outline-around-text-input-boxes-chrome */
+
 
 .btn{
 background-color: #4a138c;
@@ -84,7 +83,7 @@ color:white;
 .card{
     position: relative;
     margin: 0 auto;
-    margin-top: 30px;
+    padding: 1px;
 }
 
 .content-main {
@@ -255,13 +254,13 @@ form{
 
 /*--- Feedback form --*/
 
-.col-lg-12 input:focus{
+.form-group input:focus{
   display: block;
   border: 2px solid #543091;
   box-shadow: 0 0 8px 0 #543091; 
 }
 
-.col-lg-12 textarea:focus{
+.form-group textarea:focus{
   display: block;
   border: 2px solid #543091;
   box-shadow: 0 0 8px 0 #543091; 
@@ -269,25 +268,22 @@ form{
 
 .fdsendBtn{
   display:block;
-
     width:100%;
     border:none;
     padding:.5rem;
     font-size:18px;
     border-radius:5px;
-
-  width:100%;
-  border:none;
-  padding:.5rem;
-  font-size:18px;
-  border-radius:5px;
-  resize: none;
-}
-
-#message {
-  resize: none;
-}
-
+  border:0;
+  background:#4a138c;
+  color:white;
+  margin:1rem 0;
+  width:auto;
+  text-transform:uppercase;
+  cursor:pointer;
+  float: left;
+  margin-right: 5px;
+ 
+  }
 .fdbackBtn{
   display:block;
     width:100%;
@@ -296,17 +292,14 @@ form{
     font-size:18px;
     border-radius:5px;
   border:0;
-  background: #543091;
+  background: #4a138c;
   color:white;
   margin:1rem 0;
   width:auto;
   text-transform:uppercase;
   cursor:pointer;
   float: left; 
-}
 
-.form-control {
-  width: 100%;
 }
 
   /*--- Feedback form --*/
