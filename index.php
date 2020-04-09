@@ -16,28 +16,24 @@ Kodet og tilpasset av:  Henrik Solnør Johansen og Anders Koo
 -----------------------------------------------------------------------------------------------------  -->
 
 <?php
-session_start();
+session_start(); // Gjenopptar session
 ?>
 
 
 <!DOCTYPE html>
 <html>
 
-	<?php
-	include('includes/header.php');
-	?>
+	<?php include('includes/header.php');?> <!-- Inkluderer header.php -->
 
 	<body id="custom-body">
 
-		<?php
-		include('includes/navbar.php');
-		?>
+	<?php include('includes/navbar.php');?> <!-- Inkluderer navbar.php -->
 
 
 <!--  Visning av landdingsiden -->
 
 	<div class="content-main">
-		<?php include('includes/main.php');?>	
+		<?php include('includes/main.php');?> <!-- Inkluderer main.php -->
 	</div>
 
 <!-- Visning av landdingsiden  -->
@@ -45,7 +41,7 @@ session_start();
 
 <!-- Visning av footer -->
 	<footer>
-		<?php include('includes/footer.php');?>
+		<?php include('includes/footer.php');?> <!-- Inkluderer footer.php -->
 	</footer>
 <!--  Visning av footer -->
 

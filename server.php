@@ -28,23 +28,25 @@ session_start();
 // Setter opp forbindelse med databasen
 // ----------------------------------------------------------------------------------------------------
 
-$connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
+include('includes/db-config.php'); // Inkluderer db-config.php
 
 
-if(isset($_POST['registerbtn'])) // Sjekker at variabel er deklarert
+
+if(isset($_POST['registerbtn'])) // Sjekker at variabel er deklarert og at registerbtn knappen er klikket på 
 {
     // Informasjon om abonnement
-    $description = mysqli_real_escape_string($connection, $_POST['description']);   // Sjekker at variabel er deklarert
-    $start_date = mysqli_real_escape_string($connection, $_POST['start_date']);     // Sjekker at variabel er deklarert
-    $end_date =  mysqli_real_escape_string($connection,$_POST['end_date']);         // Sjekker at variabel er deklarert
-    $user_id = $_SESSION['id'];
+    $description = mysqli_real_escape_string($mysqli , $_POST['description']);   // Sjekker at variabel er deklarert og sikrer mot SQL injection
+    $start_date = mysqli_real_escape_string($mysqli , $_POST['start_date']);     // Sjekker at variabel er deklarert og sikrer mot SQL injection
+    $end_date =  mysqli_real_escape_string($mysqli ,$_POST['end_date']);         // Sjekker at variabel er deklarert og sikrer mot SQL injection
+    $user_id = $_SESSION['id']; // Oppretter user_id variabel og gir den verdien id fra session. 
 
 // ----------------------------------------------------------------------------------------------------
 // Setter opp spørrevariabel for registrering av abonnement
 // ----------------------------------------------------------------------------------------------------
 
+// Spørring som setter inn nytt abonnement i databasen
 $queryReg = "INSERT INTO cards (description, start_date, end_date, user_id) VALUES ('$description', '$start_date','$end_date', '$user_id')"; //  Spørring som setter inn data i databasen
-$queryDB = mysqli_query($connection, $queryReg); // Utfører spørring mot databasen
+$queryDB = mysqli_query($mysqli , $queryReg); // mysqli_query er en funksjon som utfører spørring mot databasen
 
 
 
@@ -66,26 +68,28 @@ $queryDB = mysqli_query($connection, $queryReg); // Utfører spørring mot datab
 // Redigeringsknapp
 // ----------------------------------------------------------------------------------------------------
 
-    if(isset($_POST['edit_btn']))   // Sjekker at variabel er deklarert
+    if(isset($_POST['edit_btn']))   // Sjekker at variabel er deklarert og at edit_btn knappen er klikket på 
     {
         $id = $_POST['edit_id'];    // Sjekker at variabel er deklarert
         
-        $queryReg = "SELECT * FROM cards WHERE id='$id' ";  // Spørring som henter spesifikk kort fra databasen
-        $queryDB = mysqli_query($connection, $query);       // Utfører spørring mot databasen
+        $queryReg = "SELECT * FROM cards WHERE id='$id' ";  // Spørring som henter spesifikk abonnement fra databasen
+        $queryDB = mysqli_query($mysqli , $query);       // Utfører spørring mot databasen
     }
 
 // ----------------------------------------------------------------------------------------------------
 // Oppdateringsknapp
 // ----------------------------------------------------------------------------------------------------
-if(isset($_POST['updatebtn'])) {    // Sjekker at variabel er deklarert
+if(isset($_POST['updatebtn'])) {    // Sjekker at variabel er deklarert og at updatebtn knappen er klikket på 
     $id = $_POST['edit_id'];        // Sjekker at variabel er deklarert
-    $description = mysqli_real_escape_string($connection, $_POST['edit_description']);  // Sjekker at variabel er deklarert
-    $start_date = mysqli_real_escape_string($connection, $_POST['edit_date_from']);     // Sjekker at variabel er deklarert
-    $end_date = mysqli_real_escape_string($connection, $_POST['edit_date_to']);         // Sjekker at variabel er deklarert
+   
+   // Informasjon om abonnement
+    $description = mysqli_real_escape_string($mysqli , $_POST['edit_description']);   // Sjekker at variabel er deklarert og sikrer mot SQL injection
+    $start_date = mysqli_real_escape_string($mysqli , $_POST['edit_date_from']);      // Sjekker at variabel er deklarert og sikrer mot SQL injection
+    $end_date = mysqli_real_escape_string($mysqli , $_POST['edit_date_to']);          // Sjekker at variabel er deklarert og sikrer mot SQL injection
 
-    // Spørring som oppdaterer spesifikt kort i databasen
+    // Spørring som oppdaterer spesifikt abonnement i databasen
     $queryEdit = "UPDATE cards SET description='$description', start_date='$start_date', end_date='$end_date' WHERE id='$id' ";
-    $queryDB = mysqli_query($connection, $queryEdit); // Utfører spørring mot databasen
+    $queryDB = mysqli_query($mysqli , $queryEdit); // mysqli_query er en funksjon som utfører spørring mot databasen
 
     if($queryDB) {
         $_SESSION['subOk'] = "New subscription is successfully updated!";
@@ -100,12 +104,12 @@ if(isset($_POST['updatebtn'])) {    // Sjekker at variabel er deklarert
 // ----------------------------------------------------------------------------------------------------
 // Sletteknapp
 // ----------------------------------------------------------------------------------------------------
-if(isset($_POST['delete_btn'])) // Sjekker at variabel er deklarert
+if(isset($_POST['delete_btn'])) // Sjekker at variabel er deklarert og at updatebtn knappen er klikket på 
 {
     $id = $_POST['delete_id'];  // Sjekker at variabel er deklarert
 
-    $queryDelete = "DELETE FROM cards WHERE id='$id'";  // Spørring som sletter spesifikt kort fra databasen
-    $queryDB = mysqli_query($connection, $queryDelete); // Utfører spørring mot databasen
+    $queryDelete = "DELETE FROM cards WHERE id='$id'";  // Spørring som sletter spesifikt abonnement fra databasen
+    $queryDB = mysqli_query($mysqli , $queryDelete); // mysqli_query er en funksjon som utfører spørring mot databasen
 
     if($queryDB) {
         $_SESSION['subOk'] = "Subscription is successfully deleted!";

@@ -14,23 +14,20 @@ Medlemmer som har bidratt Henrik Solnør Johansen, Vigleik Espeland Stakseng, An
 <!DOCTYPE html>
 <html>
 
-	<?php
-	session_start();
-	include('includes/header.php');
-	?>
+	<?php session_start();?>
+	<?php include('includes/header.php');?> <!-- Inkluderer header.php -->
+	
 
 	<body id="custom-body">
-		<!-- ------------------------------------------------------------------------------------------------
-		Lager et form som da har 3 inputs name, email og subject og 1 textarea der man kan skrive inn. 
-		Dette blir sendt når alle feltene er fylt ut, ellers så får du opp en feilmelding. 
-		For at et form skal sendes, så man ha en id som kobler (my_form)formet sammen med scriptet nedenfor.
-		Har 2 submit knapper der den ene knappen har en id "mybtn" som gjør at function starter. 
-		Knapp 2 sender bruker tilbake til forsiden.  
-		----------------------------------------------------------------------------------------------------->
+<!-- ------------------------------------------------------------------------------------------------
+Lager en form med fire inputs: name, email, subject og textarea. 
+Dette blir sendt når alle feltene har innhold og bruker trykker på "submit". 
+For at et form skal sendes må man ha en id som kobler (my_form)-formen sammen med scriptet nedenfor. 
+"mybtn" setter igang prosessen med å sende formen. 
+Den andre knappen returnerer brukeren til dashbordet.
+----------------------------------------------------------------------------------------------------->
 
-		<?php
-		include('includes/navbar.php');
-		?>
+		<?php include('includes/navbar.php');?> <!-- Inkluderer navbar.php -->
 			
 
 		<div class="content-dashboard">
@@ -64,7 +61,7 @@ Medlemmer som har bidratt Henrik Solnør Johansen, Vigleik Espeland Stakseng, An
 		Footer
 		----------------------------------------------------------------------------------------------------- -->
 
-		<?php include('includes/footer.php');?>
+		<?php include('includes/footer.php');?> <!-- Inkluderer footer.php -->
 
 		<!-- ---------------------------------------------------------------------------------------------------- 
 		Footer
@@ -75,8 +72,8 @@ Medlemmer som har bidratt Henrik Solnør Johansen, Vigleik Espeland Stakseng, An
 
 
 	<?php
-	include('includes/scripts.php');
-	?>
+	include('includes/scripts.php'); ?> <!-- Inkluderer scripts.php -->
+
 
 
 </html>
