@@ -39,20 +39,20 @@ Medlemmer som har bidratt Henrik Solnør Johansen, Vigleik Espeland Stakseng, An
               			<div class="card-header">Send a message</div>
 	    				<form id="my_form" onsubmit="return submitForm();">
 							<div class="form-group col-lg-12">
-								<input id="name" placeholder="Name" required class="form-control">
+								<input id="name" placeholder="Name" type="name" required class="form-control">
 							</div>
 							<div class="form-group col-lg-12">
 								<input id="email" placeholder="E-mail" type="email" class="form-control" required>
 							</div>
 							<div class="form-group col-lg-12">
-								<input id="subject" placeholder="Subject" type="subject" class="form-control">
+								<input id="subject" placeholder="Subject"  type="subject" class="form-control">
 							</div>
 							<div class="form-group col-lg-12">
 								<textarea class="form-control" id="message" placeholder="Write your message" rows="5" class="form-control" required ></textarea>
 							</div>
 							<div class="form-group col-lg-6">
 								<input class="fdsendBtn"id="mybtn" type="submit" name="submitbtn" value="Submit" style="display:inline-block;"><span id="status"></span>
-								<input class="fdbackBtn" type="submit" align="right" value="Cancel" style="display:inline-block;" onclick="document.location = 'index.php'">
+								<input class="fdbackBtn" type="submit" align="right" value="Cancel" style="display:inline-block;" onclick="document.location = 'dashboard.php'">
 							</div>
 						</form>	 
 					</div>

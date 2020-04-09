@@ -61,13 +61,6 @@ body{
 /* https://stackoverflow.com/questions/3397113/how-to-remove-focus-border-outline-around-text-input-boxes-chrome */
 
 
-input:focus {
-	outline: none;
-	border-color: #4a138c;
-  border-radius: 2px;
-  
-}
-
 .btn{
 background-color: #4a138c;
 color:white;
@@ -261,22 +254,25 @@ form{
 
 /*--- Feedback form --*/
 
-input, textarea {
+.col-lg-12 input:focus{
+  display: block;
+  border: 2px solid #543091;
+  box-shadow: 0 0 8px 0 #543091; 
+}
+
+.col-lg-12 textarea:focus{
+  display: block;
+  border: 2px solid #543091;
+  box-shadow: 0 0 8px 0 #543091; 
+}
+
+.fdsendBtn{
   display:block;
     width:100%;
     border:none;
     padding:.5rem;
     font-size:18px;
     border-radius:5px;
-}
-
-input:focus{
-  border:2px solid #543091;
-  box-shadow: 0 0 8px 0 purple;
- }
-
-
-.fdsendBtn{
   border:0;
   background:#4a138c;
   color:white;
@@ -289,6 +285,12 @@ input:focus{
  
   }
 .fdbackBtn{
+  display:block;
+    width:100%;
+    border:none;
+    padding:.5rem;
+    font-size:18px;
+    border-radius:5px;
   border:0;
   background: #4a138c;
   color:white;

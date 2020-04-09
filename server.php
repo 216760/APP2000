@@ -36,7 +36,7 @@ if(isset($_POST['registerbtn'])) // Sjekker at variabel er deklarert
     // Informasjon om abonnement
     $description = mysqli_real_escape_string($connection, $_POST['description']);   // Sjekker at variabel er deklarert
     $start_date = mysqli_real_escape_string($connection, $_POST['start_date']);     // Sjekker at variabel er deklarert
-    $end_date =  mysqli_real_escape_string($connection,$_POST['end_date'];         // Sjekker at variabel er deklarert
+    $end_date =  mysqli_real_escape_string($connection,$_POST['end_date']);         // Sjekker at variabel er deklarert
     $user_id = $_SESSION['id'];
 
 // ----------------------------------------------------------------------------------------------------
