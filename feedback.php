@@ -18,7 +18,7 @@ Medlemmer som har bidratt Henrik Solnør Johansen, Vigleik Espeland Stakseng, An
 	<?php include('includes/header.php');?> <!-- Inkluderer header.php -->
 	
 
-	<body id="custom-body">
+	<body>
 <!-- ------------------------------------------------------------------------------------------------
 Lager en form med fire inputs: name, email, subject og textarea. 
 Dette blir sendt når alle feltene har innhold og bruker trykker på "submit". 
