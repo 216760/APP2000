@@ -278,7 +278,7 @@ input, textarea {
   cursor: pointer;
   float: left;
   margin-right: 5px;
-  display: inline-block;"
+  display: inline-block;
 }
 
 .fdbackBtn {
@@ -290,7 +290,7 @@ input, textarea {
   text-transform: uppercase;
   cursor: pointer;
   float: left;
-  display: inline-block;"
+  display: inline-block;
 }
 
 .form-control {
