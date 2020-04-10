@@ -32,17 +32,17 @@ body {
 
 input:focus {
   outline: none;
-  border-color: #4A148C;
+  border-color: black;
   border-radius: 2px;
 }
 
 .btn {
-  background-color: #4A148C;
+  background-color: black;
   color:white;
 }
 
 .btn:hover {
-background-color: #4A148C;
+background-color: black;
 color:white;
 }
 
@@ -97,11 +97,11 @@ section {
 
 .bg-main {
   background-color: grey;
-  color: #4A148C;
+  color: black;
 }
 
 .bg-secondary-custom {
-  background-color: #4A148C;
+  background-color: black;
   color: #FFFFFF;
 }
 
@@ -115,7 +115,7 @@ section {
   font-weight: 700;
   font-size: .9rem;
   letter-spacing: .1rem;
-  background-color: #4A148C;
+  background-color: black;
   margin-bottom: 0;
 }
 
@@ -150,8 +150,8 @@ nav li:hover a {
 }
 
 .btn-primary {
-  background-color: #4A148C !important;
-  border-color: #4A148C !important;
+  background-color: black !important;
+  border-color: black !important;
   border-radius: 8px !important;
 }
 
@@ -159,7 +159,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #4A148C;
+  background-color: black;
 }
 
 footer.page-footer .footer-copyright {
@@ -252,7 +252,7 @@ input, textarea {
 
 .fdsendBtn {
   border: 0;
-  background: #4A148C;
+  background: black;
   color: white;
   margin: 1rem 0;
   width: auto;
@@ -264,7 +264,7 @@ input, textarea {
 
 .fdbackBtn {
   border: 0;
-  background: #4A148C;
+  background: black;
   color: white;
   margin: 1rem 0;
   width: auto;
@@ -279,14 +279,14 @@ input, textarea {
 
 .my_form input:focus{
   display: block;
-  border: 2px solid #4A148C;
-  box-shadow: 0 0 8px 0 #4A148C; 
+  border: 2px solid black;
+  box-shadow: 0 0 8px 0 black; 
 }
 
 .my_form textarea:focus{
   display: block;
-  border: 2px solid #4A148C;
-  box-shadow: 0 0 8px 0 #4A148C; 
+  border: 2px solid black;
+  box-shadow: 0 0 8px 0 black; 
 }
 
 /*--- Feedback form --*/
