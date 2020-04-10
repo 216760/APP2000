@@ -72,7 +72,7 @@ include('includes/header.php'); // Inkluderer header.php
                                 <input type="date" name="edit_date_to" value="<?php echo $row['end_date'] ?>" class="form-control" placeholder="End date">
                             </div> 
                             <a href="dashboard.php" class="btn btn-primary"> Cancel</a>
-                            <button type="submit" name="updatebtn" class="btn btn-primary">Update</button>
+                            <button name="updatebtn" class="btn btn-primary">Update</button>
                         </form>
                     </div>
 

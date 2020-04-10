@@ -142,8 +142,8 @@ nav li:hover a {
     color: #000000 !important;
 }
 
-.navbar-brand img{
-  height: 5rem;
+.navbar .navbar-brand:hover {
+  color: #FFFFFF;
 }
 
 .navbar-nav li{
@@ -202,6 +202,11 @@ footer.page-footer ul {
     color: #fff !important;
     background-color: transparent !important;
     border: 2px solid #fff !important;
+}
+
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .form-signin {
@@ -273,6 +278,7 @@ input, textarea {
   cursor: pointer;
   float: left;
   margin-right: 5px;
+  display: inline-block;"
 }
 
 .fdbackBtn {
@@ -284,6 +290,7 @@ input, textarea {
   text-transform: uppercase;
   cursor: pointer;
   float: left;
+  display: inline-block;"
 }
 
 .form-control {
