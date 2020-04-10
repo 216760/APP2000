@@ -128,7 +128,7 @@ Setter opp dashboard struktur. Vi henter så ut abonnement fra databasen ved å 
 				<div class="modal-dialog modal-dialog-centered" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel">New subscription</h5>
+							<h5 class="modal-title" id="exampleModalLabel">Add new subscription</h5>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 							</button>
