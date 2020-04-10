@@ -241,9 +241,11 @@ form {
 input, textarea {
   display:block;
   width:100%;
-  padding:.2rem;
+  border:none;
+  padding:.5rem;
   font-size:18px;
   border-radius:5px;
+  resize: none;
 }
 
 #message {
