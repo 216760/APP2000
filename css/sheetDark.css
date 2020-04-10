@@ -46,6 +46,11 @@ background-color: black;
 color:white;
 }
 
+.card-header {
+  background-color: #000000!important;
+  color: white;
+}
+
 /* ------------------------------------------- */
 /* CUSTOM STYLING END */
 /* ------------------------------------------- */
