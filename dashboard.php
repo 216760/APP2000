@@ -1,31 +1,33 @@
-<!----------------------------------------------------------------------------------------------------------------------------------------------
-
-TIL INFORMASJON: 
-
-I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.
-Dette vil også bli dokumentert under kildebruk i rapporten.  Grunnen til dette er basert på “best practice”  måter å programmere på.  
-Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 
-
-Vi ser først på en demo av hvordan et eksempel virker,  koder oss gjennom guiden for å lære hva som skjer. 
-Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke. 
-
-Linker til gjenbrukt kode:
-
-Vi har primært tilpasset kode fra part 1-6 i fra denne Youtube kanalen. Her det blir forklart hvordan man 
-henter ut data fra database og lastet inn i html malen: 
-https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
-
-https://www.w3schools.com/howto/howto_css_fixed_footer.asp 
-https://stackoverflow.com/questions/36003670/how-to-put-a-link-on-a-button-with-bootstrap 
-https://stackoverflow.com/questions/36108407/how-to-auto-adjust-the-height-of-fixed-footer-at-bottom
-
-Medlemmer som har bidratt: Henrik Solnør Johansen, Andreas Knutsen og Anders Koo
-
------------------------------------------------------------------------------------------------------------------------------------------------->
-
-
 
 <?php
+/** 
+* TIL INFORMASJON: 
+
+* I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.
+* Dette vil også bli dokumentert under kildebruk i rapporten.  Grunnen til dette er basert på “best practice”  måter å programmere på.  
+* Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 
+
+* Vi ser først på en demo av hvordan et eksempel virker,  koder oss gjennom guiden for å lære hva som skjer. 
+* Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke. 
+
+* Linker til gjenbrukt kode:
+
+* Vi har primært tilpasset kode fra part 1-6 i fra denne Youtube kanalen. Her det blir forklart hvordan man 
+* henter ut data fra database og lastet inn i html malen: 
+* https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
+
+* https://www.w3schools.com/howto/howto_css_fixed_footer.asp 
+* https://stackoverflow.com/questions/36003670/how-to-put-a-link-on-a-button-with-bootstrap 
+* https://stackoverflow.com/questions/36108407/how-to-auto-adjust-the-height-of-fixed-footer-at-bottom
+
+* Medlemmer som har bidratt: Henrik Solnør Johansen, Andreas Knutsen og Anders Koo
+  
+**/
+
+
+
+
+
 // ----------------------------------------------------------------------------------------------------
 // Setter opp session og includes
 // ----------------------------------------------------------------------------------------------------
@@ -42,11 +44,6 @@ if(!isset($_SESSION)){ // Hvis session ikke er satt blir brukeren videresendt ti
 // Setter opp session og includes
 // ----------------------------------------------------------------------------------------------------
 
-?>
-
-
-
-<?php
 // ----------------------------------------------------------------------------------------------------
 // Setter opp database forbindelse med spørrring
 // ----------------------------------------------------------------------------------------------------
