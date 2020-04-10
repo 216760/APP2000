@@ -32,7 +32,7 @@ ob_start();
     <body id="custom-body">
 
              
-        <form id="myForm" class="form-signin" form action="signup.php" method="post" name="form1">
+        <form id="myForm" class="form-signin" id="my_form" form action="signup.php" method="post" name="form1">
             <h1>LOGO</h1>
             <input type="text" placeholder="username" class="" name="name">
             <input type="text" placeholder="email" class="" name="email">
