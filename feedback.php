@@ -52,7 +52,7 @@ Den andre knappen returnerer brukeren til dashbordet.
 								<input id="subject" placeholder="Subject" type="subject" class="form-control">
 							</div>
 							<div class="form-group col-lg-12">
-								<textarea class="form-control" id="custom-message" placeholder="Write your message" rows="5" class="form-control" required ></textarea>
+								<textarea class="form-control" id="message" placeholder="Write your message" rows="5" class="form-control" required ></textarea>
 							</div>
 							<div class="form-group col-lg-12">
 								<input class="fdsendBtn" id="mybtn" type="submit" name="submitbtn" value="Submit" style="display:inline-block;"><span id="status"></span>
