@@ -55,21 +55,21 @@ include('includes/header.php'); // Inkluderer header.php
                         foreach($query_run as $row) { // foreach er en funksjon som teller opp antall rader i abonnement tabellen
                         ?>
 
-                        <form action="server.php" method="POST">
+                        <form action="server.php" id="my_form" method="POST">
 
                             <input type="hidden" name="edit_id" value="<?php echo $row['id'] ?>"> <!-- Henter abonnement id fra DB -->
                             <div class="form-group">
                                 <label> Beskrivelse </label>          
                                                                                   <!-- Henter beskrivelse fra DB -->
-                                <input id="message" type="text" name="edit_description" value="<?php echo $row['description'] ?>" class="form-control" placeholder="Service"> 
+                                <input type="text" name="edit_description" value="<?php echo $row['description'] ?>" class="form-control" placeholder="Service"> 
                             </div>
                             <div class="form-group">
                                 <label>Fra dato</label>                         <!-- Henter start dato fra DB -->
-                                <input id="message" type="date" name="edit_date_from" value="<?php echo $row['start_date'] ?>" class="form-control" placeholder="Start date">
+                                <input type="date" name="edit_date_from" value="<?php echo $row['start_date'] ?>" class="form-control" placeholder="Start date">
                             </div>
                             <div class="form-group">
                                 <label>Til dato</label>                         <!-- Henter slutt dato fra DB -->
-                                <input id="message" type="date" name="edit_date_to" value="<?php echo $row['end_date'] ?>" class="form-control" placeholder="End date">
+                                <input type="date" name="edit_date_to" value="<?php echo $row['end_date'] ?>" class="form-control" placeholder="End date">
                             </div> 
                             <a href="dashboard.php" class="btn btn-primary"> Cancel</a>
                             <button type="submit" name="updatebtn" class="btn btn-primary">Update</button>
