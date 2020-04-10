@@ -70,7 +70,7 @@ $query_run = mysqli_query($connection, $query); // mysqli_query er en metode for
 <html>
   
   <?php include('includes/header.php');?> <!-- Inkluderer header.php -->
-  <body id="custom-body">
+  <body>
 
     <?php
     include('includes/navbar.php'); ?>  <!-- Inkluderer navbar.php -->
