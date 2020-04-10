@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,300);
 
-
 /* ------------------------------------------- */
 /* CUSTOM STYLING START */
 /*
@@ -33,7 +32,7 @@ body {
   margin-bottom: 300px;
   margin-left: 50px;
   margin-top: 50px;
-  color:#543091;
+  color:#4A148C;
   position: relative;
 }
 
@@ -49,17 +48,17 @@ body {
 
 input:focus {
   outline: none;
-  border-color: #543091;
+  border-color: #4A148C;
   border-radius: 2px;
 }
 
 .btn {
-  background-color: #543091;
+  background-color: #4A148C;
   color:white;
 }
 
 .btn:hover {
-background-color: #543091;
+background-color: #4A148C;
 color:white;
 }
 
@@ -79,15 +78,6 @@ margin-right: 0px!important;
 }
 
 
-/* ------------------------------------------- */
-/* CUSTOM STYLING START */
-/*
-/* ------------------------------------------- */
-
-/* KODET AV: Anders Koo */
-
-
-/* KODET AV: Anders Koo */
 
 
 /* ------------------------------------------- */
@@ -123,11 +113,11 @@ section {
 
 .bg-main {
   background-color: grey;
-  color: #543091;
+  color: #4A148C;
 }
 
 .bg-secondary-custom {
-  background-color: #543091;
+  background-color: #4A148C;
   color: #FFFFFF;
 }
 
@@ -141,7 +131,7 @@ section {
   font-weight: 700;
   font-size: .9rem;
   letter-spacing: .1rem;
-  background-color: #543091;
+  background-color: #4A148C;
   margin-bottom: 0;
 }
 
@@ -176,8 +166,8 @@ nav li:hover a {
 }
 
 .btn-primary {
-  background-color: #543091 !important;
-  border-color: #543091 !important;
+  background-color: #4A148C !important;
+  border-color: #4A148C !important;
   border-radius: 8px !important;
 }
 
@@ -185,7 +175,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #543091;
+  background-color: #4A148C;
 }
 
 footer.page-footer .footer-copyright {
@@ -278,7 +268,7 @@ input, textarea {
 
 .fdsendBtn {
   border: 0;
-  background: #543091;
+  background: #4A148C;
   color: white;
   margin: 1rem 0;
   width: auto;
@@ -290,7 +280,7 @@ input, textarea {
 
 .fdbackBtn {
   border: 0;
-  background: #543091;
+  background: #4A148C;
   color: white;
   margin: 1rem 0;
   width: auto;
@@ -305,14 +295,14 @@ input, textarea {
 
 .my_form input:focus{
   display: block;
-  border: 2px solid #543091;
-  box-shadow: 0 0 8px 0 #543091; 
+  border: 2px solid #4A148C;
+  box-shadow: 0 0 8px 0 #4A148C; 
 }
 
 .my_form textarea:focus{
   display: block;
-  border: 2px solid #543091;
-  box-shadow: 0 0 8px 0 #543091; 
+  border: 2px solid #4A148C;
+  box-shadow: 0 0 8px 0 #4A148C; 
 }
 
 /*--- Feedback form --*/
