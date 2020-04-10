@@ -21,29 +21,31 @@ Medlemmer som har bidratt:  Henrik Solnør Johansen, Andreas Knutsen og Anders K
 <!-- Inkluderer bare 'db-config.php' en gang, og scriptet vil avbrytes dersom include_once-funksjonen ikke finner filen. -->
     <?php include('includes/header_login.php');?>
  
- <body id="custom-body">
-    <form class="form-signin col-lg-12 text-center" action="login.php" method="POST" name="form1">
-        <h1>LOGO</h1>
-            <input type="text" placeholder="Enter your email..." name="email" class="">
-            <input type="password" placeholder="Enter your password..." name="password" class="">
+    <body id="custom-body">
+        <form class="form-signin text-center" id="my_form" action="login.php" method="POST" name="form1">
+            <h1>LOGO</h1>
+            <div class="form-group">
+                <input type="text" placeholder="Enter your email..." name="email" class="">
+                <input type="password" placeholder="Enter your password..." name="password" class="">
+            </div>
             <!-- /* https://getbootstrap.com/docs/4.0/components/buttons/#button-tags */ -->
-            <input type="submit" id="login" name="loginbtn" class="btn primary" value="Login">
-        <?php
+            <input type="submit" name="loginbtn" class="btn primary" value="Logg inn">
+            <?php
 
-            // Sjekker om session status er deklarert og ikke er en tom string
-            if(isset($_SESSION['status']) && $_SESSION['status'] !='') {
-                // Viser info melding til bruker
-                echo '<h6 class="bg-warning text-white"> '.$_SESSION['status'].' </h6>';
-                // Resetter SESSION status variaber
-                unset($_SESSION['status']);
-            // Sjekker om session status er deklarert og ikke er en tom string
-            } else if (isset($_SESSION['success']) && $_SESSION['success'] !='') {
-                // Viser info melding til bruker
-                echo '<h6 class="bg-success text-white"> '.$_SESSION['success'].' </h6>';
-                // Resetter SESSION success variaber
-                unset($_SESSION['success']);
-            }
-        ?>
+                // Sjekker om session status er deklarert og ikke er en tom string
+                if(isset($_SESSION['status']) && $_SESSION['status'] !='') {
+                    // Viser info melding til bruker
+                    echo '<h6 class="bg-warning text-white"> '.$_SESSION['status'].' </h6>';
+                    // Resetter SESSION status variaber
+                    unset($_SESSION['status']);
+                // Sjekker om session status er deklarert og ikke er en tom string
+                } else if (isset($_SESSION['success']) && $_SESSION['success'] !='') {
+                    // Viser info melding til bruker
+                    echo '<h6 class="bg-success text-white"> '.$_SESSION['success'].' </h6>';
+                    // Resetter SESSION success variaber
+                    unset($_SESSION['success']);
+                }
+            ?>
         </form>
 
     </body>
