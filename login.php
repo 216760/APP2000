@@ -21,7 +21,7 @@ Medlemmer som har bidratt:  Henrik Solnør Johansen, Andreas Knutsen og Anders K
  
     <?php include('includes/header_login.php');?>
  
-    <body id="custom-body">
+    <body>
         <form class="form-signin text-center" id="my_form" action="login.php" method="POST" name="form1">
             <h1>LOGO</h1>
             <div class="form-group">
