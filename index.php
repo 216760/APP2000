@@ -27,25 +27,25 @@ session_start(); // Gjenopptar session
 
 	<body>
 
-	<?php include('includes/navbar.php');?> <!-- Inkluderer navbar.php -->
+		<?php include('includes/navbar.php');?> <!-- Inkluderer navbar.php -->
 
-<!--  Visning av landdingsiden -->
+		<!--  Visning av landdingsiden -->
 
-	<div class="content-main">
-		<?php include('includes/main.php');?> <!-- Inkluderer main.php -->
-	</div>
+		<div class="content-main">
+			<?php include('includes/main.php');?> <!-- Inkluderer main.php -->
+		</div>
 
-<!-- Visning av landdingsiden  -->
-
-
-<!-- Visning av footer -->
-	<footer>
-		<?php include('includes/footer.php');?> <!-- Inkluderer footer.php -->
-	</footer>
-<!--  Visning av footer -->
+		<!-- Visning av landdingsiden  -->
 
 
-</body>
+		<!-- Visning av footer -->
+		<footer>
+			<?php include('includes/footer.php');?> <!-- Inkluderer footer.php -->
+		</footer>
+		<!--  Visning av footer -->
+
+	</body>
+	
 </html>
 
 <!-- ---------------------------------------------------------------------------------------------------- 

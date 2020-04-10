@@ -26,7 +26,7 @@ session_start();
 // Setter opp forbindelse med databasen
 // ----------------------------------------------------------------------------------------------------
 
-include('includes/db-config.php'); // Inkluderer db-config.php
+include('db-config.php'); // Inkluderer db-config.php
 
 
 if(isset($_POST['registerbtn'])) { // Sjekker at variabel er deklarert og at registerbtn knappen er klikket på 
@@ -38,27 +38,28 @@ if(isset($_POST['registerbtn'])) { // Sjekker at variabel er deklarert og at reg
     $user_id = $_SESSION['id']; // Oppretter user_id variabel og gir den verdien id fra session. 
 
 
-// ----------------------------------------------------------------------------------------------------
-// Setter opp spørrevariabel for registrering av abonnement
-// ----------------------------------------------------------------------------------------------------
+    // ----------------------------------------------------------------------------------------------------
+    // Setter opp spørrevariabel for registrering av abonnement
+    // ----------------------------------------------------------------------------------------------------
 
-// Spørring som setter inn nytt abonnement i databasen
-$queryReg = "INSERT INTO cards (description, start_date, end_date, user_id) VALUES ('$description', '$start_date','$end_date', '$user_id')"; //  Spørring som setter inn data i databasen
-$queryDB = mysqli_query($mysqli , $queryReg); // mysqli_query er en funksjon som utfører spørring mot databasen
+    // Spørring som setter inn nytt abonnement i databasen
+    $queryReg = "INSERT INTO cards (description, start_date, end_date, user_id) VALUES ('$description', '$start_date','$end_date', '$user_id')"; //  Spørring som setter inn data i databasen
+    $queryDB = mysqli_query($mysqli , $queryReg); // mysqli_query er en funksjon som utfører spørring mot databasen
 
 
 
-    if($queryDB){   
+    if($queryDB) {   
         echo "Saved";
         $_SESSION['subOk'] = "New subscription is successfully added!";
         header('Location: dashboard.php');
     
     }
-    } else {
-        echo "Not Saved";
-        $_SESSION['subError'] = "Subscription could not be added!";
-        header('Location: dashboard.php');
-    }
+
+} else {
+    echo "Not Saved";
+    $_SESSION['subError'] = "Subscription could not be added!";
+    header('Location: dashboard.php');
+}
 
 
 
@@ -66,12 +67,12 @@ $queryDB = mysqli_query($mysqli , $queryReg); // mysqli_query er en funksjon som
 // Redigeringsknapp
 // ----------------------------------------------------------------------------------------------------
 
-    if(isset($_POST['edit_btn'])) { // Sjekker at variabel er deklarert og at edit_btn knappen er klikket på 
-        $id = $_POST['edit_id'];    // Sjekker at variabel er deklarert
-        
-        $queryReg = "SELECT * FROM cards WHERE id='$id' ";  // Spørring som henter spesifikk abonnement fra databasen
-        $queryDB = mysqli_query($mysqli , $query);       // Utfører spørring mot databasen
-    }
+if(isset($_POST['edit_btn'])) { // Sjekker at variabel er deklarert og at edit_btn knappen er klikket på 
+    $id = $_POST['edit_id'];    // Sjekker at variabel er deklarert
+    
+    $queryReg = "SELECT * FROM cards WHERE id='$id' ";  // Spørring som henter spesifikk abonnement fra databasen
+    $queryDB = mysqli_query($mysqli , $query);       // Utfører spørring mot databasen
+}
 
 // ----------------------------------------------------------------------------------------------------
 // Oppdateringsknapp
@@ -110,8 +111,7 @@ if(isset($_POST['delete_btn'])) { // Sjekker at variabel er deklarert og at upda
     if($queryDB) {
         $_SESSION['subOk'] = "Subscription is successfully deleted!";
         header('Location: dashboard.php');
-    }
-    else {
+    } else {
         $_SESSION['subError'] = "Subscription could NOT be deleted";
         header('Location: dashboard.php');
     }
@@ -120,7 +120,4 @@ if(isset($_POST['delete_btn'])) { // Sjekker at variabel er deklarert og at upda
 // ----------------------------------------------------------------------------------------------------
 //  
 // ----------------------------------------------------------------------------------------------------
-
-
-
 ?>
