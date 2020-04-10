@@ -31,7 +31,7 @@
                 <input type="password" placeholder="Enter your password..." name="password" class="">
             </div>
             <!-- /* https://getbootstrap.com/docs/4.0/components/buttons/#button-tags */ -->
-            <input type="submit" name="loginbtn" class="btn primary" value="Logg inn">
+            <input type="submit" name="loginbtn" class="btn primary" value="Login">
             <?php
 
                 // Sjekker om session status er deklarert og ikke er en tom string
