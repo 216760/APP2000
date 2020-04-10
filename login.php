@@ -58,7 +58,6 @@
 
 
 <?php
-
 include_once('db-config.php'); // Inkluderer bare 'db-config.php' en gang, og scriptet vil avbrytes dersom include_once-funksjonen ikke finner filen.
 
     if (isset($_POST['loginbtn'])) { //Sjekker at variabel er deklarert og at knappen er klikket på
@@ -75,19 +74,22 @@ include_once('db-config.php'); // Inkluderer bare 'db-config.php' en gang, og sc
         // mysqli_query funksjon som utfører SELECT spørring mot database og sjekker om email matcher med input
         $sql = mysqli_query($mysqli, "SELECT id, password FROM register WHERE email='$email'"); 
         $user_matced = mysqli_num_rows($sql); // mysqli_num_rows funksjon som enter ut raden som matcher med email og legger denne i en variabel
+
         if ($user_matced > 0) { // Hvis user_matced returerner en verdi større en 0 fortsetter koden.
             $data = mysqli_fetch_array($sql); // Legger SELECT spørringen i tabell ved hjelp av funksjonen mysqli_fetch_array. Deretter legges denne spørringen i en variabel
             $id = $data['id'];  // Henter ut bruker id fra databasen og legger den i en variabel
             $_SESSION['id'] = $id;  // Legger id variabelen inn i en session variabel. Dette for å identifisere bruker
         
-        //password_verify er en funksjon som sammenligner input password med hashet passord i databasen fra $data variabel
-        if(password_verify($password, $data['password'])) { 
-            header('Location:dashboard.php'); // Header er en funksjon som viderefører brukeren til dashboard
-            exit(0); // exit er en funksjon som terminerer operasjonen 
-        } else
+            //password_verify er en funksjon som sammenligner input password med hashet passord i databasen fra $data variabel
+            if(password_verify($password, $data['password'])) { 
+                header('Location:dashboard.php'); // Header er en funksjon som viderefører brukeren til dashboard
+                exit(0); // exit er en funksjon som terminerer operasjonen 
+
+            } else 
             header('Location:login.php');  // Header er en funksjon som viderefører brukeren til login
             $_SESSION['status'] = "Email or password is incorrect"; //Feilmelding til bruker
-            exit(0); // exit er en funksjon som terminerer operasjonen 
+            exit(0); // exit er en funksjon som terminerer operasjonen
+
         } else {
             header('Location:login.php'); // Header er en funksjon som viderefører brukeren til login
             $_SESSION['status'] = "Fields cannot be empty"; //Feilmelding til bruke
@@ -95,5 +97,4 @@ include_once('db-config.php'); // Inkluderer bare 'db-config.php' en gang, og sc
         }
     }
 //Kodet og tilpasset av: Anders Koo og Andeas Knutsen STOPP 
-
 ?>

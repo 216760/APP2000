@@ -25,22 +25,6 @@ body {
 /*
 /* ------------------------------------------- */
 
-/* KODET AV: Anders Koo */
-
-.info-text{
-  text-align: center;
-  margin-bottom: 300px;
-  margin-left: 50px;
-  margin-top: 50px;
-  color:#4A148C;
-  position: relative;
-}
-
-/* https://www.w3schools.com/cssref/pr_class_position.asp */
-.empty-sub {
-  position: relative;
-  left: 40%;
-}
 
 /* https://www.w3schools.com/cssref/sel_focus.asp */
 /* https://stackoverflow.com/questions/3397113/how-to-remove-focus-border-outline-around-text-input-boxes-chrome */
@@ -257,9 +241,11 @@ form {
 input, textarea {
   display:block;
   width:100%;
-  padding:.2rem;
+  border:none;
+  padding:.5rem;
   font-size:18px;
   border-radius:5px;
+  resize: none;
 }
 
 #message {
@@ -293,13 +279,13 @@ input, textarea {
   width: 100%;
 }
 
-.my_form input:focus{
+#my_form input:focus{
   display: block;
   border: 2px solid #4A148C;
   box-shadow: 0 0 8px 0 #4A148C; 
 }
 
-.my_form textarea:focus{
+#my_form textarea:focus{
   display: block;
   border: 2px solid #4A148C;
   box-shadow: 0 0 8px 0 #4A148C; 

@@ -21,7 +21,7 @@
 * https://stackoverflow.com/questions/36108407/how-to-auto-adjust-the-height-of-fixed-footer-at-bottom
 
 * Medlemmer som har bidratt: Henrik Solnør Johansen, Andreas Knutsen og Anders Koo
-  
+
 **/
 
 
@@ -37,7 +37,7 @@ session_start(); // Gjenopptar session
 $id = $_SESSION["id"]; 
 
 if(!isset($_SESSION)){ // Hvis session ikke er satt blir brukeren videresendt til login.php
-  header('Location:login.php'); 
+	header('Location:login.php'); 
 }
 
 // ----------------------------------------------------------------------------------------------------
@@ -61,123 +61,118 @@ $query_run = mysqli_query($connection, $query); // mysqli_query er en metode for
 
 
 <!-- ---------------------------------------------------------------------------------------------------- 
- Setter opp dashboard struktur. Vi henter så ut abonnement fra databasen ved å identifisere dem via id 
+Setter opp dashboard struktur. Vi henter så ut abonnement fra databasen ved å identifisere dem via id 
 ----------------------------------------------------------------------------------------------------- -->
 <!DOCTYPE html>
 <html>
-  
-  <?php include('includes/header.php');?> <!-- Inkluderer header.php -->
-  <body>
 
-    <?php
-    include('includes/navbar.php'); ?>  <!-- Inkluderer navbar.php -->
+<?php include('includes/header.php');?> <!-- Inkluderer header.php -->
 
-    <div class="content-dashboard">
-      <div class="container">
-        <div>
-            <button data-toggle="modal" data-target="#eexampleModal" class="btn btn-primary w-25" style="display: block; margin: 0 auto;">Add a new subscription</button>
-        </div>
-        <div class="row justify-content-center">
-            <?php
+	<body>
 
-            if(mysqli_num_rows($query_run) > 0) { // mysqli_num_rows funksjonen returnerer antall rader i databasen. Hvis mysqli_num_rows returnerer en verdi
-                                                  // som er større en 0 vil if-setningen fortsette. 
+	<?php
+	include('includes/navbar.php'); ?>  <!-- Inkluderer navbar.php -->
 
-              while($row = mysqli_fetch_assoc($query_run)) { // mysqli_fetch_assoc er en funksjon som returnerer resulterende rad i en tabell og legger den i $row variabelen
+		<div class="content-dashboard">
+			<div class="container">
+				<div>
+					<button data-toggle="modal" data-target="#eexampleModal" class="btn btn-primary w-25" style="display: block; margin: 0 auto;">Add a new subscription</button>
+				</div>
+				<div class="row justify-content-center">
+				<?php
 
-            ?>
-          <div class="col-sm-4">
-            <div class="card shadow mx-auto" style="width: 18rem;">
-              <div class="card-header"><?php echo $row['description']; ?>
-                <div class="float-right">
-                  <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Green</a>
-                    <a class="dropdown-item" href="#">Yellow</a>
-                    <a class="dropdown-item" href="#">Red</a>
-                  </div>
-                </div>
-              </div>
-            </div>  
-              <ul class="list-group list-group-flush">                                 
-                <li class="list-group-item"><h6 class="card-text">Start date</h6><?php echo $row['start_date']; ?></li> <!-- Henter ut start dato fra databasen  -->
-                <li class="list-group-item"><h6 class="card-text">End date</h6><?php echo $row['end_date']; ?></li> <!-- Henter ut slutt dato fra databasen  -->
-              </ul>
-              <div class="card-body">
-                <form action="edit.php" method="post" style="display:inline-block;">                                               
-                  <input type="hidden" name ="edit_id" value="<?php echo $row['id']; ?>"> <!-- Henter ut id dato fra databasen. Dette for å kunne identifisere spesifikt abonnement  -->
-                  <button type="submit" class="btn btn-primary" name="edit_btn" data-toggle="modal"> Edit</button>
-                </form>
-                <form action="server.php" method="post" style="display:inline-block;">                                               
-                  <input type="hidden" name ="delete_id" value="<?php echo $row['id']; ?>"> <!-- Henter ut id dato fra databasen. Dette for å kunne identifisere spesifikt abonnement  -->
-                  <button type="submit" class="btn btn-primary" name="delete_btn" data-toggle="modal"> Delete</button>
-                </form>    
-              </div>
-            </div>
-          </div>
-              <?php } ?>
-        </div>
-      </div>
-    </div>
+				if(mysqli_num_rows($query_run) > 0) { // mysqli_num_rows funksjonen returnerer antall rader i databasen. Hvis mysqli_num_rows returnerer en verdi
+				                              // som er større en 0 vil if-setningen fortsette. 
 
-  <?php
-    }
-    else { ?>
-   <?php
-    }
-  ?>
-<div class="container">
-  <div class="modal fade" id="eexampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">New subscription</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-              
-        <form action="server.php" method="POST">
-          <div class="modal-body">
-            <div class="form-group">
-                <label><h6 class="card-text">Service</h6></label>
-                <input type="text" name="description" value=""  class="form-control" >
-            </div>
-            <div class="form-group">
-                <label><h6 class="card-text">Start date</h6></label>
-                <input type="date" name="start_date" value=""  class="form-control" >
-            </div>
-            <div class="form-group">
-                <label><h6 class="card-text">End date</h6></label>
-                <input type="date" name="end_date" value="" class="form-control">
-            </div>
+					while($row = mysqli_fetch_assoc($query_run)) { // mysqli_fetch_assoc er en funksjon som returnerer resulterende rad i en tabell og legger den i $row variabelen
 
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-              <button type="submit" name="registerbtn" class="btn btn-primary">Save</button>
-            </div>
+					?>
+					<div class="col-sm-4">
+						<div class="card shadow mx-auto" style="width: 18rem;">
+							<div class="card-header"><?php echo $row['description']; ?>
+							</div>  
+							<ul class="list-group list-group-flush">                                 
+								<li class="list-group-item"><h6 class="card-text">Start date</h6><?php echo $row['start_date']; ?></li> <!-- Henter ut start dato fra databasen  -->
+								<li class="list-group-item"><h6 class="card-text">End date</h6><?php echo $row['end_date']; ?></li> <!-- Henter ut slutt dato fra databasen  -->
+							</ul>
+							<div class="card-body">
+								<form action="edit.php" method="post" style="display:inline-block;">                                               
+									<input type="hidden" name ="edit_id" value="<?php echo $row['id']; ?>"> <!-- Henter ut id dato fra databasen. Dette for å kunne identifisere spesifikt abonnement  -->
+									<button type="submit" class="btn btn-primary" name="edit_btn" data-toggle="modal"> Edit</button>
+								</form>
+								<form action="server.php" method="post" style="display:inline-block;">                                               
+									<input type="hidden" name ="delete_id" value="<?php echo $row['id']; ?>"> <!-- Henter ut id dato fra databasen. Dette for å kunne identifisere spesifikt abonnement  -->
+									<button type="submit" class="btn btn-primary" name="delete_btn" data-toggle="modal"> Delete</button>
+								</form>    
+							</div>
+						</div>
+					</div>
+				<?php } ?>
+				</div>
+			</div>
+		</div>
 
-          <?php
+				<?php
+				}
 
-          if(isset($_SESSION['success']) && $_SESSION['success'] != ''){
-            echo '<h2> ' .$_SESSION['success']. ' </h2>';
-            unset($_SESSION['success']);
-          }
+				else { ?>
 
-          if(isset($_SESSION['error']) && $_SESSION['error'] != '') {
-            echo '<h2 class="bg-info"> ' .$_SESSION['error']. ' </h2>';
-            unset($_SESSION['error']);
-          }
-          ?>
+				<?php
 
-        </div>
-      </form>
-      </div>
-    </div>
-  </div>
-</div>               
+					}
+
+				?>
+
+		<div class="container">
+			<div class="modal fade" id="eexampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">New subscription</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+
+						<form action="server.php" method="POST">
+							<div class="modal-body">
+								<div class="form-group">
+									<label><h6 class="card-text">Service</h6></label>
+									<input type="text" name="description" value=""  class="form-control" >
+								</div>
+								<div class="form-group">
+									<label><h6 class="card-text">Start date</h6></label>
+									<input type="date" name="start_date" value=""  class="form-control" >
+								</div>
+								<div class="form-group">
+									<label><h6 class="card-text">End date</h6></label>
+									<input type="date" name="end_date" value="" class="form-control">
+								</div>
+
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+									<button type="submit" name="registerbtn" class="btn btn-primary">Save</button>
+								</div>
+
+							<?php
+
+							if(isset($_SESSION['success']) && $_SESSION['success'] != ''){
+							echo '<h2> ' .$_SESSION['success']. ' </h2>';
+							unset($_SESSION['success']);
+							}
+
+							if(isset($_SESSION['error']) && $_SESSION['error'] != '') {
+							echo '<h2 class="bg-info"> ' .$_SESSION['error']. ' </h2>';
+							unset($_SESSION['error']);
+							}
+							?>
+
+							</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>               
 
 <!-- ---------------------------------------------------------------------------------------------------- 
 

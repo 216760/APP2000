@@ -27,7 +27,7 @@ session_start();
 // Kobler til database
 // ----------------------------------------------------------------------------------------------------
 
- include_once("db-config.php"); // Inkluderer db-config.php 
+include_once("db-config.php"); // Inkluderer db-config.php 
 
 // ----------------------------------------------------------------------------------------------------
 // Setter opp kredentialer
@@ -57,12 +57,10 @@ $stmt = mysqli_prepare($mysqli,"INSERT INTO feedback(name, email, message, subje
 
 //Kodet og tilpasset av: Anders Koo og Henrik Solnør Johansen STOPP
 mysqli_stmt_bind_param($stmt,"ssssi", $name, $email, $message, $subject, $user_id);
-if( ($stmt)) //Utfører SQL statement
-{
+if(mysqli_stmt_execute($stmt)) { //Utfører SQL statement
     echo 'success'; // Hvis utførelsen er vellyket sendes en success status
-}else{
+} else {
     echo 'failure'; // Hvis ikke sendes en feil status. 
 }
-
 //--------------------------------------------------------------------------------------------------------------------
 ?>
