@@ -56,7 +56,7 @@ session_start();
 							</div>
 							<div class="form-group col-lg-12">
 								<input class="fdsendBtn" id="mybtn" type="submit" name="submitbtn" value="Submit"><span id="status"></span>
-								<input class="fdbackBtn" type="submit" align="right" value="Cancel" onclick="document.location = 'index.php'">
+								<input class="fdbackBtn" type="submit" align="right" value="Cancel" onclick="document.location = 'dashboard.php'">
 							</div>
 						</form>	 
 					</div>
