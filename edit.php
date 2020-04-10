@@ -35,7 +35,7 @@ include('includes/header.php'); // Inkluderer header.php
             <div class="container">
                 <div class="card shadow mb-4 mx-auto" style="width: 30rem;">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary"> EDIT Subscription </h6>
+                    
                     </div>
                     <div class="card-body">
 
@@ -59,16 +59,16 @@ include('includes/header.php'); // Inkluderer header.php
 
                             <input type="hidden" name="edit_id" value="<?php echo $row['id'] ?>"> <!-- Henter abonnement id fra DB -->
                             <div class="form-group">
-                                <label> Beskrivelse </label>          
+                                <label> Description </label>          
                                                                                   <!-- Henter beskrivelse fra DB -->
                                 <input type="text" name="edit_description" value="<?php echo $row['description'] ?>" class="form-control" placeholder="Service"> 
                             </div>
                             <div class="form-group">
-                                <label>Fra dato</label>                         <!-- Henter start dato fra DB -->
+                                <label>From date</label>                         <!-- Henter start dato fra DB -->
                                 <input type="date" name="edit_date_from" value="<?php echo $row['start_date'] ?>" class="form-control" placeholder="Start date">
                             </div>
                             <div class="form-group">
-                                <label>Til dato</label>                         <!-- Henter slutt dato fra DB -->
+                                <label>To date</label>                         <!-- Henter slutt dato fra DB -->
                                 <input type="date" name="edit_date_to" value="<?php echo $row['end_date'] ?>" class="form-control" placeholder="End date">
                             </div> 
                             <a href="dashboard.php" class="btn btn-primary"> Cancel</a>

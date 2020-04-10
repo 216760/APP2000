@@ -30,6 +30,8 @@ body {
 /* https://stackoverflow.com/questions/3397113/how-to-remove-focus-border-outline-around-text-input-boxes-chrome */
 
 
+/* Kodet av Anders Koo */
+
 input:focus {
   outline: none;
   border-color: #4A148C;
@@ -39,12 +41,21 @@ input:focus {
 .btn {
   background-color: #4A148C;
   color:white;
+
 }
 
 .btn:hover {
 background-color: #4A148C;
 color:white;
+
 }
+
+.card-header {
+  background-color: #4A148C!important;
+  color: white;
+}
+
+
 
 /* ------------------------------------------- */
 /* CUSTOM STYLING END */
