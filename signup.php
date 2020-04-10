@@ -29,7 +29,7 @@ ob_start();
     include('includes/header_login.php');
     ?>
 
-    <body id="custom-body">
+    <body>
 
              
         <form id="myForm" class="form-signin" id="my_form" form action="signup.php" method="post" name="form1">
