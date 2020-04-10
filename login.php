@@ -18,7 +18,7 @@ Medlemmer som har bidratt:  Henrik Solnør Johansen, Andreas Knutsen og Anders K
 
 <!DOCTYPE html>
 <html>
-<!-- Inkluderer bare 'db-config.php' en gang, og scriptet vil avbrytes dersom include_once-funksjonen ikke finner filen. -->
+ 
     <?php include('includes/header_login.php');?>
  
     <body id="custom-body">
