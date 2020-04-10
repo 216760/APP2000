@@ -55,8 +55,8 @@ session_start();
 								<textarea class="form-control" id="message" placeholder="Write your message" rows="5" class="form-control" required ></textarea>
 							</div>
 							<div class="form-group col-lg-12">
-								<input class="fdsendBtn" id="mybtn" type="submit" name="submitbtn" value="Submit" style="display:inline-block;"><span id="status"></span>
-								<input class="fdbackBtn" type="submit" align="right" value="Cancel" style="display:inline-block;" onclick="document.location = 'index.php'">
+								<input class="fdsendBtn" id="mybtn" type="submit" name="submitbtn" value="Submit"><span id="status"></span>
+								<input class="fdbackBtn" type="submit" align="right" value="Cancel" onclick="document.location = 'index.php'">
 							</div>
 						</form>	 
 					</div>
