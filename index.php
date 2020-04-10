@@ -25,7 +25,7 @@ session_start(); // Gjenopptar session
 
 	<?php include('includes/header.php');?> <!-- Inkluderer header.php -->
 
-	<body id="custom-body">
+	<body>
 
 	<?php include('includes/navbar.php');?> <!-- Inkluderer navbar.php -->
 
