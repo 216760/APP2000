@@ -138,6 +138,10 @@ nav li:hover a {
     color: #000000 !important;
 }
 
+.navbar .navbar-brand:hover {
+  color: #FFFFFF;
+}
+
 .navbar-brand img{
   height: 5rem;
 }
