@@ -36,7 +36,7 @@ session_start(); // Gjenopptar session
 
 $id = $_SESSION["id"]; 
 
-if(!isset($_SESSION)){ // Hvis session ikke er satt blir brukeren videresendt til login.php
+if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren videresendt til login.php
 	header('Location:login.php'); 
 }
 
