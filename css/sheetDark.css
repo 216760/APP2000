@@ -138,6 +138,10 @@ nav li:hover a {
     color: #000000 !important;
 }
 
+.navbar .navbar-brand:hover {
+  color: #FFFFFF;
+}
+
 .navbar-brand img{
   height: 5rem;
 }
@@ -263,7 +267,7 @@ input, textarea {
   resize: none;
 }
 
-.fdsendBtn {
+/*.fdsendBtn {
   border: 0;
   background: black;
   color: white;
@@ -284,7 +288,7 @@ input, textarea {
   text-transform: uppercase;
   cursor: pointer;
   float: left;
-}
+}*/
 
 .form-control {
   width: 100%;
