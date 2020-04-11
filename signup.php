@@ -35,7 +35,7 @@ ob_start();
             <input type="text" placeholder="username" class="" name="name">
             <input type="text" placeholder="email" class="" name="email">
             <input type="password" placeholder="password" class="" name="password"> 
-            <input type="submit" id="regbtn" name="registerbtn" class="btn rounded primary" value="Registrer">
+            <input type="submit" id="regbtn" name="registerbtn" class="btn rounded primary" value="Register">
             <?php
 
                 if(isset($_SESSION['status']) && $_SESSION['status'] !='') {
@@ -115,7 +115,7 @@ ob_start();
                     // Ved gjennomført spørring får brukeren beskjed om at profilen er opprettet 
                     if ($result) {
                         $_SESSION['success'] = "$User Registered successfully";
-                        header('Location: signup.php');
+                        header('Location: login.php');
                     } else {
                         //  Ved gjennomført spørring får brukeren beskjed om at emailen allerede er i bruk
                         $_SESSION['status'] = "Email already in use: \n" . mysqli_error($mysqli);
