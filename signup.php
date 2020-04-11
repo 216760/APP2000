@@ -122,7 +122,7 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
                     // Ved gjennomført spørring får brukeren beskjed om at profilen er opprettet 
                     if ($result) {
                         $_SESSION['success'] = "$User Registered successfully";
-                        header('Location: signup.php');
+                        header('Location: login.php');
                     } else {
                         //  Ved gjennomført spørring får brukeren beskjed om at emailen allerede er i bruk
                         $_SESSION['status'] = "Email already in use: \n" . mysqli_error($mysqli);
