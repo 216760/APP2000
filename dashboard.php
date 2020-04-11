@@ -4,10 +4,10 @@
 * TIL INFORMASJON: 
 
 * I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.
-* Dette vil også bli dokumentert under kildebruk i rapporten.  Grunnen til dette er basert på “best practice”  måter å programmere på.  
+* Dette vil også bli dokumentert under kildebruk i rapporten og markert i selve koden. 
+* Grunnen til dette er basert på “best practice”  måter å programmere på.  
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 
-
-* Vi ser først på en demo av hvordan et eksempel virker,  koder oss gjennom guiden for å lære hva som skjer. 
+* Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer. 
 * Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke. 
 
 * Linker til gjenbrukt kode:
@@ -24,10 +24,6 @@
 
 **/
 
-
-
-
-
 // ----------------------------------------------------------------------------------------------------
 // Setter opp session og includes
 // ----------------------------------------------------------------------------------------------------
@@ -41,10 +37,6 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 }
 
 // ----------------------------------------------------------------------------------------------------
-// Setter opp session og includes
-// ----------------------------------------------------------------------------------------------------
-
-// ----------------------------------------------------------------------------------------------------
 // Setter opp database forbindelse med spørrring
 // ----------------------------------------------------------------------------------------------------
 
@@ -53,16 +45,15 @@ $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000d
 $query = "SELECT * FROM cards WHERE user_id=$id"; // Henter data fra cards tabellen hvor user_id er identisk med id til bruker i register tabellen
 $query_run = mysqli_query($connection, $query); // mysqli_query er en metode for å utføre forbindelse med database og spørring
 
-
-// ----------------------------------------------------------------------------------------------------
-// 
-// ----------------------------------------------------------------------------------------------------
 ?>
 
 
-<!-- ---------------------------------------------------------------------------------------------------- 
-Setter opp dashboard struktur. Vi henter så ut abonnement fra databasen ved å identifisere dem via id 
------------------------------------------------------------------------------------------------------ -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- START 																								  -->
+<!-- For å sette opp modal med kalender funksjon har vi brukt Youtube kanalen Funda of Web IT,  		  -->																	  -->
+<!-- Kilde: https://www.youtube.com/watch?v=OePNkDd3Yb8 												  -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+
 <!DOCTYPE html>
 <html>
 
@@ -174,19 +165,21 @@ Setter opp dashboard struktur. Vi henter så ut abonnement fra databasen ved å 
 		</div>
 	</div>               
 
+<!-- -------------------------------------------------------------------------------------------------- -->
+<!-- STOPP 																								-->
+<!-- For å sette opp modal med kalender funksjon har vi brukt Youtube kanalen Funda of Web IT, 			-->																	   	-->
+<!-- Kilde: https://www.youtube.com/watch?v=OePNkDd3Yb8 												-->							
+<!-- -------------------------------------------------------------------------------------------------- -->
+
+
 <!-- ---------------------------------------------------------------------------------------------------- 
-
------------------------------------------------------------------------------------------------------ -->
-
-
-<!-- ---------------------------------------------------------------------------------------------------- 
-Footer
+Footer START
 ----------------------------------------------------------------------------------------------------- -->
 
 <?php include('includes/footer.php');?> <!-- Inkluderer footer.php -->
 
 <!-- ---------------------------------------------------------------------------------------------------- 
-Footer
+Footer STOPP
 ----------------------------------------------------------------------------------------------------- -->
 
 </body> 

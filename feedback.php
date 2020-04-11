@@ -2,9 +2,10 @@
 * TIL INFORMASJON:
 *  
 * I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.
-* Dette vil også bli dokumentert under kildebruk i rapporten.  Grunnen til dette er basert på “best practice”  måter å programmere på.  
+* Dette vil også bli dokumentert under kildebruk i rapporten og markert i selve koden. 
+* Grunnen til dette er basert på “best practice”  måter å programmere på.  
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 
-* Vi ser først på en demo av hvordan et eksempel virker,  koder oss gjennom guiden for å lære hva som skjer. 
+* Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer. 
 * Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke. 
 
 * Kilde: http://www.openjs.com/ajax/tutorial/ajax.php
@@ -65,13 +66,13 @@ session_start();
 		</div>
 
 		<!-- ---------------------------------------------------------------------------------------------------- 
-		Footer
+		Footer START
 		----------------------------------------------------------------------------------------------------- -->
 
 		<?php include('includes/footer.php');?>
 
 		<!-- ---------------------------------------------------------------------------------------------------- 
-		Footer
+		Footer STOPP
 		----------------------------------------------------------------------------------------------------- -->
 
 	</body>
@@ -85,9 +86,11 @@ session_start();
 
 </html>
 
-<!-- ---------------------------------------------------------------------------------------------------- 
-
------------------------------------------------------------------------------------------------------ -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- START 																								  -->
+<!-- For å sette opp AJAX teknologi med feedback skjema har vi brukt denne guiden. 						  -->
+<!-- Kilde: http://www.openjs.com/ajax/tutorial/ajax.php 												  -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
 <script>
 
 		function _(id){ return document.getElementById(id); }// funksjon som returnerer alle id'ene i skjema
@@ -128,6 +131,8 @@ session_start();
 			ajax.send( formdata ); 
 		}
 </script>
-<!-- ---------------------------------------------------------------------------------------------------- 
-
------------------------------------------------------------------------------------------------------ -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- STOPP 																								  -->
+<!-- For å sette opp AJAX teknologi med feedback skjema har vi brukt denne guiden. 						  -->
+<!-- Kilde: http://www.openjs.com/ajax/tutorial/ajax.php 												  -->
+<!-- ---------------------------------------------------------------------------------------------------- -->

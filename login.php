@@ -4,7 +4,8 @@
 *  TIL INFORMASJON: 
 * 
 * I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.
-* Dette vil også bli dokumentert under kildebruk i rapporten.  Grunnen til dette er basert på “best practice”  måter å programmere på.  
+* Dette vil også bli dokumentert under kildebruk i rapporten og markert i selve koden. 
+* Grunnen til dette er basert på “best practice”  måter å programmere på.  
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 
 * Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer. 
 * Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke. 
@@ -64,10 +65,15 @@ include_once('db-config.php'); // Inkluderer bare 'db-config.php' en gang, og sc
         $email    = mysqli_real_escape_string($mysqli, $_POST['email']);    //Sjekker at email er deklarert og sikrer mot sql injection
         $password = mysqli_real_escape_string($mysqli, $_POST['password']); //Sjekker at password er deklarert og sikrer mot sql injection
 
-//-----------------------------------------------------------------------------------------------------
-// Denne koden er hentet fra og implementert og tilpasset inn i egen løsning fra Youtube kanalen Coding Passive income
-// Kilde: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s
-//-----------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------//
+// START                                                                                                            //
+// Denne koden under er hentet fra og tilpasset egen løsning fra Youtube kanalen Coding Passive income.             //
+// Vi brukte denne for å forstå hvordan vi registrerte hashet passord fra bruker i registreringsskjema.             //
+// Så lærte vi hvordan man kan sammenligne input password fra login skjema til å matche hashet passord i databasen. //
+// Dette for å sjekke at riktig bruker med riktig password ble logget inn                                           //
+//                                                                                                                  //
+// Kilde: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                        //
+//------------------------------------------------------------------------------------------------------------------//
 
 //Kodet og tilpasset av: Anders Koo og Andeas Knutsen START 
 
@@ -96,5 +102,18 @@ include_once('db-config.php'); // Inkluderer bare 'db-config.php' en gang, og sc
             exit(0); // exit er en funksjon som terminerer operasjonen 
         }
     }
-//Kodet og tilpasset av: Anders Koo og Andeas Knutsen STOPP 
+    //Kodet og tilpasset av: Anders Koo og Andeas Knutsen STOPP 
+
+
+//------------------------------------------------------------------------------------------------------------------//
+// STOPP                                                                                                            //
+// Denne koden under er hentet fra og tilpasset egen løsning fra Youtube kanalen Coding Passive income.             //
+// Vi brukte denne for å forstå hvordan vi registrerte hashet passord fra bruker i registreringsskjema.             //
+// Så lærte vi hvordan man kan sammenligne input password fra login skjema til å matche hashet passord i databasen. //
+// Dette for å sjekke at riktig bruker med riktig password ble logget inn                                           //
+// Sentrale metoder: passowrd_verify()                                                                              //
+//                                                                                                                  //
+// Kilde: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                        //
+//------------------------------------------------------------------------------------------------------------------//
+
 ?>

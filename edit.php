@@ -4,9 +4,10 @@
 * TIL INFORMASJON: 
 
 * I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.
-* Dette vil også bli dokumentert under kildebruk i rapporten.  Grunnen til dette er basert på “best practice”  måter å programmere på.  
+* Dette vil også bli dokumentert under kildebruk i rapporten og markert i selve koden. 
+* Grunnen til dette er basert på “best practice”  måter å programmere på.  
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 
-* Vi ser først på en demo av hvordan et eksempel virker,  koder oss gjennom guiden for å lære hva som skjer. 
+* Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer. 
 * Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke. 
 
 * Denne koden er hentet fra og tilpasset egen løsning fra denne Youtube kanalen, part 1-6
@@ -19,10 +20,17 @@
 //-----------------------------------------------------------------------------------------------------
 // Setter opp session og includes
 //-----------------------------------------------------------------------------------------------------
+
 session_start(); // Gjenopptar session
 include('db-config.php'); // Inkluderer database tilkobling
 include('includes/header.php'); // Inkluderer header.php
 ?>
+
+<!-- ----------------------------------------------------------------------------------------------------------- -->
+<!-- START -->
+<!-- For å redigere allerede opprettet abonnement har vi hentet og tilpasset kode fra Youtube kanalen, part 1-6  -->
+<!-- Kilde: https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ   -->
+<!-- ----------------------------------------------------------------------------------------------------------- -->
 
 <!DOCTYPE html>
 <html>
@@ -85,14 +93,21 @@ include('includes/header.php'); // Inkluderer header.php
                 </div>
             </div>
         </div>
+
+<!-- ----------------------------------------------------------------------------------------------------------- -->
+<!-- STOPP                                                                                                       -->
+<!-- For å redigere allerede opprettet abonnement har vi hentet og tilpasset kode fra Youtube kanalen, part 1-6  -->
+<!-- Kilde: https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                             -->
+<!-- ----------------------------------------------------------------------------------------------------------- -->
+
 <!-- --------------------------------------------------------------------------------------------------
-Footer 
+Footer START
 ------------------------------------------------------------------------------------------------------>
 
 <?php include('includes/footer.php');?> <!-- Inkluderer footer.php -->
 
 <!-- --------------------------------------------------------------------------------------------------
-Footer 
+Footer STOPP
 ------------------------------------------------------------------------------------------------------>
 
     </body>

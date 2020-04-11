@@ -3,10 +3,10 @@
 TIL INFORMASJON: 
 
 I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.
-Dette vil også bli dokumentert under kildebruk i rapporten.  Grunnen til dette er basert på “best practice”  måter å programmere på.  
+Dette vil også bli dokumentert under kildebruk i rapporten og markert i selve koden. 
+Grunnen til dette er basert på “best practice”  måter å programmere på.  
 Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 
-
-Vi ser først på en demo av hvordan et eksempel virker,  koder oss gjennom guiden for å lære hva som skjer. 
+Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer. 
 Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke. 
 
 Kilde: 
@@ -42,10 +42,18 @@ $user_id = $_SESSION['id'];
 
 
 
+
+
+// ----------------------------------------------------------------------------------------------------
+// START 
+// Koden under er var i utgangspunktet OOP basert. Vi har gjort den om til procedural. Grunnen til at vi har 
+// brukt procedural er mer eller mindre fordi dette er det mest effektive steg for steg metoden å gå frem på. 
+// Link: https://www.youtube.com/playlist?list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV
+// ----------------------------------------------------------------------------------------------------
+
 // ----------------------------------------------------------------------------------------------------
 // Forbereder insert spørring mot databasen med prepare
 // ----------------------------------------------------------------------------------------------------
-
 // mysqli_prepare er en funksjon som bruker til å sikre mot SQL injection
 $stmt = mysqli_prepare($mysqli,"INSERT INTO feedback(name, email, message, subject, user_id) VALUES(?,?,?,?,?)");
 
@@ -62,5 +70,12 @@ if(mysqli_stmt_execute($stmt)) { //Utfører SQL statement
 } else {
     echo 'failure'; // Hvis ikke sendes en feil status. 
 }
-//--------------------------------------------------------------------------------------------------------------------
+
+// ----------------------------------------------------------------------------------------------------
+// STOPP
+// Koden under er var i utgangspunktet OOP basert. Vi har gjort den om til procedural. Grunnen til at vi har 
+// brukt procedural er mer eller mindre fordi dette er det mest effektive steg for steg metoden å gå frem på. 
+// Link: https://www.youtube.com/playlist?list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV
+// ----------------------------------------------------------------------------------------------------
+
 ?>

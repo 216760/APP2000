@@ -8,13 +8,19 @@
 * Vi ser først på en demo av hvordan et eksempel virker,  koder oss gjennom guiden for å lære hva som skjer. 
 * Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke. 
 
-* Denne koden er hentet fra og tilpasset egen løsning fra denne Youtube kanalen, part 1-6
+* Kilde:
 * https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
 
  **/ 
 
 // Medlemmer som har bidratt: Anders Koo
 
+// --------------------------------------------------------------------------------------------------//
+// START                                                                                             //
+// Alle CRUD operasjonene har vi lært oss via eksempler fra Youtube kanalen Funda Of Web IT.         //
+// Denne koden er hentet fra og tilpasset egen løsning fra denne Youtube kanalen, part 1-6           //
+// Kilde: https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                   //
+// --------------------------------------------------------------------------------------------------//
 
 // ----------------------------------------------------------------------------------------------------
 // Oppretter unik session for bruker
@@ -117,7 +123,9 @@ if(isset($_POST['delete_btn'])) { // Sjekker at variabel er deklarert og at upda
     }
 }
 
-// ----------------------------------------------------------------------------------------------------
-//  
-// ----------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------//
+// STOPP                                                                                             //
+// Alle CRUD operasjonene har vi lært oss via eksempler fra Youtube kanalen Funda Of Web IT.         //
+// Denne koden er hentet fra og tilpasset egen løsning fra denne Youtube kanalen, part 1-6           //
+// --------------------------------------------------------------------------------------------------//
 ?>

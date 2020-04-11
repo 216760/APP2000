@@ -15,6 +15,7 @@
 
 **/
 
+
 session_start(); // Oppretter unik sessjon til bruker 
 ob_start();
 ?>
@@ -56,19 +57,17 @@ ob_start();
     ?>
 
 </html>
-    
-<!----------------------------------------------------------------------------------------------------------------------------------------------
-TIL INFORMASJON: 
 
-I denne filen finnes det kode som er gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under. 
-Dette er også synlig kommentert andre steder i filen der hvor dette oppstår, og vil også bli dokumentert under kildebruk i rapporten.
-Grunnen til dette er fordi at for enkelte funksjoner så er det “best practice”-måter å kode på. For vår del så er det en måte å lære dette på. 
-Vi setter oss inn i all koden først, og sørger for at vi forstår den, før den eventuelt vil bli tilpasset og implementert i vår kode.
 
-Kilde: 
-https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
-
-------------------------------------------------------------------------------------------------------------------------------------------------> 
+<!-- --------------------------------------------------------------------------------------------------------------- -->
+<!-- START                                                                                                           -->
+<!-- Denne koden under er hentet fra og tilpasset egen løsning fra Youtube kanalen Coding Passive income.            -->
+<!-- Vi brukte denne for å forstå hvordan vi registrerte hashet passord fra bruker i registreringsskjema.            -->
+<!-- Så lærte vi hvordan man kan sammenligne input password fra login skjema til å matche hashet passord i databasen.-->
+<!-- Dette for å sjekke at riktig bruker med riktig password ble logget inn.                                         -->
+<!-- Sentral krypterings algoritme: PASSWORD_BCRYPT                                                                  -->
+<!-- Kilde: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                       -->
+<!-- ------------------------------------------------------------------------------------------------------------------>
 
 
 <!-- Kodet og tilpasset av: Anders Koo og Andreas Knutsen START -->
@@ -107,12 +106,6 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
                 header('Location: signup.php');
 
             } else {
-
-                // ----------------------------------------------------------------------------------------------------
-                // Operasjon med å hashe brukerregistrert passord er hentet og tilpasset egen løsning fra: 
-                // Kilde: 
-                // https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s
-                // ----------------------------------------------------------------------------------------------------
                 
                 // Variabel som bruker password_hash funksjon sammen med PASSWORD_BCRYPT algoritme for å hashe passord
                 $hashedpass = password_hash($password, PASSWORD_BCRYPT); 
@@ -140,4 +133,14 @@ https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
 
         //-- Kodet og tilpasset av: Anders Koo og Andreas Knutsen STOPP --
 ob_end_flush();
+
 ?>
+<!-- --------------------------------------------------------------------------------------------------------------- -->
+<!-- STOPP                                                                                                           -->
+<!-- Denne koden under er hentet fra og tilpasset egen løsning fra Youtube kanalen Coding Passive income.            -->
+<!-- Vi brukte denne for å forstå hvordan vi registrerte hashet passord fra bruker i registreringsskjema.            -->
+<!-- Så lærte vi hvordan man kan sammenligne input password fra login skjema til å matche hashet passord i databasen.-->
+<!-- Dette for å sjekke at riktig bruker med riktig password ble logget inn.                                         -->
+<!-- Sentral krypterings algoritme: PASSWORD_BCRYPT                                                                  -->
+<!-- Kilde: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                       -->
+<!-- ------------------------------------------------------------------------------------------------------------------>
