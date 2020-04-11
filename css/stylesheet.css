@@ -10,6 +10,8 @@ body {
   background-attachment: fixed;
 }
 
+/* Denne offset:before er basert på noe av html, css og Bootstrap kode som har brukt tidligere i gruppeeksamen PRO1000 Prak.prosj.arb av student 225256 vår 19 */
+
 .offset:before {
   display: block;
   content: "";
