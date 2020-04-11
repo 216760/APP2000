@@ -1,6 +1,6 @@
 <?php
 
-/** 
+/**************************************************************************************************************
 *  TIL INFORMASJON: 
 * 
 * I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.
@@ -14,7 +14,7 @@
 
 * Medlemmer som har bidratt:  Henrik Solnør Johansen, Andreas Knutsen og Anders Koo
 
-**/
+**************************************************************************************************************/
 
  session_start(); // Oppretter unik sessjon til bruker 
  ?>

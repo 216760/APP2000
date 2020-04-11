@@ -1,6 +1,6 @@
 <?php
 
-/**  
+/****************************************************************************************************************
 * TIL INFORMASJON:
  
 * I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.
@@ -101,7 +101,7 @@ ob_start();
             $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 
             // Om emailen ikke er i riktig regex format blir den ikke sanitert
-            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            if (!filter_var($email,     )) {
                 $_SESSION['status'] = "$email is not a valid email address";
                 header('Location: signup.php');
 

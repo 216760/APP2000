@@ -12,9 +12,7 @@ Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempele
 Kilde: 
 
 https://www.youtube.com/playlist?list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV
-https://www.w3schools.com/php/php_mysql_prepared_statements.asp
-https://www.php.net/manual/en/mysqli.prepare.php
-https://www.php.net/manual/en/mysqli-stmt.bind-param.php
+
 
 Kodet og tilpasset av: Henrik Solnør Johansen og Vigleik Espeland Stakseng og
 
@@ -34,10 +32,10 @@ include_once("db-config.php"); // Inkluderer db-config.php
 // ----------------------------------------------------------------------------------------------------
 
 //Kodet og tilpasset av: Anders Koo og Henrik Solnør Johansen START
-$name = trim($_POST['name']); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
-$email = trim($_POST['email']); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
-$message = trim($_POST['message']); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
-$subject = trim($_POST['subject']); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
+$name = filter_var($_POST['name'], FILTER_SANITIZE_STRING); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
+$email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
+$message = filter_var($_POST['message'], FILTER_SANITIZE_STRING); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
+$subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
 $user_id = $_SESSION['id'];
 
 
