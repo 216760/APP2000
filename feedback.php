@@ -14,6 +14,13 @@
 -->
 <?php
 session_start();
+
+$id = $_SESSION["id"]; 
+
+if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren videresendt til login.php
+	header('Location:login.php'); 
+}
+
 ?>
 
 <!DOCTYPE html>
