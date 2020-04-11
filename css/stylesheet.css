@@ -295,7 +295,7 @@ input, textarea {
   resize: none;
 }
 
-.fdsendBtn {
+/*.fdsendBtn {
   border: 0;
   background: #4A148C;
   color: white;
@@ -316,7 +316,7 @@ input, textarea {
   text-transform: uppercase;
   cursor: pointer;
   float: left;
-}
+}*/
 
 
 .form-control {
