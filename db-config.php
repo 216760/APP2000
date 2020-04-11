@@ -16,9 +16,10 @@
 ***************************************************************************************************************/
 
 // ------------------------------------------------------------------------------------------------------------ //
-// START
+// START                                                                                                        //
 // Dette oppsettet er gjenbrukt fra gitlap repoet PHP Simple Login and Registration Script. Vi har selvfølgelig //
 // måttet tilpasse host, databasenavn, bruker og passord                                                        //
+//                                                                                                              //
 // Kilde:https://gitlab.com/tutorialsclass/php-simple-login-registration-script                                 //
 // ------------------------------------------------------------------------------------------------------------ //
 
@@ -33,9 +34,10 @@ $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $d
                                                                                               // kobler seg til databasen
 
 // ------------------------------------------------------------------------------------------------------------ //
-// STOPP
+// STOPP                                                                                                        //
 // Dette oppsettet er gjenbrukt fra gitlap repoet PHP Simple Login and Registration Script. Vi har selvfølgelig //
 // måttet tilpasse host, databasenavn, bruker og passord.                                                       //
+//                                                                                                              //
 // Kilde:https://gitlab.com/tutorialsclass/php-simple-login-registration-script                                 //
 // ------------------------------------------------------------------------------------------------------------ //
 ?>
