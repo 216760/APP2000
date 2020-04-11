@@ -1,7 +1,8 @@
 
 <?php
-/******************************************************************************************************* 
-* TIL INFORMASJON: 
+
+/**
+ * TIL INFORMASJON: 
 
 * I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.
 * Dette vil også bli dokumentert under kildebruk i rapporten og markert i selve koden. 
@@ -20,7 +21,7 @@
 
 * Medlemmer som har bidratt: Henrik Solnør Johansen, Andreas Knutsen og Anders Koo
 
-/******************************************************************************************************* 
+*/
 
 // ----------------------------------------------------------------------------------------------------
 // Setter opp session og includes
