@@ -1,6 +1,6 @@
 
 <?php
-/** 
+/******************************************************************************************************* 
 * TIL INFORMASJON: 
 
 * I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.
@@ -16,13 +16,11 @@
 * henter ut data fra database og lastet inn i html malen: 
 * https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
 
-* https://www.w3schools.com/howto/howto_css_fixed_footer.asp 
-* https://stackoverflow.com/questions/36003670/how-to-put-a-link-on-a-button-with-bootstrap 
-* https://stackoverflow.com/questions/36108407/how-to-auto-adjust-the-height-of-fixed-footer-at-bottom
+
 
 * Medlemmer som har bidratt: Henrik Solnør Johansen, Andreas Knutsen og Anders Koo
 
-**/
+/******************************************************************************************************* 
 
 // ----------------------------------------------------------------------------------------------------
 // Setter opp session og includes
