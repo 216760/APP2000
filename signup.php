@@ -101,7 +101,7 @@ ob_start();
             $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 
             // Om emailen ikke er i riktig regex format blir den ikke sanitert
-            if (!filter_var($email,     )) {
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $_SESSION['status'] = "$email is not a valid email address";
                 header('Location: signup.php');
 
