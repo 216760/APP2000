@@ -21,7 +21,7 @@ if (!empty($_SESSION)) {
 								<a class="nav-link" href="feedback.php">Feedback</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="logout.php">Log out</a>
+								<a class="nav-link" href="logout.php">Logout</a>
 							</li>
 						</ul>
 					</div>
