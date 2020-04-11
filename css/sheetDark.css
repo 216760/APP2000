@@ -73,6 +73,7 @@ margin-right: 0px!important;
 /* CUSTOM STYLING END */
 /* ------------------------------------------- */
 
+
 /* KODET AV: Andreas Knutsen */
 
 .card-group {
@@ -283,6 +284,19 @@ input, textarea {
   width: 100%;
 }
 
+#my_form input:focus{
+  display: block;
+  border: 2px solid black;
+  box-shadow: 0 0 8px 0 black; 
+}
+
+#my_form textarea:focus{
+  display: block;
+  border: 2px solid black;
+  box-shadow: 0 0 8px 0 black; 
+}
+
+/*--- Kodet av Vigleik Espeland Stakseng START ---*/
 .my_form input:focus{
   display: block;
   border: 2px solid black;
@@ -294,6 +308,8 @@ input, textarea {
   border: 2px solid black;
   box-shadow: 0 0 8px 0 black; 
 }
+/*--- Kodet av Vigleik Espeland Stakseng STOP ---*/
+
 
 /*--- Feedback form --*/
 
