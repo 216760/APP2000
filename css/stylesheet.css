@@ -1,10 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,300);
 
-/* ------------------------------------------- */
-/* CUSTOM STYLING START */
-/*
-/* ------------------------------------------- */
+/* Kodet av Henrik Solnør Johansen start */
 
 body {
   overflow-x: hidden;
@@ -20,17 +17,15 @@ body {
   margin-top: -4rem;
 }
 
-/* ------------------------------------------- */
-/* CUSTOM STYLING END */
-/*
-/* ------------------------------------------- */
+/* Kodet av Henrik Solnør Johansen stopp */
 
-
-/* https://www.w3schools.com/cssref/sel_focus.asp */
-/* https://stackoverflow.com/questions/3397113/how-to-remove-focus-border-outline-around-text-input-boxes-chrome */
 
 
 /* Kodet av Anders Koo start */
+
+/* Research rundt input focus */
+/* https://www.w3schools.com/cssref/sel_focus.asp */
+/* https://stackoverflow.com/questions/3397113/how-to-remove-focus-border-outline-around-text-input-boxes-chrome */
 
 input:focus {
   outline: none;
@@ -84,9 +79,6 @@ form-control:input{
 /* Kodet av Anders Koo stopp */
 
 
-/* ------------------------------------------- */
-/* CUSTOM STYLING END */
-/* ------------------------------------------- */
 
 /*--- Bootstrap Mobile Gutter Fix --*/
 .row, .container-fluid {
@@ -100,13 +92,7 @@ margin-right: 0px!important;
 }
 
 
-
-
-/* ------------------------------------------- */
-/* CUSTOM STYLING END */
-/* ------------------------------------------- */
-
-/* KODET AV: Andreas Knutsen */
+/* KODET AV: Andreas Knutsen start */
 
 .card-group {
   background-color: #FFFFFF;
@@ -244,15 +230,13 @@ footer.page-footer ul {
 }
 
 
-/* KODET AV: Andreas Knutsen */
+/* KODET AV: Andreas Knutsen stopp */
 
 
-/* KODET AV: Henrik Solnør Johansen*/
+/* KODET AV: Henrik Solnør Johansen start*/
 
 /*---- Login and Signup Section ---*/
-/* ------------------------------------------- */
-/* CUSTOM STYLING START */
-/* ------------------------------------------- */
+
 .inner {
   display: table-cell;
   vertical-align: middle;
@@ -295,30 +279,6 @@ input, textarea {
   resize: none;
 }
 
-/*.fdsendBtn {
-  border: 0;
-  background: #4A148C;
-  color: white;
-  margin: 1rem 0;
-  width: auto;
-  text-transform: uppercase;
-  cursor: pointer;
-  float: left;
-  margin-right: 5px;
-}
-
-.fdbackBtn {
-  border: 0;
-  background: #4A148C;
-  color: white;
-  margin: 1rem 0;
-  width: auto;
-  text-transform: uppercase;
-  cursor: pointer;
-  float: left;
-}*/
-
-
 .form-control {
   width: 100%;
 }
@@ -339,7 +299,5 @@ input, textarea {
 
 /*--- Feedback form --*/
 
-/* KODET AV: Henrik Solnør Johansen*/
-/* ------------------------------------------- */
-/* CUSTOM STYLING END */
-/* ------------------------------------------- */
+/* KODET AV: Henrik Solnør Johansen stopp*/
+
