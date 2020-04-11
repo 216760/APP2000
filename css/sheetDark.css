@@ -11,6 +11,7 @@ body {
   background-position: center;
   background-size: contain;
   background-attachment: fixed;
+  background-color: grey !important;
 }
 
 .offset:before {
