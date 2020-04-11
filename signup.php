@@ -34,7 +34,7 @@ ob_start();
             <input type="text" placeholder="username" class="" name="name">
             <input type="text" placeholder="email" class="" name="email">
             <input type="password" placeholder="password" class="" name="password"> 
-            <input type="submit" id="regbtn" name="registerbtn" class="btn rounded primary" value="Registrer">
+            <input type="submit" id="regbtn" name="registerbtn" class="btn rounded primary" value="Register">
             <?php
 
                 if(isset($_SESSION['status']) && $_SESSION['status'] !='') {
