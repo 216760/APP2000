@@ -33,7 +33,7 @@ include('includes/header.php'); // Inkluderer header.php
 <!-- ----------------------------------------------------------------------------------------------------------- -->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
     <body>
 

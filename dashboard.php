@@ -54,7 +54,7 @@ $query_run = mysqli_query($connection, $query); // mysqli_query er en metode for
 <!-- ---------------------------------------------------------------------------------------------------- -->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <?php include('includes/header.php');?> <!-- Inkluderer header.php -->
 
