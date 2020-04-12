@@ -10,7 +10,7 @@ session_start(); // Gjenopptar session
 
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 	<?php include('includes/header.php');?> <!-- Inkluderer header.php -->
 
