@@ -14,6 +14,6 @@ function toggleDark(cssFile) {
         link.setAttribute("href", "css/sheetDark.css");     // Setter href til stylesheet for darkmode
     } else {                                                // if-setning som kjører dersom checkbox/toggleswitch er FALSE
         var link = document.getElementById("lnk");          // Finner CSS filen ved hjelp av getElementById
-        link.setAttribute("href", "css/stylesheet.css");    // Setter href til stylesheet for vanlig nettside design (ikke darkmode)
+        link.setAttribute("href", "css/stylesheet.css");     // Setter href til stylesheet for vanlig nettside design (ikke darkmode)
     }
 }
