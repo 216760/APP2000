@@ -82,6 +82,18 @@ form-control:input{
   margin-bottom: 150px;
 }
 
+.logo_title{
+  font:BlinkMacSystemFont;
+}
+
+.image_login{
+  margin-bottom: 20px;
+}
+
+
+.image_signup{
+  margin-bottom: 30px;
+}
 /* Kodet av Anders Koo stopp */
 
 

@@ -31,7 +31,8 @@ ob_start();
 
              
         <form id="myForm" class="form-signin" id="my_form" form action="signup.php" method="post" name="form1">
-            <h1>LOGO</h1>
+        <h1 class="logo_title">re:sub</h1>
+        <img class="image_signup" src="img/logoTempCropSmol.png" alt="">
             <input type="text" placeholder="username" class="" name="name">
             <input type="text" placeholder="email" class="" name="email">
             <input type="password" placeholder="password" class="" name="password"> 

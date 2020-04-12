@@ -21,13 +21,14 @@
 
 <!DOCTYPE html>
 <html lang="en">
- 
+
     <?php include('includes/header_login.php');?>
  
     <body>
         <form class="form-signin text-center" id="my_form" action="login.php" method="POST" name="form1">
-            <h1>LOGO</h1>
+            <h1 class="logo_title">re:sub</h1>
             <div class="form-group">
+            <img class="image_login" src="img/logoTempCropSmol.png" alt="">
                 <input type="text" placeholder="Enter your email..." name="email" class="">
                 <input type="password" placeholder="Enter your password..." name="password" class="">
             </div>
