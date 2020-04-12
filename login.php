@@ -20,7 +20,7 @@
  ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
  
     <?php include('includes/header_login.php');?>
  
