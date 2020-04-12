@@ -78,6 +78,10 @@ form-control:input{
   box-shadow: 0 0 8px 0 #4A148C; 
 }
 
+.modal-content{
+  margin-bottom: 150px;
+}
+
 /* Kodet av Anders Koo stopp */
 
 
