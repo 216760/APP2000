@@ -1,24 +1,25 @@
-<!----------------------------------------------------------------------------------------------------------------------------------------------
-
-TIL INFORMASJON: 
-
-I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.
-Dette vil også bli dokumentert under kildebruk i rapporten og markert i selve koden. 
-Grunnen til dette er basert på “best practice”  måter å programmere på.  
-Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 
-Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer. 
-Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke. 
-
-Kilde: 
-
-https://www.youtube.com/playlist?list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV
-
-
-Kodet og tilpasset av: Henrik Solnør Johansen og Vigleik Espeland Stakseng og
-
-------------------------------------------------------------------------------------------------------------------------------------------------> 
-
 <?php
+/*****************************************************************************************************************
+                                                                                                                 *
+TIL INFORMASJON:                                                                                                 *
+                                                                                                                 *
+I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.                  *
+Dette vil også bli dokumentert under kildebruk i rapporten og markert i selve koden.                             *
+Grunnen til dette er basert på “best practice”  måter å programmere på.                                          *
+Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer.                                         *
+Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer.        *
+Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke.           *
+                                                                                                                 *
+Kilde:                                                                                                           *
+                                                                                                                 *
+https://www.youtube.com/playlist?list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV                                         *
+                                                                                                                 *
+                                                                                                                 *       
+Kodet og tilpasset av: Henrik Solnør Johansen og Vigleik Espeland Stakseng og Anders Koo                         *          
+                                                                                                                 *
+*****************************************************************************************************************/
+
+
 session_start();
 
 // ----------------------------------------------------------------------------------------------------

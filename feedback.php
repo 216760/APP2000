@@ -1,18 +1,20 @@
-<!--
-* TIL INFORMASJON:
-*  
-* I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.
-* Dette vil også bli dokumentert under kildebruk i rapporten og markert i selve koden. 
-* Grunnen til dette er basert på “best practice”  måter å programmere på.  
-* Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 
-* Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer. 
-* Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke. 
-
-* Kilde: http://www.openjs.com/ajax/tutorial/ajax.php
-
-* Medlemmer som har bidratt Henrik Solnør Johansen, Vigleik Espeland Stakseng, Anders Koo og Andreas Knutsen
--->
 <?php
+/*****************************************************************************************************************
+* TIL INFORMASJON:																							 	 *																		  
+* 																												 *
+* I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.				 *
+* Dette vil også bli dokumentert under kildebruk i rapporten og markert i selve koden. 							 *
+* Grunnen til dette er basert på “best practice”  måter å programmere på.  										 *
+* Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 										 *
+* Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer. 	 *
+* Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke. 		 *
+																												 *
+* Kilde: http://www.openjs.com/ajax/tutorial/ajax.php															 *
+																												 *
+* Medlemmer som har bidratt Henrik Solnør Johansen, Vigleik Espeland Stakseng, Anders Koo og Andreas Knutsen -	 *
+*																												 *
+******************************************************************************************************************/
+
 session_start();
 
 $id = $_SESSION["id"]; 
@@ -38,7 +40,7 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 		For at et form skal sendes må man ha en id som kobler (my_form)-formen sammen med scriptet nedenfor. 
 		"mybtn" setter igang prosessen med å sende formen. 
 		Den andre knappen returnerer brukeren til dashbordet.
-		----------------------------------------------------------------------------------------------------->
+		--------------------------------------------------------------------------------------------------- -->
 		<?php
 		include('includes/navbar.php');
 		?>
