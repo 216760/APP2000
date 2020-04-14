@@ -1,4 +1,4 @@
-function toggleDark(cssFile) {
+function toggleDark() {
   
     //-----------------------------------------------------------------------------------------------------------------------
     // Dett er en JavaScript funksjon som bytter CSS stylesheet fra vanlig til darkmode når bruker trykker på en checkbox

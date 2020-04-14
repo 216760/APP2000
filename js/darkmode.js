@@ -31,10 +31,8 @@ darkModeToggle.addEventListener('click', () => {
   // if it not current enabled, enable it
   if (darkMode !== 'enabled') {
     enableDarkMode();
-    console.log(darkMode);
   // if it has been enabled, turn it off  
   } else {  
-    disableDarkMode();
-    console.log(darkMode); 
+    disableDarkMode(); 
   }
 });
