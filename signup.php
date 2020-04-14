@@ -115,7 +115,7 @@ ob_start();
                 $result = mysqli_query($mysqli, "INSERT INTO register(username,email,password) VALUES('$name','$email','$hashedpass')");
                     // Ved gjennomført spørring får brukeren beskjed om at profilen er opprettet 
                     if ($result) {
-                        $_SESSION['success'] = "$User Registered successfully";
+                        $_SESSION['success'] = "$name registered successfully";
                         header('Location: login.php');
                     } else {
                         //  Ved gjennomført spørring får brukeren beskjed om at emailen allerede er i bruk
