@@ -12,13 +12,14 @@ session_start(); // Gjenopptar session
 <!DOCTYPE html>
 <html lang="en">
 
-	<?php include('includes/header.php');?> <!-- Inkluderer header.php -->
+		<!--  Visning av landdingsiden -->
+		<?php include('includes/header.php');?> <!-- Inkluderer header.php -->
 
 	<body>
 
 		<?php include('includes/navbar.php');?> <!-- Inkluderer navbar.php -->
 
-		<!--  Visning av landdingsiden -->
+		
 
 		<div class="content-main">
 			<?php include('includes/main.php');?> <!-- Inkluderer main.php -->

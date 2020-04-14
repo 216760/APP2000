@@ -4,7 +4,7 @@
 * TIL INFORMASJON:                                                                                            *
                                                                                                               *
 * I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.             *
-* Dette vil også bli dokumentert under kildebruk i rapporten og markert i selve koden.                        *
+* Dette er også dokumentert under kildebruk i rapporten og markert i selve koden.                             *
 * Grunnen til dette er basert på “best practice”  måter å programmere på.                                     *
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer.                                    *
 * Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer.   *
@@ -26,11 +26,11 @@ include('db-config.php'); // Inkluderer database tilkobling
 include('includes/header.php'); // Inkluderer header.php
 ?>
 
-<!-- ----------------------------------------------------------------------------------------------------------- -->
-<!-- START                                                                                                       -->
-<!-- For å redigere allerede opprettet abonnement har vi hentet og tilpasset kode fra Youtube kanalen, part 1-6  -->
-<!-- Kilde: https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                             -->
-<!-- ----------------------------------------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------------------------------------------------------- -->
+<!-- START                                                                                                                       -->
+<!-- For å redigere allerede opprettet abonnement har vi hentet å tilpasset kode fra Youtube kanalen Funda Of Web IT, part 1-6   -->
+<!-- Kilde: https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                                             -->
+<!-- --------------------------------------------------------------------------------------------------------------------------- -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -55,11 +55,6 @@ include('includes/header.php'); // Inkluderer header.php
                         $query = "SELECT * FROM cards WHERE id='$id' "; // Setter opp en spørrevariabel som henter abonnement som samsvarer med id' til det abonnement du har klikket på
                         // Setter opp en variabel med en mysqli_query funksjon som gjennomfører oppretting av forbindelse og SQL-spørringen 
                         $query_run = mysqli_query($mysqli, $query); 
-    
-
-                        // ----------------------------------------------------------------------------------------------------
-                        // Setter opp bootstrap struktur
-                        // ----------------------------------------------------------------------------------------------------
 
                         foreach($query_run as $row) { // foreach er en funksjon som teller opp antall rader i abonnement tabellen
                         ?>
@@ -96,7 +91,7 @@ include('includes/header.php'); // Inkluderer header.php
 
 <!-- ----------------------------------------------------------------------------------------------------------- -->
 <!-- STOPP                                                                                                       -->
-<!-- For å redigere allerede opprettet abonnement har vi hentet og tilpasset kode fra Youtube kanalen, part 1-6  -->
+<!-- For å redigere allerede opprettet abonnement har vi hentet å tilpasset kode fra Youtube kanalen, part 1-6  -->
 <!-- Kilde: https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                             -->
 <!-- ----------------------------------------------------------------------------------------------------------- -->
 
