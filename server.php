@@ -34,14 +34,12 @@ session_start();
 // ----------------------------------------------------------------------------------------------------
 
 include('db-config.php'); // Inkluderer db-config.php
-
-
 if(isset($_POST['registerbtn'])) { // Sjekker at variabel er deklarert og at registerbtn knappen er klikket på 
     // Informasjon om abonnement
 
-    $description = mysqli_real_escape_string($mysqli , $_POST['description']);   // Sjekker at variabel er deklarert og sikrer mot SQL injection
-    $start_date = mysqli_real_escape_string($mysqli , $_POST['start_date']);     // Sjekker at variabel er deklarert og sikrer mot SQL injection
-    $end_date =  mysqli_real_escape_string($mysqli ,$_POST['end_date']);         // Sjekker at variabel er deklarert og sikrer mot SQL injection
+    $description = mysqli_real_escape_string($mysqli, $_POST['description']);   // Sjekker at variabel er deklarert og sikrer mot SQL injection
+    $start_date = mysqli_real_escape_string($mysqli, $_POST['start_date']);     // Sjekker at variabel er deklarert og sikrer mot SQL injection
+    $end_date =  mysqli_real_escape_string($mysqli, $_POST['end_date']);         // Sjekker at variabel er deklarert og sikrer mot SQL injection
     $user_id = $_SESSION['id']; // Oppretter user_id variabel og gir den verdien id fra session. 
 
 
@@ -51,23 +49,23 @@ if(isset($_POST['registerbtn'])) { // Sjekker at variabel er deklarert og at reg
 
     // Spørring som setter inn nytt abonnement i databasen
     $queryReg = "INSERT INTO cards (description, start_date, end_date, user_id) VALUES ('$description', '$start_date','$end_date', '$user_id')"; //  Spørring som setter inn data i databasen
-    $queryDB = mysqli_query($mysqli , $queryReg); // mysqli_query er en funksjon som utfører spørring mot databasen
+    $queryDB = mysqli_query($mysqli, $queryReg); // mysqli_query er en funksjon som utfører spørring mot databasen
 
 
-
+    // Om spørringen er vellyket blir bruker videresendt tilbake til dashbord
     if($queryDB) {   
-        echo "Saved";
-        $_SESSION['subOk'] = "New subscription is successfully added!";
-        header('Location: dashboard.php');
-    
+        // echo "Saved";
+        // $_SESSION['subOk'] = "New subscription is successfully added!";
+        header('Location: dashboard.php');    
     }
 
-} else {
-    echo "Not Saved";
-    $_SESSION['subError'] = "Subscription could not be added!";
-    header('Location: dashboard.php');
-}
+} 
 
+// else {
+//     echo "Not Saved";
+//     $_SESSION['subError'] = "Subscription could not be added!";
+//     header('Location: dashboard.php');
+// }
 
 
 // ----------------------------------------------------------------------------------------------------
@@ -76,7 +74,6 @@ if(isset($_POST['registerbtn'])) { // Sjekker at variabel er deklarert og at reg
 
 if(isset($_POST['edit_btn'])) { // Sjekker at variabel er deklarert og at edit_btn knappen er klikket på 
     $id = $_POST['edit_id'];    // Sjekker at variabel er deklarert
-    
     $queryReg = "SELECT * FROM cards WHERE id='$id' ";  // Spørring som henter spesifikk abonnement fra databasen
     $queryDB = mysqli_query($mysqli , $query);       // Utfører spørring mot databasen
 }
@@ -96,13 +93,16 @@ if(isset($_POST['updatebtn'])) {    // Sjekker at variabel er deklarert og at up
     $queryEdit = "UPDATE cards SET description='$description', start_date='$start_date', end_date='$end_date' WHERE id='$id' ";
     $queryDB = mysqli_query($mysqli , $queryEdit); // mysqli_query er en funksjon som utfører spørring mot databasen
 
+    // Om spørringen er vellyket blir bruker videresendt tilbake til dashbord
     if($queryDB) {
-        $_SESSION['subOk'] = "New subscription is successfully updated!";
+        // $_SESSION['subOk'] = "New subscription is successfully updated!";
         header('Location: dashboard.php');
-    } else {
-        $_SESSION['subError'] = "Subscription could not be updated";
-        header('Location: dashboard.php');
-    }
+    } 
+    
+    // else {
+    //     $_SESSION['subError'] = "Subscription could not be updated";
+    //     header('Location: dashboard.php');
+    // }
 }
 
 
@@ -115,13 +115,16 @@ if(isset($_POST['delete_btn'])) { // Sjekker at variabel er deklarert og at upda
     $queryDelete = "DELETE FROM cards WHERE id='$id'";  // Spørring som sletter spesifikt abonnement fra databasen
     $queryDB = mysqli_query($mysqli , $queryDelete); // mysqli_query er en funksjon som utfører spørring mot databasen
 
+    // Om spørringen er vellyket blir bruker videresendt tilbake til dashbord
     if($queryDB) {
-        $_SESSION['subOk'] = "Subscription is successfully deleted!";
+        // $_SESSION['subOk'] = "Subscription is successfully deleted!";
         header('Location: dashboard.php');
-    } else {
-        $_SESSION['subError'] = "Subscription could NOT be deleted";
-        header('Location: dashboard.php');
-    }
+    } 
+    
+    // else {
+    //     $_SESSION['subError'] = "Subscription could NOT be deleted";
+    //     header('Location: dashboard.php');
+    // }
 }
 
 // --------------------------------------------------------------------------------------------------//
