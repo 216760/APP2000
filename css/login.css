@@ -28,9 +28,13 @@ body {
 }
 
 .form-signin input {
-	margin-bottom: 5px;
-  	border-radius: .25rem;
+	  margin-bottom: 5px;
+    border-radius: .25rem;
+    
+    
 }
+
+
 .form-signin .checkbox {
   font-weight: 400;
 }

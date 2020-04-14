@@ -30,7 +30,7 @@ ob_start();
     <body>
 
              
-        <form id="myForm" class="form-signin" id="my_form" form action="signup.php" method="post" name="form1">
+        <form id="myForm" class="form-signin" form action="signup.php" method="post" name="form1">
         <h1 class="logo_title">re:sub</h1>
         <img class="image_signup" src="img/logoTempCropSmol.png" alt="">
             <input type="text" placeholder="username" class="" name="name">

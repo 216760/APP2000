@@ -29,6 +29,8 @@ body {
 /* https://www.w3schools.com/cssref/sel_focus.asp */
 /* https://stackoverflow.com/questions/3397113/how-to-remove-focus-border-outline-around-text-input-boxes-chrome */
 
+
+/* Styling av input fokus felter */
 input:focus {
   outline: none;
   border-color: #4A148C;
@@ -93,6 +95,13 @@ form-control:input{
 
 .image_signup{
   margin-bottom: 30px;
+}
+
+/* Styling av registreringsskjema */
+#myForm input:focus{
+  display: block;
+  box-shadow: 0 0 8px 0 #4A148C; 
+  border: 2px solid #4A148C;
 }
 /* Kodet av Anders Koo stopp */
 
@@ -281,7 +290,7 @@ form {
   margin: 2px;
 }
 
-/*--- Feedback form --*/
+/*--- Styling av feedback og login skjema --*/
 
 input, textarea {
   display:block;
@@ -300,7 +309,6 @@ input, textarea {
 .form-control {
   width: 100%;
 }
-
 
 
 #my_form input:focus{
