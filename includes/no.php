@@ -8,6 +8,7 @@
         "updatebtn"    => "Oppdater",
         "submitbtn"    => "Send",
         "loginbtn"  => "Logg inn",
-        "registerbtn" => "Registrer"
+        "registerbtn" => "Registrer",
+        "subscriptionbtn" => "Legg til et nytt abonnement"
     );
 ?>

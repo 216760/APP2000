@@ -8,6 +8,7 @@
         "updatebtn"	=> "Update",
         "submitbtn"	=> "Submit",
         "loginbtn"	=> "Login",
-        "registerbtn" => "Register"
+        "registerbtn" => "Register",
+        "subscriptionbtn" => "Add a new subscription"
     );
 ?>

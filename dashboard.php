@@ -65,7 +65,7 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 		<div class="content-dashboard">
 			<div class="container">
 				<div>
-					<button data-toggle="modal" data-target="#eexampleModal" class="btn btn-primary w-25" style="display: block; margin: 0 auto;">Add a new subscription</button>
+					<button data-toggle="modal" data-target="#eexampleModal" class="btn btn-primary w-25" style="display: block; margin: 0 auto;"><?php echo $lang['subscriptionbtn']; ?></button>
 				</div>
 				<div class="row justify-content-center">
 				<?php
