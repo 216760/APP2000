@@ -86,11 +86,11 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 							<div class="card-body">
 								<form action="edit.php" method="post" style="display:inline-block;">                                               
 									<input type="hidden" name ="edit_id" value="<?php echo $row['id']; ?>"> <!-- Henter ut id dato fra databasen. Dette for å kunne identifisere spesifikt abonnement  -->
-									<button class="btn btn-primary" name="edit_btn" data-toggle="modal"> <?php echo $lang['editbtn']; ?></button> <!-- HER -->
+									<button class="btn btn-primary" name="edit_btn" data-toggle="modal"><?php echo $lang['editbtn']; ?></button> <!-- HER -->
 								</form>
 								<form action="server.php" method="post" style="display:inline-block;">                                               
 									<input type="hidden" name ="delete_id" value="<?php echo $row['id']; ?>"> <!-- Henter ut id dato fra databasen. Dette for å kunne identifisere spesifikt abonnement  -->
-									<button class="btn btn-primary" name="delete_btn" data-toggle="modal"> Delete</button>
+									<button class="btn btn-primary" name="delete_btn" data-toggle="modal"><?php echo $lang['deletebtn']; ?></button>
 								</form>    
 							</div>
 						</div>
@@ -138,8 +138,8 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 								</div>
 
 								<div class="modal-footer">
-									<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-									<button type="submit" name="registerbtn" class="btn btn-primary">Save</button>
+									<button type="button" class="btn btn-primary" data-dismiss="modal"><?php echo $lang['closebtn']; ?></button>
+									<button type="submit" name="registerbtn" class="btn btn-primary"><?php echo $lang['savebtn']; ?></button>
 								</div>
 
 							<?php
