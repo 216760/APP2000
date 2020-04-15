@@ -8,6 +8,4 @@
         "updatebtn"    => "Update",
         "submitbtn"    => "Submit"
     );
-
-    
 ?>

@@ -8,7 +8,4 @@
         "updatebtn"    => "Oppdater",
         "submitbtn"    => "Send"
     );
-
-
-    );
 ?>
