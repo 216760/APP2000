@@ -159,15 +159,16 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 
 							<?php
 
-							if(isset($_SESSION['success']) && $_SESSION['success'] != ''){
-							echo '<h2> ' .$_SESSION['success']. ' </h2>';
-							unset($_SESSION['success']);
-							}
+							// if(isset($_SESSION['success']) && $_SESSION['success'] != ''){
+							// echo '<h2> ' .$_SESSION['success']. ' </h2>';
+							// unset($_SESSION['success']);
+							// }
 
-							if(isset($_SESSION['error']) && $_SESSION['error'] != '') {
-							echo '<h2 class="bg-info"> ' .$_SESSION['error']. ' </h2>';
-							unset($_SESSION['error']);
-							}
+							// if(isset($_SESSION['error']) && $_SESSION['error'] != '') {
+							// echo '<h2 class="bg-info"> ' .$_SESSION['error']. ' </h2>';
+							// unset($_SESSION['error']);
+							// }
+
 							?>
 
 							</div>

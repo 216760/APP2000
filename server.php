@@ -54,18 +54,16 @@ if(isset($_POST['registerbtn'])) { // Sjekker at variabel er deklarert og at reg
 
     // Om spørringen er vellyket blir bruker videresendt tilbake til dashbord
     if($queryDB) {   
-        // echo "Saved";
-        // $_SESSION['subOk'] = "New subscription is successfully added!";
+
         header('Location: dashboard.php');    
+
+    } else{
+
+        echo "Something went wrong/Noe gikk galt";
     }
 
 } 
 
-// else {
-//     echo "Not Saved";
-//     $_SESSION['subError'] = "Subscription could not be added!";
-//     header('Location: dashboard.php');
-// }
 
 
 // ----------------------------------------------------------------------------------------------------
@@ -97,12 +95,13 @@ if(isset($_POST['updatebtn'])) {    // Sjekker at variabel er deklarert og at up
     if($queryDB) {
         // $_SESSION['subOk'] = "New subscription is successfully updated!";
         header('Location: dashboard.php');
-    } 
+
+    } else{
+
+        echo "Something went wrong/Noe gikk galt";
+    }
     
-    // else {
-    //     $_SESSION['subError'] = "Subscription could not be updated";
-    //     header('Location: dashboard.php');
-    // }
+
 }
 
 
@@ -119,12 +118,12 @@ if(isset($_POST['delete_btn'])) { // Sjekker at variabel er deklarert og at upda
     if($queryDB) {
         // $_SESSION['subOk'] = "Subscription is successfully deleted!";
         header('Location: dashboard.php');
-    } 
-    
-    // else {
-    //     $_SESSION['subError'] = "Subscription could NOT be deleted";
-    //     header('Location: dashboard.php');
-    // }
+        
+    }  else{
+
+        echo "Something went wrong/Noe gikk galt";
+    }
+
 }
 
 // --------------------------------------------------------------------------------------------------//
