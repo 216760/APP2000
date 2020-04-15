@@ -3,7 +3,7 @@
 /************************************************************************************************************
 * TIL INFORMASJON: 																						    *
 																										    *
-* I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.			*
+* I denne filen ligger det kode som er hentet og tilpasset fra kildene under.								*
 * Dette er også dokumentert under kildebruk i rapporten og markert i selve koden. 							*
 * Grunnen til dette er basert på “best practice”  måter å programmere på.  									*
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 									*
@@ -65,6 +65,12 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 		<div class="content-dashboard">
 			<div class="container">
 				<div>
+
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+<!-- START 																								  				  -->
+<!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset denne kilden	  		  -->																	 
+<!-- Kilde: https://www.youtube.com/watch?v=OePNkDd3Yb8 												  				  -->
+<!-- -------------------------------------------------------------------------------------------------------------------- -->				
 																																			      <!-- Henter verdi fra php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
 					<button data-toggle="modal" data-target="#eexampleModal" class="btn btn-primary w-25" style="display: block; margin: 0 auto;"><?php echo $lang['subscriptionbtn']; ?></button>
 				</div>
@@ -93,6 +99,13 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 								<form action="server.php" method="post" style="display:inline-block;">                                               
 									<input type="hidden" name ="delete_id" value="<?php echo $row['id']; ?>"> <!-- Henter ut id dato fra databasen. Dette for å kunne identifisere spesifikt abonnement  -->
 									<button class="btn btn-primary" name="delete_btn" data-toggle="modal"><?php echo $lang['deletebtn']; ?></button> <!-- Henter verdi fra php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
+
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+<!-- Stopp 																								  				  -->
+<!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset denne kilden	  		  -->																	 
+<!-- Kilde: https://www.youtube.com/watch?v=OePNkDd3Yb8 												  				  -->
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+
 								</form>    
 							</div>
 						</div>

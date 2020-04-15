@@ -1,29 +1,21 @@
 <!--------------------------------------------------------------------------------------------------------------------
-
-TIL INFORMASJON: 
-
-I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.
-Dette vil også bli dokumentert under kildebruk i rapporten.  Grunnen til dette er basert på “best practice”  måter å programmere på.  
-Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 
-
-Vi ser først på en demo av hvordan et eksempel virker,  koder oss gjennom guiden for å lære hva som skjer. 
-Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke. 
-
-Kilde:
-https://gitlab.com/tutorialsclass/php-simple-login-registration-script
-
-Medlemmer som har bidratt: Henrik Solnør Johansen og Anders Koo
+Medlemmer som har bidratt: Henrik Solnør Johansen Andreas Knutsen og Anders Koo
 -------------------------------------------------------------------------------------------------------------------->
 <?php
-include('config.php');
+include('config.php'); // Inkluderer oppsett for flere språk
 ?>
 
 <section class="bg-main">
 
 	<div class="container-fluid">
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+<!-- START 																								  				  -->
+<!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset fra kilden under  		  -->																	 
+<!-- Kilde: https://www.youtube.com/watch?v=OePNkDd3Yb8 												  				  -->
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
 
 		<h2 align="right">
-		<?php echo $lang['paragraph-right']; ?>
+		<?php echo $lang['paragraph-right']; ?> <!-- Henter verdi fra php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
 		  
 		<h2>
 
@@ -36,10 +28,14 @@ include('config.php');
 	<div class="container-fluid">
 		
 		<h2 align="left">
-		<?php echo $lang['paragraph-left']; ?>
+		<?php echo $lang['paragraph-left']; ?> <!-- Henter verdi fra php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
 		
 		</h2>
-
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+<!-- STOPP 																								  				  -->
+<!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset fra kilden under  		  -->																	 
+<!-- Kilde: https://www.youtube.com/watch?v=OePNkDd3Yb8 												  				  -->
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
 	</div>
 	
 </section>

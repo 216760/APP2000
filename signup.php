@@ -35,7 +35,21 @@ ob_start();
             <input type="text" placeholder="username" class="" name="name">
             <input type="text" placeholder="email" class="" name="email">
             <input type="password" placeholder="password" class="" name="password"> 
+
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+<!-- START 																								  				  -->
+<!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset fra kilden under  		  -->																	 
+<!-- Kilde: https://www.youtube.com/watch?v=OePNkDd3Yb8 												  				  -->
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+
             <button class="btn btn-primary w-100" id="regbtn" name="registerbtn"  value="Register"><?php echo $lang['registerbtn']; ?></button>
+            
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+<!-- STOPP 																								  				  -->
+<!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset fra kilden under  		  -->																	 
+<!-- Kilde: https://www.youtube.com/watch?v=OePNkDd3Yb8 												  				  -->
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+
             <?php
 
                 if(isset($_SESSION['status']) && $_SESSION['status'] !='') {
