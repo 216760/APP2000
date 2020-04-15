@@ -1,5 +1,5 @@
 <?php
-    $lang = array(
+    $lang_buttons = array(
         "editbtn"    => "Edit",
         "deletebtn" => "Delete",
         "savebtn"    => "Save",
@@ -8,4 +8,6 @@
         "updatebtn"    => "Update",
         "submitbtn"    => "Submit"
     );
+
+    
 ?>

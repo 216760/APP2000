@@ -1,6 +1,13 @@
 <?php
     $lang = array(
-        "editknapp" => "Rediger"
+        "editbtn"    => "Rediger",
+        "deletebtn" => "Slett",
+        "savebtn"    => "Lagre",
+        "closebtn"    => "Lukk",
+        "cancelbtn"    => "Avbryt",
+        "updatebtn"    => "Oppdater",
+        "submitbtn"    => "Send"
+    );
 
 
     );
