@@ -10,6 +10,6 @@
             $_SESSION['lang'] = "no";
     }
 
-        require_once "APP2000/" . $_SESSION['lang'] . ".php";
+        require_once "includes/" . $_SESSION['lang'] . ".php";
     
 ?>
