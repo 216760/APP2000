@@ -14,14 +14,16 @@ https://gitlab.com/tutorialsclass/php-simple-login-registration-script
 
 Medlemmer som har bidratt: Henrik Solnør Johansen og Anders Koo
 -------------------------------------------------------------------------------------------------------------------->
-
+<?php
+include('config.php');
+?>
 
 <section class="bg-main">
 
 	<div class="container-fluid">
 
 		<h2 align="right">
-		Keep control of your trial periods<br>with our services
+		<?php echo $lang['paragraph-right']; ?>
 		  
 		<h2>
 
@@ -34,7 +36,7 @@ Medlemmer som har bidratt: Henrik Solnør Johansen og Anders Koo
 	<div class="container-fluid">
 		
 		<h2 align="left">
-		Prevent accidental monthly<br>withdrawal fee
+		<?php echo $lang['paragraph-left']; ?>
 		
 		</h2>
 

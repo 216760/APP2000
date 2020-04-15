@@ -5,7 +5,7 @@
 // ----------------------------------------------------------------------------- //
 
 
-session_start(); // Gjenopptar session
+//session_start(); // Gjenopptar session
 ?>
 
 

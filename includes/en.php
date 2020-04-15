@@ -9,6 +9,8 @@
         "submitbtn"	=> "Submit",
         "loginbtn"	=> "Login",
         "registerbtn" => "Register",
-        "subscriptionbtn" => "Add a new subscription"
+        "subscriptionbtn" => "Add a new subscription",
+        "paragraph-right" => "Keep control of your trial periods<br>with our services",
+        "paragraph-left" => "Prevent accidental monthly<br>withdrawal fee"
     );
 ?>
