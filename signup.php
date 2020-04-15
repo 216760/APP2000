@@ -24,7 +24,7 @@ ob_start();
 <html lang="en">
 
     <?php
-    include('includes/header_login.php');
+    include('includes/header_signup.php');
     ?>
 
     <body>
