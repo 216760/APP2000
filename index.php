@@ -9,6 +9,7 @@ session_start(); // Gjenopptar session
 ?>
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 
