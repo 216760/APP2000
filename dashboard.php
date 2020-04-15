@@ -25,9 +25,9 @@
 // ----------------------------------------------------------------------------------------------------
 // Setter opp session og includes
 // ----------------------------------------------------------------------------------------------------
-include_once('db-config.php');
-include('config.php');
-session_start(); // Gjenopptar session
+include_once('db-config.php'); 	// Inkluderer db-oppsett
+include('config.php');			// Inkluderer oppsett for flere språk
+session_start(); 				// Gjenopptar session
 
 $id = $_SESSION["id"]; 
 
@@ -65,6 +65,7 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 		<div class="content-dashboard">
 			<div class="container">
 				<div>
+																																			      <!-- Henter verdi fra php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
 					<button data-toggle="modal" data-target="#eexampleModal" class="btn btn-primary w-25" style="display: block; margin: 0 auto;"><?php echo $lang['subscriptionbtn']; ?></button>
 				</div>
 				<div class="row justify-content-center">
@@ -87,11 +88,11 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 							<div class="card-body">
 								<form action="edit.php" method="post" style="display:inline-block;">                                               
 									<input type="hidden" name ="edit_id" value="<?php echo $row['id']; ?>"> <!-- Henter ut id dato fra databasen. Dette for å kunne identifisere spesifikt abonnement  -->
-									<button class="btn btn-primary" name="edit_btn" data-toggle="modal"><?php echo $lang['editbtn']; ?></button> <!-- HER -->
+									<button class="btn btn-primary" name="edit_btn" data-toggle="modal"><?php echo $lang['editbtn']; ?></button> <!-- Henter verdi fra php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
 								</form>
 								<form action="server.php" method="post" style="display:inline-block;">                                               
 									<input type="hidden" name ="delete_id" value="<?php echo $row['id']; ?>"> <!-- Henter ut id dato fra databasen. Dette for å kunne identifisere spesifikt abonnement  -->
-									<button class="btn btn-primary" name="delete_btn" data-toggle="modal"><?php echo $lang['deletebtn']; ?></button>
+									<button class="btn btn-primary" name="delete_btn" data-toggle="modal"><?php echo $lang['deletebtn']; ?></button> <!-- Henter verdi fra php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
 								</form>    
 							</div>
 						</div>
