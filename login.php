@@ -16,8 +16,8 @@
                                                                                                               *
 **************************************************************************************************************/
 
- session_start(); // Oppretter unik sessjon til bruker 
- ?>
+include('config.php');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +33,7 @@
                 <input type="password" placeholder="Enter your password..." name="password" class="">
             </div>
             <!-- /* https://getbootstrap.com/docs/4.0/components/buttons/#button-tags */ -->
-            <input type="submit" name="loginbtn" class="btn primary" value="Login">
+            <button class="btn btn-primary w-100" name="loginbtn"><?php echo $lang['loginbtn']; ?></button>
             <?php
 
                 // Sjekker om session status er deklarert og ikke er en tom string

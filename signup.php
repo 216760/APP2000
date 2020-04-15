@@ -15,8 +15,7 @@
                                                                                                                                       *
 **************************************************************************************************************************************/
 
-
-session_start(); // Oppretter unik sessjon til bruker 
+include('config.php');
 ob_start();
 ?>
 
@@ -36,7 +35,7 @@ ob_start();
             <input type="text" placeholder="username" class="" name="name">
             <input type="text" placeholder="email" class="" name="email">
             <input type="password" placeholder="password" class="" name="password"> 
-            <input type="submit" id="regbtn" name="registerbtn" class="btn rounded primary" value="Register">
+            <button class="btn btn-primary w-100" id="regbtn" name="registerbtn"  value="Register"><?php echo $lang['registerbtn']; ?></button>
             <?php
 
                 if(isset($_SESSION['status']) && $_SESSION['status'] !='') {

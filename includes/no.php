@@ -6,6 +6,8 @@
         "closebtn"    => "Lukk",
         "cancelbtn"    => "Avbryt",
         "updatebtn"    => "Oppdater",
-        "submitbtn"    => "Send"
+        "submitbtn"    => "Send",
+        "loginbtn"  => "Logg inn",
+        "registerbtn" => "Registrer"
     );
 ?>

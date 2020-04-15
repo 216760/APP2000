@@ -26,7 +26,7 @@
 // Setter opp session og includes
 // ----------------------------------------------------------------------------------------------------
 include_once('db-config.php');
-include_once('config.php');
+include('config.php');
 session_start(); // Gjenopptar session
 
 $id = $_SESSION["id"]; 

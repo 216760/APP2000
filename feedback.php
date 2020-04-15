@@ -15,6 +15,7 @@
 *																												 *
 ******************************************************************************************************************/
 
+include('config.php');
 session_start();
 
 $id = $_SESSION["id"]; 
@@ -65,8 +66,8 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 								<textarea class="form-control" id="message" placeholder="Write your message" rows="5" class="form-control" required ></textarea>
 							</div>
 							<div class="form-group col-lg-12">
-								<button class="btn btn-primary" id="mybtn" type="submit" name="submitbtn"><span id="status"></span>Submit</button>
-								<button class="btn btn-primary" type="submit" align="right" onclick="document.location = 'dashboard.php'">Cancel</button>
+								<button class="btn btn-primary" id="mybtn" type="submit" name="submitbtn"><span id="status"></span><?php echo $lang['submitbtn']; ?></button>
+								<button class="btn btn-primary" type="submit" align="right" onclick="document.location = 'dashboard.php'"><?php echo $lang['cancelbtn']; ?></button>
 							</div>
 						</form>	 
 					</div>

@@ -1,7 +1,7 @@
 <!--  Kodet tilpasset av Andreas Kntusen start -->
 
 <?php
-if (!empty($_SESSION)) {
+if (!empty($_SESSION) && $_SESSION['lang'] = "en") {
 		echo '<div class="container">
 				<nav class="navbar navbar-expand-md fixed-top">
 					<a class="navbar-brand" href="index.php">RE:SUB</a>
