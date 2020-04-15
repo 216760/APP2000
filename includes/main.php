@@ -15,7 +15,7 @@ include('config.php'); // Inkluderer oppsett for flere språk
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 
 		<h2 align="right">
-		<?php echo $lang['paragraph-right']; ?> <!-- Henter verdi fra php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
+		<?php echo $lang_text['paragraph-right']; ?> <!-- Henter verdi fra php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
 		  
 		<h2>
 
@@ -28,7 +28,7 @@ include('config.php'); // Inkluderer oppsett for flere språk
 	<div class="container-fluid">
 		
 		<h2 align="left">
-		<?php echo $lang['paragraph-left']; ?> <!-- Henter verdi fra php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
+		<?php echo $lang_text['paragraph-left']; ?> <!-- Henter verdi fra php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
 		
 		</h2>
 <!-- -------------------------------------------------------------------------------------------------------------------- -->

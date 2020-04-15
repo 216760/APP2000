@@ -51,23 +51,23 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
       		<div class="container">
         		<div class="row justify-content-center">
 		            <div class="card shadow mx-auto" style="width: 25rem;">
-              			<div class="card-header">Send a message</div>
+              			<div class="card-header"><?php echo $lang_text['feedback-title']; ?></div>
 	    				<form id="my_form" onsubmit="return submitForm();">
 							<div class="form-group col-lg-12">
-								<input id="name" placeholder="Name" required class="form-control">
+								<input id="name" placeholder="<?php echo $lang_input['feedback-input-name']; ?>" required class="form-control">
 							</div>
 							<div class="form-group col-lg-12">
-								<input id="email" placeholder="E-mail" type="email" class="form-control" required>
+								<input id="email" placeholder="<?php echo $lang_input['feedback-input-email']; ?>" type="email" class="form-control" required>
 							</div>
 							<div class="form-group col-lg-12">
-								<input id="subject" placeholder="Subject" type="subject" class="form-control">
+								<input id="subject" placeholder="<?php echo $lang_input['feedback-input-subject']; ?>" type="subject" class="form-control">
 							</div>
 							<div class="form-group col-lg-12">
-								<textarea class="form-control" id="message" placeholder="Write your message" rows="5" class="form-control" required ></textarea>
+								<textarea class="form-control" id="message" placeholder="<?php echo $lang_input['feedback-input-message']; ?>" rows="5" class="form-control" required ></textarea>
 							</div>
 							<div class="form-group col-lg-12">
-								<button class="btn btn-primary" id="mybtn" type="submit" name="submitbtn"><span id="status"></span><?php echo $lang['submitbtn']; ?></button>
-								<button class="btn btn-primary" type="submit" align="right" onclick="document.location = 'dashboard.php'"><?php echo $lang['cancelbtn']; ?></button>
+								<button class="btn btn-primary" id="mybtn" type="submit" name="submitbtn"><span id="status"></span><?php echo $lang_button['submitbtn']; ?></button>
+								<button class="btn btn-primary" type="submit" align="right" onclick="document.location = 'dashboard.php'"><?php echo $lang_button['cancelbtn']; ?></button>
 							</div>
 						</form>	 
 					</div>

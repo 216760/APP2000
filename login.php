@@ -29,11 +29,11 @@ include('config.php');
             <h1 class="logo_title">re:sub</h1>
             <div class="form-group">
             <img class="image_login" src="img/logoTempCropSmol.png" alt="">
-                <input type="text" placeholder="Enter your email..." name="email" class="">
-                <input type="password" placeholder="Enter your password..." name="password" class="">
+                <input type="text" placeholder="<?php echo $lang_input['input-email']; ?>" name="email" class="">
+                <input type="password" placeholder="<?php echo $lang_input['input-password']; ?>" name="password" class="">
             </div>
             <!-- /* https://getbootstrap.com/docs/4.0/components/buttons/#button-tags */ -->
-            <button class="btn btn-primary w-100" name="loginbtn"><?php echo $lang['loginbtn']; ?></button>
+            <button class="btn btn-primary w-100" name="loginbtn"><?php echo $lang_button['loginbtn']; ?></button>
             <?php
 
                 // Sjekker om session status er deklarert og ikke er en tom string

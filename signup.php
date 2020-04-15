@@ -32,9 +32,9 @@ ob_start();
         <form id="myForm" class="form-signin" form action="signup.php" method="post" name="form1">
         <h1 class="logo_title">re:sub</h1>
         <img class="image_signup" src="img/logoTempCropSmol.png" alt="">
-            <input type="text" placeholder="username" class="" name="name">
-            <input type="text" placeholder="email" class="" name="email">
-            <input type="password" placeholder="password" class="" name="password"> 
+            <input type="text" placeholder="<?php echo $lang_input['input-username']; ?>" class="" name="name">
+            <input type="text" placeholder="<?php echo $lang_input['input-email']; ?>" class="" name="email">
+            <input type="password" placeholder="<?php echo $lang_input['input-password']; ?>" class="" name="password"> 
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 <!-- START 																								  				  -->
@@ -42,7 +42,7 @@ ob_start();
 <!-- Kilde: https://www.youtube.com/watch?v=OePNkDd3Yb8 												  				  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 
-            <button class="btn btn-primary w-100" id="regbtn" name="registerbtn"  value="Register"><?php echo $lang['registerbtn']; ?></button>
+            <button class="btn btn-primary w-100" id="regbtn" name="registerbtn"  value="Register"><?php echo $lang_button['registerbtn']; ?></button>
             
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 <!-- STOPP 																								  				  -->
