@@ -1,7 +1,54 @@
 <!--  Kodet tilpasset av Andreas Kntusen start -->
-
 <?php
-if (!empty($_SESSION) && $_SESSION['lang'] = "en") {
+	if (!empty($_SESSION['id']) && ($_SESSION['lang'] == "en")) {
+			echo '<div class="container">
+					<nav class="navbar navbar-expand-md fixed-top">
+						<a class="navbar-brand" href="index.php">RE:SUB</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+
+						<!-- Kodet av: Vigleik Espeland Stakseng START -->
+						<input type="checkbox" data-toggle="toggle" data-on="Dark Mode" data-off="Light Mode" id="toggle1" onchange="toggleDark()" data-size="sm">
+						<!-- Kodet av: Vigleik Espeland Stakseng STOP -->
+
+						<div class="collapse navbar-collapse " id="navbarResponsive">
+							<ul class="navbar-nav ml-auto">
+								<li class="nav-item">
+									<a class="nav-link" href="dashboard.php">Dashboard</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="feedback.php">Feedback</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="logout.php">Logout</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>';
+	} elseif (empty($_SESSION['id']) && $_SESSION['lang'] == "en"){
+		echo '<div class="container">
+				<nav class="navbar navbar-expand-md fixed-top">
+					<a class="navbar-brand" href="index.php">RE:SUB</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+
+						<!-- Kodet av: Vigleik Espeland Stakseng START -->
+						<input type="checkbox" data-toggle="toggle" data-on="Dark Mode" data-off="Light Mode" id="toggle1" onchange="toggleDark()" data-size="sm">
+						<!-- Kodet av: Vigleik Espeland Stakseng STOP -->
+
+					<div class="collapse navbar-collapse " id="navbarResponsive">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item">
+								<a class="nav-link" href="login.php">Log in to your account</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>';
+	} elseif (!empty($_SESSION) && $_SESSION['lang'] == "no") {
 		echo '<div class="container">
 				<nav class="navbar navbar-expand-md fixed-top">
 					<a class="navbar-brand" href="index.php">RE:SUB</a>
@@ -16,43 +63,40 @@ if (!empty($_SESSION) && $_SESSION['lang'] = "en") {
 					<div class="collapse navbar-collapse " id="navbarResponsive">
 						<ul class="navbar-nav ml-auto">
 							<li class="nav-item">
-								<a class="nav-link" href="dashboard.php">Dashboard</a>
+								<a class="nav-link" href="dashboard.php">Dashbord</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="feedback.php">Feedback</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="logout.php">Logout</a>
+								<a class="nav-link" href="logout.php">Logg ut</a>
 							</li>
 						</ul>
 					</div>
 				</nav>
 			</div>';
+	} else {
+		echo '<div class="container">
+				<nav class="navbar navbar-expand-md fixed-top">
+					<a class="navbar-brand" href="index.php">RE:SUB</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+							<span class="navbar-toggler-icon"></span>
+						</button>
 
+						<!-- Kodet av: Vigleik Espeland Stakseng START -->
+						<input type="checkbox" data-toggle="toggle" data-on="Dark Mode" data-off="Light Mode" id="toggle1" onchange="toggleDark()" data-size="sm">
+						<!-- Kodet av: Vigleik Espeland Stakseng STOP -->
 
-
-} else {
-	echo '<div class="container">
-			<nav class="navbar navbar-expand-md fixed-top">
-				<a class="navbar-brand" href="index.php">RE:SUB</a>
-							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-								<span class="navbar-toggler-icon"></span>
-							</button>
-
-							<!-- Kodet av: Vigleik Espeland Stakseng START -->
-							<input type="checkbox" data-toggle="toggle" data-on="Dark Mode" data-off="Light Mode" id="toggle1" onchange="toggleDark()" data-size="sm">
-							<!-- Kodet av: Vigleik Espeland Stakseng STOP -->
-
-						<div class="collapse navbar-collapse " id="navbarResponsive">
-							<ul class="navbar-nav ml-auto">
-								<li class="nav-item">
-									<a class="nav-link" href="login.php">Log in to your account</a>
-								</li>
-							</ul>
-						</div>
-					</nav>
-		</div>';
-}
+					<div class="collapse navbar-collapse " id="navbarResponsive">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item">
+								<a class="nav-link" href="login.php">Logg inn på din konto</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>';
+	}
 ?>
 <!--  Kodet tilpasset av Andreas Kntusen stopp -->
 

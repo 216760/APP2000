@@ -4,7 +4,7 @@
 // Kodet og tilpasset av:  Henrik Solnør Johansen, Anders Koo og Andreas Knutsen //
 // ----------------------------------------------------------------------------- //
 
-
+include('config.php');
 //session_start(); // Gjenopptar session
 ?>
 

@@ -21,7 +21,9 @@
                                                                                                             *
 *************************************************************************************************************/
 
-session_start(); // Oppretter unik sessjon til bruker 
+    if(!isset($_SESSION)) { 
+        session_start(); // Oppretter unik sessjon til bruker hvis den ikke allerede eksisterer
+    } 
     
     // Oppretter $_SESSION['lang'] og gir den en verdi 'en' hvis den ikke har en verdi allerede
     if (!isset($_SESSION['lang']))

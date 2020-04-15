@@ -27,7 +27,7 @@
 // ----------------------------------------------------------------------------------------------------
 include_once('db-config.php'); 	// Inkluderer db-oppsett
 include('config.php');			// Inkluderer oppsett for flere språk
-session_start(); 				// Gjenopptar session
+//session_start(); 				// Gjenopptar session
 
 $id = $_SESSION["id"]; 
 
