@@ -21,7 +21,7 @@ Medlemmer som har bidratt: Henrik Solnør Johansen og Anders Koo
 	<div class="container-fluid">
 
 		<h2 align="right">
-		Be ready to take your one chance to change your view and take control<br>of your finances and your life
+		Keep control of your trial periods<br>with our services
 		  
 		<h2>
 
@@ -34,7 +34,7 @@ Medlemmer som har bidratt: Henrik Solnør Johansen og Anders Koo
 	<div class="container-fluid">
 		
 		<h2 align="left">
-		After just one session with our services you will have a better control<br> of your budget and savings
+		Prevent accidental monthly<br>withdrawal fee
 		
 		</h2>
 
