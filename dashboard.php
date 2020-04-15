@@ -1,11 +1,10 @@
 
 <?php
-
 /************************************************************************************************************
 * TIL INFORMASJON: 																						    *
 																										    *
 * I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.			*
-* Dette vil også bli dokumentert under kildebruk i rapporten og markert i selve koden. 						*
+* Dette er også dokumentert under kildebruk i rapporten og markert i selve koden. 							*
 * Grunnen til dette er basert på “best practice”  måter å programmere på.  									*
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 									*
 * Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer. *
@@ -26,7 +25,7 @@
 // ----------------------------------------------------------------------------------------------------
 // Setter opp session og includes
 // ----------------------------------------------------------------------------------------------------
-
+include_once('db-config.php');
 session_start(); // Gjenopptar session
 
 $id = $_SESSION["id"]; 
@@ -40,9 +39,8 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 // ----------------------------------------------------------------------------------------------------
 
 // $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
-$connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
 $query = "SELECT * FROM cards WHERE user_id=$id"; // Henter data fra cards tabellen hvor user_id er identisk med id til bruker i register tabellen
-$query_run = mysqli_query($connection, $query); // mysqli_query er en metode for å utføre forbindelse med database og spørring
+$query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å utføre forbindelse med database og spørring
 
 ?>
 
@@ -72,7 +70,7 @@ $query_run = mysqli_query($connection, $query); // mysqli_query er en metode for
 				<?php
 
 				if(mysqli_num_rows($query_run) > 0) { // mysqli_num_rows funksjonen returnerer antall rader i databasen. Hvis mysqli_num_rows returnerer en verdi
-				                              // som er større en 0 vil if-setningen fortsette. 
+				                              		  // som er større en 0 vil if-setningen fortsette. 
 
 					while($row = mysqli_fetch_assoc($query_run)) { // mysqli_fetch_assoc er en funksjon som returnerer resulterende rad i en tabell og legger den i $row variabelen
 

@@ -4,7 +4,7 @@
 * TIL INFORMASJON:                                                                                                                    *
                                                                                                                                       *
 * I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.                                     *
-* Dette vil også bli dokumentert under kildebruk i rapporten.  Grunnen til dette er basert på “best practice”  måter å programmere på.*  
+* Dette er også dokumentert under kildebruk i rapporten.  Grunnen til dette er basert på “best practice”  måter å programmere på.     *  
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer.                                                            *
 * Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer.                           *
 * Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke.                              *
@@ -115,7 +115,7 @@ ob_start();
                 $result = mysqli_query($mysqli, "INSERT INTO register(username,email,password) VALUES('$name','$email','$hashedpass')");
                     // Ved gjennomført spørring får brukeren beskjed om at profilen er opprettet 
                     if ($result) {
-                        $_SESSION['success'] = "$User Registered successfully";
+                        $_SESSION['success'] = "$name registered successfully";
                         header('Location: login.php');
                     } else {
                         //  Ved gjennomført spørring får brukeren beskjed om at emailen allerede er i bruk
