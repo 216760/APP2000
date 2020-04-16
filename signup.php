@@ -3,13 +3,14 @@
 /**************************************************************************************************************************************
 * TIL INFORMASJON:                                                                                                                    *
                                                                                                                                       *
-* I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.                                     *
+* I denne filen ligger det tilpasset kode som er funnet på linkene oppsummert under.                                                  *
 * Dette er også dokumentert under kildebruk i rapporten.  Grunnen til dette er basert på “best practice”  måter å programmere på.     *  
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer.                                                            *
 * Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer.                           *
 * Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke.                              *
                                                                                                                                       *
-* Kilder: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                                          *
+* Kilder: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                                          * 
+*         https://gitlab.com/tutorialsclass/php-simple-login-registration-script                                                      *
                                                                                                                                       *
 * Medlemmer som har bidratt:  Henrik Solnør Johansen, Andreas Knutsen og Anders Koo                                                   *         
                                                                                                                                       *
@@ -32,17 +33,20 @@ ob_start();
         <form id="myForm" class="form-signin" form action="signup.php" method="post" name="form1">
         <h1 class="logo_title">re:sub</h1>
         <img class="image_signup" src="img/logoTempCropSmol.png" alt="">
-            <input type="text" placeholder="username" class="" name="name">
-            <input type="text" placeholder="email" class="" name="email">
-            <input type="password" placeholder="password" class="" name="password"> 
+                                            <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
+            <input type="text" placeholder="<?php echo $lang_input['input-username']; ?>" class="" name="name">
+                                            <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
+            <input type="text" placeholder="<?php echo $lang_input['input-email']; ?>" class="" name="email">
+                                                <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
+            <input type="password" placeholder="<?php echo $lang_input['input-password']; ?>" class="" name="password"> 
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 <!-- START 																								  				  -->
 <!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset fra kilden under  		  -->																	 
 <!-- Kilde: https://www.youtube.com/watch?v=OePNkDd3Yb8 												  				  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
-
-            <button class="btn btn-primary w-100" id="regbtn" name="registerbtn"  value="Register"><?php echo $lang['registerbtn']; ?></button>
+                                                                                                   <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
+            <button class="btn btn-primary w-100" id="regbtn" name="registerbtn"  value="Register"><?php echo $lang_button['registerbtn']; ?></button>
             
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 <!-- STOPP 																								  				  -->
@@ -116,7 +120,7 @@ ob_start();
 
             // Om emailen ikke er i riktig regex format blir den ikke sanitert
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                $_SESSION['status'] = "$email is not a valid email address";
+                $_SESSION['status'] = "$email is not a valid email address!";
                 header('Location: signup.php');
 
             } else {
@@ -128,7 +132,7 @@ ob_start();
                 $result = mysqli_query($mysqli, "INSERT INTO register(username,email,password) VALUES('$name','$email','$hashedpass')");
                     // Ved gjennomført spørring får brukeren beskjed om at profilen er opprettet 
                     if ($result) {
-                        $_SESSION['success'] = "$name registered successfully";
+                        $_SESSION['success'] = "$name registered successfully!";
                         header('Location: login.php');
                     } else {
                         //  Ved gjennomført spørring får brukeren beskjed om at emailen allerede er i bruk
@@ -140,7 +144,7 @@ ob_start();
         } else {
 
             //Ved tomme felt får brukeren beskjed om at feltene IKKE kan være tomme
-            $_SESSION['status'] = "Fields cannot be empty";
+            $_SESSION['status'] = "Fields cannot be empty!";
             header('Location: signup.php'); // Header er en funksjon som viderefører brukeren til signup
         }
     }

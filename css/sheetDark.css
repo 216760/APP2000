@@ -210,6 +210,14 @@ footer.page-footer ul {
   box-shadow: none !important;
 }
 
+#no {
+  margin-right: 0.5rem;
+}
+
+#en {
+  margin-left: 0.5rem;
+}
+
 
 .form-signin {
   width: 100%;
@@ -217,7 +225,6 @@ footer.page-footer ul {
   padding: 15px;
   margin: 0 auto;
 }
-
 
 /* KODET AV: Andreas Knutsen */
 

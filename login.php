@@ -10,7 +10,11 @@
 * Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer.   *
 * Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke.      *
                                                                                                               *
-* Kilder: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                  *
+* Kilder:                                                                                                     * 
+                                                                                                              * 
+*  https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                         *
+*  https://gitlab.com/tutorialsclass/php-simple-login-registration-script                                     * 
+                                                                                                              *
                                                                                                               *
 * Medlemmer som har bidratt:  Henrik Solnør Johansen, Andreas Knutsen og Anders Koo                           *
                                                                                                               *
@@ -29,11 +33,13 @@ include('config.php');
             <h1 class="logo_title">re:sub</h1>
             <div class="form-group">
             <img class="image_login" src="img/logoTempCropSmol.png" alt="">
-                <input type="text" placeholder="Enter your email..." name="email" class="">
-                <input type="password" placeholder="Enter your password..." name="password" class="">
+                <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
+                <input type="text" placeholder="<?php echo $lang_input['input-email']; ?>" name="email" class="">
+                <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
+                <input type="password" placeholder="<?php echo $lang_input['input-password']; ?>" name="password" class="">
             </div>
             <!-- /* https://getbootstrap.com/docs/4.0/components/buttons/#button-tags */ -->
-            <button class="btn btn-primary w-100" name="loginbtn"><?php echo $lang['loginbtn']; ?></button>
+            <button class="btn btn-primary w-100" name="loginbtn"><?php echo $lang_button['loginbtn']; ?></button>
             <?php
 
                 // Sjekker om session status er deklarert og ikke er en tom string

@@ -27,7 +27,7 @@
 						</div>
 					</nav>
 				</div>';
-	} elseif (empty($_SESSION['id']) && $_SESSION['lang'] == "en"){
+	} elseif (empty($_SESSION['id']) && $_SESSION['lang'] == "en") {
 		echo '<div class="container">
 				<nav class="navbar navbar-expand-md fixed-top">
 					<a class="navbar-brand" href="index.php">RE:SUB</a>
@@ -48,7 +48,7 @@
 					</div>
 				</nav>
 			</div>';
-	} elseif (!empty($_SESSION) && $_SESSION['lang'] == "no") {
+	} elseif (!empty($_SESSION['id']) && $_SESSION['lang'] == "no") {
 		echo '<div class="container">
 				<nav class="navbar navbar-expand-md fixed-top">
 					<a class="navbar-brand" href="index.php">RE:SUB</a>
