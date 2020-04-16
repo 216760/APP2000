@@ -116,8 +116,8 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 	 kilde: https://www.w3schools.com/js/js_ajax_asp.asp
 	 kilde:	https://www.w3schools.com/js/js_ajax_database.asp
 	 kilde: https://www.w3schools.com/js/js_ajax_applications.asp
-	 kilde: https://www.w3schools.com/js/js_ajax_examples.asp
-												  -->
+	 kilde: https://www.w3schools.com/js/js_ajax_examples.asp    										  -->
+												  
 <!-- ---------------------------------------------------------------------------------------------------- -->
 <script>
 
@@ -128,6 +128,16 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			_("mybtn").disabled = true; 
 			// Kaller på _funksjon, deretter blir innerHTML metoden i document objektet kalt på som gjør at du kan sette inn tekst
 			_("status").innerHTML = 'please wait ...'; 
+
+
+
+			// ------------------------------------------------------------------------------------------------------------ //
+			// START                                                                                                        //
+			// Denne delen er hentet fra og tilpasset til egen løsning  													//
+			//																												//
+			// kilde: https://developer.mozilla.org/en-US/docs/Web/API/FormData/append                                	    //
+			//                                                                                                              //					// ------------------------------------------------------------------------------------------------------------ //
+			
 			//variabel som initialiserer FormData objektet
 			var formdata = new FormData(); 
 			//append er en metode som henter verdier fra de id'en name skjema via _funksjon
@@ -138,6 +148,19 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			formdata.append( "message", _("message").value ); 
 			//append er en metode som henter verdier fra de id'en subjekt i skjema _funksjon
 			formdata.append( "subject", _("subject").value ); 
+			// ------------------------------------------------------------------------------------------------------------ //
+			// STOP 																										//
+			// ------------------------------------------------------------------------------------------------------------ //
+
+
+
+			// ------------------------------------------------------------------------------------------------------------ //
+			// START                                                                                                        //
+			// Denne delen er hentet fra og tilpasset til egen løsning  													//
+			// kilde: https://www.w3schools.com/js/js_ajax_http_send.asp                                             	    //
+			//                                                                                                              //					// ------------------------------------------------------------------------------------------------------------ //
+
+
 			// denne lager et nytt XMLHttpRequest objekt, denne variabelen gjør at man kan oppdatere siden uten å laste inn siden på nytt
 			var ajax = new XMLHttpRequest(); // ajax variabel initialiserer XMLHttpRequest objektet
 			// open er en metode fra XMLHttpRequest objektet som sender en POST forespørsel til feedbackinsert.php
@@ -158,6 +181,11 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			// Sender request til database
 			ajax.send( formdata ); 
 		}
+			// ------------------------------------------------------------------------------------------------------------ //
+			// STOP 																										//
+			// ------------------------------------------------------------------------------------------------------------ //
+
+
 </script>
 <!-- ---------------------------------------------------------------------------------------------------- -->
 <!-- STOPP 																								  -->
