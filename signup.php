@@ -1,3 +1,4 @@
+<script type="text/javascript" src="password_validation.js"></script>
 <?php
 
 /**************************************************************************************************************************************
@@ -30,7 +31,7 @@ ob_start();
     <body>
 
              
-        <form id="myForm" class="form-signin" form action="signup.php" method="post" name="form1">
+        <form id="myForm" class="form-signin" form action="signup.php" method="post" name="form1" onsubmit="/*return validation();*/">
         <h1 class="logo_title">re:sub</h1>
         <img class="image_signup" src="img/logoTempCropSmol.png" alt="">
                                             <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
@@ -39,6 +40,7 @@ ob_start();
             <input type="text" placeholder="<?php echo $lang_input['input-email']; ?>" class="" name="email">
                                                 <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
             <input type="password" placeholder="<?php echo $lang_input['input-password']; ?>" class="" name="password"> 
+            <div class="col" id="error_message" style="color:red"></div>
 
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
@@ -155,6 +157,8 @@ ob_start();
 ob_end_flush();
 
 ?>
+
+
 <!-- --------------------------------------------------------------------------------------------------------------- -->
 <!-- STOPP                                                                                                           -->
 <!-- Denne koden under er hentet fra og tilpasset egen løsning fra Youtube kanalen Coding Passive income.            -->
