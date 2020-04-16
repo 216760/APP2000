@@ -37,7 +37,6 @@ input:focus {
   outline: none;
   border-color: #4A148C;
   border-radius: 2px;
-  padding-bottom: 60px;
 }
 
 .btn {
@@ -328,7 +327,7 @@ input, textarea {
 #my_form input:focus{
   display: block;
   border: 2px solid #4A148C;
-  box-shadow: 0 0 8px 0 #4A148C; 
+  box-shadow: 0 0 8px 0 #4A148C;
 }
 
 #my_form textarea:focus{

@@ -18,7 +18,7 @@
 **************************************************************************************************************************************/
 
 include('config.php');
-ob_start();
+ob_start(); // Skrur på output buffering
 ?>
 
 <!DOCTYPE html>
@@ -153,13 +153,11 @@ ob_start();
         }
     }
 
-        //-- Kodet og tilpasset av: Anders Koo og Andreas Knutsen STOPP --
-ob_end_flush();
+//-- Kodet og tilpasset av: Anders Koo og Andreas Knutsen STOPP --
+ob_end_flush(); // // Skrur av output buffering
 
 ?>
-
-
-<!-- --------------------------------------------------------------------------------------------------------------- -->
+<!--------------------------------------------------------------------------------------------------------------------->
 <!-- STOPP                                                                                                           -->
 <!-- Denne koden under er hentet fra og tilpasset egen løsning fra Youtube kanalen Coding Passive income.            -->
 <!-- Vi brukte denne for å forstå hvordan vi registrerte hashet passord fra bruker i registreringsskjema.            -->
@@ -167,4 +165,4 @@ ob_end_flush();
 <!-- Dette for å sjekke at riktig bruker med riktig password ble logget inn.                                         -->
 <!-- Sentral krypterings algoritme: PASSWORD_BCRYPT                                                                  -->
 <!-- Kilde: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                       -->
-<!-- ------------------------------------------------------------------------------------------------------------------>
+<!--------------------------------------------------------------------------------------------------------------------->
