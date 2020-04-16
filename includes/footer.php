@@ -1,4 +1,5 @@
 <!--  Kodet tilpasset av Andreas Kntusen start -->
+<!--  Kilde: https://mdbootstrap.com/docs/jquery/navigation/footer/ -->
 <?php
 	if (!empty($_SESSION['id']) && ($_SESSION['lang'] == "en")) {
 		echo '<!-- Footer -->

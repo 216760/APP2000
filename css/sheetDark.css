@@ -12,6 +12,7 @@ body {
   background-size: contain;
   background-attachment: fixed;
   background-color: grey !important;
+  padding-bottom: 130px;
 }
 
 .offset:before {
@@ -172,6 +173,7 @@ footer {
   bottom: 0;
   width: 100%;
   background-color: black;
+  height: 140px;
 }
 
 footer.page-footer .footer-copyright {
