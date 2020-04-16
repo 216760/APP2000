@@ -4,7 +4,7 @@ Medlemmer som har bidratt: Henrik Solnør Johansen Andreas Knutsen og Anders Koo
 <?php
 include('config.php'); // Inkluderer oppsett for flere språk
 ?>
-
+<html>
 <section class="bg-main">
 
 	<div class="container-fluid">
@@ -39,3 +39,4 @@ include('config.php'); // Inkluderer oppsett for flere språk
 	</div>
 	
 </section>
+</html>
