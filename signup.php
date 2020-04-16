@@ -3,13 +3,14 @@
 /**************************************************************************************************************************************
 * TIL INFORMASJON:                                                                                                                    *
                                                                                                                                       *
-* I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.                                     *
+* I denne filen ligger det tilpasset kode som er funnet på linkene oppsummert under.                                                  *
 * Dette er også dokumentert under kildebruk i rapporten.  Grunnen til dette er basert på “best practice”  måter å programmere på.     *  
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer.                                                            *
 * Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer.                           *
 * Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke.                              *
                                                                                                                                       *
-* Kilder: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                                          *
+* Kilder: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                                          * 
+*         https://gitlab.com/tutorialsclass/php-simple-login-registration-script                                                      *
                                                                                                                                       *
 * Medlemmer som har bidratt:  Henrik Solnør Johansen, Andreas Knutsen og Anders Koo                                                   *         
                                                                                                                                       *
@@ -116,7 +117,7 @@ ob_start();
 
             // Om emailen ikke er i riktig regex format blir den ikke sanitert
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                $_SESSION['status'] = "$email is not a valid email address";
+                $_SESSION['status'] = "$email is not a valid email address!";
                 header('Location: signup.php');
 
             } else {
@@ -128,7 +129,7 @@ ob_start();
                 $result = mysqli_query($mysqli, "INSERT INTO register(username,email,password) VALUES('$name','$email','$hashedpass')");
                     // Ved gjennomført spørring får brukeren beskjed om at profilen er opprettet 
                     if ($result) {
-                        $_SESSION['success'] = "$name registered successfully";
+                        $_SESSION['success'] = "$name registered successfully!";
                         header('Location: login.php');
                     } else {
                         //  Ved gjennomført spørring får brukeren beskjed om at emailen allerede er i bruk
@@ -140,7 +141,7 @@ ob_start();
         } else {
 
             //Ved tomme felt får brukeren beskjed om at feltene IKKE kan være tomme
-            $_SESSION['status'] = "Fields cannot be empty";
+            $_SESSION['status'] = "Fields cannot be empty!";
             header('Location: signup.php'); // Header er en funksjon som viderefører brukeren til signup
         }
     }

@@ -10,7 +10,11 @@
 * Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer.   *
 * Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke.      *
                                                                                                               *
-* Kilder: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                  *
+* Kilder:                                                                                                     * 
+                                                                                                              * 
+*  https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                         *
+*  https://gitlab.com/tutorialsclass/php-simple-login-registration-script                                     * 
+                                                                                                              *
                                                                                                               *
 * Medlemmer som har bidratt:  Henrik Solnør Johansen, Andreas Knutsen og Anders Koo                           *
                                                                                                               *
