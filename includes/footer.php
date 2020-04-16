@@ -11,6 +11,12 @@
 									<h5 class="mb-1">Contact us @ project.resub@gmail.com</h5>
 								</li>
 							</ul>
+							<ul class="list-unstyled list-inline text-center py-2">
+								<li class="list-inline-item">
+						            <a href="?lang=no" id="no">Norsk</a>
+                					<a href="?lang=en" id="en">English</a>
+								</li>
+							</ul>
 							<!-- Call to action -->
 						</div>
 					<!-- Footer Elements -->
@@ -37,6 +43,12 @@
 							<a href="login.php" class="btn btn-outline-white btn-rounded">Log in</a>
 						</li>
 					</ul>
+					<ul class="list-unstyled list-inline text-center py-2">
+						<li class="list-inline-item">
+				            <a href="?lang=no" id="no">Norsk</a>
+        					<a href="?lang=en" id="en">English</a>
+						</li>
+					</ul>
 					<!-- Call to action -->
 				</div>
 				<!-- Footer Elements -->
@@ -51,6 +63,12 @@
 							<ul class="list-unstyled list-inline text-center py-2">
 								<li class="list-inline-item">
 									<h5 class="mb-1">Kontakt oss @ project.resub@gmail.com</h5>
+								</li>
+							</ul>
+							<ul class="list-unstyled list-inline text-center py-2">
+								<li class="list-inline-item">
+						            <a href="?lang=no" id="no">Norsk</a>
+                					<a href="?lang=en" id="en">English</a>
 								</li>
 							</ul>
 							<!-- Call to action -->
@@ -77,6 +95,12 @@
 						</li>
 						<li class="list-inline-item">
 							<a href="login.php" class="btn btn-outline-white btn-rounded">Logg in</a>
+						</li>
+					</ul>
+					<ul class="list-unstyled list-inline text-center py-2">
+						<li class="list-inline-item">
+				            <a href="?lang=no" id="no">Norsk</a>
+        					<a href="?lang=en" id="en">English</a>
 						</li>
 					</ul>
 					<!-- Call to action -->
