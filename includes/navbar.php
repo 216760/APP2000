@@ -9,6 +9,7 @@
 						</button>
 
 						<!-- Kodet av: Vigleik Espeland Stakseng START -->
+						<!-- Lager en checkbox i navbaren som bestemmer om nettsiden skal være i darkmode eller ikke -->
 						<input type="checkbox" data-toggle="toggle" data-on="Dark Mode" data-off="Light Mode" id="toggle1" onchange="toggleDark()" data-size="sm">
 						<!-- Kodet av: Vigleik Espeland Stakseng STOP -->
 
@@ -36,6 +37,7 @@
 						</button>
 
 						<!-- Kodet av: Vigleik Espeland Stakseng START -->
+						<!-- Lager en checkbox i navbaren som bestemmer om nettsiden skal være i darkmode eller ikke -->
 						<input type="checkbox" data-toggle="toggle" data-on="Dark Mode" data-off="Light Mode" id="toggle1" onchange="toggleDark()" data-size="sm">
 						<!-- Kodet av: Vigleik Espeland Stakseng STOP -->
 
@@ -57,6 +59,7 @@
 					</button>
 
 					<!-- Kodet av: Vigleik Espeland Stakseng START -->
+					<!-- Lager en checkbox i navbaren som bestemmer om nettsiden skal være i darkmode eller ikke -->
 					<input type="checkbox" data-toggle="toggle" data-on="Dark Mode" data-off="Light Mode" id="toggle1" onchange="toggleDark()" data-size="sm">
 					<!-- Kodet av: Vigleik Espeland Stakseng STOP -->
 
@@ -84,6 +87,7 @@
 						</button>
 
 						<!-- Kodet av: Vigleik Espeland Stakseng START -->
+						<!-- Lager en checkbox i navbaren som bestemmer om nettsiden skal være i darkmode eller ikke -->
 						<input type="checkbox" data-toggle="toggle" data-on="Dark Mode" data-off="Light Mode" id="toggle1" onchange="toggleDark()" data-size="sm">
 						<!-- Kodet av: Vigleik Espeland Stakseng STOP -->
 
