@@ -98,12 +98,23 @@ form-control:input{
   margin-bottom: 30px;
 }
 
+.bg-warning{
+  border-radius: 5px;
+}
+
+.bg-success{
+  border-radius: 5px!important;;
+}
+
+
 /* Styling av registreringsskjema */
 #myForm input:focus{
   display: block;
   box-shadow: 0 0 8px 0 #4A148C; 
   border: 2px solid #4A148C;
 }
+
+
 /* Kodet av Anders Koo stopp */
 
 
