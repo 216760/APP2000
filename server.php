@@ -79,6 +79,7 @@ if(isset($_POST['edit_btn'])) { // Sjekker at variabel er deklarert og at edit_b
 // ----------------------------------------------------------------------------------------------------
 // Oppdateringsknapp
 // ----------------------------------------------------------------------------------------------------
+
 if(isset($_POST['updatebtn'])) {    // Sjekker at variabel er deklarert og at updatebtn knappen er klikket på 
     $id = $_POST['edit_id'];        // Sjekker at variabel er deklarert
    
@@ -108,6 +109,7 @@ if(isset($_POST['updatebtn'])) {    // Sjekker at variabel er deklarert og at up
 // ----------------------------------------------------------------------------------------------------
 // Sletteknapp
 // ----------------------------------------------------------------------------------------------------
+
 if(isset($_POST['delete_btn'])) { // Sjekker at variabel er deklarert og at updatebtn knappen er klikket på 
     $id = $_POST['delete_id'];  // Sjekker at variabel er deklarert
 
