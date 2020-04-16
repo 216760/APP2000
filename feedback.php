@@ -2,26 +2,14 @@
 /*****************************************************************************************************************
 * TIL INFORMASJON:																							 	 *																		  
 * 																												 *
-* I denne filen ligger det kode som er hentet og tilpasset egen løsning fra kildene nedenfor. 					 *	
+* I denne filen ligger det tilpasset kode som er funnet på linkene oppsummert under.				 			 *	
 * Dette er også dokumentert under kildebruk i rapporten og markert i selve koden. 							 	 *
 * Grunnen til dette er basert på “best practice”  måter å programmere på.  										 *
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 										 *
 * Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer. 	 *
 * Etter dette gjør vi en vurdering om å bruke, tilpasse og implementere eksempelet i vår kode eller ikke. 		 *
 *																												 *
-* Kilder: 																										 *
-*	http://www.openjs.com/ajax/tutorial/ajax.php																 *
-*	http://www.openjs.com/ajax/tutorial/ajax.php 												  				 *
-*	https://developer.mozilla.org/en-US/docs/Web/API/FormData/append							   				 *
-*	https://www.w3schools.com/js/js_ajax_http.asp												  				 *
-*	https://www.w3schools.com/js/js_ajax_http_send.asp											  				 *	
-*	https://www.w3schools.com/js/js_ajax_http_response.asp										  				 *
-*	https://www.w3schools.com/js/js_ajax_xmlfile.asp											  				 *
-*	https://www.w3schools.com/js/js_ajax_php.asp												  				 *
-*	https://www.w3schools.com/js/js_ajax_asp.asp												  				 *
-*	https://www.w3schools.com/js/js_ajax_database.asp											 				 *
-*	https://www.w3schools.com/js/js_ajax_applications.asp								          				 *
-*	https://www.w3schools.com/js/js_ajax_examples.asp    														 *
+* Kilde: http://www.openjs.com/ajax/tutorial/ajax.php															 *
 *																												 *
 * Medlemmer som har bidratt Henrik Solnør Johansen, Vigleik Espeland Stakseng, Anders Koo og Andreas Knutsen -	 *
 *																												 *
@@ -115,21 +103,24 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 
 </html>
 
-			<!-- ---------------------------------------------------------------------------------------------------- -->
-			<!-- START 																								  -->
-			<!-- For å sette opp AJAX teknologi med feedback skjema har vi brukt disse kildene. 					  -->
-			<!-- Kilde: http://www.openjs.com/ajax/tutorial/ajax.php 												  -->
-			<!-- kilde: https://developer.mozilla.org/en-US/docs/Web/API/FormData/append							  -->
-			<!-- kilde: https://www.w3schools.com/js/js_ajax_http.asp												  -->
-			<!-- kilde: https://www.w3schools.com/js/js_ajax_http_send.asp											  -->
-			<!-- kilde: https://www.w3schools.com/js/js_ajax_http_response.asp										  -->
-			<!-- kilde: https://www.w3schools.com/js/js_ajax_xmlfile.asp											  -->
-			<!-- kilde: https://www.w3schools.com/js/js_ajax_php.asp												  -->
-			<!-- kilde: https://www.w3schools.com/js/js_ajax_asp.asp												  -->
-			<!-- kilde:	https://www.w3schools.com/js/js_ajax_database.asp											  -->
-			<!-- kilde: https://www.w3schools.com/js/js_ajax_applications.asp								          -->
-			<!-- kilde: https://www.w3schools.com/js/js_ajax_examples.asp    										  -->												  
-			<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- START 																								  -->
+<!-- For å sette opp AJAX teknologi med feedback skjema har vi brukt disse kildene. 					  -->
+<!-- Kilde: http://www.openjs.com/ajax/tutorial/ajax.php 
+	 kilde: https://developer.mozilla.org/en-US/docs/Web/API/FormData/append
+	 kilde: https://www.w3schools.com/js/js_ajax_http.asp	
+	 kilde: https://www.w3schools.com/js/js_ajax_http_send.asp
+	 kilde: https://www.w3schools.com/js/js_ajax_http_response.asp
+	 kilde: https://www.w3schools.com/js/js_ajax_xmlfile.asp
+	 kilde: https://www.w3schools.com/js/js_ajax_php.asp
+	 kilde: https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp
+	 kilde: https://www.w3schools.com/js/js_ajax_asp.asp
+	 kilde:	https://www.w3schools.com/js/js_ajax_database.asp
+	 kilde: https://www.w3schools.com/js/js_ajax_applications.asp
+	 kilde: https://www.w3schools.com/js/js_ajax_examples.asp  
+	 kilde: https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp  								  -->
+												  
+<!-- ---------------------------------------------------------------------------------------------------- -->
 <script>
 
 		function _(id){ return document.getElementById(id); }// funksjon som returnerer alle id'ene i skjema
@@ -141,33 +132,13 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			_("status").innerHTML = 'please wait ...'; 
 
 
-			// ------------------------------------------------------------------------------------------------------------ //
-			// STOPP                                                                                                        //
-			// Denne delen er hentet fra og tilpasset til egen løsning  													//
-			//																												//
-			// <!-- Kilde: http://www.openjs.com/ajax/tutorial/ajax.php 												  	//
-			// kilde: https://developer.mozilla.org/en-US/docs/Web/API/FormData/append							  			//
-			// kilde: https://www.w3schools.com/js/js_ajax_http.asp												  			//
-			// kilde: https://www.w3schools.com/js/js_ajax_http_send.asp											 		//
-			// kilde: https://www.w3schools.com/js/js_ajax_http_response.asp										  		//
-			// kilde: https://www.w3schools.com/js/js_ajax_xmlfile.asp											  			//
-			// kilde: https://www.w3schools.com/js/js_ajax_php.asp												  			//
-			// kilde: https://www.w3schools.com/js/js_ajax_asp.asp												  			//
-			// kilde: https://www.w3schools.com/js/js_ajax_database.asp											 			//
-			// kilde: https://www.w3schools.com/js/js_ajax_applications.asp								          			//
-			// kilde: https://www.w3schools.com/js/js_ajax_examples.asp                             	    				//
-			//                                                                                                              //					
-			// ------------------------------------------------------------------------------------------------------------ //
-
-
 
 			// ------------------------------------------------------------------------------------------------------------ //
 			// START                                                                                                        //
 			// Denne delen er hentet fra og tilpasset til egen løsning  													//
 			//																												//
 			// kilde: https://developer.mozilla.org/en-US/docs/Web/API/FormData/append                                	    //
-			//                                                                                                              //					
-			// ------------------------------------------------------------------------------------------------------------ //
+			//                                                                                                              //					// ------------------------------------------------------------------------------------------------------------ //
 			
 			//variabel som initialiserer FormData objektet
 			var formdata = new FormData(); 
@@ -180,7 +151,7 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			//append er en metode som henter verdier fra de id'en subjekt i skjema _funksjon
 			formdata.append( "subject", _("subject").value ); 
 			// ------------------------------------------------------------------------------------------------------------ //
-			// STOPP																										//
+			// STOP 																										//
 			// ------------------------------------------------------------------------------------------------------------ //
 
 
@@ -189,8 +160,7 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			// START                                                                                                        //
 			// Denne delen er hentet fra og tilpasset til egen løsning  													//
 			// kilde: https://www.w3schools.com/js/js_ajax_http_send.asp                                             	    //
-			//                                                                                                              //					
-			// ------------------------------------------------------------------------------------------------------------ //
+			//                                                                                                              //					// ------------------------------------------------------------------------------------------------------------ //
 
 
 			// denne lager et nytt XMLHttpRequest objekt, denne variabelen gjør at man kan oppdatere siden uten å laste inn siden på nytt
@@ -214,8 +184,13 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			ajax.send( formdata ); 
 		}
 			// ------------------------------------------------------------------------------------------------------------ //
-			// STOPP 																										//
+			// STOP 																										//
 			// ------------------------------------------------------------------------------------------------------------ //
 
 
 </script>
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- STOPP 																								  -->
+<!-- For å sette opp AJAX teknologi med feedback skjema har vi brukt denne guiden. 						  -->
+<!-- Kilde: http://www.openjs.com/ajax/tutorial/ajax.php 												  -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
