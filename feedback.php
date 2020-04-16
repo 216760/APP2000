@@ -116,7 +116,8 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 	 kilde: https://www.w3schools.com/js/js_ajax_asp.asp
 	 kilde:	https://www.w3schools.com/js/js_ajax_database.asp
 	 kilde: https://www.w3schools.com/js/js_ajax_applications.asp
-	 kilde: https://www.w3schools.com/js/js_ajax_examples.asp    										  -->
+	 kilde: https://www.w3schools.com/js/js_ajax_examples.asp  
+	 kilde: https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp  								  -->
 												  
 <!-- ---------------------------------------------------------------------------------------------------- -->
 <script>
