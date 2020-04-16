@@ -98,8 +98,18 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 
 <!-- ---------------------------------------------------------------------------------------------------- -->
 <!-- START 																								  -->
-<!-- For å sette opp AJAX teknologi med feedback skjema har vi brukt denne guiden. 						  -->
-<!-- Kilde: http://www.openjs.com/ajax/tutorial/ajax.php 												  -->
+<!-- For å sette opp AJAX teknologi med feedback skjema har vi brukt disse kildene. 						  -->
+<!-- Kilde: http://www.openjs.com/ajax/tutorial/ajax.php 
+	 kilde: https://www.w3schools.com/js/js_ajax_http.asp	
+	 kilde: https://www.w3schools.com/js/js_ajax_http_send.asp
+	 kilde: https://www.w3schools.com/js/js_ajax_http_response.asp
+	 kilde: https://www.w3schools.com/js/js_ajax_xmlfile.asp
+	 kilde: https://www.w3schools.com/js/js_ajax_php.asp
+	 kilde: https://www.w3schools.com/js/js_ajax_asp.asp
+	 kilde:	https://www.w3schools.com/js/js_ajax_database.asp
+	 kilde: https://www.w3schools.com/js/js_ajax_applications.asp
+	 kilde: https://www.w3schools.com/js/js_ajax_examples.asp
+												  -->
 <!-- ---------------------------------------------------------------------------------------------------- -->
 <script>
 
