@@ -261,8 +261,11 @@ footer.page-footer ul {
 }
 
 #no {
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-right: 0.5rem;
+}
+
+#en {
+  margin-left: 0.5rem;
 }
 
 /* KODET AV: Andreas Knutsen stopp */
