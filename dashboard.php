@@ -8,7 +8,7 @@
 * Grunnen til dette er basert på “best practice”  måter å programmere på.  									*
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 									*
 * Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer. *
-* Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke. 	*
+* Etter dette gjør vi en vurdering om å bruke, tilpasse og implementere eksempelet i vår kode eller ikke. 	*
 																											*
 * Linker til gjenbrukt kode:																				*
 																											*
@@ -161,20 +161,6 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 								    <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
 									<button type="submit" name="registerbtn" class="btn btn-primary"><?php echo $lang_button['savebtn']; ?></button>
 								</div>
-
-							<?php
-
-							// if(isset($_SESSION['success']) && $_SESSION['success'] != ''){
-							// echo '<h2> ' .$_SESSION['success']. ' </h2>';
-							// unset($_SESSION['success']);
-							// }
-
-							// if(isset($_SESSION['error']) && $_SESSION['error'] != '') {
-							// echo '<h2 class="bg-info"> ' .$_SESSION['error']. ' </h2>';
-							// unset($_SESSION['error']);
-							// }
-
-							?>
 
 							</div>
 					</form>

@@ -7,7 +7,7 @@
 * Grunnen til dette er basert på “best practice”  måter å programmere på.  										 *
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 										 *
 * Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer. 	 *
-* Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke. 		 *
+* Etter dette gjør vi en vurdering om å bruke, tilpasse og implementere eksempelet i vår kode eller ikke. 		 *
 																												 *
 * Kilde: http://www.openjs.com/ajax/tutorial/ajax.php															 *
 																												 *
@@ -105,8 +105,19 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 
 <!-- ---------------------------------------------------------------------------------------------------- -->
 <!-- START 																								  -->
-<!-- For å sette opp AJAX teknologi med feedback skjema har vi brukt denne guiden. 						  -->
-<!-- Kilde: http://www.openjs.com/ajax/tutorial/ajax.php 												  -->
+<!-- For å sette opp AJAX teknologi med feedback skjema har vi brukt disse kildene. 					  -->
+<!-- Kilde: http://www.openjs.com/ajax/tutorial/ajax.php 
+	 kilde: https://developer.mozilla.org/en-US/docs/Web/API/FormData/append
+	 kilde: https://www.w3schools.com/js/js_ajax_http.asp	
+	 kilde: https://www.w3schools.com/js/js_ajax_http_send.asp
+	 kilde: https://www.w3schools.com/js/js_ajax_http_response.asp
+	 kilde: https://www.w3schools.com/js/js_ajax_xmlfile.asp
+	 kilde: https://www.w3schools.com/js/js_ajax_php.asp
+	 kilde: https://www.w3schools.com/js/js_ajax_asp.asp
+	 kilde:	https://www.w3schools.com/js/js_ajax_database.asp
+	 kilde: https://www.w3schools.com/js/js_ajax_applications.asp
+	 kilde: https://www.w3schools.com/js/js_ajax_examples.asp
+												  -->
 <!-- ---------------------------------------------------------------------------------------------------- -->
 <script>
 
@@ -119,13 +130,13 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			_("status").innerHTML = 'please wait ...'; 
 			//variabel som initialiserer FormData objektet
 			var formdata = new FormData(); 
-			//append er en metode som henter verdier fra de id'en name skjema
+			//append er en metode som henter verdier fra de id'en name skjema via _funksjon
 			formdata.append( "name", _("name").value );
-			//append er en metode som henter verdier fra de id'en email skjema
+			//append er en metode som henter verdier fra de id'en email skjema _funksjon
 			formdata.append( "email", _("email").value ); 
-			//append er en metode som henter verdier fra de id'en message skjema
+			//append er en metode som henter verdier fra de id'en message skjema _funksjon
 			formdata.append( "message", _("message").value ); 
-			//append er en metode som henter verdier fra de id'en subjekt i skjema
+			//append er en metode som henter verdier fra de id'en subjekt i skjema _funksjon
 			formdata.append( "subject", _("subject").value ); 
 			// denne lager et nytt XMLHttpRequest objekt, denne variabelen gjør at man kan oppdatere siden uten å laste inn siden på nytt
 			var ajax = new XMLHttpRequest(); // ajax variabel initialiserer XMLHttpRequest objektet
