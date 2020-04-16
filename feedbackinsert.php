@@ -3,19 +3,19 @@
 *                                                                                                                *
 *TIL INFORMASJON:                                                                                                *
 *                                                                                                                *
-*I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.                 *
-*Dette er også dokumentert under kildebruk i rapporten og markert i selve koden.                                 *
-*Grunnen til dette er basert på “best practice”  måter å programmere på.                                         *
-*Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer.                                        *
-*Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer.       *
-*Etter dette gjør vi en vurdering om å bruke, tilpasse og implementere eksempelet i vår kode eller ikke.         *
+* I denne filen ligger det kode som er hentet og tilpasset egen løsning fra kildene nedenfor.                    *
+* Dette er også dokumentert under kildebruk i rapporten og markert i selve koden.                                *
+* Grunnen til dette er basert på “best practice”  måter å programmere på.                                        *
+* Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer.                                       *
+* Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer.      *
+* Etter dette gjør vi en vurdering om å bruke, tilpasse og implementere eksempelet i vår kode eller ikke.        *
 *                                                                                                                *
-*Kilde:                                                                                                          *
-*                                                                                                                *
-*https://www.youtube.com/playlist?list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV                                        *
+* Kilde:                                                                                                         *
+*   https://www.youtube.com/playlist?list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV                                     *
+*                                                                                                                *                                                                                       
 *                                                                                                                *
 *                                                                                                                *       
-*Kodet og tilpasset av: Henrik Solnør Johansen og Vigleik Espeland Stakseng og Anders Koo                        *          
+* Kodet og tilpasset av: Henrik Solnør Johansen og Vigleik Espeland Stakseng og Anders Koo                       *          
 *                                                                                                                *
 *****************************************************************************************************************/
 
@@ -38,8 +38,6 @@ $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL); // Sjekker om varia
 $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
 $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
 $user_id = $_SESSION['id'];
-
-
 
 
 
