@@ -8,9 +8,9 @@
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 										 *
 * Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer. 	 *
 * Etter dette gjør vi en vurdering om å bruke, tilpasse og implementere eksempelet i vår kode eller ikke. 		 *
-																												 *
+*																												 *
 * Kilde: http://www.openjs.com/ajax/tutorial/ajax.php															 *
-																												 *
+*																												 *
 * Medlemmer som har bidratt Henrik Solnør Johansen, Vigleik Espeland Stakseng, Anders Koo og Andreas Knutsen -	 *
 *																												 *
 ******************************************************************************************************************/
