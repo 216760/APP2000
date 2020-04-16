@@ -58,7 +58,7 @@ if(isset($_POST['registerbtn'])) { // Sjekker at variabel er deklarert og at reg
         header('Location: dashboard.php');    
 
     } else{
-
+        // Hvis ikke blir det presentert en feilmelding
         echo "Something went wrong/Noe gikk galt";
     }
 
@@ -93,11 +93,11 @@ if(isset($_POST['updatebtn'])) {    // Sjekker at variabel er deklarert og at up
 
     // Om spørringen er vellyket blir bruker videresendt tilbake til dashbord
     if($queryDB) {
-        // $_SESSION['subOk'] = "New subscription is successfully updated!";
+
         header('Location: dashboard.php');
 
     } else{
-
+        // Hvis ikke blir det presentert en feilmelding
         echo "Something went wrong/Noe gikk galt";
     }
     
@@ -116,11 +116,11 @@ if(isset($_POST['delete_btn'])) { // Sjekker at variabel er deklarert og at upda
 
     // Om spørringen er vellyket blir bruker videresendt tilbake til dashbord
     if($queryDB) {
-        // $_SESSION['subOk'] = "Subscription is successfully deleted!";
+
         header('Location: dashboard.php');
         
     }  else{
-
+        // Hvis ikke blir det presentert en feilmelding
         echo "Something went wrong/Noe gikk galt";
     }
 
