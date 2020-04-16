@@ -33,7 +33,9 @@ include('config.php');
             <h1 class="logo_title">re:sub</h1>
             <div class="form-group">
             <img class="image_login" src="img/logoTempCropSmol.png" alt="">
+                <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
                 <input type="text" placeholder="<?php echo $lang_input['input-email']; ?>" name="email" class="">
+                <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
                 <input type="password" placeholder="<?php echo $lang_input['input-password']; ?>" name="password" class="">
             </div>
             <!-- /* https://getbootstrap.com/docs/4.0/components/buttons/#button-tags */ -->

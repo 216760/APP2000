@@ -71,7 +71,7 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 <!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset denne kilden	  		  -->																	 
 <!-- Kilde: https://www.youtube.com/watch?v=OePNkDd3Yb8 												  				  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->				
-																																			      <!-- Henter verdi fra php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
+																																			      <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
 					<button data-toggle="modal" data-target="#eexampleModal" class="btn btn-primary w-25" style="display: block; margin: 0 auto;"><?php echo $lang_button['subscriptionbtn']; ?></button>
 				</div>
 				<div class="row justify-content-center">
@@ -94,11 +94,11 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 							<div class="card-body">
 								<form action="edit.php" method="post" style="display:inline-block;">                                               
 									<input type="hidden" name ="edit_id" value="<?php echo $row['id']; ?>"> <!-- Henter ut id dato fra databasen. Dette for å kunne identifisere spesifikt abonnement  -->
-									<button class="btn btn-primary" name="edit_btn" data-toggle="modal"><?php echo $lang_button['editbtn']; ?></button> <!-- Henter verdi fra php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
+									<button class="btn btn-primary" name="edit_btn" data-toggle="modal"><?php echo $lang_button['editbtn']; ?></button> <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
 								</form>
 								<form action="server.php" method="post" style="display:inline-block;">                                               
 									<input type="hidden" name ="delete_id" value="<?php echo $row['id']; ?>"> <!-- Henter ut id dato fra databasen. Dette for å kunne identifisere spesifikt abonnement  -->
-									<button class="btn btn-primary" name="delete_btn" data-toggle="modal"><?php echo $lang_button['deletebtn']; ?></button> <!-- Henter verdi fra php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
+									<button class="btn btn-primary" name="delete_btn" data-toggle="modal"><?php echo $lang_button['deletebtn']; ?></button> <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 <!-- Stopp 																								  				  -->
@@ -140,20 +140,25 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 						<form action="server.php" method="POST">
 							<div class="modal-body">
 								<div class="form-group">
-									<label><h6 class="card-text"><?php echo $lang_text['card-title']; ?></h6></label>
+									<!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
+									<label><h6 class="card-text"><?php echo $lang_text['card-title']; ?></h6></label> 
 									<input type="text" name="description" value=""  class="form-control" >
 								</div>
 								<div class="form-group">
+									<!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
 									<label><h6 class="card-text"><?php echo $lang_text['card-start-date']; ?></h6></label>
 									<input type="date" name="start_date" value=""  class="form-control" >
 								</div>
 								<div class="form-group">
+								    <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
 									<label><h6 class="card-text"><?php echo $lang_text['card-end-date']; ?></h6></label>
 									<input type="date" name="end_date" value="" class="form-control">
 								</div>
 
 								<div class="modal-footer">
+								   	<!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
 									<button type="button" class="btn btn-primary" data-dismiss="modal"><?php echo $lang_button['closebtn']; ?></button>
+								    <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
 									<button type="submit" name="registerbtn" class="btn btn-primary"><?php echo $lang_button['savebtn']; ?></button>
 								</div>
 

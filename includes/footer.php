@@ -13,8 +13,8 @@
 							</ul>
 							<ul class="list-unstyled list-inline text-center py-2">
 								<li class="list-inline-item">
-						            <a href="?lang=no" id="no">Norsk</a>
-                					<a href="?lang=en" id="en">English</a>
+						            <a href="?lang=no" id="no">Norsk</a> <!-- Setter språk til norsk -->
+		        					<a href="?lang=en" id="en">English</a> <!-- Setter språk til engelsk -->
 								</li>
 							</ul>
 							<!-- Call to action -->
@@ -45,8 +45,8 @@
 					</ul>
 					<ul class="list-unstyled list-inline text-center py-2">
 						<li class="list-inline-item">
-				            <a href="?lang=no" id="no">Norsk</a>
-        					<a href="?lang=en" id="en">English</a>
+				            <a href="?lang=no" id="no">Norsk</a> <!-- Setter språk til norsk -->
+        					<a href="?lang=en" id="en">English</a> <!-- Setter språk til engelsk -->
 						</li>
 					</ul>
 					<!-- Call to action -->
@@ -67,8 +67,8 @@
 							</ul>
 							<ul class="list-unstyled list-inline text-center py-2">
 								<li class="list-inline-item">
-						            <a href="?lang=no" id="no">Norsk</a>
-                					<a href="?lang=en" id="en">English</a>
+						            <a href="?lang=no" id="no">Norsk</a> <!-- Setter språk til norsk -->
+		        					<a href="?lang=en" id="en">English</a> <!-- Setter språk til engelsk -->
 								</li>
 							</ul>
 							<!-- Call to action -->
@@ -99,8 +99,8 @@
 					</ul>
 					<ul class="list-unstyled list-inline text-center py-2">
 						<li class="list-inline-item">
-				            <a href="?lang=no" id="no">Norsk</a>
-        					<a href="?lang=en" id="en">English</a>
+				            <a href="?lang=no" id="no">Norsk</a> <!-- Setter språk til norsk -->
+        					<a href="?lang=en" id="en">English</a> <!-- Setter språk til engelsk -->
 						</li>
 					</ul>
 					<!-- Call to action -->
