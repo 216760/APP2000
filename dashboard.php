@@ -2,7 +2,7 @@
 <?php
 /************************************************************************************************************
 * TIL INFORMASJON: 																						    *
-																										    *
+*																										    *
 * I denne filen ligger det kode som er hentet og tilpasset fra kildene under.								*
 * Dette er også dokumentert under kildebruk i rapporten og markert i selve koden. 							*
 * Grunnen til dette er basert på “best practice”  måter å programmere på.  									*
