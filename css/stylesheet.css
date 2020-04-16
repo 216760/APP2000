@@ -8,6 +8,7 @@ body {
   background-position: center;
   background-size: contain;
   background-attachment: fixed;
+  padding-bottom: 140px;
 }
 
 /* Denne offset:before er basert på noe av html, css og Bootstrap kode som har brukt tidligere i gruppeeksamen PRO1000 Prak.prosj.arb av student 225256 vår 19 */
@@ -36,6 +37,7 @@ input:focus {
   outline: none;
   border-color: #4A148C;
   border-radius: 2px;
+  padding-bottom: 60px;
 }
 
 .btn {
@@ -222,6 +224,7 @@ footer {
   bottom: 0;
   width: 100%;
   background-color: #4A148C;
+  height: 140px;
 }
 
 footer.page-footer .footer-copyright {
