@@ -130,13 +130,13 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			_("status").innerHTML = 'please wait ...'; 
 			//variabel som initialiserer FormData objektet
 			var formdata = new FormData(); 
-			//append er en metode som henter verdier fra de id'en name skjema
+			//append er en metode som henter verdier fra de id'en name skjema via _funksjon
 			formdata.append( "name", _("name").value );
-			//append er en metode som henter verdier fra de id'en email skjema
+			//append er en metode som henter verdier fra de id'en email skjema _funksjon
 			formdata.append( "email", _("email").value ); 
-			//append er en metode som henter verdier fra de id'en message skjema
+			//append er en metode som henter verdier fra de id'en message skjema _funksjon
 			formdata.append( "message", _("message").value ); 
-			//append er en metode som henter verdier fra de id'en subjekt i skjema
+			//append er en metode som henter verdier fra de id'en subjekt i skjema _funksjon
 			formdata.append( "subject", _("subject").value ); 
 			// denne lager et nytt XMLHttpRequest objekt, denne variabelen gjør at man kan oppdatere siden uten å laste inn siden på nytt
 			var ajax = new XMLHttpRequest(); // ajax variabel initialiserer XMLHttpRequest objektet
