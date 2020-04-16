@@ -7,7 +7,7 @@
 * Grunnen til dette er basert på “best practice”  måter å programmere på.                                   *
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer.                                  *
 * Vi ser først på en demo av hvordan et eksempel virker,  koder oss gjennom guiden for å lære hva som skjer.* 
-* Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke.    *
+* Etter dette gjør vi en vurdering om å bruke, tilpasse og implementere eksempelet i vår kode eller ikke.   *
                                                                                                             *
 * Kilde:                                                                                                    * 
 * https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                                  *
@@ -27,7 +27,7 @@
 // Oppretter unik session for bruker
 // ----------------------------------------------------------------------------------------------------
 
-session_start();
+session_start();|
 
 // ----------------------------------------------------------------------------------------------------
 // Setter opp forbindelse med databasen
