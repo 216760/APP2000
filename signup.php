@@ -3,7 +3,7 @@
 /**************************************************************************************************************************************
 * TIL INFORMASJON:                                                                                                                    *
 *                                                                                                                                     *
-* I denne filen ligger det tilpasset kode som er funnet på linkene oppsummert under.                                                  *
+* I denne filen ligger det kode som er hentet og tilpasset egen løsning fra kildene nedenfor.	                                      *
 * Dette er også dokumentert under kildebruk i rapporten.  Grunnen til dette er basert på “best practice”  måter å programmere på.     *  
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer.                                                            *
 * Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer.                           *
@@ -40,6 +40,7 @@ ob_start();
                                                 <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
             <input type="password" placeholder="<?php echo $lang_input['input-password']; ?>" class="" name="password"> 
 
+
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 <!-- START 																								  				  -->
 <!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset fra kilden under  		  -->																	 
@@ -53,6 +54,7 @@ ob_start();
 <!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset fra kilden under  		  -->																	 
 <!-- Kilde: https://www.youtube.com/watch?v=OePNkDd3Yb8 												  				  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
+
 
             <?php
 

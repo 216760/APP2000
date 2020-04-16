@@ -3,18 +3,17 @@
 /************************************************************************************************************
 * TIL INFORMASJON: 																						    *
 *																										    *
-* I denne filen ligger det kode som er hentet og tilpasset fra kildene under.								*
+* I denne filen ligger det kode som er hentet og tilpasset egen løsning fra kildene nedenfor.				*
 * Dette er også dokumentert under kildebruk i rapporten og markert i selve koden. 							*
 * Grunnen til dette er basert på “best practice”  måter å programmere på.  									*
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 									*
 * Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer. *
 * Etter dette gjør vi en vurdering om å bruke, tilpasse og implementere eksempelet i vår kode eller ikke. 	*
+*																											*																		*
 *																											*
-* Linker til gjenbrukt kode:																				*
-*																											*
-* Vi har primært tilpasset kode fra part 1-6 i fra denne Youtube kanalen. Her det blir forklart hvordan man *
-* henter ut data fra database og lastet inn i html malen: 													*
+* Kilder																									*
 * https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ									*
+*https://www.youtube.com/watch?v=OePNkDd3Yb8 																*
 *																											*
 *																											*
 *																											*

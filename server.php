@@ -2,7 +2,7 @@
 /************************************************************************************************************
 * TIL INFORMASJON:                                                                                          * 
 *                                                                                                           *    
-* I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.           *
+* I denne filen ligger det kode som er hentet og tilpasset egen løsning fra kildene nedenfor.               *
 * Dette er også dokumentert under kildebruk i rapporten.                                                    * 
 * Grunnen til dette er basert på “best practice”  måter å programmere på.                                   *
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer.                                  *
@@ -133,4 +133,5 @@ if(isset($_POST['delete_btn'])) { // Sjekker at variabel er deklarert og at upda
 // Alle CRUD operasjonene har vi lært oss via eksempler fra Youtube kanalen Funda Of Web IT.         //
 // Denne koden er hentet fra og tilpasset egen løsning fra denne Youtube kanalen, part 1-6           //
 // --------------------------------------------------------------------------------------------------//
+
 ?>
