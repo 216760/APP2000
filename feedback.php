@@ -35,13 +35,14 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 
 	<body>
 
-		<!-- ------------------------------------------------------------------------------------------------
-		Lager en form med fire inputs: name, email, subject og textarea. 
-		Dette blir sendt når alle feltene har innhold og bruker trykker på "submit". 
-		For at et form skal sendes må man ha en id som kobler (my_form)-formen sammen med scriptet nedenfor. 
-		"mybtn" setter igang prosessen med å sende formen. 
-		Den andre knappen returnerer brukeren til dashbordet.
-		--------------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------------- -->
+		<!-- Lager en form med fire inputs: name, email, subject og textarea. 									  -->
+		<!-- Dette blir sendt når alle feltene har innhold og bruker trykker på "submit". 						  -->
+		<!-- For at et form skal sendes må man ha en id som kobler (my_form)-formen sammen med scriptet nedenfor. -->
+		<!-- "mybtn" setter igang prosessen med å sende formen. 											   	  -->
+		<!-- Den andre knappen returnerer brukeren til dashbordet.											      -->
+		<!-- ---------------------------------------------------------------------------------------------------- -->
+		
 		<?php
 		include('includes/navbar.php');
 		?>
@@ -173,8 +174,9 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			formdata.append( "message", _("message").value ); 
 			//append er en metode som henter verdier fra de id'en subjekt i skjema _funksjon
 			formdata.append( "subject", _("subject").value ); 
+
 			// ------------------------------------------------------------------------------------------------------------ //
-			// STOP 																										//
+			// STOPP 																										//
 			// ------------------------------------------------------------------------------------------------------------ //
 
 
@@ -208,13 +210,8 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			ajax.send( formdata ); 
 		}
 			// ------------------------------------------------------------------------------------------------------------ //
-			// STOP 																										//
+			// STOPP 																										//
 			// ------------------------------------------------------------------------------------------------------------ //
 
 
 </script>
-<!-- ---------------------------------------------------------------------------------------------------- -->
-<!-- STOPP 																								  -->
-<!-- For å sette opp AJAX teknologi med feedback skjema har vi brukt denne guiden. 						  -->
-<!-- Kilde: http://www.openjs.com/ajax/tutorial/ajax.php 												  -->
-<!-- ---------------------------------------------------------------------------------------------------- -->
