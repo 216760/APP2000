@@ -33,7 +33,7 @@ ob_start(); // Skrur på output buffering
              
         <form id="myForm" class="form-signin" form action="signup.php" method="post" name="form1" onsubmit="/*return validation();*/">
         <h1 class="logo_title">re:sub</h1>
-        <img class="image_signup" src="img/logoTempCropSmol.png" alt="">
+        <img class="image_signup" src="img/logoSmall.png" alt="">
                                             <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
             <input type="text" placeholder="<?php echo $lang_input['input-username']; ?>" class="" name="name">
                                             <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
