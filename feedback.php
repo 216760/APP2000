@@ -2,26 +2,14 @@
 /*****************************************************************************************************************
 * TIL INFORMASJON:																							 	 *																		  
 * 																												 *
-* I denne filen ligger det kode som er hentet og tilpasset egen løsning fra kildene nedenfor. 					 *	
+* I denne filen ligger det tilpasset kode som er funnet på linkene oppsummert under.				 			 *	
 * Dette er også dokumentert under kildebruk i rapporten og markert i selve koden. 							 	 *
 * Grunnen til dette er basert på “best practice”  måter å programmere på.  										 *
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 										 *
 * Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer. 	 *
 * Etter dette gjør vi en vurdering om å bruke, tilpasse og implementere eksempelet i vår kode eller ikke. 		 *
 *																												 *
-* Kilder: 																										 *
-*	http://www.openjs.com/ajax/tutorial/ajax.php																 *
-*	http://www.openjs.com/ajax/tutorial/ajax.php 												  				 *
-*	https://developer.mozilla.org/en-US/docs/Web/API/FormData/append							   				 *
-*	https://www.w3schools.com/js/js_ajax_http.asp												  				 *
-*	https://www.w3schools.com/js/js_ajax_http_send.asp											  				 *	
-*	https://www.w3schools.com/js/js_ajax_http_response.asp										  				 *
-*	https://www.w3schools.com/js/js_ajax_xmlfile.asp											  				 *
-*	https://www.w3schools.com/js/js_ajax_php.asp												  				 *
-*	https://www.w3schools.com/js/js_ajax_asp.asp												  				 *
-*	https://www.w3schools.com/js/js_ajax_database.asp											 				 *
-*	https://www.w3schools.com/js/js_ajax_applications.asp								          				 *
-*	https://www.w3schools.com/js/js_ajax_examples.asp    														 *
+* Kilde: http://www.openjs.com/ajax/tutorial/ajax.php															 *
 *																												 *
 * Medlemmer som har bidratt Henrik Solnør Johansen, Vigleik Espeland Stakseng, Anders Koo og Andreas Knutsen -	 *
 *																												 *
@@ -180,7 +168,7 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			//append er en metode som henter verdier fra de id'en subjekt i skjema _funksjon
 			formdata.append( "subject", _("subject").value ); 
 			// ------------------------------------------------------------------------------------------------------------ //
-			// STOPP																										//
+			// STOP 																										//
 			// ------------------------------------------------------------------------------------------------------------ //
 
 
@@ -214,8 +202,13 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			ajax.send( formdata ); 
 		}
 			// ------------------------------------------------------------------------------------------------------------ //
-			// STOPP 																										//
+			// STOP 																										//
 			// ------------------------------------------------------------------------------------------------------------ //
 
 
 </script>
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- STOPP 																								  -->
+<!-- For å sette opp AJAX teknologi med feedback skjema har vi brukt denne guiden. 						  -->
+<!-- Kilde: http://www.openjs.com/ajax/tutorial/ajax.php 												  -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
