@@ -106,7 +106,7 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			<!-- ---------------------------------------------------------------------------------------------------- -->
 			<!-- START 																								  -->
 			<!-- For å sette opp AJAX med feedback skjema har vi funnet på navnet på funksjonene _() 			      -->
-			<!-- og submitForm() selv, men selve innholdet i dem er hentet og tilpasset av disse kildene:			  -->
+			<!-- og submitForm(), men koden på innsiden er laget basert på disse kildene:			  	  	  		  -->
 			<!--												  													  --> 
 			<!-- Kilde: http://www.openjs.com/ajax/tutorial/ajax.php 												  -->
 			<!-- kilde: https://developer.mozilla.org/en-US/docs/Web/API/FormData/append							  -->
