@@ -139,9 +139,7 @@ ob_start(); // Skrur på output buffering
             }if(!preg_match($regex,$password)){
                     $_SESSION['status'] = "Passordet skal være minst 8 tegn og skal inneholde minst en stor bokstav, ett tall og ett spesialtegn.";
                     header('Location: signup.php');
-                } 
-            
-            else {
+            } else {
                 
                 // Variabel som bruker password_hash funksjon sammen med PASSWORD_BCRYPT algoritme for å hashe passord
                 $hashedpass = password_hash($password, PASSWORD_BCRYPT); 
