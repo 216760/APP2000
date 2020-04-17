@@ -1,4 +1,4 @@
-<script type="text/javascript" src="password_validation.js"></script>
+
 <?php
 
 /**************************************************************************************************************************************
@@ -31,7 +31,7 @@ ob_start(); // Skrur på output buffering
     <body>
 
              
-        <form id="myForm" class="form-signin" form action="signup.php" method="post" name="form1" onsubmit="/*return validation();*/">
+        <form id="myForm" class="form-signin" form action="signup.php" method="post" name="form1">
         <h1 class="logo_title">re:sub</h1>
         <img class="image_signup" src="img/logoSmall.png" alt="">
                                             <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
@@ -40,7 +40,7 @@ ob_start(); // Skrur på output buffering
             <input type="text" placeholder="<?php echo $lang_input['input-email']; ?>" class="" name="email">
                                                 <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
             <input type="password" placeholder="<?php echo $lang_input['input-password']; ?>" class="" name="password"> 
-            <div class="col" id="error_message" style="color:red"></div>
+            <div id="error_message"></div>
 
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
@@ -105,8 +105,11 @@ ob_start(); // Skrur på output buffering
         $name     = mysqli_real_escape_string($mysqli, $_POST['name']);
         $email    = mysqli_real_escape_string($mysqli, $_POST['email']);
         $password = mysqli_real_escape_string($mysqli, $_POST['password']);
+        // Dette regex uttrykket er hentet fra https://www.imtiazepu.com/password-validation/
+        $regex =  "#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$#";
 
-        // $password= password_hash($_POST["password"],PASSWORD_DEFAULT);
+
+        
         $empty = FALSE;
         $emailErr = "";
         
@@ -122,15 +125,28 @@ ob_start(); // Skrur på output buffering
             // Bruker filter_var som er en metode som tar inn en variabel og et filter FILTER_SANITIZE_EMAIL
             $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 
+
             // Om emailen ikke er i riktig regex format blir den ikke sanitert
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $_SESSION['status'] = "$email is not a valid email address!";
                 header('Location: signup.php');
 
-            } else {
+               
+            //-----------------------------------------------------------------------------------------------
+            // Denne koden er hentet og tilpasset egen løsning fra 
+            // Kilde: https://www.imtiazepu.com/password-validation/
+            //-----------------------------------------------------------------------------------------------
+            }if(!preg_match($regex,$password)){
+                    $_SESSION['status'] = "Passordet skal være minst 8 tegn og skal inneholde minst en stor bokstav, ett tall og ett spesialtegn.";
+                    header('Location: signup.php');
+                } 
+            
+            else {
                 
                 // Variabel som bruker password_hash funksjon sammen med PASSWORD_BCRYPT algoritme for å hashe passord
                 $hashedpass = password_hash($password, PASSWORD_BCRYPT); 
+
+
                 
                 // Setter brukerdata inn i databasen ved funksjon mysqli_query
                 $result = mysqli_query($mysqli, "INSERT INTO register(username,email,password) VALUES('$name','$email','$hashedpass')");
@@ -144,6 +160,7 @@ ob_start(); // Skrur på output buffering
 
                     }
             }
+
 
         } else {
 
