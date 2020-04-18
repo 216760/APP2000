@@ -1,6 +1,8 @@
 <!--  Kodet tilpasset av Andreas Kntusen start -->
 <?php
+	// Hvis $_SESSION['id'] IKKE er tom (bruker er logget inn) og $_SESSION['lang'] har verdien 'en' (brukere velger språk i footeren)
 	if (!empty($_SESSION['id']) && ($_SESSION['lang'] == "en")) {
+			// Vis footer tilpasset for innloggede brukere med engelsk tekst
 			echo '<div class="container">
 					<nav class="navbar navbar-expand-md fixed-top">
 						<a class="navbar-brand" href="index.php">RE:SUB</a>
@@ -28,7 +30,9 @@
 						</div>
 					</nav>
 				</div>';
+	// Hvis $_SESSION['id'] ER tom (bruker er ikke logget inn) og $_SESSION['lang'] har verdien 'en' (brukere velger språk i footeren)
 	} elseif (empty($_SESSION['id']) && $_SESSION['lang'] == "en") {
+		// Vis footer tilpasset for besøkende som ikke er logget inn med engelsk tekst
 		echo '<div class="container">
 				<nav class="navbar navbar-expand-md fixed-top">
 					<a class="navbar-brand" href="index.php">RE:SUB</a>
@@ -50,7 +54,9 @@
 					</div>
 				</nav>
 			</div>';
+	// Hvis $_SESSION['id'] IKKE er tom (bruker er logget inn) og $_SESSION['lang'] har verdien 'no' (brukere velger språk i footeren)
 	} elseif (!empty($_SESSION['id']) && $_SESSION['lang'] == "no") {
+		// Vis footer tilpasset for innloggede brukere med norsk tekst
 		echo '<div class="container">
 				<nav class="navbar navbar-expand-md fixed-top">
 					<a class="navbar-brand" href="index.php">RE:SUB</a>
@@ -78,7 +84,9 @@
 					</div>
 				</nav>
 			</div>';
+	// Hvis $_SESSION['id'] ER tom (bruker er ikke logget inn) og $_SESSION['lang'] har verdien 'no' (brukere velger språk i footeren)
 	} else {
+		// Vis footer tilpasset for besøkende som ikke er logget inn med norsk tekst
 		echo '<div class="container">
 				<nav class="navbar navbar-expand-md fixed-top">
 					<a class="navbar-brand" href="index.php">RE:SUB</a>
