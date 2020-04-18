@@ -14,7 +14,8 @@
 *                                                                                                             * 
 *  https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                         *
 *  https://gitlab.com/tutorialsclass/php-simple-login-registration-script                                     * 
-*  https://getbootstrap.com/docs/4.0/components/buttons/#button-tags                                          * 
+*  https://getbootstrap.com/docs/4.0/components/buttons/#button-tags                                          *
+*  https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php           * 
 *                                                                                                             *
 *                                                                                                             *
 * Medlemmer som har bidratt:  Henrik Solnør Johansen, Andreas Knutsen og Anders Koo                           *
@@ -81,6 +82,7 @@ include_once('db-config.php'); // Inkluderer bare 'db-config.php' en gang, og sc
 // Dette for å sjekke at riktig bruker med riktig password ble logget inn                                           //
 //                                                                                                                  //
 // Kilde: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                        //
+// Kilde: https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php          //
 //------------------------------------------------------------------------------------------------------------------//
 
 //Kodet og tilpasset av: Anders Koo og Andeas Knutsen START 
@@ -122,6 +124,7 @@ include_once('db-config.php'); // Inkluderer bare 'db-config.php' en gang, og sc
 // Sentrale metoder: passowrd_verify()                                                                              //
 //                                                                                                                  //
 // Kilde: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                        //
+// Kilde: https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php          //
 //------------------------------------------------------------------------------------------------------------------//
 
 ?>
