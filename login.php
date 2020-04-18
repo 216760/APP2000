@@ -14,7 +14,8 @@
 *                                                                                                             * 
 *  https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                         *
 *  https://gitlab.com/tutorialsclass/php-simple-login-registration-script                                     * 
-*  https://getbootstrap.com/docs/4.0/components/buttons/#button-tags                                          * 
+*  https://getbootstrap.com/docs/4.0/components/buttons/#button-tags                                          *
+*  https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php           * 
 *                                                                                                             *
 *                                                                                                             *
 * Medlemmer som har bidratt:  Henrik Solnør Johansen, Andreas Knutsen og Anders Koo                           *
@@ -81,6 +82,7 @@ include_once('db-config.php'); // Inkluderer bare 'db-config.php' en gang, og sc
 // Dette for å sjekke at riktig bruker med riktig password ble logget inn                                           //
 //                                                                                                                  //
 // Kilde: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                        //
+// Kilde: https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php          //
 //------------------------------------------------------------------------------------------------------------------//
 
 //Kodet og tilpasset av: Anders Koo og Andeas Knutsen START 
@@ -91,8 +93,8 @@ include_once('db-config.php'); // Inkluderer bare 'db-config.php' en gang, og sc
 
         if ($user_matced > 0) { // Hvis user_matced returerner en verdi større en 0 fortsetter koden.
             $data = mysqli_fetch_array($sql); // Legger SELECT spørringen i tabell ved hjelp av funksjonen mysqli_fetch_array. Deretter legges denne spørringen i en variabel
-            $id = $data['id'];  // Henter ut bruker id fra databasen og legger den i en variabel
-            $_SESSION['id'] = $id;  // Legger id variabelen inn i en session variabel. Dette for å identifisere bruker
+            $id = $data['id'];  // Henter ut bruker-id fra databasen og legger den i en variabel
+            $_SESSION['id'] = $id;  // Legger id-variabelen inn i en session variabel. Dette for å identifisere bruker
         
             //password_verify er en funksjon som sammenligner input password med hashet passord i databasen fra $data variabel
             if(password_verify($password, $data['password'])) { 
@@ -122,6 +124,7 @@ include_once('db-config.php'); // Inkluderer bare 'db-config.php' en gang, og sc
 // Sentrale metoder: passowrd_verify()                                                                              //
 //                                                                                                                  //
 // Kilde: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                        //
+// Kilde: https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php          //
 //------------------------------------------------------------------------------------------------------------------//
 
 ?>

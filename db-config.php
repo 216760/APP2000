@@ -26,7 +26,7 @@
 $databaseHost     = 'itfag.usn.no';
 $databaseName     = 'v20app2000db2';
 $databaseUsername = 'v20app2000u2';
-$databasePassword = 'pw2';
+$databasePassword = '8TW6qOzYkosGDhmu';
 // ----------------------------------------------------------------------------------------------------
 // Kobler til database
 // ----------------------------------------------------------------------------------------------------
