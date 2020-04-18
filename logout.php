@@ -8,8 +8,10 @@
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer.                                  *
 * Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer. * 
 * Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke.    * 
+*                                                                                                           * 
 * Kilde:                                                                                                    * 
-* https://gitlab.com/tutorialsclass/php-simple-login-registration-script                                    *
+* https://gitlab.com/tutorialsclass/php-simple-login-registration-script                                    * 
+* https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                        *
 ************************************************************************************************************/
 
 

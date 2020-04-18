@@ -5,7 +5,6 @@
 // ----------------------------------------------------------------------------- //
 
 include('config.php');
-//session_start(); // Gjenopptar session
 ?>
 
 
@@ -20,10 +19,10 @@ include('config.php');
 
 		<?php include('includes/navbar.php');?> <!-- Inkluderer navbar.php -->
 
-		
-
 		<div class="content-main">
+
 			<?php include('includes/main.php');?> <!-- Inkluderer main.php -->
+			
 		</div>
 
 		<!-- Visning av landdingsiden  -->
@@ -31,7 +30,9 @@ include('config.php');
 
 		<!-- Visning av footer -->
 		<footer>
+
 			<?php include('includes/footer.php');?> <!-- Inkluderer footer.php -->
+			
 		</footer>
 		<!--  Visning av footer -->
 
