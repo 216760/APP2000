@@ -39,9 +39,8 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 // Setter opp database forbindelse med spørrring
 // ----------------------------------------------------------------------------------------------------
 
-// $connection = mysqli_connect("itfag.usn.no", "v20app2000u2", "pw2", "v20app2000db2");
 $query = "SELECT * FROM cards WHERE user_id=$id"; // Henter data fra cards tabellen hvor user_id er identisk med id til bruker i register tabellen
-$query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å utføre forbindelse med database og spørring
+$query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å utføre forbindelse med database og spørring. $mysqli hentes fra config.php
 
 ?>
 
