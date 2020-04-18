@@ -28,6 +28,7 @@ include('config.php'); // Inkluderer config.php
 <!DOCTYPE html>
 <html lang="en">
 
+        <!-- Inkluderer header_login.php -->
     <?php include('includes/header_login.php');?>
  
     <body>
