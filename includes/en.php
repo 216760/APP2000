@@ -1,3 +1,24 @@
+<!-- ---------------------------------------------------------------------------------------------------------- -->
+<!-- START 																								        -->
+<!-- I denne filen ligger det kode som er hentet og tilpasset egen løsning fra kildene nedenfor.		        -->
+<!-- Dette er også dokumentert under kildebruk i rapporten og markert i selve koden. 					        -->
+<!-- Grunnen til dette er basert på “best practice”  måter å programmere på.  							        -->
+<!-- Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 							        -->
+<!-- Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer.  -->
+<!-- Etter dette gjør vi en vurdering om å bruke, tilpasse og implementere eksempelet i vår kode eller ikke.    -->
+<!--                                                                                                            -->
+<!-- Kilde: https://www.youtube.com/watch?v=cgvDMUrQ3vA                                                         -->                                          -->
+<!--  											                                                                -->
+<!-- ---------------------------------------------------------------------------------------------------------- -->
+
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+<!-- START 																								  				  -->
+<!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset fra Youtube kanalen	  -->
+<!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA													  -->
+<!-- -------------------------------------------------------------------------------------------------------------------- -->	
+
+
+
 <?php
     $lang_button = array(
         "editbtn"    => "Edit",
@@ -30,4 +51,10 @@
         "card-end-date" => "End date",
         "feedback-title" => "Send a message"
     );
+    
 ?>
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+<!-- STOPP 																								  				  -->
+<!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset fra Youtube kanalen	  -->
+<!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA													  -->
+<!-- -------------------------------------------------------------------------------------------------------------------- -->	

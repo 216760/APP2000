@@ -156,7 +156,7 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 								</div>
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
-<!-- Stopp 																								  				  -->
+<!-- STOPP 																								  				  -->
 <!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset fra Youtube kanalen	  -->
 <!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA													  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->	
