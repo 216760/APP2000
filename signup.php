@@ -42,8 +42,6 @@ ob_start(); // Skrur på output buffering
             <input type="text" placeholder="<?php echo $lang_input['input-email']; ?>" class="" name="email">
                                                 <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
             <input type="password" placeholder="<?php echo $lang_input['input-password']; ?>" class="" name="password"> 
-            <div id="error_message"></div>
-
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 <!-- START 																								  				  -->
@@ -60,6 +58,11 @@ ob_start(); // Skrur på output buffering
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 
 
+
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+<!-- START 																								  				  -->
+<!-- Setter opp tilbakemelding til bruker basert på session status												  		  -->
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
             <?php
 
                 if(isset($_SESSION['status']) && $_SESSION['status'] !='') {
@@ -71,6 +74,11 @@ ob_start(); // Skrur på output buffering
                 }
 
             ?>
+
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+<!-- STOPP 																								  				  -->
+<!-- Setter opp tilbakemelding til bruker basert på session status												  		  -->
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
 
         </form>
 

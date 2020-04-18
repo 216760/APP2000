@@ -125,7 +125,7 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			<!-- ---------------------------------------------------------------------------------------------------- -->
 <script>
 
-		function _(id){ return document.getElementById(id); }// funksjon som returnerer alle id'ene i skjema
+		function _(id){ return document.getElementById(id); } // funksjon som returnerer alle id'ene i skjema
 		// Dette er en funksjon som samler inn data fra feedback skjema ovenfor
 		function submitForm(){
 			// Kaller på _funksjon, deretter blir disabled funksjonen kalt på som gjør at brukeren ikke kan sende data flere ganger
@@ -160,7 +160,7 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			// START                                                                                                        //
 			// Denne delen er hentet fra og tilpasset til egen løsning  													//
 			//																												//
-			// kilde: https://developer.mozilla.org/en-US/docs/Web/API/FormData/append                                	    //
+			// kilde: https://developer.mozilla.org/en-US/docs/Web/API/FormData/append                                	    //	
 			//                                                                                                              //					
 			// ------------------------------------------------------------------------------------------------------------ //
 			
