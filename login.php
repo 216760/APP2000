@@ -22,15 +22,15 @@
 *                                                                                                             *
 **************************************************************************************************************/
 
-include('config.php'); // Inkluderer config.php
-?>
+include('config.php'); // Inkluderer config.php 
+ob_start(); // Skrur på output buffering (forhindrer header warning)
+?>  
 
 <!DOCTYPE html>
 <html lang="en">
 
         <!-- Inkluderer header_login.php -->
-    <?php include('includes/header_login.php');?>
- 
+    <?php include('includes/header_login.php');?> 
     <body>
         <form class="form-signin text-center" id="my_form" action="login.php" method="POST" name="form1">
             <h1 class="logo_title">re:sub</h1>
@@ -63,7 +63,7 @@ include('config.php'); // Inkluderer config.php
 
     </body>
 
-    <?php include('includes/scripts.php');?> <!-- Inkluderer scripts.php -->
+<?php include('includes/scripts.php');?><!-- Inkluderer scripts.php -->
 
 </html>
 
@@ -127,5 +127,5 @@ include_once('db-config.php'); // Inkluderer bare 'db-config.php' en gang, og sc
 // Kilde: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                        //
 // Kilde: https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php          //
 //------------------------------------------------------------------------------------------------------------------//
-
+ob_end_flush(); // // Skrur av output buffering (forhindrer header warning)
 ?>
