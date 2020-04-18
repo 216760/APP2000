@@ -1,7 +1,9 @@
 <!--  Kodet tilpasset av Andreas Kntusen start -->
 <!--  Kilde: https://mdbootstrap.com/docs/jquery/navigation/footer/ -->
 <?php
+	// Hvis $_SESSION['id'] IKKE er tom (bruker er logget inn) og $_SESSION['lang'] har verdien 'en' (brukere velger språk i footeren)
 	if (!empty($_SESSION['id']) && ($_SESSION['lang'] == "en")) {
+		// Vis footer tilpasset for innloggede brukere med engelsk tekst
 		echo '<!-- Footer -->
 				<footer class="page-footer font-small unique-color-dark pt-4">
 					<!-- Footer Elements -->
@@ -23,7 +25,9 @@
 					<!-- Footer Elements -->
 				</footer>
 				<!-- Footer -->';
+	// Hvis $_SESSION['id'] ER tom (bruker er ikke logget inn) og $_SESSION['lang'] har verdien 'en' (brukere velger språk i footeren)
 	} elseif (empty($_SESSION['id']) && ($_SESSION['lang'] == "en")) {
+		// Vis footer tilpasset for besøkende som ikke er logget inn med engelsk tekst
 		echo '<footer class="page-footer font-small unique-color-dark pt-4">
 				<!-- Footer Elements -->
 				<div class="container text-center">
@@ -55,7 +59,9 @@
 				<!-- Footer Elements -->
 			</footer>
 			<!-- Footer -->';
+	// Hvis $_SESSION['id'] IKKE er tom (bruker er logget inn) og $_SESSION['lang'] har verdien 'no' (brukere velger språk i footeren)
 	} elseif (!empty($_SESSION['id']) && ($_SESSION['lang'] == "no")) {
+		// Vis footer tilpasset for innloggede brukere med norsk tekst
 		echo '<!-- Footer -->
 				<footer class="page-footer font-small unique-color-dark pt-4">
 					<!-- Footer Elements -->
@@ -77,7 +83,9 @@
 					<!-- Footer Elements -->
 				</footer>
 				<!-- Footer -->';
+	// Hvis $_SESSION['id'] ER tom (bruker er ikke logget inn) og $_SESSION['lang'] har verdien 'no' (brukere velger språk i footeren)
 	} else {
+		// Vis footer tilpasset for besøkende som ikke er logget inn med norsk tekst
 		echo '<footer class="page-footer font-small unique-color-dark pt-4">
 				<!-- Footer Elements -->
 				<div class="container text-center">
