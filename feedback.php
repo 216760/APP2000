@@ -122,6 +122,10 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			<!-- kilde: https://www.w3schools.com/jsref/prop_html_innerhtml.asp								  		  -->		  
 			<!-- ---------------------------------------------------------------------------------------------------- -->
 <script>
+			// -------------------------------------------------------- //
+			// kode til passet og basert på kilder angitt over og under // 
+			// Medlemmer som har bidratt Henrik Solnør Johansen			//
+			// -------------------------------------------------------- //
 
 		function _(id){ return document.getElementById(id); } // funksjon som returnerer alle id'ene i skjema
 		// Dette er en funksjon som samler inn data fra feedback skjema ovenfor
