@@ -14,6 +14,13 @@
 
 <!--  Kodet tilpasset av Andreas Kntusen start -->
 
+
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+<!-- START 																								  				  -->
+<!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset fra Youtube kanalen	  -->
+<!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA													  -->
+<!-- -------------------------------------------------------------------------------------------------------------------- -->	
+
 <?php
 	// Hvis $_SESSION['id'] IKKE er tom (bruker er logget inn) og $_SESSION['lang'] har verdien 'en' (brukere velger språk i footeren)
 	if (!empty($_SESSION['id']) && ($_SESSION['lang'] == "en")) {
@@ -132,5 +139,13 @@
 			</footer>
 			<!-- Footer -->';
 	} 
-?>		
+?>	
+
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+<!-- STOPP 																								  				  -->
+<!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset fra Youtube kanalen	  -->
+<!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA													  -->
+<!-- -------------------------------------------------------------------------------------------------------------------- -->	
+
+
 <!--  Kodet tilpasset av Andreas Kntusen topp -->
