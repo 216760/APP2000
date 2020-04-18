@@ -14,6 +14,7 @@
 *                                                                                                             * 
 *  https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                         *
 *  https://gitlab.com/tutorialsclass/php-simple-login-registration-script                                     * 
+*  https://getbootstrap.com/docs/4.0/components/buttons/#button-tags                                          * 
 *                                                                                                             *
 *                                                                                                             *
 * Medlemmer som har bidratt:  Henrik Solnør Johansen, Andreas Knutsen og Anders Koo                           *

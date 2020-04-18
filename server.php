@@ -11,11 +11,10 @@
 *                                                                                                           *
 * Kilde:                                                                                                    * 
 * https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                                  *
-*                                                                                                           *
+*                                                                                                           * 
+* Medlemmer som har bidratt: Anders Koo                                                                     *
 ************************************************************************************************************/ 
-
-// Medlemmer som har bidratt: Anders Koo
-
+ 
 // --------------------------------------------------------------------------------------------------//
 // START                                                                                             //
 // Alle CRUD operasjonene har vi lært oss via eksempler fra Youtube kanalen Funda Of Web IT.         //
