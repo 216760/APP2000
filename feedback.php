@@ -123,7 +123,9 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			<!-- ---------------------------------------------------------------------------------------------------- -->
 <script>
 			// -------------------------------------------------------- //
-			// kode tilpasset og basert på kilder angitt over og under // 
+			// START 													//
+			// Kode tilpasset og basert på kilder angitt over og under 	// 
+			//															//
 			// Medlemmer som har bidratt Henrik Solnør Johansen			//
 			// -------------------------------------------------------- //
 
@@ -211,6 +213,15 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			// Sender request til database
 			ajax.send( formdata ); 
 		}
+			// -------------------------------------------------------- //
+			// STOPP 													//
+			// Kode tilpasset og basert på kilder angitt over        	// 
+			//															//
+			// Medlemmer som har bidratt Henrik Solnør Johansen			//
+			// -------------------------------------------------------- //
+
+
+
 			// ------------------------------------------------------------------------------------------------------------ //
 			// STOPP 																										//
 			// ------------------------------------------------------------------------------------------------------------ //
