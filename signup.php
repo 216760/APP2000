@@ -143,7 +143,7 @@ ob_start(); // Skrur på output buffering
 
                
             //-----------------------------------------------------------------------------------------------
-            // Start
+            // START
             // Denne koden er hentet og tilpasset egen løsning fra 
             // Kilde: https://www.imtiazepu.com/password-validation/
             //-----------------------------------------------------------------------------------------------
@@ -152,7 +152,7 @@ ob_start(); // Skrur på output buffering
                     header('Location: signup.php');
 
             //-----------------------------------------------------------------------------------------------
-            // Stopp
+            // STOPP
             // Denne koden er hentet og tilpasset egen løsning fra 
             // Kilde: https://www.imtiazepu.com/password-validation/
             //-----------------------------------------------------------------------------------------------
