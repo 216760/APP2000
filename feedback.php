@@ -123,7 +123,7 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			<!-- ---------------------------------------------------------------------------------------------------- -->
 <script>
 			// -------------------------------------------------------- //
-			// kode til passet og basert på kilder angitt over og under // 
+			// kode tilpasset og basert på kilder angitt over og under // 
 			// Medlemmer som har bidratt Henrik Solnør Johansen			//
 			// -------------------------------------------------------- //
 
