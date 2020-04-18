@@ -8,7 +8,7 @@
 <!-- Etter dette gjør vi en vurdering om å bruke, tilpasse og implementere eksempelet i vår kode eller ikke.    -->
 <!--                                                                                                            -->
 <!--  Kilde: https://mdbootstrap.com/docs/jquery/navigation/footer/ 											-->                                        
-<!--  											                                                                -->
+<!--  Kilde: https://www.youtube.com/watch?v=cgvDMUrQ3vA                                                        -->
 <!-- ---------------------------------------------------------------------------------------------------------- -->
 
 
