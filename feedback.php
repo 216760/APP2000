@@ -122,6 +122,12 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			<!-- kilde: https://www.w3schools.com/jsref/prop_html_innerhtml.asp								  		  -->		  
 			<!-- ---------------------------------------------------------------------------------------------------- -->
 <script>
+			// -------------------------------------------------------- //
+			// START 													//
+			// Kode tilpasset og basert på kilder angitt over og under 	// 
+			//															//
+			// Medlemmer som har bidratt Henrik Solnør Johansen			//
+			// -------------------------------------------------------- //
 
 		function _(id){ return document.getElementById(id); } // funksjon som returnerer alle id'ene i skjema
 		// Dette er en funksjon som samler inn data fra feedback skjema ovenfor
@@ -207,6 +213,15 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			// Sender request til database
 			ajax.send( formdata ); 
 		}
+			// -------------------------------------------------------- //
+			// STOPP 													//
+			// Kode tilpasset og basert på kilder angitt over        	// 
+			//															//
+			// Medlemmer som har bidratt Henrik Solnør Johansen			//
+			// -------------------------------------------------------- //
+
+
+
 			// ------------------------------------------------------------------------------------------------------------ //
 			// STOPP 																										//
 			// ------------------------------------------------------------------------------------------------------------ //

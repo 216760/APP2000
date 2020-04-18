@@ -7,7 +7,7 @@
 <!-- Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer.  -->
 <!-- Etter dette gjør vi en vurdering om å bruke, tilpasse og implementere eksempelet i vår kode eller ikke.    -->
 <!--                                                                                                            -->
-<!-- Kilde: https://getbootstrap.com/docs/4.1/components/navbar/                                     			-->                                         
+<!-- Kilde: https://getbootstrap.com/docs/4.1/components/navbar/	                                  		    -->                                         
 <!--  											                                                                -->
 <!---------------------------------------------------------------------------------------------------------------->
 

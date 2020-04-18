@@ -83,10 +83,9 @@ ob_start(); // Skrur på output buffering
         </form>
 
     </body>
-
-    <?php
-    include('includes/scripts.php');
-    ?>
+    
+    <!-- Inkluderer script.php -->
+    <?php include('includes/scripts.php');?>
 
 </html>
 

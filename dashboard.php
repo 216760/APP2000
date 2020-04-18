@@ -25,7 +25,7 @@
 // ----------------------------------------------------------------------------------------------------
 // Setter opp session og includes
 // ----------------------------------------------------------------------------------------------------
-include_once('db-config.php'); 	// Inkluderer db-oppsett
+include_once('db-config.php'); 	// Inkluderer bare 'db-config.php' en gang, og scriptet vil avbrytes dersom include_once-funksjonen ikke finner filen.
 include('config.php');			// Inkluderer oppsett for flere språk
 //session_start(); 				// Gjenopptar session
 
