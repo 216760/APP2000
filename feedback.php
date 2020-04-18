@@ -15,7 +15,7 @@
 *																												 *
 ******************************************************************************************************************/
 
-include('config.php'); // Inkluderer config.php
+include('config.php');
 session_start();
 
 $id = $_SESSION["id"]; 
@@ -29,8 +29,9 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 <!DOCTYPE html>
 <html>
 
-	<!-- Inkluderer header.php -->
-	<?php include('includes/header.php');?> 
+	<?php
+	include('includes/header.php');
+	?>
 
 	<body>
 
@@ -86,8 +87,7 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 		Footer START
 		----------------------------------------------------------------------------------------------------- -->
 
-		<!-- Inkluderer footer.php -->
-		<?php include('includes/footer.php');?> 
+		<?php include('includes/footer.php');?>
 
 		<!-- ---------------------------------------------------------------------------------------------------- 
 		Footer STOPP
@@ -96,8 +96,10 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 	</body>
 
 
-	<!-- Inkluderer scripts.php -->
-	<?php include('includes/scripts.php');?>
+
+	<?php
+	include('includes/scripts.php');
+	?>
 
 
 </html>
