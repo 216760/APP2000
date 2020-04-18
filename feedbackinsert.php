@@ -51,6 +51,7 @@ $user_id = $_SESSION['id'];
 // ----------------------------------------------------------------------------------------------------
 // Forbereder insert spørring mot databasen med prepare
 // ----------------------------------------------------------------------------------------------------
+
 // mysqli_prepare er en funksjon som bruker til å sikre mot SQL injection
 $stmt = mysqli_prepare($mysqli,"INSERT INTO feedback(name, email, message, subject, user_id) VALUES(?,?,?,?,?)");
 

@@ -19,7 +19,7 @@
 *                                                                                                                                     *
 **************************************************************************************************************************************/
 
-include('config.php');
+include('config.php'); // Inkluderer config.php
 ob_start(); // Skrur på output buffering
 ?>
 
