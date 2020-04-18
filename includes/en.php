@@ -17,8 +17,10 @@
 <!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA													  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->	
 
-
-
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-- Oppretter arrays for de forskjellige elementene som trenger å bli oversatt mellom norsk/engelsk                      -->
+<!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA                                                   -->
+<!-------------------------------------------------------------------------------------------------------------------------->
 <?php
     $lang_button = array(
         "editbtn"    => "Edit",
