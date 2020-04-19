@@ -122,7 +122,7 @@ include_once('db-config.php'); // Inkluderer bare 'db-config.php' en gang, og sc
 // Vi brukte denne for å forstå hvordan vi registrerte hashet passord fra bruker i registreringsskjema.             //
 // Så lærte vi hvordan man kan sammenligne input password fra login skjema til å matche hashet passord i databasen. //
 // Dette for å sjekke at riktig bruker med riktig password ble logget inn                                           //
-// Sentrale metoder: passowrd_verify()                                                                              //
+// Sentrale metoder: password_verify()                                                                              //
 //                                                                                                                  //
 // Kilde: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                        //
 // Kilde: https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php          //
