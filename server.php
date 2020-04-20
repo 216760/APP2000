@@ -40,14 +40,14 @@ if(isset($_POST['registerbtn'])) { // Sjekker at variabel er deklarert og at reg
     $start_date = mysqli_real_escape_string($mysqli, $_POST['start_date']);     // Sjekker at variabel er deklarert og sikrer mot SQL injection
     $end_date =  mysqli_real_escape_string($mysqli, $_POST['end_date']);        // Sjekker at variabel er deklarert og sikrer mot SQL injection
     
-    // user id i cards blir automatisk opprettet når registrert bruker lager et abonnement
+    // user_id i cards blir automatisk opprettet når registrert bruker lager et abonnement
     $user_id = $_SESSION['id']; // Oppretter user_id variabel for cards tabellen som en egenskap session 
 
     // ----------------------------------------------------------------------------------------------------
     // Setter opp spørrevariabel for registrering av abonnement
     // ----------------------------------------------------------------------------------------------------
 
-    // Spørring som setter inn nytt abonnement i databasen
+    // Spørring som setter inn nytt abonnement i databasen basert på user_id (spesifikk bruker)
     $queryReg = "INSERT INTO cards (description, start_date, end_date, user_id) VALUES ('$description', '$start_date','$end_date', '$user_id')"; //  Spørring som setter inn data i databasen
     $queryDB = mysqli_query($mysqli, $queryReg); // mysqli_query er en funksjon som utfører spørring mot databasen
 
@@ -76,7 +76,7 @@ if(isset($_POST['updatebtn'])) {    // Sjekker at variabel er deklarert og at up
     $start_date = mysqli_real_escape_string($mysqli , $_POST['edit_date_from']);      // Sjekker at variabel er deklarert og sikrer mot SQL injection
     $end_date = mysqli_real_escape_string($mysqli , $_POST['edit_date_to']);          // Sjekker at variabel er deklarert og sikrer mot SQL injection
 
-    // Spørring som oppdaterer spesifikt abonnement i databasen
+    // Spørring som oppdaterer spesifikt abonnement i databasen basert på id i cards tabell
     $queryEdit = "UPDATE cards SET description='$description', start_date='$start_date', end_date='$end_date' WHERE id='$id' ";
     $queryDB = mysqli_query($mysqli , $queryEdit); // mysqli_query er en funksjon som utfører spørring mot databasen
 
@@ -100,7 +100,7 @@ if(isset($_POST['updatebtn'])) {    // Sjekker at variabel er deklarert og at up
 if(isset($_POST['delete_btn'])) { // Sjekker at variabel er deklarert og at updatebtn knappen er klikket på 
     $id = $_POST['delete_id'];  // // Sjekker at variabel er deklarert slik at vi vet hvilket abonnement vi skal slette i databasen
 
-    $queryDelete = "DELETE FROM cards WHERE id='$id'";  // Spørring som sletter spesifikt abonnement fra databasen
+    $queryDelete = "DELETE FROM cards WHERE id='$id'";  // Spørring som sletter spesifikt abonnement fra databasen basert på id
     $queryDB = mysqli_query($mysqli , $queryDelete); // mysqli_query er en funksjon som utfører spørring mot databasen
 
     // Om spørringen er vellyket blir bruker videresendt tilbake til dashbord
