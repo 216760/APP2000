@@ -33,6 +33,11 @@ session_start();// Det er bare brukere med tildelt sessions id fra session_start
 // ----------------------------------------------------------------------------------------------------
 
 include('db-config.php'); // Inkluderer db-config.php
+
+// ----------------------------------------------------------------------------------------------------
+// Registreringsknapp
+// ----------------------------------------------------------------------------------------------------
+
 if(isset($_POST['registerbtn'])) { // Sjekker at variabel er deklarert og at registerbtn knappen er klikket på 
     // Informasjon om abonnement
 
