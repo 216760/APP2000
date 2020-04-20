@@ -52,6 +52,11 @@ include('includes/header.php'); // Inkluderer header.php
 
                     <?php
 
+                    // ----------------------------------------------------------------------------------------------------
+                    // Redigeringsknapp START
+                    // ----------------------------------------------------------------------------------------------------
+                    // Medlemmer som har bidratt: Anders Koo                                                                        
+
                     if(isset($_POST['edit_btn'])) { // Sjekker om edit_btn er deklarert og knapp har blitt aktivert
                         $id = $_POST['edit_id'];  // Legger id på abonnementet inn i en variabel
                         $query = "SELECT * FROM cards WHERE id='$id' "; // Setter opp en spørrevariabel som henter abonnement som samsvarer med id' til det abonnement du har klikket på
@@ -59,6 +64,11 @@ include('includes/header.php'); // Inkluderer header.php
                         $query_run = mysqli_query($mysqli, $query); 
 
                         foreach($query_run as $row) { // foreach er en funksjon som teller opp antall rader i abonnement tabellen
+                        
+                    // ----------------------------------------------------------------------------------------------------
+                    // Redigeringsknapp STOPP
+                    // ----------------------------------------------------------------------------------------------------
+
                         ?>
 
                         <form action="server.php" id="my_form" method="POST">

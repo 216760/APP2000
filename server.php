@@ -40,10 +40,8 @@ if(isset($_POST['registerbtn'])) { // Sjekker at variabel er deklarert og at reg
     $start_date = mysqli_real_escape_string($mysqli, $_POST['start_date']);     // Sjekker at variabel er deklarert og sikrer mot SQL injection
     $end_date =  mysqli_real_escape_string($mysqli, $_POST['end_date']);        // Sjekker at variabel er deklarert og sikrer mot SQL injection
     
-    
     // user id i cards blir automatisk opprettet når registrert bruker lager et abonnement
     $user_id = $_SESSION['id']; // Oppretter user_id variabel for cards tabellen som en egenskap session 
-
 
     // ----------------------------------------------------------------------------------------------------
     // Setter opp spørrevariabel for registrering av abonnement
@@ -52,7 +50,6 @@ if(isset($_POST['registerbtn'])) { // Sjekker at variabel er deklarert og at reg
     // Spørring som setter inn nytt abonnement i databasen
     $queryReg = "INSERT INTO cards (description, start_date, end_date, user_id) VALUES ('$description', '$start_date','$end_date', '$user_id')"; //  Spørring som setter inn data i databasen
     $queryDB = mysqli_query($mysqli, $queryReg); // mysqli_query er en funksjon som utfører spørring mot databasen
-
 
     // Om spørringen er vellyket blir bruker videresendt tilbake til dashbord
     if($queryDB) {   
@@ -66,17 +63,6 @@ if(isset($_POST['registerbtn'])) { // Sjekker at variabel er deklarert og at reg
 
 } 
 
-
-
-// ----------------------------------------------------------------------------------------------------
-// Redigeringsknapp
-// ----------------------------------------------------------------------------------------------------
-
-if(isset($_POST['edit_btn'])) { // Sjekker at variabel er deklarert og at edit_btn knappen er klikket på 
-    $id = $_POST['edit_id'];    // Sjekker at variabel er deklarert slik at vi vet hvilket abonnement vi skal endre i databasen
-    $queryReg = "SELECT * FROM cards WHERE id='$id' ";  // Spørring som henter spesifikk abonnement fra databasen
-    $queryDB = mysqli_query($mysqli , $query);       // Utfører spørring mot databasen
-}
 
 // ----------------------------------------------------------------------------------------------------
 // Oppdateringsknapp
@@ -104,7 +90,6 @@ if(isset($_POST['updatebtn'])) {    // Sjekker at variabel er deklarert og at up
         echo "Something went wrong/Noe gikk galt";
     }
     
-
 }
 
 
