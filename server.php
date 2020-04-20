@@ -82,8 +82,8 @@ if(isset($_POST['updatebtn'])) {    // Sjekker at variabel er deklarert og at up
     $end_date = mysqli_real_escape_string($mysqli , $_POST['edit_date_to']);          // Sjekker at variabel er deklarert og sikrer mot SQL injection
 
     // Spørring som oppdaterer spesifikt abonnement i databasen basert på id i cards tabell
-    $queryEdit = "UPDATE cards SET description='$description', start_date='$start_date', end_date='$end_date' WHERE id='$id' ";
-    $queryDB = mysqli_query($mysqli , $queryEdit); // mysqli_query er en funksjon som utfører spørring mot databasen
+    $queryUpdate = "UPDATE cards SET description='$description', start_date='$start_date', end_date='$end_date' WHERE id='$id' ";
+    $queryDB = mysqli_query($mysqli , $queryUpdate); // mysqli_query er en funksjon som utfører spørring mot databasen
 
     // Om spørringen er vellyket blir bruker videresendt tilbake til dashbord
     if($queryDB) {
