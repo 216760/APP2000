@@ -46,8 +46,13 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 
 <!-- ---------------------------------------------------------------------------------------------------- -->
 <!-- START 																								  -->
-<!-- For å sette opp modal med kalender funksjon har vi brukt Youtube kanalen Funda of Web IT,  		  -->																	 
-<!-- Kilde: https://www.youtube.com/watch?v=OePNkDd3Yb8 												  -->
+<!-- For å sette opp modal med kalender funksjon har vi hentet og tilpasset kode Youtube kanalen 		  -->
+<!-- Funda of Web IT.  		  																			  -->																	 
+<!-- Kilde: 																							  -->
+<!--	 https://www.youtube.com/watch?v=OePNkDd3Yb8													  -->
+<!--												  													  -->
+<!-- Kildekode for Admin Panel PHP: 													  			      -->
+<!--     https://drive.google.com/file/d/1Xz-ei5uWr-ZgBzBdHBUt0-0R3z3WsOW0/view							  -->
 <!-- ---------------------------------------------------------------------------------------------------- -->
 
 <!DOCTYPE html>
@@ -167,11 +172,16 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 		</div>
 	</div>               
 
-<!-- -------------------------------------------------------------------------------------------------- -->
-<!-- STOPP 																								-->
-<!-- For å sette opp modal med kalender funksjon har vi brukt Youtube kanalen Funda of Web IT, 			-->		
-<!-- Kilde: https://www.youtube.com/watch?v=OePNkDd3Yb8 												-->							
-<!-- -------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- STOPP 																								  -->
+<!-- For å sette opp modal med kalender funksjon har vi hentet og tilpasset kode Youtube kanalen 		  -->
+<!-- Funda of Web IT.  		  																			  -->																	 
+<!-- Kilde: 																							  -->
+<!--	 https://www.youtube.com/watch?v=OePNkDd3Yb8													  -->
+<!--												  													  -->
+<!-- Kildekode for Admin Panel PHP: 													  			      -->
+<!--     https://drive.google.com/file/d/1Xz-ei5uWr-ZgBzBdHBUt0-0R3z3WsOW0/view							  -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
 
 
 <!-- ---------------------------------------------------------------------------------------------------- 

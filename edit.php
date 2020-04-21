@@ -31,6 +31,9 @@ include('includes/header.php'); // Inkluderer header.php
 <!-- START                                                                                                                       -->
 <!-- For å redigere allerede opprettet abonnement har vi hentet å tilpasset kode fra Youtube kanalen Funda Of Web IT, part 1-6   -->
 <!-- Kilde: https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                                             -->
+<!--                                                                                                                             -->
+<!-- Kildekode for Admin Panel PHP:                                                                                              -->
+<!-- https://drive.google.com/file/d/1Xz-ei5uWr-ZgBzBdHBUt0-0R3z3WsOW0/view	                                                     -->
 <!-- --------------------------------------------------------------------------------------------------------------------------- -->
 
 <!DOCTYPE html>
@@ -107,11 +110,14 @@ include('includes/header.php'); // Inkluderer header.php
             </div>
         </div>
 
-<!-- ----------------------------------------------------------------------------------------------------------- -->
-<!-- STOPP                                                                                                       -->
-<!-- For å redigere allerede opprettet abonnement har vi hentet å tilpasset kode fra Youtube kanalen, part 1-6  -->
-<!-- Kilde: https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                             -->
-<!-- ----------------------------------------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------------------------------------------------------- -->
+<!-- STOPP                                                                                                                       -->
+<!-- For å redigere allerede opprettet abonnement har vi hentet å tilpasset kode fra Youtube kanalen Funda Of Web IT, part 1-6   -->
+<!-- Kilde: https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                                             -->
+<!--                                                                                                                             -->
+<!-- Kildekode for Admin Panel PHP:                                                                                              -->
+<!-- https://drive.google.com/file/d/1Xz-ei5uWr-ZgBzBdHBUt0-0R3z3WsOW0/view	                                                     -->
+<!-- --------------------------------------------------------------------------------------------------------------------------- -->
 
 <!-- --------------------------------------------------------------------------------------------------
 Footer START
