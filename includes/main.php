@@ -2,7 +2,7 @@
 Medlemmer som har bidratt: Henrik Solnør Johansen Andreas Knutsen og Anders Koo
 -------------------------------------------------------------------------------------------------------------------->
 <?php
-include('config.php'); // Inkluderer oppsett for flere språk
+include('lang-config.php'); // Inkluderer oppsett for flere språk
 ?>
 <html>
 <section class="bg-main">
