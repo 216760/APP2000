@@ -22,8 +22,8 @@
 *                                                                                                             *
 **************************************************************************************************************/
 
-include('config.php'); // Inkluderer config.php 
-ob_start(); // Skrur på output buffering (forhindrer header warning)
+include('lang-config.php'); // Inkluderer oppsett for flere språk 
+ob_start();                 // Skrur på output buffering (forhindrer header warning)
 ?>  
 
 <!DOCTYPE html>

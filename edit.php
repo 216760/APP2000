@@ -21,9 +21,9 @@
 // Setter opp session og includes
 //-----------------------------------------------------------------------------------------------------------------
 
-session_start(); // Gjenopptar session
-include('db-config.php'); // Inkluderer database tilkobling
-include('config.php'); // Inkluderer database tilkobling
+session_start();                // Gjenopptar session
+include('db-config.php');       // Inkluderer database tilkobling
+include('lang-config.php');     // Inkluderer oppsett for flere språk
 include('includes/header.php'); // Inkluderer header.php
 ?>
 

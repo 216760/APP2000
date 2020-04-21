@@ -15,7 +15,7 @@
 *																												 *
 ******************************************************************************************************************/
 
-include('config.php');
+include('lang-config.php'); // Inkluderer oppsett for flere språk
 session_start();
 
 $id = $_SESSION["id"]; 
