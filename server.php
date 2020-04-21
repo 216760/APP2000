@@ -103,7 +103,7 @@ if(isset($_POST['updatebtn'])) {    // Sjekker at variabel er deklarert og at up
 // ----------------------------------------------------------------------------------------------------
 
 if(isset($_POST['delete_btn'])) { // Sjekker at variabel er deklarert og at updatebtn knappen er klikket på 
-    $id = $_POST['delete_id'];  // // Sjekker at variabel er deklarert slik at vi vet hvilket abonnement vi skal slette i databasen
+    $id = $_POST['delete_id'];  // Henter ut id med $_POST slik at vi vet hvilket abonnement vi skal slette i databasen
 
     $queryDelete = "DELETE FROM cards WHERE id='$id'";  // Spørring som sletter spesifikt abonnement fra databasen basert på id
     $queryDB = mysqli_query($mysqli , $queryDelete); // mysqli_query er en funksjon som utfører spørring mot databasen

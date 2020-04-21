@@ -45,8 +45,7 @@ include('includes/header.php'); // Inkluderer header.php
                 <div class="card shadow mb-4 mx-auto" style="width: 30rem;">
                     <div class="card-header py-3">
                                             <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
-                    <h6 class="modal-title"><?php echo $lang_text['edit-subscription']; ?></h6>
-                    <!-- <h6 class="m-0 font-weight-bold text-primary"> EDIT Subscription </h6> -->
+                        <h6 class="modal-title"><?php echo $lang_text['edit-subscription']; ?></h6>
                     </div>
                     <div class="card-body">
 
@@ -88,7 +87,8 @@ include('includes/header.php'); // Inkluderer header.php
                             <div class="form-group">
                                        <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
                                 <label><?php echo $lang_text['card-end-date']; ?></label>
-                                                                              <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->                         <!-- Henter slutt dato fra DB -->
+                                                                    <!-- Henter slutt dato fra DB -->
+                                                                              <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->                     
                                 <input type="date" name="edit_date_to" value="<?php echo $row['end_date'] ?>" class="form-control" placeholder="End date">
                             </div>
                                                                             <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] --> 
