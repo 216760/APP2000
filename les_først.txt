@@ -8,10 +8,10 @@ annet	                // Her ligger alle diagrammene vi har i dokumentasjonen
 bootstrap-4.1.3-dist	
 css	                    // Styling av applikasjonen vår
 img	                    // Her ligger logo og bilder fra brukergrensesnitt
-includes                // Her ligger main, footer og header filene	
+includes                // Her ligger main, footer, header, navbar og språk filene	
 js                      // Her ligger darkmode skript, og bootstrap kode
 .DS_Store	
-LEST FØRST!.txt	
+les_først.txt	
 README.md	
 config.php
 dashboard.php	
