@@ -37,14 +37,15 @@ $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING); // Sjekker om variab
 $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
 $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
 $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
-$user_id = $_SESSION['id'];
+$user_id = $_SESSION['id']; // Oppretter en $user_id som er session basert
 
 
 
 // ----------------------------------------------------------------------------------------------------
 // START 
 // Koden under er var i utgangspunktet OOP basert. Vi har gjort den om til procedural. Grunnen til at vi har 
-// brukt procedural er mer eller mindre fordi dette er det mest effektive steg for steg metoden å gå frem på. 
+// brukt procedural er mer eller mindre fordi dette er det mest effektive steg for steg metoden å gå frem på 
+// for å lære seg grunnleggende php. 
 // Link: https://www.youtube.com/playlist?list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV
 // ----------------------------------------------------------------------------------------------------
 
