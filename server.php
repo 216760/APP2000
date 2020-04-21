@@ -41,9 +41,9 @@ include('db-config.php'); // Inkluderer db-config.php
 if(isset($_POST['registerbtn'])) { // Sjekker at variabel er deklarert og at registerbtn knappen er klikket på 
     // Informasjon om abonnement
 
-    $description = mysqli_real_escape_string($mysqli, $_POST['description']);   // Sjekker at variabel er deklarert og sikrer mot SQL injection
-    $start_date = mysqli_real_escape_string($mysqli, $_POST['start_date']);     // Sjekker at variabel er deklarert og sikrer mot SQL injection
-    $end_date =  mysqli_real_escape_string($mysqli, $_POST['end_date']);        // Sjekker at variabel er deklarert og sikrer mot SQL injection
+    $description = mysqli_real_escape_string($mysqli, $_POST['description']);   // Henter ut data med $_POST og sikrer mot SQL injection
+    $start_date = mysqli_real_escape_string($mysqli, $_POST['start_date']);     // Henter ut data med $_POST og sikrer mot SQL injection
+    $end_date =  mysqli_real_escape_string($mysqli, $_POST['end_date']);        // Henter ut data med $_POST og sikrer mot SQL injection
     
     // user_id i cards blir automatisk opprettet når registrert bruker lager et abonnement
     $user_id = $_SESSION['id']; // Oppretter user_id variabel for cards tabellen som en sessions variabel 
@@ -74,12 +74,12 @@ if(isset($_POST['registerbtn'])) { // Sjekker at variabel er deklarert og at reg
 // ----------------------------------------------------------------------------------------------------
 
 if(isset($_POST['updatebtn'])) {    // Sjekker at variabel er deklarert og at updatebtn knappen er klikket på 
-    $id = $_POST['edit_id'];        // Sjekker at variabel er deklarert slik at vi vet hvilket abonnement vi skal oppdatere
+    $id = $_POST['edit_id'];        // Henter riktig id med $_POST, slik at vi vet hvilket abonnement vi skal oppdatere
    
    // Informasjon om abonnement
-    $description = mysqli_real_escape_string($mysqli , $_POST['edit_description']);   // Sjekker at variabel er deklarert og sikrer mot SQL injection
-    $start_date = mysqli_real_escape_string($mysqli , $_POST['edit_date_from']);      // Sjekker at variabel er deklarert og sikrer mot SQL injection
-    $end_date = mysqli_real_escape_string($mysqli , $_POST['edit_date_to']);          // Sjekker at variabel er deklarert og sikrer mot SQL injection
+    $description = mysqli_real_escape_string($mysqli , $_POST['edit_description']);   // Henter ut data med $_POST og sikrer mot SQL injection
+    $start_date = mysqli_real_escape_string($mysqli , $_POST['edit_date_from']);      // Henter ut data med $_POST og sikrer mot SQL injection
+    $end_date = mysqli_real_escape_string($mysqli , $_POST['edit_date_to']);          // Henter ut data med $_POST og sikrer mot SQL injection
 
     // Spørring som oppdaterer spesifikt abonnement i databasen basert på id i cards tabell
     $queryUpdate = "UPDATE cards SET description='$description', start_date='$start_date', end_date='$end_date' WHERE id='$id' ";

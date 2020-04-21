@@ -58,7 +58,7 @@ include('includes/header.php'); // Inkluderer header.php
                     // Medlemmer som har bidratt: Anders Koo                                                                        
 
                     if(isset($_POST['edit_btn'])) { // Sjekker om edit_btn er deklarert og knapp har blitt aktivert
-                        $id = $_POST['edit_id'];  // Legger id på abonnementet inn i en variabel
+                        $id = $_POST['edit_id'];  // Henter ut id med $_POST
                         $queryEdit = "SELECT * FROM cards WHERE id='$id' "; // Setter opp en spørrevariabel som henter abonnement som samsvarer med id' til det abonnement du har klikket på
                         // Setter opp en variabel med en mysqli_query funksjon som gjennomfører oppretting av forbindelse og SQL-spørringen 
                         $queryDB = mysqli_query($mysqli, $queryEdit); 
