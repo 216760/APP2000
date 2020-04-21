@@ -1,0 +1,38 @@
+1. Unzip mappe 
+2. Legg mappestruktur inn i htdocs i xampp
+
+Slik ser strukturen ut: 
+
+__MACOSX
+annet	                // Her ligger alle diagrammene vi har i dokumentasjonen
+bootstrap-4.1.3-dist	
+css	                    // Styling av applikasjonen vår
+img	                    // Her ligger logo og bilder fra brukergrensesnitt
+includes                // Her ligger main, footer og header filene	
+js                      // Her ligger darkmode skript, og bootstrap kode
+.DS_Store	
+LEST FØRST!.txt	
+README.md	
+config.php
+dashboard.php	
+db-config.php	
+edit.php	
+feedback.php	
+feedbackinsert.php	
+index.php	
+login.php	
+logout.php	
+server.php	
+signup.php
+
+3. Importer databasefilene register, cards og feedback i myphpadmin
+4. Logg inn med 
+
+Testbruker
+
+bruker: user@user.com
+passord: :lhqrSn%!)W7G;W
+
+
+
+

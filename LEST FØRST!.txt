@@ -1,7 +1,0 @@
-1. Unzip mappe 
-2. Legg mappe struktur inn i htdocs i xampp
-3. Importer databasefilene register, cards og feedback i myphpadmin
-4. Logg inn med 
-
-bruker: test
-passord: test
