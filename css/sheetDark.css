@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,300');
 
+/* Kodet av Vigleik Espeland Stakseng START */
 
 body {
   overflow-x: hidden;
@@ -10,6 +11,8 @@ body {
   background-color: grey !important;
   padding-bottom: 130px;
 }
+
+/* Kodet av Vigleik Espeland Stakseng STOPP */
 
 /* Denne offset:before er basert på noe av html, css og Bootstrap kode som har brukt tidligere i gruppeeksamen PRO1000 Prak.prosj.arb av student 225256 vår 19 */
 
@@ -268,6 +271,8 @@ input, textarea {
   width: 100%;
 }
 
+/* Kodet av: Henrik Solnør Johansen STOPP */
+
 /* Kodet av Vigleik Espeland Stakseng START  */
 
 #my_form input:focus{
@@ -286,4 +291,4 @@ input, textarea {
 
 /*--- Feedback form --- STOPP */
 
-/* Kodet av: Henrik Solnør Johansen STOPP */
+
