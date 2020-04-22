@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,300);
 
-/* Kodet av Henrik Solnør Johansen start */
+/* Kodet av Henrik Solnør Johansen START */
 
 body {
   overflow-x: hidden;
@@ -20,11 +20,11 @@ body {
   margin-top: -4rem;
 }
 
-/* Kodet av Henrik Solnør Johansen stopp */
+/* Kodet av Henrik Solnør Johansen STOPP */
 
 
 
-/* Kodet av Anders Koo start */
+/* Kodet av Anders Koo START */
 
 /* Research rundt input focus */
 /* https://www.w3schools.com/cssref/sel_focus.asp */
@@ -115,7 +115,7 @@ form-control:input{
 }
 
 
-/* Kodet av Anders Koo stopp */
+/* Kodet av Anders Koo STOPP */
 
 
 
@@ -130,8 +130,7 @@ margin-right: 0px!important;
   padding: 1rem;
 }
 
-
-/* KODET AV: Andreas Knutsen --START-- */
+/* Kodet av Andreas Knutsen Start */
 
 .card-group {
   background-color: #FFFFFF;
@@ -270,10 +269,9 @@ footer.page-footer ul {
   margin-left: 0.5rem;
 }
 
-/* KODET AV: Andreas Knutsen --STOPP-- */
+/* Kodet av Andreas Knutsen STOPP */
 
-
-/* KODET AV: Henrik Solnør Johansen start*/
+/* Kodet av: Henrik Solnør Johansen START*/
 
 /*---- Login and Signup Section ---*/
 
@@ -338,5 +336,5 @@ input, textarea {
 
 /*--- Feedback form --*/
 
-/* KODET AV: Henrik Solnør Johansen stopp*/
+/* Kodet av : Henrik Solnør Johansen STOPP */
 

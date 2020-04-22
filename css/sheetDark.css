@@ -19,9 +19,10 @@ body {
   height: 4rem;
   margin-top: -4rem;
 }
-/*--- Kodet av Henrik Solnør Johansen STOPP ---*/
 
-/*--- Kodet av Vigleik Espeland Stakseng START ---*/
+
+
+/* Kodet av Vigleik Espeland Stakseng START */
 
 /* https://www.w3schools.com/cssref/sel_focus.asp */
 /* https://stackoverflow.com/questions/3397113/how-to-remove-focus-border-outline-around-text-input-boxes-chrome */
@@ -49,7 +50,7 @@ color:white;
   color: white;
 }
 
-/*--- Kodet av Vigleik Espeland Stakseng START ---*/
+/* Kodet av Vigleik Espeland Stakseng START */
 
 /*--- Bootstrap Mobile Gutter Fix ---*/
 
@@ -65,7 +66,7 @@ margin-right: 0px!important;
 }
 
 
-/*--- Kodet av: Andreas Knutsen START ---*/
+/* Kodet av: Andreas Knutsen START */
 
 .card-group {
   background-color: #FFFFFF;
@@ -217,9 +218,9 @@ footer.page-footer ul {
   margin: 0 auto;
 }
 
-/* --- Kodet av: Andreas Knutsen STOPP --- */
-  
-/* --- Kodet av: Henrik Solnør Johansen START ---*/
+/* Kodet av: Andreas Knutsen STOPP */
+
+/* Kodet av: Henrik Solnør Johansen START */
 
 /* --- Login and Signup Section ---*/
 
@@ -267,7 +268,7 @@ input, textarea {
   width: 100%;
 }
 
-/*--- Kodet av Vigleik Espeland Stakseng START ---*/
+/* Kodet av Vigleik Espeland Stakseng START  */
 
 #my_form input:focus{
   display: block;
@@ -281,8 +282,8 @@ input, textarea {
   box-shadow: 0 0 8px 0 black; 
 }
 
-/*--- Kodet av Vigleik Espeland Stakseng STOPP ---*/
+/* Kodet av Vigleik Espeland Stakseng STOPP */
 
 /*--- Feedback form --- STOPP */
 
-/*--- Kodet av: Henrik Solnør Johansen STOPP ---*/
+/* Kodet av: Henrik Solnør Johansen STOPP */
