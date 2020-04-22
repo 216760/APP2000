@@ -33,8 +33,11 @@ Testbruker
 bruker: user@user.com
 passord: :lhqrSn%!)W7G;W
 
-Brukerkonto InfinityFree
+
+BRUKERKONTO PÅ WEB HOSTING-TJENESTEN (infinityfree.net)
+-------------------------------------------------------
 brukernavn: project.resub@gmail.com
 passord: y)}H`uj8DaXV*[=3
+
 
 
