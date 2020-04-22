@@ -28,9 +28,14 @@ signup.php
 3. Importer databasefilene register, cards og feedback i myphpadmin
 4. Logg inn med 
 
-Testbruker
+Testbruker 1
 
-bruker: user@user.com
+brukernavn: bob@mail.com
+passord: C}DK0(`_-(K0?"j
+
+Testbruker 2
+
+brukernavn: user@user.com
 passord: :lhqrSn%!)W7G;W
 
 
