@@ -107,6 +107,7 @@ form-control:input{
 
 
 /* Styling av registreringsskjema */
+
 #myForm input:focus{
   display: block;
   box-shadow: 0 0 8px 0 #4A148C; 

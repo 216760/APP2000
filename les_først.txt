@@ -33,6 +33,8 @@ Testbruker
 bruker: user@user.com
 passord: :lhqrSn%!)W7G;W
 
-
+Brukerkonto InfinityFree
+brukernavn: project.resub@gmail.com
+passord: y)}H`uj8DaXV*[=3
 
 

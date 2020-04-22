@@ -15,22 +15,22 @@ body {
   padding-bottom: 130px;
 }
 
+/* Denne offset:before er basert på noe av html, css og Bootstrap kode som har brukt tidligere i gruppeeksamen PRO1000 Prak.prosj.arb av student 225256 vår 19 */
+
 .offset:before {
   display: block;
   content: "";
   height: 4rem;
   margin-top: -4rem;
 }
+/* Kodet av Henrik Solnør Johansen stopp */
 
-/* ------------------------------------------- */
-/* CUSTOM STYLING END */
-/*
-/* ------------------------------------------- */
-
+/*--- Kodet av Vigleik Espeland Stakseng START ---*/
 
 /* https://www.w3schools.com/cssref/sel_focus.asp */
 /* https://stackoverflow.com/questions/3397113/how-to-remove-focus-border-outline-around-text-input-boxes-chrome */
 
+/* Styling av input fokus felter */
 
 input:focus {
   outline: none;
@@ -53,27 +53,20 @@ color:white;
   color: white;
 }
 
-/* ------------------------------------------- */
-/* CUSTOM STYLING END */
-/* ------------------------------------------- */
+/*--- Kodet av Vigleik Espeland Stakseng START ---*/
 
 /*--- Bootstrap Mobile Gutter Fix --*/
+
 .row, .container-fluid {
 margin-left: 0px!important;
 margin-right: 0px!important;
 }
 
 /*--- Extra Bootstrap Column Padding --*/
+
 [class*="col-"] {
   padding: 1rem;
 }
-
-
-
-
-/* ------------------------------------------- */
-/* CUSTOM STYLING END */
-/* ------------------------------------------- */
 
 
 /* KODET AV: Andreas Knutsen */
@@ -234,9 +227,7 @@ footer.page-footer ul {
 /* KODET AV: Henrik Solnør Johansen*/
 
 /*---- Login and Signup Section ---*/
-/* ------------------------------------------- */
-/* CUSTOM STYLING START */
-/* ------------------------------------------- */
+
 .inner {
   display: table-cell;
   vertical-align: middle;
@@ -277,29 +268,6 @@ input, textarea {
   resize: none;
 }
 
-/*.fdsendBtn {
-  border: 0;
-  background: black;
-  color: white;
-  margin: 1rem 0;
-  width: auto;
-  text-transform: uppercase;
-  cursor: pointer;
-  float: left;
-  margin-right: 5px;
-}
-
-.fdbackBtn {
-  border: 0;
-  background: black;
-  color: white;
-  margin: 1rem 0;
-  width: auto;
-  text-transform: uppercase;
-  cursor: pointer;
-  float: left;
-}*/
-
 .form-control {
   width: 100%;
 }
@@ -322,6 +290,3 @@ input, textarea {
 /*--- Feedback form --*/
 
 /* KODET AV: Henrik Solnør Johansen*/
-/* ------------------------------------------- */
-/* CUSTOM STYLING END */
-/* ------------------------------------------- */
