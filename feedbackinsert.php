@@ -35,10 +35,11 @@ include_once("db-config.php"); // Inkluderer db-config.php
 // ----------------------------------------------------------------------------------------------------
 
 //Kodet og tilpasset av: Anders Koo og Henrik Solnør Johansen START
-$name = filter_var($_POST['name'], FILTER_SANITIZE_STRING); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
-$email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
-$message = filter_var($_POST['message'], FILTER_SANITIZE_STRING); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
-$subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING); // Sjekker om variaber er deklarert og fjerner whitespace på start og slutt
+
+$name = filter_var($_POST['name'], FILTER_SANITIZE_STRING); // Henter ut data med $_POST og fjerner whitespace på start og slutt
+$email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL); // Henter ut data med $_POST og fjerner whitespace på start og slutt
+$message = filter_var($_POST['message'], FILTER_SANITIZE_STRING); // Henter ut data med $_POST og fjerner whitespace på start og slutt
+$subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING); // Henter ut data med $_POST og fjerner whitespace på start og slutt
 $user_id = $_SESSION['id']; // Oppretter en $user_id som er session basert
 
 
