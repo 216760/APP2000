@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,300');
 
-/* ------------------------------------------- */
-/* CUSTOM STYLING START */
-/*
-/* ------------------------------------------- */
 
 body {
   overflow-x: hidden;
@@ -23,7 +19,7 @@ body {
   height: 4rem;
   margin-top: -4rem;
 }
-/* Kodet av Henrik Solnør Johansen stopp */
+/*--- Kodet av Henrik Solnør Johansen STOPP ---*/
 
 /*--- Kodet av Vigleik Espeland Stakseng START ---*/
 
@@ -55,7 +51,7 @@ color:white;
 
 /*--- Kodet av Vigleik Espeland Stakseng START ---*/
 
-/*--- Bootstrap Mobile Gutter Fix --*/
+/*--- Bootstrap Mobile Gutter Fix ---*/
 
 .row, .container-fluid {
 margin-left: 0px!important;
@@ -69,7 +65,7 @@ margin-right: 0px!important;
 }
 
 
-/* KODET AV: Andreas Knutsen */
+/*--- Kodet av: Andreas Knutsen START ---*/
 
 .card-group {
   background-color: #FFFFFF;
@@ -221,12 +217,12 @@ footer.page-footer ul {
   margin: 0 auto;
 }
 
-/* KODET AV: Andreas Knutsen */
+/* --- Kodet av: Andreas Knutsen ---*/
 
 
-/* KODET AV: Henrik Solnør Johansen*/
+/* --- Kodet av: Henrik Solnør Johansen START ---*/
 
-/*---- Login and Signup Section ---*/
+/* --- Login and Signup Section ---*/
 
 .inner {
   display: table-cell;
@@ -243,7 +239,7 @@ footer.page-footer ul {
   display: table;
 }
 
-/*---- Login and Signup Section ---*/
+/*--- Login and Signup Section --- */
 
 form {
   text-align: center;
@@ -254,7 +250,7 @@ form {
   margin: 2px;
 }
 
-/*--- Feedback form --*/
+/*--- Feedback form START --- */
 
 input, textarea {
   display:block;
@@ -273,6 +269,7 @@ input, textarea {
 }
 
 /*--- Kodet av Vigleik Espeland Stakseng START ---*/
+
 #my_form input:focus{
   display: block;
   border: 2px solid black;
@@ -284,9 +281,9 @@ input, textarea {
   border: 2px solid black;
   box-shadow: 0 0 8px 0 black; 
 }
-/*--- Kodet av Vigleik Espeland Stakseng STOP ---*/
 
+/*--- Kodet av Vigleik Espeland Stakseng STOPP ---*/
 
-/*--- Feedback form --*/
+/*--- Feedback form --- STOPP */
 
-/* KODET AV: Henrik Solnør Johansen*/
+/*--- Kodet av: Henrik Solnør Johansen STOPP ---*/
