@@ -103,9 +103,9 @@ include_once('db-config.php'); // Inkluderer bare 'db-config.php' en gang, og sc
                 exit(0); // exit er en funksjon som terminerer operasjonen 
 
             } else 
-            header('Location:login.php');  // Header er en funksjon som viderefører brukeren til login
-            $_SESSION['status'] = "Email or password is incorrect"; //Feilmelding til bruker
-            exit(0); // exit er en funksjon som terminerer operasjonen
+                header('Location:login.php');  // Header er en funksjon som viderefører brukeren til login
+                $_SESSION['status'] = "Email or password is incorrect"; //Feilmelding til bruker
+                exit(0); // exit er en funksjon som terminerer operasjonen
 
         } else {
             header('Location:login.php'); // Header er en funksjon som viderefører brukeren til login
