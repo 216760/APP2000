@@ -127,5 +127,5 @@ include_once('db-config.php'); // Inkluderer bare 'db-config.php' en gang, og sc
 // Kilde: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                        //
 // Kilde: https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php          //
 //------------------------------------------------------------------------------------------------------------------//
-ob_end_flush(); // // Skrur av output buffering (forhindrer header warning)
+ob_end_flush(); // Skrur av output buffering (forhindrer header warning)
 ?>

@@ -11,7 +11,8 @@
 * Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke.      *
 *                                                                                                             * 
 * Kilder:                                                                                                     * 
-* https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                                    *     
+* https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                                    * 
+* https://drive.google.com/file/d/1Xz-ei5uWr-ZgBzBdHBUt0-0R3z3WsOW0/view	                                  *     
 *                                                                                                             *
 * Medlemmer som har bidratt:  Andreas Knutsen og Anders Koo                                                   *
 *                                                                                                             *

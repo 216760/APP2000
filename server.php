@@ -124,6 +124,7 @@ if(isset($_POST['delete_btn'])) { // Sjekker at variabel er deklarert og at upda
 // STOPP                                                                                             //
 // Alle CRUD operasjonene har vi lært oss via eksempler fra Youtube kanalen Funda Of Web IT.         //
 // Denne koden er hentet fra og tilpasset egen løsning fra denne Youtube kanalen, part 1-6           //
+// Kilde: https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                   //
 // --------------------------------------------------------------------------------------------------//
 
 ?>

@@ -12,7 +12,7 @@
 *                                                                                                                *
 * Kilde:                                                                                                         *
 *   https://www.youtube.com/playlist?list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV                                     *
-*    https://websitebeaver.com/prepared-statements-in-php-mysqli-to-prevent-sql-injection                        *
+*   https://websitebeaver.com/prepared-statements-in-php-mysqli-to-prevent-sql-injection                         *
 *                                                                                                                *
 *                                                                                                                *                                                                                       
 *                                                                                                                *

@@ -9,7 +9,20 @@
 * Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer. 	 *
 * Etter dette gjør vi en vurdering om å bruke, tilpasse og implementere eksempelet i vår kode eller ikke. 		 *
 *																												 *
-* Kilde: http://www.openjs.com/ajax/tutorial/ajax.php															 *
+* Kilde: 																									     *
+* http://www.openjs.com/ajax/tutorial/ajax.php 																	 *
+* https://developer.mozilla.org/en-US/docs/Web/API/FormData/append							  					 * 
+* https://www.w3schools.com/js/js_ajax_http.asp																	 *
+* https://www.w3schools.com/js/js_ajax_http_send.asp											  				 * 
+* https://www.w3schools.com/js/js_ajax_http_response.asp										  				 * 
+* https://www.w3schools.com/js/js_ajax_xmlfile.asp											 					 *
+* https://www.w3schools.com/js/js_ajax_php.asp																	 *
+* https://www.w3schools.com/js/js_ajax_asp.asp												  					 *
+* https://www.w3schools.com/js/js_ajax_database.asp											  					 *
+* https://www.w3schools.com/js/js_ajax_applications.asp								          					 *
+* https://www.w3schools.com/js/js_ajax_examples.asp    									  						 *
+* https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp								  					 *
+* https://www.w3schools.com/jsref/prop_html_innerhtml.asp													     *				
 *																												 *
 * Medlemmer som har bidratt Henrik Solnør Johansen, Vigleik Espeland Stakseng, Anders Koo og Andreas Knutsen 	 *
 *																												 *
