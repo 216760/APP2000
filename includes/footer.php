@@ -9,7 +9,7 @@
 <!--                                                                                                            -->
 <!--  Kilde: 																									-->
 <!--	https://mdbootstrap.com/docs/jquery/navigation/footer/ 													-->                                        
-<!--  	Kilde: https://www.youtube.com/watch?v=cgvDMUrQ3vA                                                      -->
+<!--  	https://www.youtube.com/watch?v=cgvDMUrQ3vA                                                      		-->
 <!-- ---------------------------------------------------------------------------------------------------------- -->
 
 
