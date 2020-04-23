@@ -1,4 +1,4 @@
-<!----------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------->
 <!-- TIL INFORMASON:																							-->
 <!-- I denne filen ligger det kode som er hentet og tilpasset egen løsning fra kildene nedenfor.		        -->
 <!-- Dette er også dokumentert under kildebruk i rapporten og markert i selve koden. 					        -->
@@ -10,7 +10,7 @@
 <!--  Kilde: 																									-->
 <!-- 	https://getbootstrap.com/docs/4.0/examples/navbar-top-fixed/											-->
 <!--	https://getbootstrap.com/docs/4.0/components/navbar/													-->                                        
-<!--  	Kilde: https://www.youtube.com/watch?v=cgvDMUrQ3vA                                                      -->
+<!--  	https://www.youtube.com/watch?v=cgvDMUrQ3vA                                                      		-->
 <!---------------------------------------------------------------------------------------------------------------->
 
 
