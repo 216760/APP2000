@@ -15,6 +15,14 @@
 
 
 
+<!----------------------------------------------------------------------------------------------------------------->
+<!-- START																										 -->
+<!-- Denne navbaren er basert på noe av html, css og Bootstrap kode som jeg har brukt tidligere i gruppeeksamen  -->
+<!-- PRO1000 Prak.prosj.arb av student 225256 vår 19 															 -->
+<!-- Kodet av: Henrik Solnør Johansen																			 -->
+<!----------------------------------------------------------------------------------------------------------------->
+
+
 <!--  Kodet tilpasset av Andreas Kntusen start -->
 <?php
 	// Hvis $_SESSION['id'] IKKE er tom (bruker er logget inn) og $_SESSION['lang'] har verdien 'en' (brukere velger språk i footeren)
@@ -31,7 +39,6 @@
 						<!-- Lager en checkbox i navbaren som bestemmer om nettsiden skal være i darkmode eller ikke -->
 						<input type="checkbox" data-toggle="toggle" data-on="Dark Mode" data-off="Light Mode" id="toggle1" onchange="toggleDark()" data-size="sm">
 						<!-- Kodet av: Vigleik Espeland Stakseng STOP -->
-
 						<div class="collapse navbar-collapse " id="navbarResponsive">
 							<ul class="navbar-nav ml-auto">
 								<li class="nav-item">
@@ -125,8 +132,17 @@
 					</div>
 				</nav>
 			</div>';
+
 	}
 ?>
+
+<!----------------------------------------------------------------------------------------------------------------->
+<!-- STOPP																										 -->
+<!-- Denne navbaren er basert på noe av html, css og Bootstrap kode som jeg har brukt tidligere i gruppeeksamen  -->
+<!-- PRO1000 Prak.prosj.arb av student 225256 vår 19 															 -->
+<!-- Kodet av: Henrik Solnør Johansen																			 -->
+<!----------------------------------------------------------------------------------------------------------------->
+
 <!--  Kodet tilpasset av Andreas Kntusen stopp -->
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
