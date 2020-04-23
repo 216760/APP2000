@@ -14,7 +14,8 @@
 * Kilder:                                                                                                                             * 
 * https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                                                  * 
 * https://gitlab.com/tutorialsclass/php-simple-login-registration-script                                                              * 
-* https://www.imtiazepu.com/password-validation                                                                                       *
+* https://www.imtiazepu.com/password-validation                                                                                       * 
+* https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view                                                              *
 *                                                                                                                                     *
 * Medlemmer som har bidratt:  Henrik Solnør Johansen, Andreas Knutsen og Anders Koo                                                   *         
 *                                                                                                                                     *

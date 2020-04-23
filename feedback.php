@@ -22,7 +22,8 @@
 * https://www.w3schools.com/js/js_ajax_applications.asp								          					 *
 * https://www.w3schools.com/js/js_ajax_examples.asp    									  						 *
 * https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp								  					 *
-* https://www.w3schools.com/jsref/prop_html_innerhtml.asp													     *				
+* https://www.w3schools.com/jsref/prop_html_innerhtml.asp														 * 
+* https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view		 								 *				
 *																												 *
 * Medlemmer som har bidratt Henrik Solnør Johansen, Vigleik Espeland Stakseng, Anders Koo og Andreas Knutsen 	 *
 *																												 *

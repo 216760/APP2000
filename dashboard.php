@@ -14,7 +14,8 @@
 * https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ									*
 * https://www.youtube.com/watch?v=OePNkDd3Yb8																* 
 * https://www.youtube.com/watch?v=cgvDMUrQ3vA																* 
-* https://drive.google.com/file/d/1Xz-ei5uWr-ZgBzBdHBUt0-0R3z3WsOW0/view		 							*
+* https://drive.google.com/file/d/1Xz-ei5uWr-ZgBzBdHBUt0-0R3z3WsOW0/view									* 
+* https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view		 							*
 *																											*
 *																											*
 *																											*

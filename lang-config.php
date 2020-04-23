@@ -11,7 +11,7 @@
 *                                                                                                           *
 * Linker til gjenbrukt kode:                                                                                *
 *                                                                                                           *
-* https://www.youtube.com/watch?v=cgvDMUrQ3vA                                                               *
+* https://www.youtube.com/watch?v=cgvDMUrQ3vA                                                               * 
 *                                                                                                           *
 *                                                                                                           *
 *Medlemmer som har bidratt: Henrik Solnør Johansen, Andreas Knutsen, Anders Koo og Vigleik Espeland Stakseng*

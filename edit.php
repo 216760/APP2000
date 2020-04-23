@@ -12,7 +12,8 @@
 *                                                                                                             * 
 * Kilder:                                                                                                     * 
 * https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                                    * 
-* https://drive.google.com/file/d/1Xz-ei5uWr-ZgBzBdHBUt0-0R3z3WsOW0/view	                                  *     
+* https://drive.google.com/file/d/1Xz-ei5uWr-ZgBzBdHBUt0-0R3z3WsOW0/view                                      * 
+* https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view	                                  *     
 *                                                                                                             *
 * Medlemmer som har bidratt:  Andreas Knutsen og Anders Koo                                                   *
 *                                                                                                             *
