@@ -41,7 +41,7 @@ include('lang-config.php'); // Inkluderer oppsett for flere språk
 
 	<div class="container-fluid">
 		
-	<h2 style="text-align:left">>
+	<h2 style="text-align:left">
 		<?php echo $lang_text['paragraph-left']; ?> <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
 		
 		</h2>
