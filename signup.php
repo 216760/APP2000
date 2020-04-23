@@ -4,7 +4,8 @@
 /**************************************************************************************************************************************
 * TIL INFORMASJON:                                                                                                                    *
 *                                                                                                                                     *
-* I denne filen ligger det kode som er hentet og tilpasset egen løsning fra kildene nedenfor.	                                      *
+* I denne filen ligger det kode vi har bygget videre på fra Tutorials Class: PHP Simple Login and Registration Script og tilpasset    *
+* egen løsning fra kildene nedenfor.	                                                                                              *
 * Dette er også dokumentert under kildebruk i rapporten.  Grunnen til dette er basert på “best practice”  måter å programmere på.     *  
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer.                                                            *
 * Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer.                           *
@@ -92,7 +93,7 @@ ob_start();                 // Skrur på output buffering
 
 <!-- --------------------------------------------------------------------------------------------------------------- -->
 <!-- START                                                                                                           -->
-<!-- Denne koden under er hentet fra og tilpasset egen løsning fra Youtube kanalen Coding Passive income.            -->
+<!-- Denne koden er hentet fra og tilpasset egen løsning fra Youtube kanalen Coding Passive income.                  -->
 <!-- Vi brukte denne for å forstå hvordan vi registrerte hashet passord fra bruker i registreringsskjema.            -->
 <!-- Så lærte vi hvordan man kan sammenligne input password fra login skjema til å matche hashet passord i databasen.-->
 <!-- Dette for å sjekke at riktig bruker med riktig password ble logget inn.                                         -->
@@ -190,7 +191,7 @@ ob_end_flush(); // // Skrur av output buffering
 ?>
 <!--------------------------------------------------------------------------------------------------------------------->
 <!-- STOPP                                                                                                           -->
-<!-- Denne koden under er hentet fra og tilpasset egen løsning fra Youtube kanalen Coding Passive income.            -->
+<!-- Denne koden er hentet fra og tilpasset egen løsning fra Youtube kanalen Coding Passive income.                  -->
 <!-- Vi brukte denne for å forstå hvordan vi registrerte hashet passord fra bruker i registreringsskjema.            -->
 <!-- Så lærte vi hvordan man kan sammenligne input password fra login skjema til å matche hashet passord i databasen.-->
 <!-- Dette for å sjekke at riktig bruker med riktig password ble logget inn.                                         -->

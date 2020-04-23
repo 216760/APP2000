@@ -3,7 +3,8 @@
 /**************************************************************************************************************
 *  TIL INFORMASJON:                                                                                           *
 *                                                                                                             *
-* I denne filen ligger det kode som er hentet og tilpasset egen løsning fra kildene nedenfor.	              *
+* I denne filen ligger det kode vi har bygget videre på fra Tutorials Class: PHP Simple Login                 * 
+* and Registration Script og tilpasset egen løsning fra kildene nedenfor.                                     * 
 * Dette er også dokumentert under kildebruk i rapporten og markert i selve koden.                             *
 * Grunnen til dette er basert på “best practice”  måter å programmere på.                                     *
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer.                                    *
@@ -77,7 +78,7 @@ include_once('db-config.php'); // Inkluderer bare 'db-config.php' en gang, og sc
 
 //------------------------------------------------------------------------------------------------------------------//
 // START                                                                                                            //
-// Denne koden under er hentet fra og tilpasset egen løsning fra Youtube kanalen Coding Passive income.             //
+// Denne koden er hentet fra og tilpasset egen løsning fra Youtube kanalen Coding Passive income.                   //
 // Vi brukte denne for å forstå hvordan vi registrerte hashet passord fra bruker i registreringsskjema.             //
 // Så lærte vi hvordan man kan sammenligne input password fra login skjema til å matche hashet passord i databasen. //
 // Dette for å sjekke at riktig bruker med riktig password ble logget inn                                           //
@@ -127,5 +128,6 @@ include_once('db-config.php'); // Inkluderer bare 'db-config.php' en gang, og sc
 // Kilde: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                        //
 // Kilde: https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php          //
 //------------------------------------------------------------------------------------------------------------------//
+
 ob_end_flush(); // Skrur av output buffering (forhindrer header warning)
 ?>
