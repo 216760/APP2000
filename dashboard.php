@@ -14,6 +14,8 @@
 * https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ									*
 * https://www.youtube.com/watch?v=OePNkDd3Yb8																* 
 * https://www.youtube.com/watch?v=cgvDMUrQ3vA																* 
+* https://getbootstrap.com/docs/4.3/components/card/														* 
+* https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering									* 
 * https://drive.google.com/file/d/1Xz-ei5uWr-ZgBzBdHBUt0-0R3z3WsOW0/view									* 
 * https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view		 							*
 *																											*
@@ -88,6 +90,13 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 					while($row = mysqli_fetch_assoc($query_run)) { // mysqli_fetch_assoc er en funksjon som returnerer resulterende rad i en tabell og legger den i $row variabelen
 
 					?>
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+<!-- START 																								  				  -->
+<!-- Oppsett av cards er gjort ved hjelp av disse lenkene:																  -->
+<!-- https://getbootstrap.com/docs/4.3/components/card/																	  --> 
+<!-- https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering											  -->
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+
 					<div class="col-sm-4">
 						<div class="card shadow mx-auto" style="width: 18rem;">
 							<div class="card-header"><?php echo $row['description']; ?>
@@ -109,6 +118,13 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 							</div>
 						</div>
 					</div>
+
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+<!-- STOPP 																								  				  -->
+<!-- Oppsett av cards er gjort ved hjelp av disse lenkene:																  -->
+<!-- https://getbootstrap.com/docs/4.3/components/card/																	  --> 
+<!-- https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering											  -->
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
 				<?php } ?>
 				</div>
 			</div>
