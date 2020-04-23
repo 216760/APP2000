@@ -7,7 +7,7 @@
 <!-- Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer.  -->
 <!-- Etter dette gjør vi en vurdering om å bruke, tilpasse og implementere eksempelet i vår kode eller ikke.    -->
 <!--                                                                                                            -->
-<!--  Kilde: https://getbootstrap.com/docs/4.3/components/navbar/												-->                                        
+<!--  Kilde: https://getbootstrap.com/docs/4.0/examples/navbar-top-fixed/												-->                                        
 <!--  Kilde: https://www.youtube.com/watch?v=cgvDMUrQ3vA                                                        -->
 <!---------------------------------------------------------------------------------------------------------------->
 
