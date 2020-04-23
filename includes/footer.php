@@ -7,8 +7,9 @@
 <!-- Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer.  -->
 <!-- Etter dette gjør vi en vurdering om å bruke, tilpasse og implementere eksempelet i vår kode eller ikke.    -->
 <!--                                                                                                            -->
-<!--  Kilde: https://mdbootstrap.com/docs/jquery/navigation/footer/ 											-->                                        
-<!--  Kilde: https://www.youtube.com/watch?v=cgvDMUrQ3vA                                                        -->
+<!--  Kilde: 																									-->
+<!--	https://mdbootstrap.com/docs/jquery/navigation/footer/ 													-->                                        
+<!--  	Kilde: https://www.youtube.com/watch?v=cgvDMUrQ3vA                                                      -->
 <!-- ---------------------------------------------------------------------------------------------------------- -->
 
 
