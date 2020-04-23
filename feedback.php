@@ -24,7 +24,10 @@
 * https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp								  					 *
 * https://www.w3schools.com/jsref/prop_html_innerhtml.asp														 * 
 * https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view										 * 
-* https://www.youtube.com/watch?v=cgvDMUrQ3vA		 								 							 *				
+* https://www.youtube.com/watch?v=cgvDMUrQ3vA																	 * 
+* https://getbootstrap.com/docs/4.3/components/card/															 * 
+* https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering									 	 * 
+* https://getbootstrap.com/docs/4.3/components/forms/			 								 			     *				
 *																												 *
 * Medlemmer som har bidratt Henrik Solnør Johansen, Vigleik Espeland Stakseng, Anders Koo og Andreas Knutsen 	 *
 *																												 *
@@ -66,6 +69,15 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 		<div class="content-dashboard">
       		<div class="container">
         		<div class="row justify-content-center">
+
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+<!-- START 																								  				  -->
+<!-- Oppsett av feeback skjema er gjort ved hjelp av disse lenkene:														  -->
+<!-- https://getbootstrap.com/docs/4.3/components/card/																	  --> 
+<!-- https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering											  -->
+<!-- https://getbootstrap.com/docs/4.3/components/forms/											  					  -->
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+
 		            <div class="card shadow mx-auto" style="width: 25rem;">
             								     <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
               			<div class="card-header"><?php echo $lang_text['feedback-title']; ?></div>
@@ -94,6 +106,15 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 							</div>
 						</form>	 
 					</div>
+
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+<!-- STOPP 																								  				  -->
+<!-- Oppsett av feeback skjema er gjort ved hjelp av disse lenkene:														  -->
+<!-- https://getbootstrap.com/docs/4.3/components/card/																	  --> 
+<!-- https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering											  -->
+<!-- https://getbootstrap.com/docs/4.3/components/forms/											  					  -->
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+
 				</div>
 			</div>
 		</div>
