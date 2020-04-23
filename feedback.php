@@ -117,25 +117,26 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 
 </html>
 
-			<!-- ---------------------------------------------------------------------------------------------------- -->
-			<!-- START 																								  -->
-			<!-- For å sette opp AJAX med feedback skjema har vi funnet på navnet på funksjonene _() 			      -->
-			<!-- og submitForm(), men koden på innsiden er laget basert på disse kildene:			  	  	  		  -->
-			<!--												  													  --> 
-			<!-- Kilde: http://www.openjs.com/ajax/tutorial/ajax.php 												  -->
-			<!-- kilde: https://developer.mozilla.org/en-US/docs/Web/API/FormData/append							  -->
-			<!-- kilde: https://www.w3schools.com/js/js_ajax_http.asp												  -->
-			<!-- kilde: https://www.w3schools.com/js/js_ajax_http_send.asp											  -->
-			<!-- kilde: https://www.w3schools.com/js/js_ajax_http_response.asp										  -->
-			<!-- kilde: https://www.w3schools.com/js/js_ajax_xmlfile.asp											  -->
-			<!-- kilde: https://www.w3schools.com/js/js_ajax_php.asp												  -->
-			<!-- kilde: https://www.w3schools.com/js/js_ajax_asp.asp												  -->
-			<!-- kilde:	https://www.w3schools.com/js/js_ajax_database.asp											  -->
-			<!-- kilde: https://www.w3schools.com/js/js_ajax_applications.asp								          -->
-			<!-- kilde: https://www.w3schools.com/js/js_ajax_examples.asp    										  -->
-			<!-- Kilde:	https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp								  -->
-			<!-- kilde: https://www.w3schools.com/jsref/prop_html_innerhtml.asp								  		  -->		  
-			<!-- ---------------------------------------------------------------------------------------------------- -->
+			<!-- ------------------------------------------------------------------------------------------------ -->
+			<!-- START 																							  -->
+			<!-- For å sette opp AJAX med feedback skjema har vi funnet på navnet på funksjonene _() 			  -->
+			<!-- og submitForm(), men koden på innsiden er laget basert på disse kildene:			  	  	  	  -->
+			<!--												  											      --> 
+			<!-- Kilde: 																					      -->
+			<!-- http://www.openjs.com/ajax/tutorial/ajax.php 												  	  -->
+			<!-- https://developer.mozilla.org/en-US/docs/Web/API/FormData/append							  	  -->
+			<!-- https://www.w3schools.com/js/js_ajax_http.asp												      -->
+			<!-- https://www.w3schools.com/js/js_ajax_http_send.asp											      -->
+			<!-- https://www.w3schools.com/js/js_ajax_http_response.asp										      -->
+			<!-- https://www.w3schools.com/js/js_ajax_xmlfile.asp											      -->
+			<!-- https://www.w3schools.com/js/js_ajax_php.asp												      -->
+			<!-- https://www.w3schools.com/js/js_ajax_asp.asp												      -->
+			<!-- https://www.w3schools.com/js/js_ajax_database.asp											      -->
+			<!-- https://www.w3schools.com/js/js_ajax_applications.asp								              -->
+			<!-- https://www.w3schools.com/js/js_ajax_examples.asp    										      -->
+			<!-- https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp								      -->
+			<!-- https://www.w3schools.com/jsref/prop_html_innerhtml.asp								  		  -->		  
+			<!-- ------------------------------------------------------------------------------------------------ -->
 <script>
 			// -------------------------------------------------------- //
 			// START 													//
@@ -158,19 +159,20 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			// For å sette opp AJAX med feedback skjema har vi funnet på navnet på funksjonene _() 			      			//
 			// og submitForm(), men koden på innsiden er laget basert på disse kildene:										//
 			//																												//
-			// Kilde: http://www.openjs.com/ajax/tutorial/ajax.php 												  			//
-			// kilde: https://developer.mozilla.org/en-US/docs/Web/API/FormData/append							  			//
-			// kilde: https://www.w3schools.com/js/js_ajax_http.asp												  			//
-			// kilde: https://www.w3schools.com/js/js_ajax_http_send.asp											 		//
-			// kilde: https://www.w3schools.com/js/js_ajax_http_response.asp										  		//
-			// kilde: https://www.w3schools.com/js/js_ajax_xmlfile.asp											  			//
-			// kilde: https://www.w3schools.com/js/js_ajax_php.asp												  			//
-			// kilde: https://www.w3schools.com/js/js_ajax_asp.asp												  			//
-			// kilde: https://www.w3schools.com/js/js_ajax_database.asp											 			//
-			// kilde: https://www.w3schools.com/js/js_ajax_applications.asp								          			//
-			// kilde: https://www.w3schools.com/js/js_ajax_examples.asp                             	    				//
-			// kilde: https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp                                			//
-			// kilde: https://www.w3schools.com/jsref/prop_html_innerhtml.asp												//
+			// Kilder:																										//
+			// http://www.openjs.com/ajax/tutorial/ajax.php 												  				//
+			// https://developer.mozilla.org/en-US/docs/Web/API/FormData/append							  					//
+			// https://www.w3schools.com/js/js_ajax_http.asp												  				//
+			// https://www.w3schools.com/js/js_ajax_http_send.asp											 				//
+			// https://www.w3schools.com/js/js_ajax_http_response.asp										  				//
+			// https://www.w3schools.com/js/js_ajax_xmlfile.asp											  					//
+			// https://www.w3schools.com/js/js_ajax_php.asp												  					//
+			// https://www.w3schools.com/js/js_ajax_asp.asp												  					//
+			// https://www.w3schools.com/js/js_ajax_database.asp											 				//
+			// https://www.w3schools.com/js/js_ajax_applications.asp								          				//
+			// https://www.w3schools.com/js/js_ajax_examples.asp                             	    						//
+			// https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp                                					//
+			// https://www.w3schools.com/jsref/prop_html_innerhtml.asp														//
 			// ------------------------------------------------------------------------------------------------------------ //
 
 
