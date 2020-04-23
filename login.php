@@ -18,6 +18,7 @@
 *  https://getbootstrap.com/docs/4.0/components/buttons/#button-tags                                          *
 *  https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php           * 
 *  https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view                                     * 
+*  https://www.youtube.com/watch?v=cgvDMUrQ3vA                                                                * 
 *                                                                                                             *
 *                                                                                                             *
 * Medlemmer som har bidratt:  Henrik Solnør Johansen, Andreas Knutsen og Anders Koo                           *
