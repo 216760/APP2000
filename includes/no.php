@@ -48,6 +48,7 @@
     $lang_text = array(
         "paragraph-right" => "Hold kontroll på prøveperiodene<br>dine med vår tjeneste",
         "paragraph-left" => "Unngå unødvendige månedlige<br>kostnader",
+        "card-header" => "Legg til et nytt abonnement",
         "card-title" => "Tjeneste",
         "subscription-name" => "Navn på tjeneste",
         "edit-subscription" => "Endre abonnement",

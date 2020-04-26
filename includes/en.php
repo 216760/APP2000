@@ -48,6 +48,7 @@
     $lang_text = array(
         "paragraph-right" => "Keep control of your trial periods<br>with our service",
         "paragraph-left" => "Prevent accidental monthly<br>withdrawal fee",
+        "card-header" => "Add new subscription",
         "card-title" => "Service",
         "subscription-name" => "Name of service",
         "edit-subscription" => "Edit subscription",
