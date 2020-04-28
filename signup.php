@@ -109,8 +109,6 @@ ob_start();                 // Skrur på output buffering (forhindrer header war
 
     include("db-config.php"); // Inkluderer db-config.php
 
-    $empty = FALSE;
-
     // Sjekker om registreringsformen er klar, og legger inn data i databasen
     if (isset($_POST['registerbtn'])) {
         $name     = mysqli_real_escape_string($mysqli, $_POST['name']);
