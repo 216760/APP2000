@@ -1,12 +1,12 @@
-
 <?php
 
 /**************************************************************************************************************************************
 * TIL INFORMASJON:                                                                                                                    *
 *                                                                                                                                     *
 * I denne filen ligger det kode vi har bygget videre på fra Tutorials Class: PHP Simple Login and Registration Script og tilpasset    *
-* egen løsning fra kildene nedenfor.	                                                                                              *
-* Dette er også dokumentert under kildebruk i rapporten.  Grunnen til dette er basert på “best practice”  måter å programmere på.     *  
+* egen løsning fra kildene nedenfor. Regex uttrykket for passord validering er gjenbrukt.                                             *
+* Dette er også dokumentert under "Kommentarer til kildebruk" i rapporten og markert i selve koden                                    *
+* Grunnen til dette er basert på “best practice”  måter å programmere på.                                                             *  
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer.                                                            *
 * Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer.                           *
 * Etter dette gjør vi en vurdering om å bruke, tilpasse og implementere eksempelet i vår kode eller ikke.                             *
@@ -23,14 +23,14 @@
 **************************************************************************************************************************************/
 
 include('lang-config.php'); // Inkluderer oppsett for flere språk
-ob_start();                 // Skrur på output buffering
+ob_start();                 // Skrur på output buffering (forhindrer header warning)
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
     <?php
-    include('includes/header_signup.php');
+    include('includes/header_signup.php'); // Inkluderer header_singup.php
     ?>
 
     <body>
@@ -49,7 +49,7 @@ ob_start();                 // Skrur på output buffering
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 <!-- START 																								  				  -->
 <!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset fra kilden under  		  -->																	 
-<!-- Kilde: https://www.youtube.com/watch?v=OePNkDd3Yb8 												  				  -->
+<!-- Kilde: https://www.youtube.com/watch?v=cgvDMUrQ3vA											  				  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
                                                                                                    <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
             <button class="btn btn-primary w-100" id="regbtn" name="registerbtn"  value="Register"><?php echo $lang_button['registerbtn']; ?></button>
@@ -57,7 +57,7 @@ ob_start();                 // Skrur på output buffering
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 <!-- STOPP 																								  				  -->
 <!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset fra kilden under  		  -->																	 
-<!-- Kilde: https://www.youtube.com/watch?v=OePNkDd3Yb8 												  				  -->
+<!-- Kilde: https://www.youtube.com/watch?v=cgvDMUrQ3vA											  				  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 
 
@@ -96,19 +96,18 @@ ob_start();                 // Skrur på output buffering
 <!-- --------------------------------------------------------------------------------------------------------------- -->
 <!-- START                                                                                                           -->
 <!-- Denne koden er hentet fra og tilpasset egen løsning fra Youtube kanalen Coding Passive income.                  -->
-<!-- Vi brukte denne for å forstå hvordan vi registrerte hashet passord fra bruker i registreringsskjema.            -->
-<!-- Så lærte vi hvordan man kan sammenligne input password fra login skjema til å matche hashet passord i databasen.-->
-<!-- Dette for å sjekke at riktig bruker med riktig password ble logget inn.                                         -->
+<!-- Vi brukte denne kanalen for å forstå hvordan vi registrerte hashet passord fra bruker i registreringsskjema.    -->
+<!-- Så lærte vi hvordan man kan sammenligne input passsord fra login skjema til å matche hashet passord i databasen.-->
+<!-- Dette for å sjekke at korrekt bruker med korrekt password blir logget inn.                                      -->
 <!-- Sentral krypterings algoritme: PASSWORD_BCRYPT                                                                  -->
 <!-- Kilde: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                       -->
 <!-- ------------------------------------------------------------------------------------------------------------------>
 
-
 <!-- Kodet og tilpasset av: Anders Koo og Andreas Knutsen START -->
 
 <?php
-    //Inkluderer database connection-fil
-    include("db-config.php");
+
+    include("db-config.php"); // Inkluderer db-config.php
 
     $empty = FALSE;
 
@@ -117,7 +116,7 @@ ob_start();                 // Skrur på output buffering
         $name     = mysqli_real_escape_string($mysqli, $_POST['name']);
         $email    = mysqli_real_escape_string($mysqli, $_POST['email']);
         $password = mysqli_real_escape_string($mysqli, $_POST['password']);
-        // Dette regex uttrykket er hentet fra https://www.imtiazepu.com/password-validation/
+        // Dette regex uttrykket er gjenbrukt hentet fra https://www.imtiazepu.com/password-validation/
         $regex =  "#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$#";
 
 
@@ -177,6 +176,15 @@ ob_start();                 // Skrur på output buffering
 
                     }
             }
+//--------------------------------------------------------------------------------------------------------------------//
+// STOPP                                                                                                              //
+// Denne koden er hentet fra og tilpasset egen løsning fra Youtube kanalen Coding Passive income.                     //
+// Vi brukte denne for å forstå hvordan vi registrerte hashet passord fra bruker i registreringsskjema.               //
+// Så lærte vi hvordan man kan sammenligne input password fra login skjema til å matche hashet passord i databasen.   //
+// Dette for å sjekke at riktig bruker med riktig password ble logget inn.                                            //
+// Sentral krypterings algoritme: PASSWORD_BCRYPT                                                                     //
+// Kilde: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                          //
+//--------------------------------------------------------------------------------------------------------------------//
 
 
         } else {
@@ -188,15 +196,6 @@ ob_start();                 // Skrur på output buffering
     }
 
 //-- Kodet og tilpasset av: Anders Koo og Andreas Knutsen STOPP --
-ob_end_flush(); // // Skrur av output buffering
+ob_end_flush(); // // Skrur av output buffering (forhindrer header warning)
 
 ?>
-<!--------------------------------------------------------------------------------------------------------------------->
-<!-- STOPP                                                                                                           -->
-<!-- Denne koden er hentet fra og tilpasset egen løsning fra Youtube kanalen Coding Passive income.                  -->
-<!-- Vi brukte denne for å forstå hvordan vi registrerte hashet passord fra bruker i registreringsskjema.            -->
-<!-- Så lærte vi hvordan man kan sammenligne input password fra login skjema til å matche hashet passord i databasen.-->
-<!-- Dette for å sjekke at riktig bruker med riktig password ble logget inn.                                         -->
-<!-- Sentral krypterings algoritme: PASSWORD_BCRYPT                                                                  -->
-<!-- Kilde: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                       -->
-<!--------------------------------------------------------------------------------------------------------------------->

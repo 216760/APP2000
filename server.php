@@ -3,7 +3,7 @@
 * TIL INFORMASJON:                                                                                          * 
 *                                                                                                           *    
 * I denne filen ligger det kode som er hentet og tilpasset egen løsning fra kildene nedenfor.               *
-* Dette er også dokumentert under kildebruk i rapporten.                                                    * 
+* Dette er også dokumentert under "Kommentarer til kildebruk" i rapporten og markert i selve koden.         * 
 * Grunnen til dette er basert på “best practice”  måter å programmere på.                                   *
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer.                                  *
 * Vi ser først på en demo av hvordan et eksempel virker,  koder oss gjennom guiden for å lære hva som skjer.* 
@@ -17,8 +17,9 @@
  
 // --------------------------------------------------------------------------------------------------//
 // START                                                                                             //
-// Alle CRUD operasjonene har vi lært oss via eksempler fra Youtube kanalen Funda Of Web IT.         //
+// Alle CRUD operasjonene har vi lært via eksempler fra Youtube kanalen Funda Of Web IT.             //
 // Denne koden er hentet fra og tilpasset egen løsning fra denne Youtube kanalen, part 1-6           //
+//                                                                                                   //
 // Kilde: https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                   //
 // --------------------------------------------------------------------------------------------------//
 
@@ -40,7 +41,6 @@ include('db-config.php'); // Inkluderer db-config.php
 
 if(isset($_POST['registerbtn'])) { // Sjekker at variabel er deklarert og at registerbtn knappen er klikket på 
     // Informasjon om abonnement
-
     $description = mysqli_real_escape_string($mysqli, $_POST['description']);   // Henter ut data med $_POST og sikrer mot SQL injection
     $start_date = mysqli_real_escape_string($mysqli, $_POST['start_date']);     // Henter ut data med $_POST og sikrer mot SQL injection
     $end_date =  mysqli_real_escape_string($mysqli, $_POST['end_date']);        // Henter ut data med $_POST og sikrer mot SQL injection
@@ -122,8 +122,9 @@ if(isset($_POST['delete_btn'])) { // Sjekker at variabel er deklarert og at upda
 
 // --------------------------------------------------------------------------------------------------//
 // STOPP                                                                                             //
-// Alle CRUD operasjonene har vi lært oss via eksempler fra Youtube kanalen Funda Of Web IT.         //
+// Alle CRUD operasjonene har vi lært via eksempler fra Youtube kanalen Funda Of Web IT.             //
 // Denne koden er hentet fra og tilpasset egen løsning fra denne Youtube kanalen, part 1-6           //
+//                                                                                                   //
 // Kilde: https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                   //
 // --------------------------------------------------------------------------------------------------//
 

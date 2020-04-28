@@ -4,7 +4,7 @@
 * TIL INFORMASJON:                                                                                            *
 *                                                                                                             *
 * I denne filen ligger det kode som er hentet og tilpasset egen løsning fra kildene nedenfor.                 *
-* Dette er også dokumentert under kildebruk i rapporten og markert i selve koden.                             *
+* Dette er også dokumentert under "Kommentarer til kildebruk" i rapporten og markert i selve koden.           *
 * Grunnen til dette er basert på “best practice”  måter å programmere på.                                     *
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer.                                    *
 * Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer.   *

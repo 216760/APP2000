@@ -3,11 +3,11 @@
 * TIL INFORMASJON: 																						    *
 *																										    *
 * I denne filen ligger det kode som er hentet og tilpasset egen løsning fra kildene nedenfor.				*
-* Dette er også dokumentert under kildebruk i rapporten og markert i selve koden. 							*
+* Dette er også dokumentert under "Kommentarer til kildebruk" i rapporten og markert i selve koden.  	    *
 * Grunnen til dette er basert på “best practice”  måter å programmere på.  									*
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 									*
 * Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer. *
-* Etter dette gjør vi en vurdering om å bruke, tilpasse og implementere eksempelet i vår kode eller ikke. 	*
+* Etter dette gjør vi en vurdering om å hente, tilpasse og implementere eksempelet i vår kode eller ikke. 	*
 *																											*
 *																											*
 * Kilder																									*
@@ -50,7 +50,7 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 
 <!-- ---------------------------------------------------------------------------------------------------- -->
 <!-- START 																								  -->
-<!-- For å sette opp modal med kalender funksjon har vi hentet og tilpasset kode Youtube kanalen 		  -->
+<!-- For å sette opp modal med kalender funksjon har vi hentet og tilpasset kode fra Youtube kanalen 	  -->
 <!-- Funda of Web IT.  		  																			  -->																	 
 <!-- Kilde: 																							  -->
 <!--	 https://www.youtube.com/watch?v=OePNkDd3Yb8													  -->
@@ -75,7 +75,7 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 <!-- START 																								  				  -->
-<!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset fra Youtube kanalen	  -->
+<!-- For å sette opp muligheter for både norsk og engelsk opppsett av vi hentet kode og tilpasset fra Youtube kanalen	  -->
 <!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA													  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->				
 																																			      <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
@@ -179,7 +179,7 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 <!-- STOPP 																								  				  -->
-<!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset fra Youtube kanalen	  -->
+<!-- For å sette opp muligheter for både norsk og engelsk opppsett av vi hentet kode og tilpasset fra Youtube kanalen	  -->
 <!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA													  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->	
 

@@ -2,8 +2,8 @@
 /*************************************************************************************************************** 
 *  TIL INFORMASJON:                                                                                            *
 *                                                                                                              *
-* I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene oppsummert under.              *
-* Dette er også dokumentert under kildebruk i rapporten og markert i selve koden.                              *
+* I denne filen ligger det gjenbrukt og tilpasset kode som er funnet på linkene nedenfor                       *
+* Dette er også dokumentert under "Kommentarer til kildebruk" i rapporten og markert i selve koden.            *
 * Grunnen til dette er basert på “best practice”  måter å programmere på.                                      *
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer.                                     *
 * Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer.    *
@@ -17,8 +17,8 @@
 
 // ------------------------------------------------------------------------------------------------------------ //
 // START                                                                                                        //
-// Dette oppsettet er gjenbrukt fra gitlap repoet PHP Simple Login and Registration Script. Vi har selvfølgelig //
-// måttet tilpasse host, databasenavn, bruker og passord                                                        //
+// Dette oppsettet er gjenbrukt fra gitlab repoet PHP Simple Login and Registration Script. Vi har selvfølgelig //
+// tilpasse databsehost, databasenavn, brukernavn og passord til itfag.usn.no                                   //
 //                                                                                                              //
 // Kilde:https://gitlab.com/tutorialsclass/php-simple-login-registration-script                                 //
 // ------------------------------------------------------------------------------------------------------------ //
@@ -26,7 +26,7 @@
 $databaseHost     = 'itfag.usn.no';
 $databaseName     = 'v20app2000db2';
 $databaseUsername = 'v20app2000u2';
-$databasePassword = '8TW6qOzYkosGDhmu';// 8TW6qOzYkosGDhmu
+$databasePassword = '8TW6qOzYkosGDhmu';
 // ----------------------------------------------------------------------------------------------------
 // Kobler til database
 // ----------------------------------------------------------------------------------------------------
@@ -35,8 +35,8 @@ $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $d
 
 // ------------------------------------------------------------------------------------------------------------ //
 // STOPP                                                                                                        //
-// Dette oppsettet er gjenbrukt fra gitlap repoet PHP Simple Login and Registration Script. Vi har selvfølgelig //
-// måttet tilpasse host, databasenavn, bruker og passord.                                                       //
+// Dette oppsettet er gjenbrukt fra gitlab repoet PHP Simple Login and Registration Script. Vi har selvfølgelig //
+// tilpasse databsehost, databasenavn, brukernavn og passord til itfag.usn.no                                   //
 //                                                                                                              //
 // Kilde:https://gitlab.com/tutorialsclass/php-simple-login-registration-script                                 //
 // ------------------------------------------------------------------------------------------------------------ //

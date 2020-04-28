@@ -3,13 +3,13 @@
 * TIL INFORMASJON:																							 	 *																		  
 * 																												 *
 * I denne filen ligger det tilpasset kode som er funnet på linkene oppsummert under.				 			 *	
-* Dette er også dokumentert under kildebruk i rapporten og markert i selve koden. 							 	 *
+* Dette er også dokumentert under "Kommentarer til kildebruk" i rapporten og markert i selve koden. 			 *
 * Grunnen til dette er basert på “best practice”  måter å programmere på.  										 *
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer. 										 *
 * Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer. 	 *
 * Etter dette gjør vi en vurdering om å bruke, tilpasse og implementere eksempelet i vår kode eller ikke. 		 *
 *																												 *
-* Kilde: 																									     *
+* Kilder: 																									     *
 * http://www.openjs.com/ajax/tutorial/ajax.php 																	 *
 * https://developer.mozilla.org/en-US/docs/Web/API/FormData/append							  					 * 
 * https://www.w3schools.com/js/js_ajax_http.asp																	 *
@@ -27,19 +27,21 @@
 * https://www.youtube.com/watch?v=cgvDMUrQ3vA																	 * 
 * https://getbootstrap.com/docs/4.3/components/card/															 * 
 * https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering									 	 * 
-* https://getbootstrap.com/docs/4.3/components/forms/			 								 			     *				
+* https://getbootstrap.com/docs/4.3/components/forms/															 * 
+* https://www.youtube.com/playlist?list=PL0eyrZgxdwhyeIDc3EA4XGsI9HoWLc6nF										 * 
+* 	 								 			     			 												 *				
 *																												 *
 * Medlemmer som har bidratt Henrik Solnør Johansen, Vigleik Espeland Stakseng, Anders Koo og Andreas Knutsen 	 *
 *																												 *
 ******************************************************************************************************************/
 
 include('lang-config.php'); // Inkluderer oppsett for flere språk
-session_start();
+session_start();			// Gjenopptar session
+
 
 $id = $_SESSION["id"]; 
-
-if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren videresendt til login.php
-	header('Location:login.php'); 
+if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren 
+	header('Location:login.php'); //videresendt til login.php
 }
 
 ?>
@@ -48,7 +50,7 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 <html>
 
 	<?php
-	include('includes/header.php');
+	include('includes/header.php'); // Inkluderer header.php
 	?>
 
 	<body>
@@ -62,7 +64,7 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 		<!-- ---------------------------------------------------------------------------------------------------- -->
 		
 		<?php
-		include('includes/navbar.php');
+		include('includes/navbar.php'); // Inkluderer navbar.php
 		?>
 			
 
@@ -123,7 +125,8 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 		Footer START
 		----------------------------------------------------------------------------------------------------- -->
 
-		<?php include('includes/footer.php');?>
+		<?php include('includes/footer.php'); // Inkluderer footer.php
+		?> 
 
 		<!-- ---------------------------------------------------------------------------------------------------- 
 		Footer STOPP
@@ -134,7 +137,7 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 
 
 	<?php
-	include('includes/scripts.php');
+	include('includes/scripts.php'); // Inkluderer scripts.php
 	?>
 
 
@@ -146,27 +149,39 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			<!-- og submitForm(), men koden på innsiden er laget basert på disse kildene:			  	  	  	  -->
 			<!--												  											      --> 
 			<!-- Kilde: 																					      -->
-			<!-- http://www.openjs.com/ajax/tutorial/ajax.php 												  	  -->
-			<!-- https://developer.mozilla.org/en-US/docs/Web/API/FormData/append							  	  -->
-			<!-- https://www.w3schools.com/js/js_ajax_http.asp												      -->
-			<!-- https://www.w3schools.com/js/js_ajax_http_send.asp											      -->
-			<!-- https://www.w3schools.com/js/js_ajax_http_response.asp										      -->
-			<!-- https://www.w3schools.com/js/js_ajax_xmlfile.asp											      -->
-			<!-- https://www.w3schools.com/js/js_ajax_php.asp												      -->
-			<!-- https://www.w3schools.com/js/js_ajax_asp.asp												      -->
-			<!-- https://www.w3schools.com/js/js_ajax_database.asp											      -->
-			<!-- https://www.w3schools.com/js/js_ajax_applications.asp								              -->
-			<!-- https://www.w3schools.com/js/js_ajax_examples.asp    										      -->
-			<!-- https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp								      -->
-			<!-- https://www.w3schools.com/jsref/prop_html_innerhtml.asp								  		  -->		  
+			<!--	http://www.openjs.com/ajax/tutorial/ajax.php 												  -->				 
+			<!--	https://developer.mozilla.org/en-US/docs/Web/API/FormData/append							  -->			 
+			<!--	https://www.w3schools.com/js/js_ajax_http.asp												  -->					
+			<!--	https://www.w3schools.com/js/js_ajax_http_send.asp											  -->				 
+			<!--	https://www.w3schools.com/js/js_ajax_http_response.asp										  -->				 
+			<!--	https://www.w3schools.com/js/js_ajax_xmlfile.asp											  -->					 
+			<!--	https://www.w3schools.com/js/js_ajax_php.asp												  -->					
+			<!--	https://www.w3schools.com/js/js_ajax_asp.asp												  -->					
+			<!--	https://www.w3schools.com/js/js_ajax_database.asp											  -->					 
+			<!--	https://www.w3schools.com/js/js_ajax_applications.asp								          -->					
+			<!--	https://www.w3schools.com/js/js_ajax_examples.asp    									  	  -->					
+			<!--	https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp								  -->					
+			<!--	https://www.w3schools.com/jsref/prop_html_innerhtml.asp										  -->				
+			<!--	https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view						  -->				 
+			<!--	https://www.youtube.com/watch?v=cgvDMUrQ3vA													  -->				
+			<!--	https://getbootstrap.com/docs/4.3/components/card/											  -->				 
+			<!--	https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering					  -->				 	 
+			<!--	https://getbootstrap.com/docs/4.3/components/forms/											  -->	
+			<!--	https://www.youtube.com/playlist?list=PL0eyrZgxdwhyeIDc3EA4XGsI9HoWLc6nF				      -->		  
 			<!-- ------------------------------------------------------------------------------------------------ -->
+
+
+
+
+
+
 <script>
-			// -------------------------------------------------------- //
-			// START 													//
-			// Kode tilpasset og basert på kilder angitt over og under 	// 
-			//															//
-			// Medlemmer som har bidratt Henrik Solnør Johansen			//
-			// -------------------------------------------------------- //
+			//***********************************************************//
+			// START 													 //
+			// Kode tilpasset og basert på kilder angitt over og under 	 // 
+			//															 //
+			// Medlemmer som har bidratt Henrik Solnør Johansen			 //
+			//***********************************************************//
 
 		function _(id){ return document.getElementById(id); } // funksjon som returnerer alle id'ene i skjema
 		// Dette er en funksjon som samler inn data fra feedback skjema ovenfor
@@ -220,9 +235,12 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			formdata.append( "subject", _("subject").value ); 
 
 			// ------------------------------------------------------------------------------------------------------------ //
-			// STOPP 																										//
+			// STOPP                                                                                                        //
+			// Denne delen er hentet fra og tilpasset til egen løsning  													//
+			//																												//
+			// kilde: https://developer.mozilla.org/en-US/docs/Web/API/FormData/append                                	    //	
+			//                                                                                                              //					
 			// ------------------------------------------------------------------------------------------------------------ //
-
 
 
 			// ------------------------------------------------------------------------------------------------------------ //
@@ -253,6 +271,11 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			// Sender request til database
 			ajax.send( formdata ); 
 		}
+
+
+
+
+
 			// -------------------------------------------------------- //
 			// STOPP 													//
 			// Kode tilpasset og basert på kilder angitt over        	// 

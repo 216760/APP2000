@@ -4,14 +4,15 @@
 *TIL INFORMASJON:                                                                                                *
 *                                                                                                                *
 * I denne filen ligger det kode som er hentet og tilpasset egen løsning fra kildene nedenfor.                    *
-* Dette er også dokumentert under kildebruk i rapporten og markert i selve koden.                                *
+* Dette er også dokumentert under "Kommentarer til kildebruk" i rapporten og markert i selve koden.             *
 * Grunnen til dette er basert på “best practice”  måter å programmere på.                                        *
 * Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer.                                       *
 * Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer.      *
 * Etter dette gjør vi en vurdering om å bruke, tilpasse og implementere eksempelet i vår kode eller ikke.        *
 *                                                                                                                *
 * Kilde:                                                                                                         *
-*   https://www.youtube.com/playlist?list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV                                     *
+*   https://www.youtube.com/playlist?list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV                                     * 
+*   https://www.youtube.com/watch?v=XV9x17zVZFU&list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV&index=3&t=0s             *
 *   https://websitebeaver.com/prepared-statements-in-php-mysqli-to-prevent-sql-injection                         *
 *                                                                                                                *
 *                                                                                                                *                                                                                       
@@ -21,8 +22,7 @@
 *                                                                                                                *
 *****************************************************************************************************************/
 
-
-session_start();
+session_start(); // Gjenopptar session
 
 // ----------------------------------------------------------------------------------------------------
 // Kobler til database
@@ -49,26 +49,23 @@ $user_id = $_SESSION['id']; // Oppretter en $user_id som er session basert
 // Koden under er var i utgangspunktet OOP basert. Vi har gjort den om til procedural. Grunnen til at vi har 
 // brukt procedural er mer eller mindre fordi dette er det mest effektive steg for steg metoden å gå frem på 
 // for å lære seg grunnleggende php. 
-// Link: https://www.youtube.com/playlist?list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV
+// Link: https://www.youtube.com/watch?v=XV9x17zVZFU&list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV&index=3&t=0s
 // ----------------------------------------------------------------------------------------------------
 
-// ----------------------------------------------------------------------------------------------------
-// Forbereder insert spørring mot databasen med prepare
-// ----------------------------------------------------------------------------------------------------
 
 // ----------------------------------------------------------------------------------------------------
-// mysqli_prepare er en funksjon som bruker til å forberede en spørring men også sikre mot SQL injection
-// Kilde:
-// https://websitebeaver.com/prepared-statements-in-php-mysqli-to-prevent-sql-injection
-$stmt = mysqli_prepare($mysqli,"INSERT INTO feedback(name, email, message, subject, user_id) VALUES(?,?,?,?,?)");
-
-// ----------------------------------------------------------------------------------------------------
-// Utfører spørring mot databaseb. mysqli_stmt_bind_param er er metode for å "binde" sammen de forskjellige input 
+// Utfører spørring mot databasen. mysqli_stmt_bind_param er er metode for å "binde" sammen de forskjellige input 
 // datatypene. Bruker variablene blir først definert med "ssssi" (s=string) (i=integer), og deretter legges dem inn.
-// mysqli_stmt_bind_param og mysqli_prepare metodene hører sammen og er en måte å sikre mot sql injection. 
+// mysqli_stmt_bind_param og mysqli_prepare metodene hører sammen og er en måte å sikre mot sql injection og 
+// forberede en spørring 
+// Kilde: 
+// https://www.youtube.com/watch?v=XV9x17zVZFU&list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV&index=3&t=0s
+// https://websitebeaver.com/prepared-statements-in-php-mysqli-to-prevent-sql-injection
 // ----------------------------------------------------------------------------------------------------
 
-//Kodet og tilpasset av: Anders Koo og Henrik Solnør Johansen STOPP
+//Kodet og tilpasset av: Anders Koo og Henrik Solnør Johansen START
+
+$stmt = mysqli_prepare($mysqli,"INSERT INTO feedback(name, email, message, subject, user_id) VALUES(?,?,?,?,?)");
 mysqli_stmt_bind_param($stmt,"ssssi", $name, $email, $message, $subject, $user_id);
 if(mysqli_stmt_execute($stmt)) { //Utfører SQL statement
     echo 'success'; // Hvis utførelsen er vellyket sendes en success status
@@ -76,11 +73,16 @@ if(mysqli_stmt_execute($stmt)) { //Utfører SQL statement
     echo 'failure'; // Hvis ikke sendes en feil status. 
 }
 
+
+//Kodet og tilpasset av: Anders Koo og Henrik Solnør Johansen STOPP
+
 // ----------------------------------------------------------------------------------------------------
-// STOPP
+// STOPP 
 // Koden under er var i utgangspunktet OOP basert. Vi har gjort den om til procedural. Grunnen til at vi har 
-// brukt procedural er mer eller mindre fordi dette er det mest effektive steg for steg metoden å gå frem på. 
-// Link: https://www.youtube.com/playlist?list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV
+// brukt procedural mer eller mindre fordi dette er det mest effektive steg for steg metoden å gå frem på 
+// for å lære seg grunnleggende php. 
+//
+// Link: https://www.youtube.com/watch?v=XV9x17zVZFU&list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV&index=3&t=0s
 // ----------------------------------------------------------------------------------------------------
 
 ?>
