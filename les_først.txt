@@ -46,6 +46,4 @@ passord: y)}H`uj8DaXV*[=3
 
 Gruppens kode
 
-Vår kode er hentet og tilpasset fra en rekke dokumenterte kilder forklart under “Kommentarer til kildebruk” i denne dokumentasjonen. 
-Videre har vi også klart markert og beskrevet tydelig i kode filene hvilke kilder vi har brukt, kode vi har gjenbrukt og kode vi har
-hentet og tilpasset egen løsning. 
+Vi har kode som er gjenbrukt,  kode vi har bygget på, hentet og tilpasset fra en rekke dokumenterte kilder. Dette står forklart under “Kommentarer til kildebruk” i dokumentasjonen. Videre har vi også klart markert og beskrevet tydelig i kode filene hvilke kilder vi har brukt, kode vi har gjenbrukt, bygget på, hentet og tilpasset egen løsning. 
