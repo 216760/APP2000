@@ -241,7 +241,7 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 			ajax.onreadystatechange = function() { 
 				if(ajax.readyState == 4 && ajax.status == 200) {
 					if(ajax.responseText == "success"){ // hvis status er vellykket får brukeren en tilbakemelding
-						_("my_form").innerHTML = '<h2>Thanks '+_("name").value+', your message has been sent.</h2>';  
+						_("my_form").innerHTML = '<h2>Thanks '+_("name").value+', Feedback has been sent.</h2>';  
 					} else {
 						// hvis ikke får man feilmelding
 						_("status").innerHTML = ajax.responseText; 
