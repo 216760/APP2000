@@ -33,14 +33,17 @@ gruppeeksamen PRO1000 Prak.prosj.arb av student 225256 vår 19
 */
 
 
-/* Kodet av Anders Koo START */
+/* 
+ Kode for styling av inputfelter er hentet og tilpasset egen løsning fra disse linkene
 
-/* Research rundt input focus */
-/* https://www.w3schools.com/cssref/sel_focus.asp */
-/* https://stackoverflow.com/questions/3397113/how-to-remove-focus-border-outline-around-text-input-boxes-chrome */
+ Kilder: 
+ https://www.w3schools.com/cssref/sel_focus.asp 
+ https://stackoverflow.com/questions/3397113/how-to-remove-focus-border-outline-around-text-input-boxes-chrome
 
+ Kodet av Anders Koo START 
 
-/* Styling av input fokus felter */
+*/
+
 input:focus {
   outline: none;
   border-color: #4A148C;
