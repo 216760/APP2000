@@ -7,9 +7,7 @@
 * and Registration Script og tilpasset egen løsning fra kildene nedenfor.                                     * 
 * Dette er også dokumentert under "Kommentarer til kildebruk" i rapporten og markert i selve koden.           *
 * Grunnen til dette er basert på “best practice”  måter å programmere på.                                     *
-* Vi har gjennom en rekke eksempler lært oss hvordan php språket fungerer.                                    *
-* Vi ser først på en demo av hvordan et eksempel virker, koder oss gjennom guiden for å lære hva som skjer.   *
-* Etter dette gjør vi en vurdering om å bruke, tilpasse og implementer eksempelet i vår kode eller ikke.      *
+* Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan php språket fungerer. 	          *
 *                                                                                                             *
 * Kilder:                                                                                                     * 
 *                                                                                                             * 
@@ -81,8 +79,7 @@ include_once('db-config.php'); // Inkluderer bare 'db-config.php' en gang, og sc
 //------------------------------------------------------------------------------------------------------------------//
 // START                                                                                                            //
 // Denne koden er hentet fra og tilpasset egen løsning fra Youtube kanalen Coding Passive income.                   //
-// Vi brukte denne for å forstå hvordan vi registrerte hashet passord fra bruker i registreringsskjema.             //
-// Så lærte vi hvordan man kan sammenligne input passord fra login skjema til å matche hashet passord i databasen.  //
+// Vi lærte hvordan man kan sammenligne input passord fra login skjema til å matche hashet passord i databasen.     //
 // Dette for å sjekke at korrekt bruker med korrekt password ble logget inn.                                        //
 //                                                                                                                  //
 // Kilde: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                        //
@@ -124,8 +121,7 @@ include_once('db-config.php'); // Inkluderer bare 'db-config.php' en gang, og sc
 //------------------------------------------------------------------------------------------------------------------//
 // STOPP                                                                                                            //
 // Denne koden er hentet fra og tilpasset egen løsning fra Youtube kanalen Coding Passive income.                   //
-// Vi brukte denne for å forstå hvordan vi registrerte hashet passord fra bruker i registreringsskjema.             //
-// Så lærte vi hvordan man kan sammenligne input passord fra login skjema til å matche hashet passord i databasen.  //
+// Vi lærte hvordan man kan sammenligne input passord fra login skjema til å matche hashet passord i databasen.     //
 // Dette for å sjekke at korrekt bruker med korrekt password ble logget inn.                                        //
 //                                                                                                                  //
 // Kilde: https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                        //
