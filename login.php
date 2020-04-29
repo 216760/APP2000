@@ -102,17 +102,17 @@ include_once('db-config.php'); // Inkluderer bare 'db-config.php' en gang, og sc
             //password_verify er en funksjon som sammenligner input password med hashet passord i databasen fra $data variabel
             if(password_verify($password, $data['password'])) { 
                 header('Location:dashboard.php'); // Header er en funksjon som viderefører brukeren til dashboard
-                exit(0); // exit er en funksjon som terminerer operasjonen 
+                exit(); // exit er en funksjon som terminerer operasjonen 
 
             } else 
                 header('Location:login.php');  // Header er en funksjon som viderefører brukeren til login
                 $_SESSION['status'] = "Email or password is incorrect"; //Feilmelding til bruker
-                exit(0); // exit er en funksjon som terminerer operasjonen
+                exit(); // exit er en funksjon som terminerer operasjonen
 
         } else {
             header('Location:login.php'); // Header er en funksjon som viderefører brukeren til login
             $_SESSION['status'] = "Fields cannot be empty"; //Feilmelding til bruke
-            exit(0); // exit er en funksjon som terminerer operasjonen 
+            exit(); // exit er en funksjon som terminerer operasjonen 
         }
     }
     //Kodet og tilpasset av: Anders Koo og Andeas Knutsen STOPP 
