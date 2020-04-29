@@ -36,7 +36,7 @@ ob_start();                 // Skrur på output buffering (forhindrer header war
         <form class="form-signin text-center" id="my_form" action="login.php" method="POST" name="form1">
             <h1 class="logo_title">re:sub</h1>
             <div class="form-group">
-            <img class="image_login" src="img/logoSmall.png" alt="">
+            <img class="image_login" src="other/logo/logoSmall.png" alt="">
                 <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
                 <input type="text" placeholder="<?php echo $lang_input['input-email']; ?>" name="email" class="">
                 <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
