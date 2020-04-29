@@ -190,41 +190,13 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren
 
 
 			// ------------------------------------------------------------------------------------------------------------ //
-			// STOPP                                                                                                        //
-			// For å sette opp AJAX med feedback skjema har vi funnet på navnet på funksjonene _() 			      			//
-			// og submitForm(), men koden på innsiden er laget basert på disse kildene:										//
-			//																												//
-			// Kilder:																										//
-			// http://www.openjs.com/ajax/tutorial/ajax.php 												  				//
-			// https://developer.mozilla.org/en-US/docs/Web/API/FormData/append							  					//
-			// https://www.w3schools.com/js/js_ajax_http.asp												  				//
-			// https://www.w3schools.com/js/js_ajax_http_send.asp											 				//
-			// https://www.w3schools.com/js/js_ajax_http_response.asp										  				//
-			// https://www.w3schools.com/js/js_ajax_xmlfile.asp											  					//
-			// https://www.w3schools.com/js/js_ajax_php.asp												  					//
-			// https://www.w3schools.com/js/js_ajax_asp.asp												  					//
-			// https://www.w3schools.com/js/js_ajax_database.asp											 				//
-			// https://www.w3schools.com/js/js_ajax_applications.asp								          				//
-			// https://www.w3schools.com/js/js_ajax_examples.asp                             	    						//
-			// https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp                                					//
-			// https://www.w3schools.com/jsref/prop_html_innerhtml.asp													    //
-			// https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view						  				//	 
-			// https://www.youtube.com/watch?v=cgvDMUrQ3vA													  				//	
-			// https://getbootstrap.com/docs/4.3/components/card/											  				//	 
-			// https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering					  				//	 	 
-			// https://getbootstrap.com/docs/4.3/components/forms/											  				//
-			// https://www.youtube.com/playlist?list=PL0eyrZgxdwhyeIDc3EA4XGsI9HoWLc6nF										//
-			// ------------------------------------------------------------------------------------------------------------ //
-
-
-
-			// ------------------------------------------------------------------------------------------------------------ //
 			// START                                                                                                        //
 			// Denne delen er hentet fra og tilpasset egen løsning via kilden under											//
 			//																												//
 			// kilde: https://developer.mozilla.org/en-US/docs/Web/API/FormData/append                                	    //	
 			//                                                                                                              //					
 			// ------------------------------------------------------------------------------------------------------------ //
+			
 			
 			//variabel som initialiserer FormData objektet
 			var formdata = new FormData(); 
@@ -287,6 +259,34 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren
 			// https://www.w3schools.com/js/js_ajax_php.asp																	//
 			// https://www.w3schools.com/js/js_ajax_http.asp												                //                                                // https://www.w3schools.com/js/js_ajax_asp.asp																  //
 			//																												//
+			// ------------------------------------------------------------------------------------------------------------ //
+
+		
+			// ------------------------------------------------------------------------------------------------------------ //
+			// STOPP                                                                                                        //
+			// For å sette opp AJAX med feedback skjema har vi funnet på navnet på funksjonene _() 			      			//
+			// og submitForm(), men koden på innsiden er laget basert på disse kildene:										//
+			//																												//
+			// Kilder:																										//
+			// http://www.openjs.com/ajax/tutorial/ajax.php 												  				//
+			// https://developer.mozilla.org/en-US/docs/Web/API/FormData/append							  					//
+			// https://www.w3schools.com/js/js_ajax_http.asp												  				//
+			// https://www.w3schools.com/js/js_ajax_http_send.asp											 				//
+			// https://www.w3schools.com/js/js_ajax_http_response.asp										  				//
+			// https://www.w3schools.com/js/js_ajax_xmlfile.asp											  					//
+			// https://www.w3schools.com/js/js_ajax_php.asp												  					//
+			// https://www.w3schools.com/js/js_ajax_asp.asp												  					//
+			// https://www.w3schools.com/js/js_ajax_database.asp											 				//
+			// https://www.w3schools.com/js/js_ajax_applications.asp								          				//
+			// https://www.w3schools.com/js/js_ajax_examples.asp                             	    						//
+			// https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp                                					//
+			// https://www.w3schools.com/jsref/prop_html_innerhtml.asp													    //
+			// https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view						  				//	 
+			// https://www.youtube.com/watch?v=cgvDMUrQ3vA													  				//	
+			// https://getbootstrap.com/docs/4.3/components/card/											  				//	 
+			// https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering					  				//	 	 
+			// https://getbootstrap.com/docs/4.3/components/forms/											  				//
+			// https://www.youtube.com/playlist?list=PL0eyrZgxdwhyeIDc3EA4XGsI9HoWLc6nF										//
 			// ------------------------------------------------------------------------------------------------------------ //
 
 
