@@ -20,7 +20,7 @@
 * Vi har med vilje laget informasjonsboksene i koden med ulike størrelser 									* 
 * for å kunne skille dem fra hverandre. 																	*
 *																											*
-* Medlemmer som har bidratt: Henrik Solnør Johansen, Andreas Knutsen og Anders Koo							*
+* Kodet og tilpasset av: Henrik Solnør Johansen, Andreas Knutsen og Anders Koo								*
 *																											*
 *************************************************************************************************************/
 

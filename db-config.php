@@ -9,7 +9,6 @@
 *                                                                                                              *
 * Kilde: https://gitlab.com/tutorialsclass/php-simple-login-registration-script                                *
 *                                                                                                              *
-* Medlemmer som har bidratt: Anders Koo                                                                        *
 *                                                                                                              *
 ***************************************************************************************************************/
 

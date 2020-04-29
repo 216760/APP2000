@@ -19,7 +19,7 @@
 *  https://www.youtube.com/watch?v=cgvDMUrQ3vA                                                                * 
 *                                                                                                             *
 *                                                                                                             *
-* Medlemmer som har bidratt:  Henrik Solnør Johansen, Andreas Knutsen og Anders Koo                           *
+* Kodet og tilpasset av  Henrik Solnør Johansen, Andreas Knutsen og Anders Koo                                *
 *                                                                                                             *
 **************************************************************************************************************/
 
@@ -88,7 +88,7 @@ include_once('db-config.php'); // Inkluderer bare 'db-config.php' en gang, og sc
 // Kilde: https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php          //
 //------------------------------------------------------------------------------------------------------------------//
 
-//Kodet og tilpasset av: Anders Koo og Andeas Knutsen START 
+// Kodet og tilpasset av: Anders Koo og Andeas Knutsen START 
 
         // mysqli_query funksjon som utfører SELECT spørring mot database og sjekker om email matcher med input
         $sql = mysqli_query($mysqli, "SELECT id, password FROM register WHERE email='$email'"); 

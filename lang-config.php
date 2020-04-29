@@ -13,8 +13,6 @@
 * https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view                                    * 
 *                                                                                                           *
 *                                                                                                           *
-*Medlemmer som har bidratt: Henrik Solnør Johansen, Andreas Knutsen, Anders Koo og Vigleik Espeland Stakseng*
-*                                                                                                           *
 *************************************************************************************************************/
 
 
