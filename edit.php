@@ -65,7 +65,7 @@ if(!isset($_SESSION['id'])){    // Hvis session ikke er satt blir brukeren vider
                     // ----------------------------------------------------------------------------------------------------
                     // Redigeringsknapp START
                     // ----------------------------------------------------------------------------------------------------
-                    // Medlemmer som har bidratt: Anders Koo                                                                        
+                    // Medlemmer som har bidratt: Anders Koo  START                                                                     
 
                     if(isset($_POST['edit_btn'])) { // Sjekker om edit_btn er deklarert og knapp har blitt aktivert
                         $id = $_POST['edit_id'];  // Henter ut id med $_POST
@@ -74,7 +74,8 @@ if(!isset($_SESSION['id'])){    // Hvis session ikke er satt blir brukeren vider
                         $queryDB = mysqli_query($mysqli, $queryEdit); 
 
                         foreach($queryDB as $row) { // foreach er en funksjon som teller opp antall rader i abonnement tabellen
-                        
+                    
+                    // Medlemmer som har bidratt: Anders Koo  STOPP    
                     // ----------------------------------------------------------------------------------------------------
                     // Redigeringsknapp STOPP
                     // ----------------------------------------------------------------------------------------------------
