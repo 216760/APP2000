@@ -11,6 +11,8 @@
 <!--  											                                                                -->
 <!-- ---------------------------------------------------------------------------------------------------------- -->
 
+<!--  Kodet og tilpasset av Andreas Knutsen S START -->
+
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 <!-- START 																								  				  -->
 <!-- For å sette opp muligheter for både norsk og engelsk opppsett av vi hentet kode og tilpasset fra Youtube kanalen	  -->
@@ -61,3 +63,5 @@
 <!-- For å sette opp muligheter for både norsk og engelsk opppsett av vi hentet kode og tilpasset fra Youtube kanalen	  -->
 <!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA													  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->	
+
+<!--  Kodet og tilpasset av Andreas Knutsen STOPP -->

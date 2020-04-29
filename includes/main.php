@@ -5,7 +5,7 @@
 <!-- Grunnen til dette er basert på “best practice”  måter å programmere på.  							        -->
 <!-- Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan php språket fungerer. 			-->
 <!-- 																											-->
-<!--  Medlemmer som har bidratt: Henrik Solnør Johansen Andreas Knutsen og Anders Koo  							-->
+<!--  Kodet og tilpasset av: Henrik Solnør Johansen Andreas Knutsen og Anders Koo  								-->
 <!--										                      												-->
 <!--  Kilde: 																									-->                                       
 <!--    	https://www.youtube.com/watch?v=cgvDMUrQ3vA															-->
