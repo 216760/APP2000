@@ -16,7 +16,7 @@
 // ------------------------------------------------------------------------------------------------------------ //
 // START                                                                                                        //
 // Dette oppsettet er gjenbrukt fra gitlab repoet PHP Simple Login and Registration Script. Vi har selvfølgelig //
-// tilpasse databsehost, databasenavn, brukernavn og passord til itfag.usn.no                                   //
+// tilpasset databsehost, databasenavn, brukernavn og passord til itfag.usn.no                                  //
 //                                                                                                              //
 // Kilde:https://gitlab.com/tutorialsclass/php-simple-login-registration-script                                 //
 // ------------------------------------------------------------------------------------------------------------ //
@@ -34,7 +34,7 @@ $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $d
 // ------------------------------------------------------------------------------------------------------------ //
 // STOPP                                                                                                        //
 // Dette oppsettet er gjenbrukt fra gitlab repoet PHP Simple Login and Registration Script. Vi har selvfølgelig //
-// tilpasse databsehost, databasenavn, brukernavn og passord til itfag.usn.no                                   //
+// tilpasset databsehost, databasenavn, brukernavn og passord til itfag.usn.no                                  //
 //                                                                                                              //
 // Kilde:https://gitlab.com/tutorialsclass/php-simple-login-registration-script                                 //
 // ------------------------------------------------------------------------------------------------------------ //

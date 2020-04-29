@@ -5,7 +5,7 @@
 * I denne filen ligger det tilpasset kode som er funnet på linkene nedenfor							 			 *	
 * Dette er også dokumentert under "Kommentarer til kildebruk" i rapporten og markert i selve koden. 			 *
 * Grunnen til dette er basert på “best practice”  måter å programmere på.  										 *
-* Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan php språket fungerer. 				 *
+* Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan ajax teknikken fungerer. 		     *
 *																												 *
 * Kilder: 																									     *
 * http://www.openjs.com/ajax/tutorial/ajax.php 																	 *
@@ -220,7 +220,7 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren
 
 			// ------------------------------------------------------------------------------------------------------------ //
 			// START                                                                                                        //
-			// Denne delen er hentet fra og tilpasset til egen løsning  													//
+			// Denne delen er hentet fra og tilpasset egen løsning via kilden under											//
 			//																												//
 			// kilde: https://developer.mozilla.org/en-US/docs/Web/API/FormData/append                                	    //	
 			//                                                                                                              //					
@@ -239,7 +239,7 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren
 
 			// ------------------------------------------------------------------------------------------------------------ //
 			// STOPP                                                                                                        //
-			// Denne delen er hentet fra og tilpasset til egen løsning  													//
+			// Denne delen er hentet fra og tilpasset egen løsning via kilden under											//
 			//																												//
 			// kilde: https://developer.mozilla.org/en-US/docs/Web/API/FormData/append                                	    //	
 			//                                                                                                              //					

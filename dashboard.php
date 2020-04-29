@@ -191,7 +191,7 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 
 <!-- ---------------------------------------------------------------------------------------------------- -->
 <!-- STOPP 																								  -->
-<!-- For å sette opp modal med kalender funksjon har vi hentet og tilpasset kode Youtube kanalen 		  -->
+<!-- For å sette opp modal med kalender funksjon har vi hentet og tilpasset kode fra Youtube kanalen 	  -->
 <!-- Funda of Web IT.  		  																			  -->																	 
 <!-- Kilde: 																							  -->
 <!--	 https://www.youtube.com/watch?v=OePNkDd3Yb8													  -->
