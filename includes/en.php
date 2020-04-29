@@ -13,7 +13,7 @@
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 <!-- START 																								  				  -->
-<!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset fra Youtube kanalen	  -->
+<!-- For å sette opp muligheter for både norsk og engelsk opppsett av vi hentet kode og tilpasset fra Youtube kanalen	  -->
 <!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA													  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->	
 
@@ -58,6 +58,6 @@
 ?>
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 <!-- STOPP 																								  				  -->
-<!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset fra Youtube kanalen	  -->
+<!-- For å sette opp muligheter for både norsk og engelsk opppsett av vi hentet kode og tilpasset fra Youtube kanalen	  -->
 <!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA													  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->	
