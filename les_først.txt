@@ -6,7 +6,7 @@ Mappestruktur
 Slik ser strukturen ut: 
 
 __MACOSX
-other	                	// Her ligger alle diagrammene vi har i dokumentasjonen
+other	                	// Her ligger alle diagrammer, skisser, logo og bilder av applikasjonen
 bootstrap-4.1.3-dist	
 css	                    	// Styling av applikasjonen vår
 img	                    	// Mappen inneholder logo og bilder fra brukergrensesnitt
