@@ -15,7 +15,10 @@
 * https://www.imtiazepu.com/password-validation                                                                                       * 
 * https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view                                                              * 
 * https://www.youtube.com/watch?v=cgvDMUrQ3vA                                                                                         *
-*                                                                                                                                     *
+*                                                                                                                                     * 
+* Vi har med vilje laget informasjons boksene i koden med ulike størrelser 									                          * 
+* for å kunne skille dem fra hverandre.                                                                                               * 
+*                                                                                                                                     *                                                                                                                     *
 * Medlemmer som har bidratt:  Henrik Solnør Johansen, Andreas Knutsen og Anders Koo                                                   *         
 *                                                                                                                                     *
 **************************************************************************************************************************************/
