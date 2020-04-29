@@ -13,7 +13,7 @@
 *   https://www.youtube.com/watch?v=XV9x17zVZFU&list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV&index=3&t=0s             *
 *   https://websitebeaver.com/prepared-statements-in-php-mysqli-to-prevent-sql-injection                         *
 *                                                                                                                *
-* Vi har med vilje laget informasjons boksene i koden med ulike størrelser 									     * 
+* Vi har med vilje laget informasjonsboksene i koden med ulike størrelser 									     * 
 * for å kunne skille dem fra hverandre.                                                                          *                                                                                       
 *                                                                                                                *
 *                                                                                                                *       

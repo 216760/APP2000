@@ -10,7 +10,7 @@
 * Kilde:                                                                                                    * 
 * https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                                  *
 *                                                                                                           * 
-* Vi har med vilje laget informasjons boksene i koden med ulike størrelser 									* 
+* Vi har med vilje laget informasjonsboksene i koden med ulike størrelser 									* 
 * for å kunne skille dem fra hverandre.                                                                     * 
 *                                                                                                           * 
 * Medlemmer som har bidratt: Anders Koo                                                                     *
