@@ -49,6 +49,12 @@ if(!isset($_SESSION['id'])){    // Hvis session ikke er satt blir brukeren vider
 
     <body>
 
+        <!-- -------------------------------------------------------------------------------------------------------------------- -->
+        <!-- START 																								  				  -->
+        <!-- For å sette opp muligheter for både norsk og engelsk opppsett av vi hentet kode og tilpasset fra Youtube kanalen	  -->
+        <!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA													  -->
+        <!-- -------------------------------------------------------------------------------------------------------------------- -->	
+
         <?php include('includes/navbar.php'); ?> <!-- Inkluderer navbar.php  -->
 
         <div class="content-dashboard">
@@ -114,6 +120,12 @@ if(!isset($_SESSION['id'])){    // Hvis session ikke er satt blir brukeren vider
                     }
                 }
             ?>
+
+            <!-- -------------------------------------------------------------------------------------------------------------------- -->
+            <!-- STOPP 																								  				  -->
+            <!-- For å sette opp muligheter for både norsk og engelsk opppsett av vi hentet kode og tilpasset fra Youtube kanalen	  -->
+            <!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA													  -->
+            <!-- -------------------------------------------------------------------------------------------------------------------- -->
 
                 </div>
             </div>
