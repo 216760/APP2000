@@ -13,8 +13,7 @@
 * Vi har med vilje laget informasjonsboksene i koden med ulike størrelser 									* 
 * for å kunne skille dem fra hverandre.                                                                     * 
 *                                                                                                           * 
-* Medlemmer som har bidratt: Anders Koo                                                                     *
-************************************************************************************************************/ 
+*************************************************************************************************************/ 
  
 // --------------------------------------------------------------------------------------------------//
 // START                                                                                             //
@@ -22,6 +21,8 @@
 // Denne koden er hentet fra og tilpasset egen løsning fra denne Youtube kanalen, part 1-6           //
 //                                                                                                   //
 // Kilde: https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                   //
+//                                                                                                   //   
+// Kodet og tilpasset av: Anders Koo                                                                 //
 // --------------------------------------------------------------------------------------------------//
 
 // ----------------------------------------------------------------------------------------------------
@@ -127,6 +128,8 @@ if(isset($_POST['delete_btn'])) { // Sjekker at variabel er deklarert og at upda
 // Denne koden er hentet fra og tilpasset egen løsning fra denne Youtube kanalen, part 1-6           //
 //                                                                                                   //
 // Kilde: https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                   //
+//                                                                                                   //   
+// Kodet og tilpasset av: Anders Koo                                                                 //
 // --------------------------------------------------------------------------------------------------//
 
 ?>
