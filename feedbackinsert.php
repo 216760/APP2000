@@ -6,14 +6,15 @@
 * I denne filen ligger det kode som er hentet og tilpasset egen løsning fra kildene nedenfor.                    *
 * Dette er også dokumentert under "Kommentarer til kildebruk" i rapporten og markert i selve koden.              *
 * Grunnen til dette er basert på “best practice”  måter å programmere på.                                        *
-* Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan php språket fungerer. 	           *
+* Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan php språket fungerer. 	             *
 *                                                                                                                *
 * Kilde:                                                                                                         *
 *   https://www.youtube.com/playlist?list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV                                     * 
 *   https://www.youtube.com/watch?v=XV9x17zVZFU&list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV&index=3&t=0s             *
 *   https://websitebeaver.com/prepared-statements-in-php-mysqli-to-prevent-sql-injection                         *
 *                                                                                                                *
-*                                                                                                                *                                                                                       
+* Vi har med vilje laget informasjons boksene i koden med ulike størrelser 									     * 
+* for å kunne skille dem fra hverandre.                                                                          *                                                                                       
 *                                                                                                                *
 *                                                                                                                *       
 * Kodet og tilpasset av: Henrik Solnør Johansen og Vigleik Espeland Stakseng og Anders Koo                       *          

@@ -27,7 +27,9 @@
 * https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering									 	 * 
 * https://getbootstrap.com/docs/4.3/components/forms/															 * 
 * https://www.youtube.com/playlist?list=PL0eyrZgxdwhyeIDc3EA4XGsI9HoWLc6nF										 * 
-* 	 								 			     			 												 *				
+* 	 																											 * 
+* Vi har med vilje laget informasjons boksene i koden med ulike størrelser 										 * 
+* for å kunne skille dem fra hverandre. 								 			     			 		     *				
 *																												 *
 * Medlemmer som har bidratt Henrik Solnør Johansen, Vigleik Espeland Stakseng, Anders Koo og Andreas Knutsen 	 *
 *																												 *

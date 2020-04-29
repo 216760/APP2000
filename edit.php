@@ -6,13 +6,16 @@
 * I denne filen ligger det kode som er hentet og tilpasset egen løsning fra kildene nedenfor.                 *
 * Dette er også dokumentert under "Kommentarer til kildebruk" i rapporten og markert i selve koden.           *
 * Grunnen til dette er basert på “best practice”  måter å programmere på.                                     *
-* Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan php språket fungerer. 	           *
+* Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan php språket fungerer. 	          *
 *                                                                                                             * 
 * Kilder:                                                                                                     * 
 * https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                                    * 
 * https://drive.google.com/file/d/1Xz-ei5uWr-ZgBzBdHBUt0-0R3z3WsOW0/view                                      * 
 * https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view                                      * 
-* https://www.youtube.com/watch?v=cgvDMUrQ3vA	                                                              *     
+* https://www.youtube.com/watch?v=cgvDMUrQ3vA	                                                              *  
+*                                                                                                             * 
+* Vi har med vilje laget informasjons boksene i koden med ulike størrelser 									  * 
+* for å kunne skille dem fra hverandre.                                                                       *
 *                                                                                                             *
 * Medlemmer som har bidratt:  Andreas Knutsen og Anders Koo                                                   *
 *                                                                                                             *

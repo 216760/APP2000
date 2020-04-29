@@ -17,7 +17,8 @@
 * https://drive.google.com/file/d/1Xz-ei5uWr-ZgBzBdHBUt0-0R3z3WsOW0/view									* 
 * https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view		 							*
 *																											*
-*																											*
+* Vi har med vilje laget informasjons boksene i koden med ulike størrelser 									* 
+* for å kunne skille dem fra hverandre. 																	*
 *																											*
 * Medlemmer som har bidratt: Henrik Solnør Johansen, Andreas Knutsen og Anders Koo							*
 *																											*

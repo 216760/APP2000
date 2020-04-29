@@ -32,7 +32,6 @@ ob_start();                 // Skrur på output buffering (forhindrer header war
     ?>
 
     <body>
-
              
         <form id="myForm" class="form-signin" form action="signup.php" method="post" name="form1">
         <h1 class="logo_title">re:sub</h1>
@@ -47,7 +46,7 @@ ob_start();                 // Skrur på output buffering (forhindrer header war
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 <!-- START 																								  				  -->
 <!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset fra kilden under  		  -->																	 
-<!-- Kilde: https://www.youtube.com/watch?v=cgvDMUrQ3vA											  				  -->
+<!-- Kilde: https://www.youtube.com/watch?v=cgvDMUrQ3vA											  				          -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
                                                                                                    <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
             <button class="btn btn-primary w-100" id="regbtn" name="registerbtn"  value="Register"><?php echo $lang_button['registerbtn']; ?></button>
@@ -55,7 +54,7 @@ ob_start();                 // Skrur på output buffering (forhindrer header war
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 <!-- STOPP 																								  				  -->
 <!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset fra kilden under  		  -->																	 
-<!-- Kilde: https://www.youtube.com/watch?v=cgvDMUrQ3vA											  				  -->
+<!-- Kilde: https://www.youtube.com/watch?v=cgvDMUrQ3vA											  				          -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 
 
