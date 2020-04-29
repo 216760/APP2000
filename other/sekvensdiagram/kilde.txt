@@ -2,5 +2,8 @@ Denne modellen er basert på eksamensoppgave OAD2000B av student 215759 vår 19
 
 Nettkilder:
 
-https://browse.startpage.com/do/show_picture.pl?l=english&rais=1&oiu=https%3A%2F%2Fabout.draw.io%2Fwp-content%2Fuploads%2F2018%2F02%2Fdrawio-sequence-checkin.png&sp=38fa5374c97da44905406043739a16aa&t=default
 https://browse.startpage.com/do/show_picture.pl?l=english&rais=1&oiu=https%3A%2F%2Fi.ytimg.com%2Fvi%2FVjb86eQgHsA%2Fmaxresdefault.jpg&sp=70c22a01c23fb814225c930733f481fd&t=default
+
+https://eu-browse.startpage.com/av/anon-image?piurl=https%3A%2F%2Fdrawio-app.com%2Fwp-content%2Fuploads%2F2018%2F02%2Fdrawio-sequence-diagram-habit-tracker.png&sp=1588104472Tf3443450ef9280f669eb301172f627d26925308d0016736cfa1eca2e2b1a2d23
+
+

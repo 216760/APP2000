@@ -12,4 +12,3 @@ https://browse.startpage.com/do/show_picture.pl?l=english&rais=1&oiu=https%3A%2F
 
 https://browse.startpage.com/do/show_picture.pl?l=english&rais=1&oiu=https%3A%2F%2Fwww.uml-diagrams.org%2Fexamples%2Fdeployment-example-clusters.png&sp=a4996433549fc1b865909ec8d74dab35&t=default
 
-https://browse.startpage.com/do/show_picture.pl?l=english&rais=1&oiu=https%3A%2F%2Fwww.learn-it-with-examples.com%2Fit-architecture-management%2Fit-architecture%2Fuml%2Fpictures%2F4-deployment-diagram-uml%2F1-deployment-diagram-uml.PNG&sp=8fcc20f0688340dd0643e566baeae81a&t=default
