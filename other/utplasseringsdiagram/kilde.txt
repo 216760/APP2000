@@ -6,9 +6,10 @@ https://browse.startpage.com/do/show_picture.pl?l=english&rais=1&oiu=https%3A%2F
 
 https://browse.startpage.com/do/show_picture.pl?l=english&rais=1&oiu=https%3A%2F%2Fwww.researchgate.net%2Fprofile%2FJuan_Corchado_Rodriguez%2Fpublication%2F272019761%2Ffigure%2Ffig5%2FAS%3A668773895925780%401536459530929%2FUML-deployment-diagram-of-the-basic-schema-of-the-FUSION-architecture-The-association.png&sp=61afafce2670ba0d2ac305088bf75f87&t=default
 
+https://browse.startpage.com/do/show_picture.pl?l=english&rais=1&oiu=https%3A%2F%2Fwww.uml-diagrams.org%2Fexamples%2Fdeployment-example-clusters.png&sp=a4996433549fc1b865909ec8d74dab35&t=default
+
 https://www.youtube.com/watch?v=nTtQwGoUUNc&t=73s
 
-https://browse.startpage.com/do/show_picture.pl?l=english&rais=1&oiu=https%3A%2F%2Fwww.researchgate.net%2Fprofile%2FJuan_Corchado_Rodriguez%2Fpublication%2F272019761%2Ffigure%2Ffig5%2FAS%3A668773895925780%401536459530929%2FUML-deployment-diagram-of-the-basic-schema-of-the-FUSION-architecture-The-association.png&sp=61afafce2670ba0d2ac305088bf75f87&t=default
 
-https://browse.startpage.com/do/show_picture.pl?l=english&rais=1&oiu=https%3A%2F%2Fwww.uml-diagrams.org%2Fexamples%2Fdeployment-example-clusters.png&sp=a4996433549fc1b865909ec8d74dab35&t=default
+
 

@@ -175,7 +175,7 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren
 <script>
 			//***********************************************************//
 			// START 													 //
-			// Kode tilpasset og basert på kilder angitt over og under 	 // 
+			// Kode tilpasset og basert på kilder angitt over.		 	 // 
 			//															 //
 			// Medlemmer som har bidratt Henrik Solnør Johansen			 //
 			//***********************************************************//
@@ -261,7 +261,15 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren
 			//																												//
 			// ------------------------------------------------------------------------------------------------------------ //
 
-		
+
+			// -------------------------------------------------------- //
+			// STOPP 													//
+			// Kode tilpasset og basert på kilder angitt under        	// 
+			//															//
+			// Medlemmer som har bidratt Henrik Solnør Johansen			//
+			// -------------------------------------------------------- //
+
+
 			// ------------------------------------------------------------------------------------------------------------ //
 			// STOPP                                                                                                        //
 			// For å sette opp AJAX med feedback skjema har vi funnet på navnet på funksjonene _() 			      			//
@@ -290,12 +298,7 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren
 			// ------------------------------------------------------------------------------------------------------------ //
 
 
-			// -------------------------------------------------------- //
-			// STOPP 													//
-			// Kode tilpasset og basert på kilder angitt over        	// 
-			//															//
-			// Medlemmer som har bidratt Henrik Solnør Johansen			//
-			// -------------------------------------------------------- //
+
 
 
 </script>
