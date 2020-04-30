@@ -8,13 +8,13 @@ Slik ser strukturen ut:
 other	                	// Her ligger alle diagrammer, skisser, logo av applikasjonen
 bootstrap-4.1.3-dist	
 css	                    	// Styling av applikasjonen vår
-img	                    	// Mappen inneholder og bilder fra brukergrensesnitt
-includes                	// Mappen inneholder main, footer, header, navbar og språk filene	
-js                      	// Mappen inneholder dark mode skript, og bootstrap kode
+img	                    	// Mappen inneholder logo og bilder fra brukergrensesnitt
+includes                	// Mappen inneholder main, footer, header, navbar og språkfilene	
+js                      	// Mappen inneholder dark mode-skript, og bootstrapkode
 .DS_Store	
 les_først.txt	
 README.md	
-config.php
+lang-config.php
 dashboard.php	
 db-config.php	
 edit.php	
