@@ -48,9 +48,17 @@ if(isset($_POST['registerbtn'])) { // Sjekker at variabel er deklarert og at reg
     $start_date = mysqli_real_escape_string($mysqli, $_POST['start_date']);     // Henter ut data med $_POST og sikrer mot SQL injection
     $end_date =  mysqli_real_escape_string($mysqli, $_POST['end_date']);        // Henter ut data med $_POST og sikrer mot SQL injection
     
-    // user_id i cards blir automatisk opprettet når registrert bruker lager et abonnement
-    $user_id = $_SESSION['id']; // Oppretter user_id variabel for cards tabellen som en sessions variabel 
 
+    // ----------------------------------------------------------------------------------------------------
+    // user_id i cards blir automatisk opprettet når registrert bruker lager et abonnement
+    // https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php
+    // Oppretter user_id variabel for cards tabellen som en sessions variabel.Dette for å identifisere bruker
+    
+    $user_id = $_SESSION['id']; 
+    
+    // ----------------------------------------------------------------------------------------------------
+
+    
     // ----------------------------------------------------------------------------------------------------
     // Setter opp spørrevariabel for registrering av abonnement
     // ----------------------------------------------------------------------------------------------------

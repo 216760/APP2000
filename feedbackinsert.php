@@ -39,8 +39,15 @@ $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING); // Henter ut data me
 $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL); // Henter ut data med $_POST og fjerner whitespace på start og slutt
 $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING); // Henter ut data med $_POST og fjerner whitespace på start og slutt
 $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING); // Henter ut data med $_POST og fjerner whitespace på start og slutt
-$user_id = $_SESSION['id']; // Oppretter en $user_id som er session basert
 
+
+// ----------------------------------------------------------------------------------------------------
+// Oppretter en $user_id som er session basert. Dette for å identifisere bruker
+// https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php
+
+$user_id = $_SESSION['id'];
+
+// ----------------------------------------------------------------------------------------------------
 
 
 // ----------------------------------------------------------------------------------------------------
