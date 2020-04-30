@@ -50,7 +50,7 @@ if(isset($_POST['registerbtn'])) { // Sjekker at variabel er deklarert og at reg
     
 
     // ----------------------------------------------------------------------------------------------------
-    // user_id i cards blir automatisk opprettet når registrert bruker lager et abonnement
+    // user_id i cards tabellen blir automatisk opprettet når registrert bruker lager et abonnement
     // https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php
     // Oppretter user_id variabel for cards tabellen som en sessions variabel.Dette for å identifisere bruker
     
