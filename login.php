@@ -96,6 +96,7 @@ include_once('db-config.php'); // Inkluderer bare 'db-config.php' en gang, og sc
 
         if ($user_matced > 0) { // Hvis user_matced returerner en verdi større en 0 fortsetter koden.
             $data = mysqli_fetch_array($sql); // Legger SELECT spørringen i tabell ved hjelp av funksjonen mysqli_fetch_array. Deretter legges denne spørringen i en variabel
+            
             $id = $data['id'];  // Henter ut bruker-id fra databasen og legger den i en variabel
             $_SESSION['id'] = $id;  // Legger id-variabelen inn i en session variabel. Dette for å identifisere bruker
         
