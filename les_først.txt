@@ -14,7 +14,7 @@ js                      	// Mappen inneholder dark mode skript, og bootstrap kod
 .DS_Store	
 les_først.txt	
 README.md	
-config.php
+lang-config.php
 dashboard.php	
 db-config.php	
 edit.php	
