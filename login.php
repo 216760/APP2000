@@ -96,9 +96,14 @@ include_once('db-config.php'); // Inkluderer bare 'db-config.php' en gang, og sc
 
         if ($user_matced > 0) { // Hvis user_matced returerner en verdi større en 0 fortsetter koden.
             $data = mysqli_fetch_array($sql); // Legger SELECT spørringen i tabell ved hjelp av funksjonen mysqli_fetch_array. Deretter legges denne spørringen i en variabel
-            
+
+//------------------------------------------------------------------------------------------------------------------//
+// Denne kilden er brukt for å finne ut av hvordan man legger id fra register tabellen inn i en session variabel    //
+// Kilde: https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php          //
+//------------------------------------------------------------------------------------------------------------------//
             $id = $data['id'];  // Henter ut bruker-id fra databasen og legger den i en variabel
             $_SESSION['id'] = $id;  // Legger id-variabelen inn i en session variabel. Dette for å identifisere bruker
+            
         
             //password_verify er en funksjon som sammenligner input password med hashet passord i databasen fra $data variabel
             if(password_verify($password, $data['password'])) { 
