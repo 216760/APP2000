@@ -117,10 +117,7 @@ ob_start();                 // Skrur på output buffering (forhindrer header war
         // Dette regex uttrykket er gjenbrukt hentet fra https://www.imtiazepu.com/password-validation/
         $regex =  "#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$#";
 
-
-        
         $empty = FALSE;
-        $emailErr = "";
         
         if(!empty($_POST['name'] && $_POST['email'] && $_POST['password'])) {
 

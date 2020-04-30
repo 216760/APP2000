@@ -15,7 +15,8 @@
 * https://getbootstrap.com/docs/4.3/components/card/														* 
 * https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering									* 
 * https://drive.google.com/file/d/1Xz-ei5uWr-ZgBzBdHBUt0-0R3z3WsOW0/view									* 
-* https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view		 							*
+* https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view									* 
+* https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php		 	*
 *																											*
 * Vi har med vilje laget informasjonsboksene i koden med ulike størrelser 									* 
 * for å kunne skille dem fra hverandre. 																	*

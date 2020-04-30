@@ -8,7 +8,8 @@
 * Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan php språket fungerer. 	        *
 *                                                                                                           *
 * Kilde:                                                                                                    * 
-* https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                                  *
+* https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                                  * 
+* https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php          *
 *                                                                                                           * 
 * Vi har med vilje laget informasjonsboksene i koden med ulike størrelser 									* 
 * for å kunne skille dem fra hverandre.                                                                     * 
