@@ -39,12 +39,8 @@ login.php<br>
 logout.php<br>
 server.php<br>
 signup.php<br>
-3. Importer vedlagt sql-skript inn i phpmyadmin<br>
-4. Testbrukere:<br>
-brukernavn: bob@mail.com<br>
-passord:C}DK0(`_-(K0?"j<br>
-brukernavn: user@user.com<br>
-passord::lhqrSn%!)W7G;W<br>
+3. Importer eget sql-skript inn i phpmyadmin<br>
+
 
 # Bilder av grensesnitt
 Landingsside topp<br>
