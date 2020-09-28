@@ -40,7 +40,7 @@ logout.php<br>
 server.php<br>
 signup.php<br>
 3. Importer eget sql-skript inn i phpmyadmin<br>
-
+4. Oppsett klart, da er det bare å teste ut :)
 
 # Bilder av grensesnitt
 Landingsside topp<br>
