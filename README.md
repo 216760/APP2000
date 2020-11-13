@@ -45,15 +45,15 @@ signup.php<br>
 # Link
 http://resub.epizy.com/
 
-# Bilder av grensesnitt
+# Grensesnitt
 Landingsside topp<br>
-<img src="https://github.com/andreas-knutsen/RE-SUB/blob/master/img/seksjon1.png" alt="alternatetext" width="600" height="300"><br>
+<img src="https://github.com/andreas-knutsen/RE-SUB/blob/master/img/seksjon1.png" alt="alternatetext" width="1000" height="500"><br>
 
 Landingsside bunn:<br>
-<img src="https://github.com/andreas-knutsen/RE-SUB/blob/master/img/landingsside.png" alt="alternatetext" width="600" height="300"><br>
+<img src="https://github.com/andreas-knutsen/RE-SUB/blob/master/img/landingsside.png" alt="alternatetext" width="1000" height="500"><br>
 
 Logg inn:<br>
-<img src="https://github.com/andreas-knutsen/RE-SUB/blob/master/img/login.png" alt="alternatetext" width="200" height="200"><br>
+<img src="https://github.com/andreas-knutsen/RE-SUB/blob/master/img/login.png" alt="alternatetext" width="300" height="400"><br>
 
 Dashbord:<br>
-<img src="https://github.com/andreas-knutsen/RE-SUB/blob/master/img/3cards.png" alt="alternatetext" width="600" height="300"><br>
+<img src="https://github.com/andreas-knutsen/RE-SUB/blob/master/img/3cards.png" alt="alternatetext" width="1000" height="500"><br>
