@@ -42,6 +42,9 @@ signup.php<br>
 3. Importer eget sql-skript inn i phpmyadmin<br>
 4. Oppsett klart, da er det bare å teste ut :)
 
+# Link
+http://resub.epizy.com/
+
 # Bilder av grensesnitt
 Landingsside topp<br>
 <img src="https://github.com/andreas-knutsen/RE-SUB/blob/master/img/seksjon1.png" alt="alternatetext" width="600" height="300"><br>
@@ -54,6 +57,3 @@ Logg inn:<br>
 
 Dashbord:<br>
 <img src="https://github.com/andreas-knutsen/RE-SUB/blob/master/img/3cards.png" alt="alternatetext" width="600" height="300"><br>
-
-# Nettadresse til løsning
-http://resub.epizy.com/
