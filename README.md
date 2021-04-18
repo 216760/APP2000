@@ -1,3 +1,6 @@
+# Demo
+ ![Demo](demo.gif)
+
 # Problemstilling
 
 Netflix, HBO, TV 2 Sumo og Viaplay er bare noen av strømmetjenestene på markedet i dag.<br>
@@ -12,9 +15,13 @@ prøveperioder, uten å risikere at de taper penger på tjenester de ikke benytt
 Ifølge Norsk mediebarometer i 2018, så 37 prosent av befolkningen på video- eller filmmedier<br>
 (som inkluderer strømmede videoer) en gjennomsnittsdag. Ifølge undersøkelsen har strømming<br>
 av videoinnhold de siste årene økt. Målgruppen for applikasjonen er derfor stor.<br>
-
-# Demo
- ![Demo](demo.gif)
+ 
+# Teknologier:<br>
+•	HTML/ CSS/ Bootstrap	<br>
+•	JavaScript<br>
+•	AJAX	<br>
+•	PHP<br>
+•	MySQL	<br>
 
 # Hvordan sette opp?
 
