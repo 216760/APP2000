@@ -23,6 +23,13 @@ av videoinnhold de siste årene økt. Målgruppen for applikasjonen er derfor st
 •	PHP<br>
 •	MySQL	<br>
 
+# Link<br>
+http://resub.epizy.com/<br>
+
+# Testbruker:<br>
+brukernavn: bob@mail.com<br>
+passord:C}DK0(`_-(K0?"j<br>
+
 # Hvordan sette opp?
 
 1. Unzip mappe<br>
@@ -49,9 +56,6 @@ server.php<br>
 signup.php<br>
 3. Importer eget sql-skript inn i phpmyadmin<br>
 4. Oppsett klart, da er det bare å teste ut :)
-
-# Link
-http://resub.epizy.com/
 
 # Grensesnitt
 Landingsside topp<br>
