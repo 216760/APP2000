@@ -34,6 +34,11 @@ ob_start();                 // Skrur på output buffering (forhindrer header war
     include('includes/header_signup.php'); // Inkluderer header_singup.php
     ?>
 
+    
+    
+    <!-- -------------------------------------------------------------------- -->
+	<!-- Oppsett av registring for ny bruker START                            -->
+	<!-- -------------------------------------------------------------------- -->
     <body>
              
         <form id="myForm" class="form-signin" form action="signup.php" method="post" name="form1">
@@ -45,6 +50,10 @@ ob_start();                 // Skrur på output buffering (forhindrer header war
             <input type="text" placeholder="<?php echo $lang_input['input-email']; ?>" class="" name="email">
                                                 <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
             <input type="password" placeholder="<?php echo $lang_input['input-password']; ?>" class="" name="password"> 
+            
+    <!-- -------------------------------------------------------------------- -->
+	<!-- Oppsett av registring for ny bruker STOPP                            -->
+	<!-- -------------------------------------------------------------------- -->
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 <!-- START 																								  				  -->
