@@ -105,11 +105,14 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 								<li class="list-group-item"><h6 class="card-text"><?php echo $lang_text['card-start-date']; ?></h6><?php echo $row['start_date']; ?></li> <!-- Henter ut start dato fra databasen  -->
 								<li class="list-group-item"><h6 class="card-text"><?php echo $lang_text['card-end-date']; ?></h6><?php echo $row['end_date']; ?></li> <!-- Henter ut slutt dato fra databasen  -->
 							</ul>
+							
+							<!-- EDIT FIELD -->
 							<div class="card-body">
 								<form action="edit.php" method="post" style="display:inline-block;">                                               
 									<input type="hidden" name ="edit_id" value="<?php echo $row['id']; ?>"> <!-- Henter ut id dato fra databasen. Dette for å kunne identifisere spesifikt abonnement  -->
 									<button class="btn btn-primary" name="edit_btn" data-toggle="modal"><?php echo $lang_button['editbtn']; ?></button> <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
 								</form>
+								<!-- DELETE FIELD -->
 								<form action="server.php" method="post" style="display:inline-block;">                                               
 									<input type="hidden" name ="delete_id" value="<?php echo $row['id']; ?>"> <!-- Henter ut id dato fra databasen. Dette for å kunne identifisere spesifikt abonnement  -->
 									<button class="btn btn-primary" name="delete_btn" data-toggle="modal"><?php echo $lang_button['deletebtn']; ?></button> <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
@@ -141,6 +144,9 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 
 				?>
 
+	<!-- -------------------------------------------------------------------- -->
+	<!-- Modal for å sett inn informasjon og opprette nytt abonnement START 	-->
+	<!-- -------------------------------------------------------------------- -->
 		<div class="container">
 			<div class="modal fade" id="eexampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-centered" role="document">
@@ -177,6 +183,11 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 									<button type="submit" name="registerbtn" class="btn btn-primary"><?php echo $lang_button['savebtn']; ?></button>
 								</div>
 
+								
+	<!-- -------------------------------------------------------------------- -->
+	<!-- Modal for å sett inn informasjon og opprette nytt abonnement START   -->
+	<!-- -------------------------------------------------------------------- -->
+								
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 <!-- STOPP 												                  -->
 <!-- For å sette opp muligheter for både norsk og engelsk opppsett av vi hentet kode og tilpasset fra Youtube kanalen	  -->
