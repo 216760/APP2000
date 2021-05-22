@@ -5,7 +5,7 @@
 * I denne filen ligger det gjenbrukt kode som er funnet på linkene oppsummert under.                        *
 * Dette er også dokumentert under "Kommentarer til kildebruk" i rapporten og markert i selve koden.         *
 * Grunnen til dette er basert på “best practice”  måter å programmere på.                                   *
-* Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan php språket fungerer. 	        *
+* Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan php språket fungerer.          *
 *                                                                                                           *
 * Linker til gjenbrukt kode:                                                                                *
 *                                                                                                           *
