@@ -1,13 +1,13 @@
 <!-- ---------------------------------------------------------------------------------------------------------- -->
-<!-- TIL INFORMASON:																							-->
-<!-- I denne filen ligger det kode som er hentet og tilpasset egen løsning fra kildene nedenfor.		        -->
-<!-- Dette er også dokumentert under "Kommentarer til kildebruk" i rapporten og markert i selve koden 		    -->
-<!-- Grunnen til dette er basert på “best practice”  måter å programmere på.  							        -->
-<!-- Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan php språket fungerer. 			-->
+<!-- TIL INFORMASON:												-->
+<!-- I denne filen ligger det kode som er hentet og tilpasset egen løsning fra kildene nedenfor.		-->
+<!-- Dette er også dokumentert under "Kommentarer til kildebruk" i rapporten og markert i selve koden 		-->
+<!-- Grunnen til dette er basert på “best practice”  måter å programmere på.  					-->
+<!-- Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan php språket fungerer. 		-->
 <!--                                                                                                            -->
-<!--  Kilde: 																									-->
-<!--	https://mdbootstrap.com/docs/jquery/navigation/footer/ 													-->                                        
-<!--  	https://www.youtube.com/watch?v=cgvDMUrQ3vA                                                      		-->
+<!--  Kilde: 													-->
+<!--	https://mdbootstrap.com/docs/jquery/navigation/footer/ 							-->                                        
+<!--  	https://www.youtube.com/watch?v=cgvDMUrQ3vA                                                      	-->
 <!-- ---------------------------------------------------------------------------------------------------------- -->
 
 
@@ -15,9 +15,9 @@
 
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
-<!-- START 																								  				  -->
+<!-- START 														  -->
 <!-- For å sette opp muligheter for både norsk og engelsk opppsett av vi hentet kode og tilpasset fra Youtube kanalen	  -->
-<!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA													  -->
+<!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA							  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->	
 
 <?php
@@ -141,9 +141,9 @@
 ?>	
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
-<!-- STOPP 																								  				  -->
+<!-- STOPP 														  -->
 <!-- For å sette opp muligheter for både norsk og engelsk opppsett av vi hentet kode og tilpasset fra Youtube kanalen	  -->
-<!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA													  -->
+<!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA							  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->	
 
 
