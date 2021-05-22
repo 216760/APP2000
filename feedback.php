@@ -1,38 +1,38 @@
 <?php
 /*****************************************************************************************************************
-* TIL INFORMASJON:																							 	 *																		  
-* 																												 *
-* I denne filen ligger det tilpasset kode som er funnet på linkene nedenfor							 			 *	
-* Dette er også dokumentert under "Kommentarer til kildebruk" i rapporten og markert i selve koden. 			 *
-* Grunnen til dette er basert på “best practice”  måter å programmere på.  										 *
-* Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan ajax teknikken fungerer. 		     *
-*																												 *
-* Kilder: 																									     *
-* http://www.openjs.com/ajax/tutorial/ajax.php 																	 *
-* https://developer.mozilla.org/en-US/docs/Web/API/FormData/append							  					 * 
-* https://www.w3schools.com/js/js_ajax_http.asp																	 *
-* https://www.w3schools.com/js/js_ajax_http_send.asp											  				 * 
-* https://www.w3schools.com/js/js_ajax_http_response.asp										  				 * 
-* https://www.w3schools.com/js/js_ajax_xmlfile.asp											 					 *
-* https://www.w3schools.com/js/js_ajax_php.asp																	 *
-* https://www.w3schools.com/js/js_ajax_asp.asp												  					 *
-* https://www.w3schools.com/js/js_ajax_database.asp											  					 *
-* https://www.w3schools.com/js/js_ajax_applications.asp								          					 *
-* https://www.w3schools.com/js/js_ajax_examples.asp    									  						 *
-* https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp								  					 *
-* https://www.w3schools.com/jsref/prop_html_innerhtml.asp														 * 
-* https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view										 * 
-* https://www.youtube.com/watch?v=cgvDMUrQ3vA																	 * 
-* https://getbootstrap.com/docs/4.3/components/card/															 * 
-* https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering									 	 * 
-* https://getbootstrap.com/docs/4.3/components/forms/															 * 
-* https://www.youtube.com/playlist?list=PL0eyrZgxdwhyeIDc3EA4XGsI9HoWLc6nF										 * 
-* 	 																											 * 
-* Vi har med vilje laget informasjonsboksene i koden med ulike størrelser 										 * 
-* for å kunne skille dem fra hverandre. 								 			     			 		     *				
-*																												 *
-* Kodet og tilpasset av Henrik Solnør Johansen, Vigleik Espeland Stakseng, Anders Koo og Andreas Knutsen 	     *
-*																												 *
+* TIL INFORMASJON:										                 *																		  
+* 													         *
+* I denne filen ligger det tilpasset kode som er funnet på linkene nedenfor					 *	
+* Dette er også dokumentert under "Kommentarer til kildebruk" i rapporten og markert i selve koden.              *
+* Grunnen til dette er basert på “best practice”  måter å programmere på.  					 *
+* Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan ajax teknikken fungerer. 		 *
+*														 *
+* Kilder: 												         *
+* http://www.openjs.com/ajax/tutorial/ajax.php 									 *
+* https://developer.mozilla.org/en-US/docs/Web/API/FormData/append				                 * 
+* https://www.w3schools.com/js/js_ajax_http.asp									 *
+* https://www.w3schools.com/js/js_ajax_http_send.asp								 * 
+* https://www.w3schools.com/js/js_ajax_http_response.asp							 * 
+* https://www.w3schools.com/js/js_ajax_xmlfile.asp								 *
+* https://www.w3schools.com/js/js_ajax_php.asp									 *
+* https://www.w3schools.com/js/js_ajax_asp.asp									 *
+* https://www.w3schools.com/js/js_ajax_database.asp								 *
+* https://www.w3schools.com/js/js_ajax_applications.asp								 *
+* https://www.w3schools.com/js/js_ajax_examples.asp    							         *
+* https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp							 *
+* https://www.w3schools.com/jsref/prop_html_innerhtml.asp							 * 
+* https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view					 * 
+* https://www.youtube.com/watch?v=cgvDMUrQ3vA									 * 
+* https://getbootstrap.com/docs/4.3/components/card/								 * 
+* https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering					 * 
+* https://getbootstrap.com/docs/4.3/components/forms/								 * 
+* https://www.youtube.com/playlist?list=PL0eyrZgxdwhyeIDc3EA4XGsI9HoWLc6nF					 * 
+* 	 													 * 
+* Vi har med vilje laget informasjonsboksene i koden med ulike størrelser 					 * 
+* for å kunne skille dem fra hverandre. 								         *				
+*														 *
+* Kodet og tilpasset av Henrik Solnør Johansen, Vigleik Espeland Stakseng, Anders Koo og Andreas Knutsen 	 *
+*														 *
 ******************************************************************************************************************/
 
 include('lang-config.php'); // Inkluderer oppsett for flere språk
@@ -56,11 +56,11 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren
 	<body>
 
 		<!-- ---------------------------------------------------------------------------------------------------- -->
-		<!-- Lager en form med fire inputs: name, email, subject og textarea. 									  -->
-		<!-- Dette blir sendt når alle feltene har innhold og bruker trykker på "submit". 						  -->
+		<!-- Lager en form med fire inputs: name, email, subject og textarea. 					  -->
+		<!-- Dette blir sendt når alle feltene har innhold og bruker trykker på "submit". 			  -->
 		<!-- For at et form skal sendes må man ha en id som kobler (my_form)-formen sammen med scriptet nedenfor. -->
-		<!-- "mybtn" setter igang prosessen med å sende formen. 											   	  -->
-		<!-- Den andre knappen returnerer brukeren til dashbordet.											      -->
+		<!-- "mybtn" setter igang prosessen med å sende formen. 						  -->
+		<!-- Den andre knappen returnerer brukeren til dashbordet.						  -->
 		<!-- ---------------------------------------------------------------------------------------------------- -->
 		
 		<?php
@@ -73,11 +73,11 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren
         		<div class="row justify-content-center">
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
-<!-- START 																								  				  -->
-<!-- Oppsett av feeback skjema er gjort ved hjelp av disse lenkene:														  -->
-<!-- https://getbootstrap.com/docs/4.3/components/card/																	  --> 
-<!-- https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering											  -->
-<!-- https://getbootstrap.com/docs/4.3/components/forms/											  					  -->
+<!-- START 														  -->
+<!-- Oppsett av feeback skjema er gjort ved hjelp av disse lenkene:							  -->
+<!-- https://getbootstrap.com/docs/4.3/components/card/								    	  --> 
+<!-- https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering						  -->
+<!-- https://getbootstrap.com/docs/4.3/components/forms/								  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 
 		            <div class="card shadow mx-auto" style="width: 25rem;">
@@ -110,11 +110,11 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren
 					</div>
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
-<!-- STOPP 																								  				  -->
-<!-- Oppsett av feeback skjema er gjort ved hjelp av disse lenkene:														  -->
-<!-- https://getbootstrap.com/docs/4.3/components/card/																	  --> 
-<!-- https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering											  -->
-<!-- https://getbootstrap.com/docs/4.3/components/forms/											  					  -->
+<!-- STOPP 														  -->
+<!-- Oppsett av feeback skjema er gjort ved hjelp av disse lenkene:							  -->
+<!-- https://getbootstrap.com/docs/4.3/components/card/									  --> 
+<!-- https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering						  -->
+<!-- https://getbootstrap.com/docs/4.3/components/forms/								  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 
 				</div>
@@ -144,40 +144,40 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren
 </html>
 
 			<!-- ------------------------------------------------------------------------------------------------ -->
-			<!-- START 																							  -->
-			<!-- For å sette opp AJAX med feedback skjema har vi funnet på navnet på funksjonene _() 			  -->
-			<!-- og submitForm(), men koden på innsiden er laget basert på disse kildene:			  	  	  	  -->
-			<!--												  											      --> 
-			<!-- Kilder: 																					      -->
-			<!--	http://www.openjs.com/ajax/tutorial/ajax.php 												  -->			 
-			<!--	https://developer.mozilla.org/en-US/docs/Web/API/FormData/append							  -->		 
-			<!--    https://www.w3schools.com/js/js_ajax_http.asp												  -->				
-			<!--	https://www.w3schools.com/js/js_ajax_http_send.asp											  -->			 
-			<!--	https://www.w3schools.com/js/js_ajax_http_response.asp										  -->				 
-			<!--	https://www.w3schools.com/js/js_ajax_xmlfile.asp											  -->					 
-			<!--	https://www.w3schools.com/js/js_ajax_php.asp												  -->					
-			<!--	https://www.w3schools.com/js/js_ajax_asp.asp												  -->					
-			<!--	https://www.w3schools.com/js/js_ajax_database.asp										      -->					 
-			<!--	https://www.w3schools.com/js/js_ajax_applications.asp								          -->					
-			<!--	https://www.w3schools.com/js/js_ajax_examples.asp    									  	  -->				
-			<!--	https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp								  -->					
-			<!--	https://www.w3schools.com/jsref/prop_html_innerhtml.asp										  -->				
-			<!--	https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view						  -->			 
-			<!--	https://www.youtube.com/watch?v=cgvDMUrQ3vA													  -->				
-			<!--	https://getbootstrap.com/docs/4.3/components/card/											  -->			 
-			<!--	https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering					  -->				 	 
-			<!--	https://getbootstrap.com/docs/4.3/components/forms/											  -->	
-			<!--	https://www.youtube.com/playlist?list=PL0eyrZgxdwhyeIDc3EA4XGsI9HoWLc6nF					  -->
-			<!--    https://www.w3schools.com/js/js_ajax_http_send.asp 		  									  --> 
+			<!-- START 											      -->
+			<!-- For å sette opp AJAX med feedback skjema har vi funnet på navnet på funksjonene _() 	      -->
+			<!-- og submitForm(), men koden på innsiden er laget basert på disse kildene:			      -->
+<!--												  			      --> 
+<!-- Kilder: 														      -->
+			<!--	http://www.openjs.com/ajax/tutorial/ajax.php 						      -->			 
+			<!--	https://developer.mozilla.org/en-US/docs/Web/API/FormData/append			      -->		 
+			<!--    https://www.w3schools.com/js/js_ajax_http.asp						      -->				
+			<!--	https://www.w3schools.com/js/js_ajax_http_send.asp					      -->			 
+			<!--	https://www.w3schools.com/js/js_ajax_http_response.asp					      -->				 
+			<!--	https://www.w3schools.com/js/js_ajax_xmlfile.asp					      -->					 
+			<!--	https://www.w3schools.com/js/js_ajax_php.asp						      -->					
+			<!--	https://www.w3schools.com/js/js_ajax_asp.asp						      -->					
+			<!--	https://www.w3schools.com/js/js_ajax_database.asp					      -->					 
+			<!--	https://www.w3schools.com/js/js_ajax_applications.asp					      -->					
+			<!--	https://www.w3schools.com/js/js_ajax_examples.asp    					      -->				
+			<!--	https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp				      -->					
+			<!--	https://www.w3schools.com/jsref/prop_html_innerhtml.asp					      -->				
+			<!--	https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view			      -->			 
+			<!--	https://www.youtube.com/watch?v=cgvDMUrQ3vA						      -->				
+			<!--	https://getbootstrap.com/docs/4.3/components/card/					      -->			 
+			<!--	https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering		      -->				 	 
+			<!--	https://getbootstrap.com/docs/4.3/components/forms/					      -->	
+			<!--	https://www.youtube.com/playlist?list=PL0eyrZgxdwhyeIDc3EA4XGsI9HoWLc6nF		      -->
+			<!--    https://www.w3schools.com/js/js_ajax_http_send.asp 		  			      --> 
 			<!-- ------------------------------------------------------------------------------------------------ -->
 			     
 
 <script>
 			//***********************************************************//
-			// START 													 //
-			// Kode tilpasset og basert på kilder angitt over.		 	 // 
-			//															 //
-			// Medlemmer som har bidratt Henrik Solnør Johansen			 //
+			// START 						     //
+			// Kode tilpasset og basert på kilder angitt over.	     // 
+			//							     //
+			// Medlemmer som har bidratt Henrik Solnør Johansen          //
 			//***********************************************************//
 
 		function _(id){ return document.getElementById(id); } // funksjon som returnerer alle id'ene i skjema
@@ -191,9 +191,9 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren
 
 			// ------------------------------------------------------------------------------------------------------------ //
 			// START                                                                                                        //
-			// Denne delen er hentet fra og tilpasset egen løsning via kilden under											//
-			//																												//
-			// kilde: https://developer.mozilla.org/en-US/docs/Web/API/FormData/append                                	    //	
+			// Denne delen er hentet fra og tilpasset egen løsning via kilden under					        //
+			//														//
+			// kilde: https://developer.mozilla.org/en-US/docs/Web/API/FormData/append                                	//	
 			//                                                                                                              //					
 			// ------------------------------------------------------------------------------------------------------------ //
 			
@@ -211,22 +211,22 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren
 
 			// ------------------------------------------------------------------------------------------------------------ //
 			// STOPP                                                                                                        //
-			// Denne delen er hentet fra og tilpasset egen løsning via kilden under											//
-			//																												//
-			// kilde: https://developer.mozilla.org/en-US/docs/Web/API/FormData/append                                	    //	
+			// Denne delen er hentet fra og tilpasset egen løsning via kilden under						//
+			//														//
+			// kilde: https://developer.mozilla.org/en-US/docs/Web/API/FormData/append                                	//	
 			//                                                                                                              //					
 			// ------------------------------------------------------------------------------------------------------------ //
 
 
 			// ------------------------------------------------------------------------------------------------------------ //
 			// START                                                                                                        //
-			// Denne delen er hentet fra og tilpasset til egen løsning  													//
-			// Kilde:																										//
-			// https://www.w3schools.com/js/js_ajax_http_send.asp   														//
-			// https://www.w3schools.com/js/js_ajax_http_response.asp                                          	  		    //
-			// https://www.w3schools.com/js/js_ajax_php.asp																	//
-			// https://www.w3schools.com/js/js_ajax_http.asp												                //   															  //
-			//																												//
+			// Denne delen er hentet fra og tilpasset til egen løsning  							//
+			// Kilde:													//
+			// https://www.w3schools.com/js/js_ajax_http_send.asp   							//
+			// https://www.w3schools.com/js/js_ajax_http_response.asp                                          	        //
+			// https://www.w3schools.com/js/js_ajax_php.asp									//
+			// https://www.w3schools.com/js/js_ajax_http.asp							        //
+			//													        //
 			// ------------------------------------------------------------------------------------------------------------ //
 
 
@@ -253,48 +253,49 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren
 
 			// ------------------------------------------------------------------------------------------------------------ //
 			// STOPP                                                                                                        //
-			// Denne delen er hentet fra og tilpasset til egen løsning  													//
-			// https://www.w3schools.com/js/js_ajax_http_send.asp   														//
-			// https://www.w3schools.com/js/js_ajax_http_response.asp                                          	  		    //
-			// https://www.w3schools.com/js/js_ajax_php.asp																	//
-			// https://www.w3schools.com/js/js_ajax_http.asp												                //                                                // https://www.w3schools.com/js/js_ajax_asp.asp																  //
-			//																												//
+			// Denne delen er hentet fra og tilpasset til egen løsning  						        //
+			// https://www.w3schools.com/js/js_ajax_http_send.asp   						        //
+			// https://www.w3schools.com/js/js_ajax_http_response.asp                                          	        //
+			// https://www.w3schools.com/js/js_ajax_php.asp									//
+			// https://www.w3schools.com/js/js_ajax_http.asp								//
+			// https://www.w3schools.com/js/js_ajax_asp.asp	// 								//
+			//														//
 			// ------------------------------------------------------------------------------------------------------------ //
 
 
 			// -------------------------------------------------------- //
-			// STOPP 													//
-			// Kode tilpasset og basert på kilder angitt under        	// 
-			//															//
-			// Medlemmer som har bidratt Henrik Solnør Johansen			//
+			// STOPP 						    //
+			// Kode tilpasset og basert på kilder angitt under          // 
+			//						            //
+			// Medlemmer som har bidratt Henrik Solnør Johansen	    //
 			// -------------------------------------------------------- //
 
 
 			// ------------------------------------------------------------------------------------------------------------ //
 			// STOPP                                                                                                        //
-			// For å sette opp AJAX med feedback skjema har vi funnet på navnet på funksjonene _() 			      			//
-			// og submitForm(), men koden på innsiden er laget basert på disse kildene:										//
-			//																												//
-			// Kilder:																										//
-			// http://www.openjs.com/ajax/tutorial/ajax.php 												  				//
-			// https://developer.mozilla.org/en-US/docs/Web/API/FormData/append							  					//
-			// https://www.w3schools.com/js/js_ajax_http.asp												  				//
-			// https://www.w3schools.com/js/js_ajax_http_send.asp											 				//
-			// https://www.w3schools.com/js/js_ajax_http_response.asp										  				//
-			// https://www.w3schools.com/js/js_ajax_xmlfile.asp											  					//
-			// https://www.w3schools.com/js/js_ajax_php.asp												  					//
-			// https://www.w3schools.com/js/js_ajax_asp.asp												  					//
-			// https://www.w3schools.com/js/js_ajax_database.asp											 				//
-			// https://www.w3schools.com/js/js_ajax_applications.asp								          				//
-			// https://www.w3schools.com/js/js_ajax_examples.asp                             	    						//
-			// https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp                                					//
-			// https://www.w3schools.com/jsref/prop_html_innerhtml.asp													    //
-			// https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view						  				//	 
-			// https://www.youtube.com/watch?v=cgvDMUrQ3vA													  				//	
-			// https://getbootstrap.com/docs/4.3/components/card/											  				//	 
-			// https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering					  				//	 	 
-			// https://getbootstrap.com/docs/4.3/components/forms/											  				//
-			// https://www.youtube.com/playlist?list=PL0eyrZgxdwhyeIDc3EA4XGsI9HoWLc6nF										//
+			// For å sette opp AJAX med feedback skjema har vi funnet på navnet på funksjonene _() 			      	//
+			// og submitForm(), men koden på innsiden er laget basert på disse kildene:				   	//
+			//														//
+			// Kilder:													//
+			// http://www.openjs.com/ajax/tutorial/ajax.php 								//
+			// https://developer.mozilla.org/en-US/docs/Web/API/FormData/append						//
+			// https://www.w3schools.com/js/js_ajax_http.asp								//
+			// https://www.w3schools.com/js/js_ajax_http_send.asp								//
+			// https://www.w3schools.com/js/js_ajax_http_response.asp							//
+			// https://www.w3schools.com/js/js_ajax_xmlfile.asp								//
+			// https://www.w3schools.com/js/js_ajax_php.asp									//
+			// https://www.w3schools.com/js/js_ajax_asp.asp									//
+			// https://www.w3schools.com/js/js_ajax_database.asp								//
+			// https://www.w3schools.com/js/js_ajax_applications.asp							//
+			// https://www.w3schools.com/js/js_ajax_examples.asp                             	    			//
+			// https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp                                			//
+			// https://www.w3schools.com/jsref/prop_html_innerhtml.asp							//
+			// https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view				        //	 
+			// https://www.youtube.com/watch?v=cgvDMUrQ3vA									//	
+			// https://getbootstrap.com/docs/4.3/components/card/								//	 
+			// https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering					//	 	 
+			// https://getbootstrap.com/docs/4.3/components/forms/								//
+			// https://www.youtube.com/playlist?list=PL0eyrZgxdwhyeIDc3EA4XGsI9HoWLc6nF				        //
 			// ------------------------------------------------------------------------------------------------------------ //
 
 
