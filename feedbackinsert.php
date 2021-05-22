@@ -24,15 +24,15 @@
 
 session_start(); // Gjenopptar session
 
-// ----------------------------------------------------------------------------------------------------
-// Kobler til database
-// ----------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------- //
+// Kobler til database                                                                                  //
+// ---------------------------------------------------------------------------------------------------- //
 
 include_once("db-config.php"); // Inkluderer db-config.php 
 
-// ----------------------------------------------------------------------------------------------------
-// Setter opp kredentialer
-// ----------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------- //
+// Setter opp kredentialer                                                                              //
+// ---------------------------------------------------------------------------------------------------- //
 
 //Kodet og tilpasset av: Anders Koo og Henrik Solnør Johansen START
 
@@ -42,33 +42,33 @@ $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING); // Henter ut d
 $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING); // Henter ut data med $_POST og fjerner whitespace på start og slutt
 
 
-// ----------------------------------------------------------------------------------------------------
-// Oppretter en $user_id som er session basert. Dette for å identifisere bruker
-// https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php
-
-$user_id = $_SESSION['id'];
-
-// ----------------------------------------------------------------------------------------------------
-
-
-// ----------------------------------------------------------------------------------------------------
-// START 
-// Koden under er var i utgangspunktet OOP basert. Vi har gjort den om til procedural. Grunnen til at vi har 
-// brukt procedural er fordi dette er den mest effektive steg for steg metoden å gå frem på 
-// for å lære seg grunnleggende php. 
-// Link: https://www.youtube.com/watch?v=XV9x17zVZFU&list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV&index=3&t=0s
-// ----------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------- //
+// Oppretter en $user_id som er session basert. Dette for å identifisere bruker                         //
+// https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php     //
+//                                                                                                      //
+//    $user_id = $_SESSION['id'];                                                                       //
+//                                                                                                      //
+// ---------------------------------------------------------------------------------------------------- //
 
 
-// ----------------------------------------------------------------------------------------------------
-// Utfører spørring mot databasen. mysqli_stmt_bind_param er er metode for å "binde" sammen de forskjellige input 
-// datatypene. Bruker variablene blir først definert med "ssssi" (s=string) (i=integer), og deretter legges dem inn.
-// mysqli_stmt_bind_param og mysqli_prepare metodene hører sammen og er en måte å sikre mot sql injection og 
-// forberede en spørring 
-// Kilde: 
-// https://www.youtube.com/watch?v=XV9x17zVZFU&list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV&index=3&t=0s
-// https://websitebeaver.com/prepared-statements-in-php-mysqli-to-prevent-sql-injection
-// ----------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------- //
+// START                                                                                                     //
+// Koden under er var i utgangspunktet OOP basert. Vi har gjort den om til procedural. Grunnen til at vi har //
+// brukt procedural er fordi dette er den mest effektive steg for steg metoden å gå frem på                  //
+// for å lære seg grunnleggende php.                                                                         //
+// Link: https://www.youtube.com/watch?v=XV9x17zVZFU&list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV&index=3&t=0s    //
+// --------------------------------------------------------------------------------------------------------- //
+
+
+// ----------------------------------------------------------------------------------------------------------------- //
+// Utfører spørring mot databasen. mysqli_stmt_bind_param er er metode for å "binde" sammen de forskjellige input    //
+// datatypene. Bruker variablene blir først definert med "ssssi" (s=string) (i=integer), og deretter legges dem inn. //
+// mysqli_stmt_bind_param og mysqli_prepare metodene hører sammen og er en måte å sikre mot sql injection og         //
+// forberede en spørring                                                                                             //
+// Kilde:                                                                                                            //
+// https://www.youtube.com/watch?v=XV9x17zVZFU&list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV&index=3&t=0s                  //
+// https://websitebeaver.com/prepared-statements-in-php-mysqli-to-prevent-sql-injection                              //
+// ----------------------------------------------------------------------------------------------------------------- //
 
 //Kodet og tilpasset av: Anders Koo og Henrik Solnør Johansen START
 
