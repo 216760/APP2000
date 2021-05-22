@@ -83,12 +83,12 @@ if(mysqli_stmt_execute($stmt)) { //Utfører SQL statement
 
 // Kodet og tilpasset av: Anders Koo og Henrik Solnør Johansen STOPP
 
-// ----------------------------------------------------------------------------------------------------
-// STOPP 
-// Koden under er var i utgangspunktet OOP basert. Vi har gjort den om til procedural. Grunnen til at vi har 
-// brukt procedural er fordi dette er den mest effektive steg for steg metoden å gå frem på 
-// for å lære seg grunnleggende php. 
-// Link: https://www.youtube.com/watch?v=XV9x17zVZFU&list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV&index=3&t=0s
-// ----------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------- //
+// STOPP                                                                                                       //
+// Koden under er var i utgangspunktet OOP basert. Vi har gjort den om til procedural. Grunnen til at vi har   //
+// brukt procedural er fordi dette er den mest effektive steg for steg metoden å gå frem på                    //
+// for å lære seg grunnleggende php.                                                                           //
+// Link: https://www.youtube.com/watch?v=XV9x17zVZFU&list=PLk7v1Z2rk4hiJD24gvXHxzkfA2twWvxXV&index=3&t=0s      //
+// ----------------------------------------------------------------------------------------------------------- //
 
 ?>
