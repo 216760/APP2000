@@ -1,7 +1,7 @@
 <?php
 /*****************************************************************************************************************
 *                                                                                                                *
-*TIL INFORMASJON:                                                                                                *
+* TIL INFORMASJON:                                                                                               *
 *                                                                                                                *
 * I denne filen ligger det kode som er hentet og tilpasset egen løsning fra kildene nedenfor.                    *
 * Dette er også dokumentert under "Kommentarer til kildebruk" i rapporten og markert i selve koden.              *
