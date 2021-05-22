@@ -1,23 +1,23 @@
 <!---------------------------------------------------------------------------------------------------------------->
-<!-- TIL INFORMASON:																							-->
-<!-- I denne filen ligger det kode som er hentet og tilpasset egen løsning fra kildene nedenfor.		        -->
-<!-- Dette er også dokumentert under "Kommentarer til kildebruk" i rapporten og markert i selve koden 		    -->
-<!-- Grunnen til dette er basert på “best practice” måter å programmere på.  							        -->
-<!-- Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan php språket fungerer. 			-->
+<!-- TIL INFORMASON:												-->
+<!-- I denne filen ligger det kode som er hentet og tilpasset egen løsning fra kildene nedenfor.		-->
+<!-- Dette er også dokumentert under "Kommentarer til kildebruk" i rapporten og markert i selve koden 		-->
+<!-- Grunnen til dette er basert på “best practice” måter å programmere på.  					-->
+<!-- Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan php språket fungerer. 		-->
 <!--                                                                                                            -->
-<!--  Kilde: 																									-->
-<!-- 	https://getbootstrap.com/docs/4.0/examples/navbar-top-fixed/											-->
-<!--	https://getbootstrap.com/docs/4.0/components/navbar/													-->                                        
-<!--  	https://www.youtube.com/watch?v=cgvDMUrQ3vA                                                      		-->
+<!--  Kilde: 													-->
+<!-- 	https://getbootstrap.com/docs/4.0/examples/navbar-top-fixed/						-->
+<!--	https://getbootstrap.com/docs/4.0/components/navbar/							-->                                        
+<!--  	https://www.youtube.com/watch?v=cgvDMUrQ3vA                                                      	-->
 <!---------------------------------------------------------------------------------------------------------------->
 
 
 
 <!----------------------------------------------------------------------------------------------------------------->
-<!-- START																										 -->
+<!-- START													 -->
 <!-- Denne navbaren er basert på noe av html, css og Bootstrap kode som jeg har brukt tidligere i gruppeeksamen  -->
-<!-- PRO1000 Prak.prosj.arb av student 225256 vår 19 															 -->
-<!-- Kodet av: Henrik Solnør Johansen																			 -->
+<!-- PRO1000 Prak.prosj.arb av student 225256 vår 19 								 -->
+<!-- Kodet av: Henrik Solnør Johansen										 -->
 <!----------------------------------------------------------------------------------------------------------------->
 
 
@@ -135,14 +135,16 @@
 ?>
 
 <!----------------------------------------------------------------------------------------------------------------->
-<!-- STOPP																										 -->
+<!-- STOPP													 -->
 <!-- Denne navbaren er basert på noe av html, css og Bootstrap kode som jeg har brukt tidligere i gruppeeksamen  -->
-<!-- PRO1000 Prak.prosj.arb av student 225256 vår 19 															 -->
-<!-- Kodet av: Henrik Solnør Johansen																			 -->
+<!-- PRO1000 Prak.prosj.arb av student 225256 vår 19 								 -->
+<!-- Kodet av: Henrik Solnør Johansen										 -->
 <!----------------------------------------------------------------------------------------------------------------->
 
 <!--  Kode basert på SESSION er tilpasset av Andreas Knutsen STOPP -->
 
+<!-- Laster innJavaScript og Bootstrap CDN START -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Laster innJavaScript og Bootstrap CDN STOPP -->
