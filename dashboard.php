@@ -1,28 +1,28 @@
 <?php
 /************************************************************************************************************
-* TIL INFORMASJON: 																						    *
-*																										    *
-* I denne filen ligger det kode som er hentet og tilpasset egen løsning fra kildene nedenfor.				*
+* TIL INFORMASJON: 	                   							            *
+*													    *
+* I denne filen ligger det kode som er hentet og tilpasset egen løsning fra kildene nedenfor.               *
 * Dette er også dokumentert under "Kommentarer til kildebruk" i rapporten og markert i selve koden.  	    *
-* Grunnen til dette er basert på “best practice”  måter å programmere på.  									*
-* Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan php språket fungerer. 			*
-*																											*
-*																											*
-* Kilder																									*
-* https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ									*
-* https://www.youtube.com/watch?v=OePNkDd3Yb8																* 
-* https://www.youtube.com/watch?v=cgvDMUrQ3vA																* 
-* https://getbootstrap.com/docs/4.3/components/card/														* 
-* https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering									* 
-* https://drive.google.com/file/d/1Xz-ei5uWr-ZgBzBdHBUt0-0R3z3WsOW0/view									* 
-* https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view									* 
-* https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php		 	*
-*																											*
-* Vi har med vilje laget informasjonsboksene i koden med ulike størrelser 									* 
-* for å kunne skille dem fra hverandre. 																	*
-*																											*
-* Kodet og tilpasset av: Henrik Solnør Johansen, Andreas Knutsen og Anders Koo								*
-*																											*
+* Grunnen til dette er basert på “best practice”  måter å programmere på.  				    *
+* Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan php språket fungerer. 	    *
+*												            *
+*											                    *
+* Kilder											            *
+* https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ				    *
+* https://www.youtube.com/watch?v=OePNkDd3Yb8							            * 
+* https://www.youtube.com/watch?v=cgvDMUrQ3vA							            *	 
+* https://getbootstrap.com/docs/4.3/components/card/							    * 
+* https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering				    * 
+* https://drive.google.com/file/d/1Xz-ei5uWr-ZgBzBdHBUt0-0R3z3WsOW0/view				    * 
+* https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view				    * 
+* https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php	    *
+*												            *
+* Vi har med vilje laget informasjonsboksene i koden med ulike størrelser 				    * 
+* for å kunne skille dem fra hverandre. 							            *
+*												            *
+* Kodet og tilpasset av: Henrik Solnør Johansen, Andreas Knutsen og Anders Koo				    *
+*										                            *
 *************************************************************************************************************/
 
 // ----------------------------------------------------------------------------------------------------
@@ -49,14 +49,14 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 
 
 <!-- ---------------------------------------------------------------------------------------------------- -->
-<!-- START 																								  -->
+<!-- START 												  -->
 <!-- For å sette opp modal med kalender funksjon har vi hentet og tilpasset kode fra Youtube kanalen 	  -->
-<!-- Funda of Web IT.  		  																			  -->																	 
-<!-- Kilde: 																							  -->
-<!--	 https://www.youtube.com/watch?v=OePNkDd3Yb8													  -->
-<!--												  													  -->
-<!-- Kildekode for Admin Panel PHP: 													  			      -->
-<!--     https://drive.google.com/file/d/1Xz-ei5uWr-ZgBzBdHBUt0-0R3z3WsOW0/view							  -->
+<!-- Funda of Web IT.  		  									  -->																	 
+<!-- Kilde: 												  -->
+<!--	 https://www.youtube.com/watch?v=OePNkDd3Yb8							  -->
+<!--												  	  -->
+<!-- Kildekode for Admin Panel PHP: 								          -->
+<!--     https://drive.google.com/file/d/1Xz-ei5uWr-ZgBzBdHBUt0-0R3z3WsOW0/view				  -->
 <!-- ---------------------------------------------------------------------------------------------------- -->
 
 <!DOCTYPE html>
@@ -74,11 +74,11 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 				<div>
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
-<!-- START 																								  				  -->
+<!-- START 													          -->
 <!-- For å sette opp muligheter for både norsk og engelsk opppsett av vi hentet kode og tilpasset fra Youtube kanalen	  -->
-<!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA													  -->
+<!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA						          -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->				
-																																			      <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
+																				<!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
 					<button data-toggle="modal" data-target="#eexampleModal" class="btn btn-primary w-25" style="display: block; margin: 0 auto;"><?php echo $lang_button['subscriptionbtn']; ?></button>
 				</div>
 				<div class="row justify-content-center">
@@ -91,10 +91,10 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 
 					?>
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
-<!-- START 																								  				  -->
-<!-- Oppsett av cards er gjort ved hjelp av disse lenkene:																  -->
-<!-- https://getbootstrap.com/docs/4.3/components/card/																	  --> 
-<!-- https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering											  -->
+<!-- START 														  -->
+<!-- Oppsett av cards er gjort ved hjelp av disse lenkene:							          -->
+<!-- https://getbootstrap.com/docs/4.3/components/card/									  --> 
+<!-- https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering						  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 
 					<div class="col-sm-4">
@@ -120,10 +120,10 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 					</div>
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
-<!-- STOPP 																								  				  -->
-<!-- Oppsett av cards er gjort ved hjelp av disse lenkene:																  -->
-<!-- https://getbootstrap.com/docs/4.3/components/card/																	  --> 
-<!-- https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering											  -->
+<!-- STOPP 													          -->
+<!-- Oppsett av cards er gjort ved hjelp av disse lenkene:							          -->
+<!-- https://getbootstrap.com/docs/4.3/components/card/									  --> 
+<!-- https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering						  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 				<?php } ?>
 				</div>
@@ -178,9 +178,9 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 								</div>
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
-<!-- STOPP 																								  				  -->
+<!-- STOPP 												                  -->
 <!-- For å sette opp muligheter for både norsk og engelsk opppsett av vi hentet kode og tilpasset fra Youtube kanalen	  -->
-<!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA													  -->
+<!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA							  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->	
 
 							</div>
@@ -191,14 +191,14 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 	</div>               
 
 <!-- ---------------------------------------------------------------------------------------------------- -->
-<!-- STOPP 																								  -->
+<!-- STOPP 												  -->
 <!-- For å sette opp modal med kalender funksjon har vi hentet og tilpasset kode fra Youtube kanalen 	  -->
-<!-- Funda of Web IT.  		  																			  -->																	 
-<!-- Kilde: 																							  -->
-<!--	 https://www.youtube.com/watch?v=OePNkDd3Yb8													  -->
-<!--												  													  -->
-<!-- Kildekode for Admin Panel PHP: 													  			      -->
-<!--     https://drive.google.com/file/d/1Xz-ei5uWr-ZgBzBdHBUt0-0R3z3WsOW0/view							  -->
+<!-- Funda of Web IT.  		  									  -->																	 
+<!-- Kilde: 												  -->
+<!--	 https://www.youtube.com/watch?v=OePNkDd3Yb8							  -->
+<!--												          -->
+<!-- Kildekode for Admin Panel PHP: 									  -->
+<!--     https://drive.google.com/file/d/1Xz-ei5uWr-ZgBzBdHBUt0-0R3z3WsOW0/view				  -->
 <!-- ---------------------------------------------------------------------------------------------------- -->
 
 
