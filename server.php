@@ -5,7 +5,7 @@
 * I denne filen ligger det kode som er hentet og tilpasset egen løsning fra kildene nedenfor.               *
 * Dette er også dokumentert under "Kommentarer til kildebruk" i rapporten og markert i selve koden.         * 
 * Grunnen til dette er basert på “best practice”  måter å programmere på.                                   *
-* Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan php språket fungerer. 	        *
+* Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan php språket fungerer. 	     *
 *                                                                                                           *
 * Kilde:                                                                                                    * 
 * https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                                  * 
