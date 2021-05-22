@@ -7,7 +7,7 @@
 * egen løsning fra kildene nedenfor. Regex uttrykket for passord validering er gjenbrukt.                                             *
 * Dette er også dokumentert under "Kommentarer til kildebruk" i rapporten og markert i selve koden                                    *
 * Grunnen til dette er basert på “best practice”  måter å programmere på.                                                             *  
-* Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan php språket fungerer. 	                                  *
+* Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan php språket fungerer. 	                              *
 *                                                                                                                                     *
 * Kilder:                                                                                                                             * 
 * https://www.youtube.com/watch?v=3bGDe0rbImY&t=635s                                                                                  * 
@@ -16,7 +16,7 @@
 * https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view                                                              * 
 * https://www.youtube.com/watch?v=cgvDMUrQ3vA                                                                                         *
 *                                                                                                                                     * 
-* Vi har med vilje laget informasjons boksene i koden med ulike størrelser 									                          * 
+* Vi har med vilje laget informasjons boksene i koden med ulike størrelser 							      * 
 * for å kunne skille dem fra hverandre.                                                                                               * 
 *                                                                                                                                     *                                                                                                                     *
 * Medlemmer som har bidratt:  Henrik Solnør Johansen, Andreas Knutsen og Anders Koo                                                   *         
@@ -33,12 +33,11 @@ ob_start();                 // Skrur på output buffering (forhindrer header war
     <?php
     include('includes/header_signup.php'); // Inkluderer header_singup.php
     ?>
-
     
-    
-    <!-- -------------------------------------------------------------------- -->
+    	<!-- -------------------------------------------------------------------- -->
 	<!-- Oppsett av registring for ny bruker START                            -->
 	<!-- -------------------------------------------------------------------- -->
+	
     <body>
              
         <form id="myForm" class="form-signin" form action="signup.php" method="post" name="form1">
@@ -51,29 +50,29 @@ ob_start();                 // Skrur på output buffering (forhindrer header war
                                                 <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
             <input type="password" placeholder="<?php echo $lang_input['input-password']; ?>" class="" name="password"> 
             
-    <!-- -------------------------------------------------------------------- -->
+    	<!-- -------------------------------------------------------------------- -->
 	<!-- Oppsett av registring for ny bruker STOPP                            -->
 	<!-- -------------------------------------------------------------------- -->
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
-<!-- START 																								  				  -->
-<!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset fra kilden under  		  -->																	 
-<!-- Kilde: https://www.youtube.com/watch?v=cgvDMUrQ3vA											  				          -->
+<!-- START 														  -->
+<!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset fra kilden under         -->																	 
+<!-- Kilde: https://www.youtube.com/watch?v=cgvDMUrQ3vA									  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
                                                                                                    <!-- Henter verdi fra et php-array(en.php/no.php) basert på verdien til $_SESSION['lang'] -->
             <button class="btn btn-primary w-100" id="regbtn" name="registerbtn"  value="Register"><?php echo $lang_button['registerbtn']; ?></button>
             
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
-<!-- STOPP 																								  				  -->
-<!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset fra kilden under  		  -->																	 
-<!-- Kilde: https://www.youtube.com/watch?v=cgvDMUrQ3vA											  				          -->
+<!-- STOPP 														  -->
+<!-- For å sette opp muligheter for både norsk og engelsk opppset av vi hentet kode og tilpasset fra kilden under  	  -->																	 
+<!-- Kilde: https://www.youtube.com/watch?v=cgvDMUrQ3vA									  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 
 
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
-<!-- START 																								  				  -->
-<!-- Setter opp tilbakemelding til bruker basert på session status												  		  -->
+<!-- START 														  -->
+<!-- Setter opp tilbakemelding til bruker basert på session status							  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
             <?php
 
@@ -88,8 +87,8 @@ ob_start();                 // Skrur på output buffering (forhindrer header war
             ?>
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
-<!-- STOPP 																								  				  -->
-<!-- Setter opp tilbakemelding til bruker basert på session status												  		  -->
+<!-- STOPP 														  -->
+<!-- Setter opp tilbakemelding til bruker basert på session status							  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 
         </form>
