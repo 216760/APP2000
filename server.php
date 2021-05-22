@@ -16,7 +16,7 @@
 *                                                                                                           * 
 *************************************************************************************************************/ 
  
-// --------------------------------------------------------------------------------------------------//
+// ------------------------------------------------------------------------------------------------- //
 // START                                                                                             //
 // Alle CRUD operasjonene har vi lært via eksempler fra Youtube kanalen Funda Of Web IT.             //
 // Denne koden er hentet fra og tilpasset egen løsning fra denne Youtube kanalen, part 1-6           //
@@ -24,23 +24,23 @@
 // Kilde: https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                   //
 //                                                                                                   //   
 // Kodet og tilpasset av: Anders Koo                                                                 //
-// --------------------------------------------------------------------------------------------------//
+// ------------------------------------------------------------------------------------------------- //
 
-// ----------------------------------------------------------------------------------------------------
-// Oppretter unik session for bruker
-// ----------------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------- //
+// Oppretter unik session for bruker                                                                  //
+// -------------------------------------------------------------------------------------------------- //
 
 session_start();// Det er bare brukere med tildelt sessions id fra session_start() som kan opprette abonnement
 
-// ----------------------------------------------------------------------------------------------------
-// Setter opp forbindelse med databasen
-// ----------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------- //
+// Setter opp forbindelse med databasen                                                                 //
+// ---------------------------------------------------------------------------------------------------- //
 
 include('db-config.php'); // Inkluderer db-config.php
 
-// ----------------------------------------------------------------------------------------------------
-// Registreringsknapp
-// ----------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------- //
+// Registreringsknapp                                                                                   //
+// ---------------------------------------------------------------------------------------------------- //
 
 if(isset($_POST['registerbtn'])) { // Sjekker at variabel er deklarert og at registerbtn knappen er klikket på 
     // Informasjon om abonnement
@@ -49,19 +49,19 @@ if(isset($_POST['registerbtn'])) { // Sjekker at variabel er deklarert og at reg
     $end_date =  mysqli_real_escape_string($mysqli, $_POST['end_date']);        // Henter ut data med $_POST og sikrer mot SQL injection
     
 
-    // ----------------------------------------------------------------------------------------------------
-    // user_id i cards-tabellen blir automatisk opprettet når registrert bruker lager et abonnement
-    // https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php
-    // Oppretter user_id variabel for cards tabellen som en sessions variabel.Dette for å identifisere bruker
-    
+    // -------------------------------------------------------------------------------------------------------- //
+    // user_id i cards-tabellen blir automatisk opprettet når registrert bruker lager et abonnement             //
+    // https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php         //
+    // Oppretter user_id variabel for cards tabellen som en sessions variabel.Dette for å identifisere bruker   //
+    // -------------------------------------------------------------------------------------------------------- //
     $user_id = $_SESSION['id']; 
     
-    // ----------------------------------------------------------------------------------------------------
+    // -------------------------------------------------------------------------------------------------------- //
 
     
-    // ----------------------------------------------------------------------------------------------------
-    // Setter opp spørrevariabel for registrering av abonnement
-    // ----------------------------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------------------------- //
+    // Setter opp spørrevariabel for registrering av abonnement                                             //
+    // ---------------------------------------------------------------------------------------------------- //
 
     // Spørring som setter inn nytt abonnement i databasen basert på user_id (spesifikk bruker)
     $queryReg = "INSERT INTO cards (description, start_date, end_date, user_id) VALUES ('$description', '$start_date','$end_date', '$user_id')"; //  Spørring som setter inn data i databasen
