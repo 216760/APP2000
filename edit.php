@@ -57,6 +57,12 @@ if(!isset($_SESSION['id'])){    // Hvis session ikke er satt blir brukeren vider
 
         <?php include('includes/navbar.php'); ?> <!-- Inkluderer navbar.php  -->
 
+        
+        
+    <!-- -------------------------------------------------------------------- -->
+	<!-- Modal for å oppdatere informasjon i et eksisterende abonnement START -->
+	<!-- -------------------------------------------------------------------- -->
+        
         <div class="content-dashboard">
             <div class="container">
                 <div class="card shadow mb-4 mx-auto" style="width: 30rem;">
@@ -120,6 +126,10 @@ if(!isset($_SESSION['id'])){    // Hvis session ikke er satt blir brukeren vider
                     }
                 }
             ?>
+                    
+    <!-- -------------------------------------------------------------------- -->
+	<!-- Modal for å oppdatere informasjon i et eksisterende abonnement START -->
+	<!-- -------------------------------------------------------------------- -->
 
             <!-- -------------------------------------------------------------------------------------------------------------------- -->
             <!-- STOPP 																								  				  -->
