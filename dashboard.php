@@ -91,10 +91,10 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 
 					?>
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
-<!-- START 														  -->
+<!-- START														  -->
 <!-- Oppsett av cards er gjort ved hjelp av disse lenkene:							          -->
 <!-- https://getbootstrap.com/docs/4.3/components/card/									  --> 
-<!-- https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering						  -->
+<!-- https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering					          -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 
 					<div class="col-sm-4">
@@ -123,8 +123,8 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 					</div>
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
-<!-- STOPP 													          -->
-<!-- Oppsett av cards er gjort ved hjelp av disse lenkene:							          -->
+<!-- STOPP														  -->
+<!-- Oppsett av cards er gjort ved hjelp av disse lenkene:								  -->
 <!-- https://getbootstrap.com/docs/4.3/components/card/									  --> 
 <!-- https://getbootstrap.com/docs/4.3/utilities/spacing/#horizontal-centering						  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
@@ -145,7 +145,7 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 				?>
 
 	<!-- -------------------------------------------------------------------- -->
-	<!-- Modal for å sett inn informasjon og opprette nytt abonnement START 	-->
+	<!-- Modal for å sett inn informasjon og opprette nytt abonnement START	  -->
 	<!-- -------------------------------------------------------------------- -->
 		<div class="container">
 			<div class="modal fade" id="eexampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -189,7 +189,7 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 	<!-- -------------------------------------------------------------------- -->
 								
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
-<!-- STOPP 												                  -->
+<!-- STOPP														  -->
 <!-- For å sette opp muligheter for både norsk og engelsk opppsett av vi hentet kode og tilpasset fra Youtube kanalen	  -->
 <!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA							  -->
 <!-- -------------------------------------------------------------------------------------------------------------------- -->	
@@ -202,13 +202,13 @@ $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å 
 	</div>               
 
 <!-- ---------------------------------------------------------------------------------------------------- -->
-<!-- STOPP 												  -->
-<!-- For å sette opp modal med kalender funksjon har vi hentet og tilpasset kode fra Youtube kanalen 	  -->
-<!-- Funda of Web IT.  		  									  -->																	 
-<!-- Kilde: 												  -->
+<!-- STOPP												  -->
+<!-- For å sette opp modal med kalender funksjon har vi hentet og tilpasset kode fra Youtube kanalen	  -->
+<!-- Funda of Web IT.											  -->																	 
+<!-- Kilde:												  -->
 <!--	 https://www.youtube.com/watch?v=OePNkDd3Yb8							  -->
-<!--												          -->
-<!-- Kildekode for Admin Panel PHP: 									  -->
+<!--													  -->
+<!-- Kildekode for Admin Panel PHP:								          -->
 <!--     https://drive.google.com/file/d/1Xz-ei5uWr-ZgBzBdHBUt0-0R3z3WsOW0/view				  -->
 <!-- ---------------------------------------------------------------------------------------------------- -->
 
