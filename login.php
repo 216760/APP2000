@@ -7,7 +7,7 @@
 * and Registration Script og tilpasset egen løsning fra kildene nedenfor.                                     * 
 * Dette er også dokumentert under "Kommentarer til kildebruk" i rapporten og markert i selve koden.           *
 * Grunnen til dette er basert på “best practice”  måter å programmere på.                                     *
-* Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan php språket fungerer. 	          *
+* Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan php språket fungerer. 	      *
 *                                                                                                             *
 * Kilder:                                                                                                     * 
 *                                                                                                             * 
@@ -101,6 +101,7 @@ include_once('db-config.php'); // Inkluderer bare 'db-config.php' en gang, og sc
 // Denne kilden er brukt for å finne ut av hvordan man legger id fra register tabellen inn i en session variabel    //
 // Kilde: https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php          //
 //------------------------------------------------------------------------------------------------------------------//
+                
             $id = $data['id'];  // Henter ut bruker-id fra databasen og legger den i en variabel
             $_SESSION['id'] = $id;  // Legger id-variabelen inn i en session variabel. Dette for å identifisere bruker
             
