@@ -1,8 +1,8 @@
 function toggleDark() {
   
-    //-------------------------------------------------------------------------------------------------------------------------------
-    // Dett er en JavaScript funksjon som bytter CSS stylesheet fra vanlig til darkmode når bruker trykker på en checkbox i navbaren
-    //-------------------------------------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------------------------------------- //
+    // Dett er en JavaScript funksjon som bytter CSS stylesheet fra vanlig til darkmode når bruker trykker på en checkbox i navbaren  //
+    //------------------------------------------------------------------------------------------------------------------------------- //
     // Kodet av: Vigleik Espeland Stakseng
 
     var checkBox = document.getElementById("toggle1");      // Finner selve checkboxen ("toggle1" i navbar.php)
