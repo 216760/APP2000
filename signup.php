@@ -138,20 +138,20 @@ ob_start();                 // Skrur på output buffering (forhindrer header war
                 header('Location: signup.php');
 
                
-            //-----------------------------------------------------------------------------------------------
-            // START
-            // Denne koden er hentet og tilpasset egen løsning fra 
-            // Kilde: https://www.imtiazepu.com/password-validation/
-            //-----------------------------------------------------------------------------------------------
+            //----------------------------------------------------------------------------------------------- //
+            // START                                                                                          //
+            // Denne koden er hentet og tilpasset egen løsning fra                                            //  
+            // Kilde: https://www.imtiazepu.com/password-validation/                                          // 
+            //----------------------------------------------------------------------------------------------- //
             }if(!preg_match($regex,$password)){
                     $_SESSION['status'] = "The password must be at least 8 characters and must contain at least one capital letter, one number and one special character.";
                     header('Location: signup.php');
 
-            //-----------------------------------------------------------------------------------------------
-            // STOPP
-            // Denne koden er hentet og tilpasset egen løsning fra 
-            // Kilde: https://www.imtiazepu.com/password-validation/
-            //-----------------------------------------------------------------------------------------------
+            //----------------------------------------------------------------------------------------------- //
+            // STOPP                                                                                          //
+            // Denne koden er hentet og tilpasset egen løsning fra                                            //
+            // Kilde: https://www.imtiazepu.com/password-validation/                                          //
+            //----------------------------------------------------------------------------------------------- //
             } else {
                 
                 // Variabel som bruker password_hash funksjon sammen med PASSWORD_BCRYPT algoritme for å hashe passord
