@@ -6,7 +6,7 @@
 * I denne filen ligger det kode som er hentet og tilpasset egen løsning fra kildene nedenfor.                 *
 * Dette er også dokumentert under "Kommentarer til kildebruk" i rapporten og markert i selve koden.           *
 * Grunnen til dette er basert på “best practice”  måter å programmere på.                                     *
-* Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan php språket fungerer. 	          *
+* Vi har gjennom en rekke eksempler via dokumenterte kilder lært oss hvordan php språket fungerer. 	      *
 *                                                                                                             * 
 * Kilder:                                                                                                     * 
 * https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                                    * 
@@ -14,7 +14,7 @@
 * https://drive.google.com/file/d/1WM7zpPmlS7JFFfdn6PfsdxlT2iS5zOSF/view                                      * 
 * https://www.youtube.com/watch?v=cgvDMUrQ3vA	                                                              *  
 *                                                                                                             * 
-* Vi har med vilje laget informasjonsboksene i koden med ulike størrelser 									  * 
+* Vi har med vilje laget informasjonsboksene i koden med ulike størrelser 				      * 
 * for å kunne skille dem fra hverandre.                                                                       *
 *                                                                                                             *
 * Kodet og tilpasset av Andreas Knutsen og Anders Koo                                                         *
@@ -41,7 +41,7 @@ if(!isset($_SESSION['id'])){    // Hvis session ikke er satt blir brukeren vider
 <!-- Kilde: https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                                             -->
 <!--                                                                                                                             -->
 <!-- Kildekode for Admin Panel PHP:                                                                                              -->
-<!-- https://drive.google.com/file/d/1Xz-ei5uWr-ZgBzBdHBUt0-0R3z3WsOW0/view	                                                     -->
+<!-- https://drive.google.com/file/d/1Xz-ei5uWr-ZgBzBdHBUt0-0R3z3WsOW0/view	                                                 -->
 <!-- --------------------------------------------------------------------------------------------------------------------------- -->
 
 <!DOCTYPE html>
@@ -50,16 +50,16 @@ if(!isset($_SESSION['id'])){    // Hvis session ikke er satt blir brukeren vider
     <body>
 
         <!-- -------------------------------------------------------------------------------------------------------------------- -->
-        <!-- START 																								  				  -->
+        <!-- START 														  -->
         <!-- For å sette opp muligheter for både norsk og engelsk opppsett av vi hentet kode og tilpasset fra Youtube kanalen	  -->
-        <!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA													  -->
+        <!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA							  -->
         <!-- -------------------------------------------------------------------------------------------------------------------- -->	
 
         <?php include('includes/navbar.php'); ?> <!-- Inkluderer navbar.php  -->
 
         
         
-    <!-- -------------------------------------------------------------------- -->
+   	<!-- -------------------------------------------------------------------- -->
 	<!-- Modal for å oppdatere informasjon i et eksisterende abonnement START -->
 	<!-- -------------------------------------------------------------------- -->
         
@@ -127,14 +127,14 @@ if(!isset($_SESSION['id'])){    // Hvis session ikke er satt blir brukeren vider
                 }
             ?>
                     
-    <!-- -------------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------------- -->
 	<!-- Modal for å oppdatere informasjon i et eksisterende abonnement START -->
 	<!-- -------------------------------------------------------------------- -->
 
             <!-- -------------------------------------------------------------------------------------------------------------------- -->
-            <!-- STOPP 																								  				  -->
-            <!-- For å sette opp muligheter for både norsk og engelsk opppsett av vi hentet kode og tilpasset fra Youtube kanalen	  -->
-            <!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA													  -->
+            <!-- STOPP 														      -->
+            <!-- For å sette opp muligheter for både norsk og engelsk opppsett av vi hentet kode og tilpasset fra Youtube kanalen     -->
+            <!-- Coding Passive Income: https://www.youtube.com/watch?v=cgvDMUrQ3vA						      -->
             <!-- -------------------------------------------------------------------------------------------------------------------- -->
 
                 </div>
@@ -147,7 +147,7 @@ if(!isset($_SESSION['id'])){    // Hvis session ikke er satt blir brukeren vider
 <!-- Kilde: https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                                             -->
 <!--                                                                                                                             -->
 <!-- Kildekode for Admin Panel PHP:                                                                                              -->
-<!-- https://drive.google.com/file/d/1Xz-ei5uWr-ZgBzBdHBUt0-0R3z3WsOW0/view	                                                     -->
+<!-- https://drive.google.com/file/d/1Xz-ei5uWr-ZgBzBdHBUt0-0R3z3WsOW0/view	                                                 -->
 <!-- --------------------------------------------------------------------------------------------------------------------------- -->
 
 <!-- --------------------------------------------------------------------------------------------------
