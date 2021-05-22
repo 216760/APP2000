@@ -11,8 +11,8 @@
 * https://www.youtube.com/playlist?list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ                                  * 
 * https://stackoverflow.com/questions/35931377/get-id-for-a-specific-user-in-mysql-database-in-php          *
 *                                                                                                           * 
-* Vi har med vilje laget informasjonsboksene i koden med ulike størrelser 									* 
-* for å kunne skille dem fra hverandre.                                                                     * 
+* Vi har med vilje laget informasjonsboksene i koden med ulike størrelser 									                         * 
+* for å kunne skille dem fra hverandre.                                                                     *  
 *                                                                                                           * 
 *************************************************************************************************************/ 
  
@@ -80,9 +80,9 @@ if(isset($_POST['registerbtn'])) { // Sjekker at variabel er deklarert og at reg
 } 
 
 
-// ----------------------------------------------------------------------------------------------------
-// Oppdateringsknapp
-// ----------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------- //
+// Oppdateringsknapp                                                                                    //
+// ---------------------------------------------------------------------------------------------------- //
 
 if(isset($_POST['updatebtn'])) {    // Sjekker at variabel er deklarert og at updatebtn knappen er klikket på 
     $id = $_POST['edit_id'];        // Henter riktig id med $_POST, slik at vi vet hvilket abonnement vi skal oppdatere
@@ -109,9 +109,9 @@ if(isset($_POST['updatebtn'])) {    // Sjekker at variabel er deklarert og at up
 }
 
 
-// ----------------------------------------------------------------------------------------------------
-// Sletteknapp
-// ----------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------- //
+// Sletteknapp                                                                                          //
+// ---------------------------------------------------------------------------------------------------- //
 
 if(isset($_POST['delete_btn'])) { // Sjekker at variabel er deklarert og at updatebtn knappen er klikket på 
     $id = $_POST['delete_id'];  // Henter ut id med $_POST slik at vi vet hvilket abonnement vi skal slette i databasen
