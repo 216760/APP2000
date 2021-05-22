@@ -25,9 +25,9 @@
 *										                            *
 *************************************************************************************************************/
 
-// ----------------------------------------------------------------------------------------------------
-// Setter opp session og includes
-// ----------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------- //
+// Setter opp session og includes									//
+// ---------------------------------------------------------------------------------------------------- //
 include_once('db-config.php'); 	// Inkluderer bare 'db-config.php' en gang, og scriptet vil avbrytes dersom include_once-funksjonen ikke finner filen.
 include('lang-config.php');		// Inkluderer oppsett for flere språk
 
@@ -38,9 +38,9 @@ if(!isset($_SESSION['id'])){ // Hvis session ikke er satt blir brukeren viderese
 	header('Location:login.php'); 
 }
 
-// ----------------------------------------------------------------------------------------------------
-// Setter opp database forbindelse med spørrring
-// ----------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------- //
+// Setter opp database forbindelse med spørrring							//
+// ---------------------------------------------------------------------------------------------------- //
 
 $query = "SELECT * FROM cards WHERE user_id=$id"; // Henter data fra cards tabellen hvor user_id er identisk med id til bruker i register tabellen
 $query_run = mysqli_query($mysqli, $query); // mysqli_query er en metode for å utføre forbindelse med database og spørring. $mysqli hentes fra config.php
